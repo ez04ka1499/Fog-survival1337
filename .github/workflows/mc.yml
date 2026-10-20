@@ -1,72 +1,47 @@
-name: Minecraft Forge 1.20.1 Optimized Server
+name: Minecraft Forge 1.20.1 Server
 
 on:
-  workflow_dispatch: # Ручной запуск через вкладку Actions
-    inputs:
-      e4mc_version:
-        description: 'Версия e4mc (оставьте latest для автопоиска)'
-        required: false
-        default: 'latest'
+  workflow_dispatch:
 
 env:
   FORGE_VERSION: "1.20.1-47.3.0"
   JAVA_VERSION: "17"
-  SERVER_RAM: "6G"
-  # Агрессивная оптимизация GC для минимизации input lag
-  JAVA_OPTS: >-
-    -Xms${{ env.SERVER_RAM }} 
-    -Xmx${{ env.SERVER_RAM }} 
-    -XX:+UseZGC 
-    -XX:+ZGenerational 
-    -XX:+AlwaysPreTouch 
-    -XX:+DisableExplicitGC 
-    -XX:+UnlockExperimentalVMOptions 
-    -XX:ZCollectionInterval=5 
-    -XX:ZAllocationSpikeTolerance=5 
-    -Dfml.queryResult=confirm 
-    -Dterminal.jline=false 
-    -Dterminal.ansi=true
 
 jobs:
   start-server:
     runs-on: ubuntu-latest
-    timeout-minutes: 360 # Максимальное время работы (6 часов)
+    timeout-minutes: 360
     
     steps:
-      - name: 🧹 Очистка места и подготовка
+      - name: 🧹 Очистка места
         run: |
           sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
           mkdir -p server/mods
           
-      - name: ☕ Установка Java ${{ env.JAVA_VERSION }}
+      - name: ☕ Установка Java 17
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ env.JAVA_VERSION }}
+          java-version: '17'
           distribution: 'temurin'
           
       - name: ⬇️ Скачивание Forge Installer
         run: |
-          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/${{ env.FORGE_VERSION }}/forge-${{ env.FORGE_VERSION }}-installer.jar"
+          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.0/forge-1.20.1-47.3.0-installer.jar"
           
       - name: 🔨 Установка Forge Server
         run: java -jar forge-*-installer.jar --installServer --no-user-input
         
       - name: 🌐 Установка e4mc
         run: |
-          if [ "${{ github.event.inputs.e4mc_version }}" = "latest" ]; then
-            E4MC_URL=$(curl -s https://api.modrinth.com/rest/v2/project/e4mc/version?game_versions=["1.20.1"]&loaders=["forge"] | jq -r '.[0].files[0].url')
-          else
-            E4MC_URL="https://cdn.modrinth.com/data/qANg5Jrr/versions/${{ github.event.inputs.e4mc_version }}/e4mc-${{ github.event.inputs.e4mc_version }}.jar"
-          fi
+          E4MC_URL=$(curl -s https://api.modrinth.com/v2/project/e4mc/version?game_versions=["1.20.1"]&loaders=["forge"] | jq -r '.[0].files[0].url')
           echo "Скачивание e4mc: $E4MC_URL"
           wget -q "$E4MC_URL" -O server/mods/e4mc.jar
           
-      - name: ⚡ Установка модов оптимизации (Anti-Lag)
+      - name: ⚡ Установка модов оптимизации
         run: |
-          # Функция для скачивания последнего релиза с Modrinth по slug
           download_mod() {
             local slug=$1
-            local url=$(curl -s "https://api.modrinth.com/rest/v2/project/$slug/version?game_versions=[\"1.20.1\"]&loaders=[\"forge\"]" | jq -r '.[0].files[0].url')
+            local url=$(curl -s "https://api.modrinth.com/v2/project/$slug/version?game_versions=[\"1.20.1\"]&loaders=[\"forge\"]" | jq -r '.[0].files[0].url')
             if [ "$url" != "null" ] && [ -n "$url" ]; then
               wget -q "$url" -P server/mods/
               echo "✅ Установлен: $slug"
@@ -75,13 +50,12 @@ jobs:
             fi
           }
           
-          # Критически важные моды для стабильного TPS и низкого пинга
-          download_mod "modernfix"       # Оптимизация памяти и загрузки
-          download_mod "ferritecore"     # Снижение потребления RAM
-          download_mod "embeddium"       # Оптимизация рендеринга (серверная часть)
-          download_mod "entityculling"   # Пропуск тиков невидимых сущностей
-          download_mod "spark"           # Профайлер (для мониторинга лагов)
-          download_mod "krypton-reforged"# Оптимизация сетевого стека (снижение пинга)
+          download_mod "modernfix"
+          download_mod "ferritecore"
+          download_mod "embeddium"
+          download_mod "entityculling"
+          download_mod "spark"
+          download_mod "krypton-reforged"
           
       - name: ⚙️ Создание server.properties
         run: |
@@ -97,15 +71,40 @@ jobs:
           use-native-transport=true
           EOF
           
+      - name: 👑 Настройка операторов (TWIX_EXTRATOP)
+        run: |
+          mkdir -p server/world
+          echo "TWIX_EXTRATOP" > server/ops.json
+          cat <<EOF > server/ops.json
+          [
+            {
+              "uuid": "",
+              "name": "TWIX_EXTRATOP",
+              "level": 4,
+              "bypassesPlayerLimit": false
+            }
+          ]
+          EOF
+          
       - name: 📜 Принятие EULA
         run: echo "eula=true" > server/eula.txt
         
-      - name: 🚀 Запуск сервера с e4mc
+      - name: 🚀 Запуск сервера
         working-directory: ./server
         run: |
           echo "=== ЗАПУСК СЕРВЕРА ==="
+          echo "Игрок TWIX_EXTRATOP получит права оператора автоматически"
           echo "После появления ссылки e4mc скопируйте её для подключения!"
-          echo "Сервер будет работать до истечения таймаута или ручной отмены."
           
-          # Запуск через bash для корректной обработки сигналов
-          java $JAVA_OPTS @user_jvm_args.txt @libraries/net/minecraftforge/forge/${{ env.FORGE_VERSION }}/unix_args.txt nogui
+          java -Xms6G -Xmx6G \
+            -XX:+UseZGC \
+            -XX:+ZGenerational \
+            -XX:+AlwaysPreTouch \
+            -XX:+DisableExplicitGC \
+            -XX:+UnlockExperimentalVMOptions \
+            -XX:ZCollectionInterval=5 \
+            -XX:ZAllocationSpikeTolerance=5 \
+            -Dfml.queryResult=confirm \
+            -Dterminal.jline=false \
+            -Dterminal.ansi=true \
+            @user_jvm_args.txt @libraries/net/minecraftforge/forge/1.20.1-47.3.0/unix_args.txt nogui
