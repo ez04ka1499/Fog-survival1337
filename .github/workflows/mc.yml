@@ -80,18 +80,19 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Кэш установки Forge
+      - name: Кэш установки Forge и модов
         uses: actions/cache@v4
         with:
           path: |
             server/libraries
             server/run.sh
-          key: forge-1.20.1-47.2.0-v6
+            server/mods
+          key: forge-1.20.1-47.2.0-e4all-v1
 
       - name: Установка Forge
         run: |
           set -euo pipefail
-          mkdir -p server
+          mkdir -p server/mods
           cd server
 
           ARGS="libraries/net/minecraftforge/forge/1.20.1-47.2.0/unix_args.txt"
@@ -107,6 +108,20 @@ jobs:
           test -f run.sh
           test -f "$ARGS"
 
+      - name: Установка мода e4all для туннеля
+        run: |
+          set -euo pipefail
+          cd server/mods
+          # Скачиваем последнюю версию e4all для Forge 1.20.1 с Modrinth (если файл еще не кэширован)
+          if [ ! -f e4all*.jar ]; then
+            # Удаляем старые версии если были
+            rm -f e4all*.jar
+            curl -fL --retry 5 -o e4all.jar \
+              https://cdn.modrinth.com/data/X57z0X0g/versions/latest/e4all-forge-1.20.1.jar || \
+            curl -fL --retry 5 -o e4all.jar \
+              https://github.com/Synquox/e4all/releases/latest/download/e4all-forge-1.20.1.jar
+          fi
+
       - name: Настройки сервера
         run: |
           set -euo pipefail
@@ -120,6 +135,11 @@ jobs:
           -XX:+UseG1GC
           -XX:MaxGCPauseMillis=200
           -XX:+ParallelRefProcEnabled
+          -XX:+UnlockExperimentalVMOptions
+          -XX:G1NewSizePercent=30
+          -XX:G1MaxNewSizePercent=40
+          -XX:G1HeapRegionSize=8M
+          -XX:InitiatingHeapOccupancyPercent=15
           EOF
 
           cat > server.properties <<EOF
@@ -135,44 +155,7 @@ jobs:
           enable-command-block=true
           EOF
 
-           - name: Установка bore
-        run: |
-          set -euo pipefail
-
-          # Берём ссылку на актуальный Linux-бинарник из GitHub Releases.
-          BORE_URL=$(curl -fsSL \
-            https://api.github.com/repos/ekzhang/bore/releases/latest \
-            | jq -r '.assets[]
-                | select(.name | test("x86_64-unknown-linux-musl\\.tar\\.gz$"))
-                | .browser_download_url' \
-            | head -n 1)
-
-          if [ -z "$BORE_URL" ]; then
-            echo "::error::Не удалось найти bore для Linux x86_64"
-            exit 1
-          fi
-
-          echo "Скачиваю: $BORE_URL"
-
-          curl -fL --retry 5 --retry-delay 3 \
-            -o /tmp/bore.tar.gz \
-            "$BORE_URL"
-
-          mkdir -p /tmp/bore
-          tar -xzf /tmp/bore.tar.gz -C /tmp/bore
-
-          BORE_BIN=$(find /tmp/bore -type f -name bore | head -n 1)
-
-          if [ -z "$BORE_BIN" ]; then
-            echo "::error::В архиве не найден файл bore"
-            find /tmp/bore -maxdepth 3 -type f
-            exit 1
-          fi
-
-          sudo install "$BORE_BIN" /usr/local/bin/bore
-          bore --version
-
-      - name: Запуск Minecraft и bore
+      - name: Запуск Minecraft и e4all туннеля
         run: |
           set -euo pipefail
 
@@ -187,13 +170,22 @@ jobs:
           bash run.sh nogui <&3 > ../server.log 2>&1 &
           SERVER_PID=$!
 
-          echo "Ждём Minecraft..."
+          echo "Ждём запуск Minecraft и генерацию ссылки e4all..."
           READY=false
+          ADDRESS=""
 
-          for i in $(seq 1 120); do
+          for i in $(seq 1 140); do
+            # Проверяем, запустился ли сервер
             if grep -q "Done (" ../server.log; then
               READY=true
-              break
+            fi
+
+            # Ищем адрес e4all в логах (обычно выглядит как abcde.e4mc.link)
+            if grep -qE '[a-zA-Z0-9-]+\.e4mc\.link' ../server.log; then
+              ADDRESS=$(grep -oE '[a-zA-Z0-9-]+\.e4mc\.link' ../server.log | tail -n 1)
+              if [ -n "$ADDRESS" ]; then
+                break
+              fi
             fi
 
             if ! kill -0 "$SERVER_PID" 2>/dev/null; then
@@ -205,36 +197,15 @@ jobs:
             sleep 3
           done
 
-          if [ "$READY" != true ]; then
-            echo "::error::Minecraft не запустился за 6 минут"
-            tail -n 160 ../server.log
-            exit 1
-          fi
-
-          echo "Minecraft запущен. Поднимаю bore.pub..."
-
-          bore local 25565 --to bore.pub > ../bore.log 2>&1 &
-          BORE_PID=$!
-
-          sleep 5
-
-          if ! kill -0 "$BORE_PID" 2>/dev/null; then
-            echo "::error::bore не запустился"
-            cat ../bore.log || true
-            exit 1
-          fi
-
-          ADDRESS=$(grep -oE 'bore\.pub:[0-9]+' ../bore.log | head -n 1 || true)
-
           if [ -z "$ADDRESS" ]; then
-            echo "::error::Не удалось получить адрес bore.pub"
-            cat ../bore.log || true
+            echo "::error::Не удалось получить адрес e4all. Проверьте логи."
+            tail -n 160 ../server.log
             exit 1
           fi
 
           echo "Адрес сервера: $ADDRESS"
 
-          # Пишем адрес для HTML-панели.
+          # Пишем адрес для файла / репозитория
           CONTENT=$(printf '%s' "$ADDRESS" | base64 -w0)
           SHA=$(gh api "repos/$REPO/contents/tunnel.txt?ref=$BRANCH" --jq .sha 2>/dev/null || true)
 
@@ -267,7 +238,6 @@ jobs:
           name: mc-logs-${{ github.run_id }}
           path: |
             server.log
-            bore.log
             server/logs/latest.log
           if-no-files-found: ignore
           retention-days: 3
