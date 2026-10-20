@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java 17 (Required for Forge 1.20.1)
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -37,42 +37,58 @@ jobs:
           cd server
           echo "eula=true" > eula.txt
           
-          # Скачиваем официальный установщик Forge 1.20.1 (версия 47.2.0)
-          curl -o installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
-          
-          # Устанавливаем сервер в тихом режиме
-          java -jar installer.jar --installServer
-          
-          # Удаляем инсталлятор, чтобы не занимал место
-          rm installer.jar
+          if [ ! -f "run.sh" ]; then
+            curl -o installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
+            java -jar installer.jar --installServer
+            rm installer.jar
+          fi
 
       - name: Start Minecraft Server & Tunnel
         run: |
           cd server
-          
-          # Создаем FIFO пайп для управления консолью с сайта
           mkfifo mc_pipe
           
-          # Запускаем сервер через официальный скрипт run.sh (он сам подставит все пути к библиотекам)
-          sh run.sh nogui < mc_pipe &
+          # Запуск сервера
+          sh run.sh nogui < mc_pipe > ../server.log 2>&1 &
           
-          echo "Сервер Forge запускается, ждем инициализацию мира..."
-          sleep 60
+          echo "Ожидание запуска сервера..."
+          
+          # Умный цикл ожидания строки Done в логах
+          for i in {1..45}; do
+            if grep -q "Done (" ../server.log; then
+              echo "Сервер успешно запущен!"
+              break
+            fi
+            sleep 3
+          done
 
-          # Запуск нативного SSH TCP-туннеля (Serveo) для порта 25565
-          ssh -o StrictHostKeyChecking=no -R 25565:localhost:25565 serveo.net > ../tunnel.log 2>&1 &
+          echo "Поднимаем туннель через localhost.run..."
+          # Запуск стабильного SSH туннеля
+          ssh -o StrictHostKeyChecking=no -R 25565:localhost:25565 localhost.run > ../tunnel.log 2>&1 &
           
-          sleep 5
+          sleep 7
           
-          # Вытаскиваем адрес туннеля и сохраняем в файл для сайта
-          TUNNEL_URL=$(grep -o 'serveo.net:[0-9]*' ../tunnel.log | head -n 1 || echo "Ожидание туннеля...")
+          # Выводим содержимое лога туннеля прямо в консоль GitHub Actions, чтобы ты видел IP в логах!
+          echo "=== СОДЕРЖИМОЕ ЛОГА ТУННЕЛЯ ==="
+          cat ../tunnel.log
+          echo "================================"
+
+          # Извлекаем адрес и сохраняем
+          TUNNEL_URL=$(grep -o '[a-zA-Z0-9.-]*\.lhr\.life' ../tunnel.log | head -n 1 || echo "")
+          
+          if [ -z "$TUNNEL_URL" ]; then
+            # Запасной вариант поиска порта, если формат изменился
+            TUNNEL_URL=$(cat ../tunnel.log | grep -o 'localhost.run.*' | head -n 1)
+          fi
+
           echo "$TUNNEL_URL" > ../tunnel.txt
-          
+          echo "Полученный адрес: $TUNNEL_URL"
+
           git add ../tunnel.txt
           git commit -m "Update server tunnel address [skip ci]" || true
           git push || true
 
-          # Цикл обработки команд из консоли сайта
+          # Цикл приема команд из панели управления на сайте
           while true; do
             if [ -f ../command.txt ]; then
               CMD=$(cat ../command.txt)
