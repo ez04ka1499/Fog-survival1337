@@ -33,7 +33,7 @@ jobs:
 
       - name: Prepare Forge 1.20.1 Server Environment
         run: |
-          mkdir server
+          mkdir -p server
           cd server
           echo "eula=true" > eula.txt
           
@@ -48,12 +48,18 @@ jobs:
           cd server
           mkfifo mc_pipe
           
-          # Запуск сервера в фоне
+          # Автоматически отключаем лицензию (делаем сервер пиратским)
+          if [ -f "server.properties" ]; then
+            sed -i 's/online-mode=true/online-mode=false/g' server.properties
+          else
+            echo "online-mode=false" > server.properties
+          fi
+          
+          # Запуск сервера
           sh run.sh nogui < mc_pipe > ../server.log 2>&1 &
           
           echo "Ожидание запуска сервера..."
           
-          # Умный цикл ожидания готовности сервера
           for i in {1..45}; do
             if grep -q "Done (" ../server.log; then
               echo "Сервер успешно запущен!"
@@ -63,16 +69,10 @@ jobs:
           done
 
           echo "Поднимаем публичный TCP-туннель через Pinggy..."
-          # Запуск туннеля Pinggy для порта 25565
           ssh -o StrictHostKeyChecking=no -p 443 -R0:localhost:25565 tcp@free.pinggy.io > ../tunnel.log 2>&1 &
           
           sleep 8
           
-          echo "=== СОДЕРЖИМОЕ ЛОГА ТУННЕЛЯ ==="
-          cat ../tunnel.log
-          echo "================================"
-
-          # Извлекаем честный публичный URL (начинается с tcp://)
           TUNNEL_URL=$(grep -o 'tcp://[a-zA-Z0-9.-]*:[0-9]*' ../tunnel.log | head -n 1 || echo "")
 
           echo "$TUNNEL_URL" > ../tunnel.txt
@@ -82,7 +82,6 @@ jobs:
           git commit -m "Update server tunnel address [skip ci]" || true
           git push || true
 
-          # Цикл приема команд с сайта
           while true; do
             if [ -f ../command.txt ]; then
               CMD=$(cat ../command.txt)
