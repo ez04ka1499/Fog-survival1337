@@ -1,4 +1,4 @@
-name: Forge 1.20.1 Minecraft Server (Custom Tunnel)
+name: Forge 1.20.1 Minecraft Server Pro
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget curl git jq python3
+          sudo apt-get install -y wget curl git jq screen
 
       - name: Setup Forge 1.20.1 Server
         run: |
@@ -36,7 +36,7 @@ jobs:
 
           echo "eula=true" > eula.txt
 
-      - name: Load User Mods
+      - name: Load User Mods & Configs
         run: |
           cd server
           mkdir -p mods
@@ -46,41 +46,48 @@ jobs:
             cp -r ../my_mods/* mods/
           fi
 
-      - name: Configure server.properties
-        run: |
-          cd server
-          cat <<EOF > server.properties
-          online-mode=false
-          view-distance=8
-          simulation-distance=6
-          max-players=5
-          spawn-protection=0
-          enable-command-block=true
-          motd=GitHub Custom Forge Server
-          EOF
-
-      - name: Restore World & Ops from Git
+      - name: Restore World from Git
         run: |
           if [ -d "world_backup" ]; then
             echo "Восстанавливаем сохраненный мир..."
             cp -r world_backup/* server/
           fi
 
-      - name: Run Custom Tunnel & Forge Server
+      - name: Start Tunnel, Server & Console Bridge
         run: |
           cd server
 
-          echo "-Xms4G" > user_args.txt
-          echo "-Xmx6G" >> user_args.txt
+          # Aikar's Flags для идеальной производительности без лагов
+          cat <<EOF > user_args.txt
+          -Xms4G
+          -Xmx6G
+          -XX:+UseG1GC
+          -XX:+ParallelRefProcEnabled
+          -XX:MaxGCPauseMillis=200
+          -XX:+UnlockExperimentalVMOptions
+          -XX:+DisableExplicitGC
+          -XX:+AlwaysPreTouch
+          -XX:G1NewSizePercent=30
+          -XX:G1MaxNewSizePercent=40
+          -XX:G1HeapRegionSize=8M
+          -XX:G1ReservePercent=20
+          -XX:G1HeapWastePercent=5
+          -XX:G1MixedGCCountTarget=4
+          -XX:InitiatingHeapOccupancyPercent=15
+          -XX:G1MixedGCLiveThresholdPercent=90
+          -XX:RSetUpdatingPauseTimePercent=5
+          -XX:SurvivorRatio=32
+          -XX:+PerfDisableSharedMem
+          -XX:MaxTenuringThreshold=1
+          EOF
 
-          echo "Запускаем SSH-туннель (localhost.run)..."
-          ssh -o StrictHostKeyChecking=no -R 80:localhost:25565 localhost.run > tunnel.log 2>&1 &
+          echo "Запускаем SSH-туннель (Serveo)..."
+          ssh -o StrictHostKeyChecking=no -R 25565:localhost:25565 serveo.net > tunnel.log 2>&1 &
 
-          # Ждем до 20 секунд, пока туннель реально получит адрес от localhost.run
-          echo "Ожидание выдачи IP от туннеля..."
+          echo "Ожидание выдачи IP от Serveo..."
           TUNNEL_URL=""
           for i in {1..20}; do
-            TUNNEL_URL=$(grep -oE "https://[a-zA-Z0-9.-]+\.lh\.run" tunnel.log || grep -oE "[a-zA-Z0-9.-]+\.lh\.run" tunnel.log || true)
+            TUNNEL_URL=$(grep -oE "([a-zA-Z0-9.-]+\.serveo\.net)" tunnel.log || true)
             if [ -n "$TUNNEL_URL" ]; then
               break
             fi
@@ -88,11 +95,34 @@ jobs:
           done
 
           echo "========================================"
-          echo "SERVER_IP: ${TUNNEL_URL:-Не удалось получить адрес}"
+          echo "SERVER_IP: ${TUNNEL_URL:-Не удалось получить адрес}:25565"
           echo "========================================"
 
-          echo "Запускаем сервер Minecraft..."
-          bash run.sh || true
+          echo "Запускаем сервер Minecraft в фоновом screen-сеансе..."
+          screen -S mc -d -m bash run.sh
+
+          # Фоновый процесс-мост для консоли: проверяет command.txt и шлет команды в сервер
+          cd ..
+          (
+            LAST_CMD=""
+            while true; do
+              sleep 3
+              git pull origin main --quiet || true
+              if [ -f "command.txt" ]; then
+                CMD=$(cat command.txt)
+                if [ -n "$CMD" ] && [ "$CMD" != "$LAST_CMD" ]; then
+                  echo "Отправка команды в сервер: $CMD"
+                  screen -S mc -p 0 -X stuff "$CMD\n"
+                  LAST_CMD="$CMD"
+                fi
+              fi
+            done
+          ) &
+
+          # Ждем завершения работы сервера (пока процесс screen живет)
+          while screen -list | grep -q "mc"; do
+            sleep 10
+          done
 
       - name: Save World & Commit to Git
         if: always()
@@ -104,5 +134,5 @@ jobs:
           [ -d "server/world" ] && cp -r server/world world_backup/
           
           git add world_backup/
-          git commit -m "Автосохранение мира Forge [skip ci]" || echo "Изменений в мире нет."
+          git commit -m "Автосохранение мира [skip ci]" || echo "Изменений в мире нет."
           git push
