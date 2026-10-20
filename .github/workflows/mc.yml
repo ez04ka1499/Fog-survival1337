@@ -4,249 +4,492 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: "start | stop"
-        required: true
-        default: "start"
+        description: "Для запуска выбери start. Остановка — командой STOP из панели."
+        type: choice
+        options:
+          - start
+        default: start
+
       memory:
-        description: "RAM, например 6G"
-        required: false
-        default: "6G"
+        description: "Максимальный объём памяти Java"
+        type: choice
+        options:
+          - 3G
+          - 4G
+          - 6G
+        default: 4G
+
       view_distance:
-        description: "View distance 4-12"
-        required: false
+        description: "Дальность прорисовки, 3–12"
         default: "6"
+
       simulation_distance:
-        description: "Simulation distance 4-10"
-        required: false
-        default: "5"
+        description: "Дальность симуляции, 3–10"
+        default: "4"
+
       online_mode:
-        description: "true = лицензии, false = пиратки"
-        required: false
-        default: "false"
+        description: "Проверка лицензионных аккаунтов"
+        type: choice
+        options:
+          - "true"
+          - "false"
+        default: "true"
+
       difficulty:
-        description: "peaceful | easy | normal | hard"
-        required: false
-        default: "normal"
+        description: "Сложность"
+        type: choice
+        options:
+          - peaceful
+          - easy
+          - normal
+          - hard
+        default: normal
+
       max_players:
-        description: "Максимум игроков"
-        required: false
-        default: "20"
+        description: "Количество игроков, 1–100"
+        default: "10"
+
       motd:
         description: "Описание сервера"
-        required: false
-        default: "Minecraft on GitHub Actions"
-      pinggy_token:
-        description: "Pinggy token для долгого туннеля"
-        required: false
+        default: "Fog Survival"
+
+      public_address:
+        description: "Публичный адрес из playit, включая порт, если он указан"
         default: ""
 
+      pinggy_token:
+        description: "Устаревшее поле совместимости с HTML. Оставь пустым."
+        default: ""
+
+permissions:
+  contents: write
+  actions: read
+
+# Не допускаем два сервера одновременно.
+concurrency:
+  group: minecraft-forge-server
+  cancel-in-progress: false
+
 jobs:
-  run-server:
+  server:
     runs-on: ubuntu-latest
     timeout-minutes: 355
-    permissions:
-      contents: write
+
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      BRANCH: ${{ github.ref_name }}
+
+      MC_MEMORY: ${{ inputs.memory }}
+      MC_VIEW: ${{ inputs.view_distance }}
+      MC_SIMULATION: ${{ inputs.simulation_distance }}
+      MC_ONLINE: ${{ inputs.online_mode }}
+      MC_DIFFICULTY: ${{ inputs.difficulty }}
+      MC_PLAYERS: ${{ inputs.max_players }}
+      MC_MOTD: ${{ inputs.motd }}
+      MC_ADDRESS: ${{ inputs.public_address }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Java 17
+      - name: Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
 
-      - name: Cache Forge server
+      - name: Проверка настроек
+        env:
+          PLAYIT_SECRET: ${{ secrets.PLAYIT_SECRET }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$PLAYIT_SECRET" ]; then
+            echo "::error::Добавь Secret PLAYIT_SECRET в настройках репозитория."
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import os
+
+          def number(key, minimum, maximum):
+              value = int(os.environ[key])
+              if not minimum <= value <= maximum:
+                  raise SystemExit(f"{key}: допустимо {minimum}–{maximum}")
+
+          number("MC_VIEW", 3, 12)
+          number("MC_SIMULATION", 3, 10)
+          number("MC_PLAYERS", 1, 100)
+
+          if os.environ["MC_MEMORY"] not in {"3G", "4G", "6G"}:
+              raise SystemExit("Недопустимый объём памяти")
+          if os.environ["MC_ONLINE"] not in {"true", "false"}:
+              raise SystemExit("Недопустимый online-mode")
+          if os.environ["MC_DIFFICULTY"] not in {
+              "peaceful", "easy", "normal", "hard"
+          }:
+              raise SystemExit("Недопустимая сложность")
+
+          for key in ("MC_MOTD", "MC_ADDRESS"):
+              if any(c in os.environ[key] for c in "\r\n"):
+                  raise SystemExit(f"{key}: переносы строк запрещены")
+          PY
+
+          free -h
+          java -version
+          mkdir -p server backups
+
+      # Кэшируем только установку, а не изменяемый мир.
+      - name: Кэш библиотек Forge
         uses: actions/cache@v4
         with:
-          path: server
-          key: forge-1.20.1-47.2.0-server-v1
+          path: |
+            server/libraries
+            server/run.sh
+          key: forge-install-1.20.1-47.2.0-v5
 
-      - name: Prepare Forge server
+      - name: Установка Forge
         run: |
-          mkdir -p server
+          set -euo pipefail
           cd server
 
-          if [ ! -f run.sh ]; then
-            echo "Первая установка Forge..."
-            curl -fL --retry 5 -o installer.jar \
+          ARGS="libraries/net/minecraftforge/forge/1.20.1-47.2.0/unix_args.txt"
+
+          if [ ! -f run.sh ] || [ ! -f "$ARGS" ]; then
+            curl -fL --retry 5 --retry-delay 3 \
+              -o installer.jar \
               https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
+
             java -jar installer.jar --installServer
             rm -f installer.jar
           fi
 
-          echo "eula=true" > eula.txt
+          test -f run.sh
+          test -f "$ARGS"
 
-          cat > user_jvm_args.txt <<EOF
-          -Xms${{ github.event.inputs.memory }}
-          -Xmx${{ github.event.inputs.memory }}
-          -XX:+UseG1GC
-          -XX:+ParallelRefProcEnabled
-          -XX:MaxGCPauseMillis=200
-          -XX:+UnlockExperimentalVMOptions
-          -XX:+DisableExplicitGC
-          -XX:+AlwaysPreTouch
-          -XX:G1NewSizePercent=30
-          -XX:G1MaxNewSizePercent=40
-          -XX:G1HeapRegionSize=8M
-          -XX:G1ReservePercent=20
-          -XX:G1MixedGCCountTarget=4
-          -XX:InitiatingHeapOccupancyPercent=15
-          -XX:G1MixedGCLiveThresholdPercent=90
-          -XX:G1RSetUpdatingPauseTimePercent=5
-          -XX:SurvivorRatio=32
-          -XX:+PerfDisableSharedMem
-          -XX:MaxTenuringThreshold=1
-          -Dusing.aikars.flags=https://mcflags.emc.gs
-          -Daikars.new.flags=true
-          EOF
+      - name: Восстановление последнего мира
+        run: |
+          set -euo pipefail
 
-          if [ ! -f server.properties ]; then
-            cat > server.properties <<EOF
-          server-port=25565
-          online-mode=${{ github.event.inputs.online_mode }}
-          difficulty=${{ github.event.inputs.difficulty }}
-          max-players=${{ github.event.inputs.max_players }}
-          motd=${{ github.event.inputs.motd }}
-          view-distance=${{ github.event.inputs.view_distance }}
-          simulation-distance=${{ github.event.inputs.simulation_distance }}
-          spawn-protection=0
-          allow-flight=true
-          enable-command-block=true
-          sync-chunk-writes=false
-          EOF
+          gh api --paginate \
+            "repos/$REPO/actions/artifacts?name=mc-world&per_page=100" \
+            > /tmp/mc-artifacts.json
+
+          ARTIFACT_ID=$(jq -s -r '
+            [.[].artifacts[]
+             | select(.expired == false)]
+            | sort_by(.created_at)
+            | last
+            | .id // empty
+          ' /tmp/mc-artifacts.json)
+
+          if [ -z "$ARTIFACT_ID" ]; then
+            echo "Предыдущей резервной копии нет."
+            echo "Будет использован мир из репозитория или создан новый."
           else
-            sed -i "s/^online-mode=.*/online-mode=${{ github.event.inputs.online_mode }}/" server.properties
-            sed -i "s/^difficulty=.*/difficulty=${{ github.event.inputs.difficulty }}/" server.properties
-            sed -i "s/^max-players=.*/max-players=${{ github.event.inputs.max_players }}/" server.properties
-            sed -i "s/^motd=.*/motd=${{ github.event.inputs.motd }}/" server.properties
-            sed -i "s/^view-distance=.*/view-distance=${{ github.event.inputs.view_distance }}/" server.properties
-            sed -i "s/^simulation-distance=.*/simulation-distance=${{ github.event.inputs.simulation_distance }}/" server.properties
-            sed -i "s/^sync-chunk-writes=.*/sync-chunk-writes=false/" server.properties
+            echo "Восстанавливаю artifact $ARTIFACT_ID"
+
+            gh api \
+              "repos/$REPO/actions/artifacts/$ARTIFACT_ID/zip" \
+              > /tmp/mc-world.zip
+
+            mkdir -p /tmp/mc-restore
+            unzip -q /tmp/mc-world.zip -d /tmp/mc-restore
+            test -s /tmp/mc-restore/world.tar.gz
+
+            tar -xzf /tmp/mc-restore/world.tar.gz -C server
           fi
 
-      - name: Configure Git
+      - name: Настройки Minecraft
         run: |
-          git config user.name "MC Bot"
-          git config user.email "bot@github.com"
+          set -euo pipefail
 
-      - name: Start server
-        if: github.event.inputs.action == 'start'
-        working-directory: server
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          root = Path("server")
+          path = root / "server.properties"
+
+          properties = {}
+          if path.exists():
+              for line in path.read_text(
+                  encoding="utf-8", errors="replace"
+              ).splitlines():
+                  if line and not line.startswith(("#", "!")) and "=" in line:
+                      key, value = line.split("=", 1)
+                      properties[key.strip()] = value
+
+          motd = os.environ["MC_MOTD"]
+          motd = motd.replace("\\", "\\\\")
+          motd = motd.encode("ascii", "backslashreplace").decode("ascii")
+
+          properties.update({
+              "server-ip": "",
+              "server-port": "25565",
+              "level-name": "world",
+              "online-mode": os.environ["MC_ONLINE"],
+              "difficulty": os.environ["MC_DIFFICULTY"],
+              "max-players": os.environ["MC_PLAYERS"],
+              "view-distance": os.environ["MC_VIEW"],
+              "simulation-distance": os.environ["MC_SIMULATION"],
+              "motd": motd,
+              "enable-rcon": "false",
+              "enable-query": "false",
+              "sync-chunk-writes": "true",
+              "white-list": "true",
+              "enforce-whitelist": "true",
+          })
+
+          path.write_text(
+              "".join(f"{k}={v}\n" for k, v in properties.items()),
+              encoding="ascii",
+              errors="backslashreplace",
+          )
+
+          (root / "eula.txt").write_text("eula=true\n")
+          (root / "user_jvm_args.txt").write_text(
+              "-Xms1G\n"
+              f"-Xmx{os.environ['MC_MEMORY']}\n"
+              "-XX:+UseG1GC\n"
+              "-XX:+ParallelRefProcEnabled\n"
+              "-XX:MaxGCPauseMillis=200\n"
+              "-XX:+DisableExplicitGC\n"
+          )
+          PY
+
+      - name: Запуск Minecraft и playit
+        env:
+          PLAYIT_SECRET: ${{ secrets.PLAYIT_SECRET }}
         run: |
-          set -u
+          set -euo pipefail
+
+          # Образ загружаем до старта сервера.
+          docker pull ghcr.io/playit-cloud/playit-agent:latest
+
+          cd server
+          rm -f mc_pipe
           mkfifo mc_pipe
 
-          sh run.sh nogui < mc_pipe > ../server.log 2>&1 &
+          # Ключевое исправление: открываем обе стороны FIFO.
+          exec 3<>mc_pipe
+
+          SERVER_PID=""
+
+          cleanup() {
+            trap - EXIT INT TERM
+            set +e
+
+            if [ -n "$SERVER_PID" ] && kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo "Останавливаю Minecraft с сохранением мира..."
+              printf 'stop\n' >&3
+
+              for i in $(seq 1 90); do
+                kill -0 "$SERVER_PID" 2>/dev/null || break
+                sleep 1
+              done
+
+              if kill -0 "$SERVER_PID" 2>/dev/null; then
+                echo "::warning::Minecraft не завершился за 90 секунд."
+                kill -TERM "$SERVER_PID"
+                sleep 5
+                kill -KILL "$SERVER_PID" 2>/dev/null
+              fi
+
+              wait "$SERVER_PID" 2>/dev/null
+            fi
+
+            docker logs mc-playit > ../playit.log 2>&1
+            docker rm -f mc-playit >/dev/null 2>&1
+
+            exec 3>&-
+            rm -f mc_pipe
+          }
+
+          trap cleanup EXIT
+          trap 'exit 130' INT
+          trap 'exit 143' TERM
+
+          bash run.sh nogui <&3 > ../server.log 2>&1 &
           SERVER_PID=$!
-          echo "$SERVER_PID" > ../server.pid
 
           echo "Ожидание запуска Minecraft..."
-          STARTED=false
-          for i in $(seq 1 100); do
-            if grep -q "Done (" ../server.log; then
-              echo "Сервер запущен."
-              STARTED=true
+          READY=false
+
+          for i in $(seq 1 120); do
+            if grep -q 'Done (' ../server.log; then
+              READY=true
               break
             fi
+
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo "::error::Minecraft завершился во время запуска."
+              tail -n 160 ../server.log
+              exit 1
+            fi
+
             sleep 3
           done
 
-          if [ "$STARTED" != "true" ]; then
-            echo "::error::Сервер не запустился за 5 минут"
-            tail -n 120 ../server.log
+          if [ "$READY" != true ]; then
+            echo "::error::Minecraft не запустился за 6 минут."
+            tail -n 160 ../server.log
             exit 1
           fi
 
-          start_tunnel() {
-            if [ -n "${{ github.event.inputs.pinggy_token }}" ]; then
-              ssh -o StrictHostKeyChecking=no -p 443 \
-                -R0:localhost:25565 \
-                "${{ github.event.inputs.pinggy_token }}@free.pinggy.io" \
-                > ../tunnel.log 2>&1 &
-            else
-              ssh -o StrictHostKeyChecking=no -p 443 \
-                -R0:localhost:25565 \
-                tcp@free.pinggy.io \
-                > ../tunnel.log 2>&1 &
-            fi
-            echo "$!" > ../tunnel.pid
-          }
+          echo "Minecraft запущен."
 
-          update_tunnel_url() {
-            sleep 8
-            URL=$(grep -oE 'tcp://[a-zA-Z0-9.-]+:[0-9]+' ../tunnel.log | head -n 1 || true)
-            if [ -n "$URL" ]; then
-              echo "$URL" > ../tunnel.txt
-              echo "Публичный адрес: $URL"
+          # Docker получает секрет из окружения, не из YAML.
+          export SECRET_KEY="$PLAYIT_SECRET"
 
-              git add ../tunnel.txt || true
-              git commit -m "Update tunnel [skip ci]" || true
-              git push || true
-            fi
-          }
+          docker run -d \
+            --name mc-playit \
+            --network host \
+            --restart on-failure:3 \
+            -e SECRET_KEY \
+            ghcr.io/playit-cloud/playit-agent:latest
 
-          start_tunnel
-          update_tunnel_url
+          unset SECRET_KEY
 
-          LAST_TUNNEL_CHECK=$(date +%s)
+          sleep 10
 
-          while true; do
-            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
-              echo "Minecraft остановился."
+          if [ "$(docker inspect -f '{{.State.Running}}' mc-playit)" != true ]; then
+            echo "::error::Агент playit остановился."
+            exit 1
+          fi
+
+          echo "Агент запущен. Проверь Connected в кабинете playit."
+
+          # Публикуем адрес для старой HTML-панели.
+          if [ -n "$MC_ADDRESS" ]; then
+            ENCODED=$(printf '%s\n' "$MC_ADDRESS" | base64 -w0)
+
+            SHA=$(gh api -X GET \
+              "repos/$REPO/contents/tunnel.txt" \
+              -f ref="$BRANCH" --jq .sha 2>/dev/null || true)
+
+            jq -n \
+              --arg message "Update Minecraft address [skip ci]" \
+              --arg content "$ENCODED" \
+              --arg branch "$BRANCH" \
+              --arg sha "$SHA" \
+              '{message: $message, content: $content, branch: $branch}
+               + (if $sha == "" then {} else {sha: $sha} end)' \
+              > /tmp/mc-address.json
+
+            gh api -X PUT \
+              "repos/$REPO/contents/tunnel.txt" \
+              --input /tmp/mc-address.json >/dev/null
+          fi
+
+          # Даём время на остановку, архив и загрузку бэкапа.
+          DEADLINE=$(( $(date +%s) + 19000 ))
+          LAST_SHA=""
+
+          while kill -0 "$SERVER_PID" 2>/dev/null; do
+            if [ "$(date +%s)" -ge "$DEADLINE" ]; then
+              echo "Плановая остановка перед лимитом job."
               break
             fi
 
-            if [ -f ../command.txt ]; then
-              CMD=$(tr -d '\r\n' < ../command.txt)
-              rm -f ../command.txt
+            if [ "$(docker inspect -f '{{.State.Running}}' mc-playit)" != true ]; then
+              echo "::error::Агент playit остановился."
+              exit 1
+            fi
 
-              if [ "$CMD" = "STOP" ]; then
-                echo "Получена команда STOP."
-                echo "stop" > mc_pipe
-                break
-              fi
+            # Получаем команды из GitHub, а не из локального checkout.
+            if gh api -X GET \
+              "repos/$REPO/contents/command.txt" \
+              -f ref="$BRANCH" \
+              > /tmp/mc-command.json 2>/dev/null; then
 
-              if [ -n "$CMD" ]; then
-                echo "Выполняю: $CMD"
-                echo "$CMD" > mc_pipe
+              SHA=$(jq -r '.sha' /tmp/mc-command.json)
+
+              if [ "$SHA" != "$LAST_SHA" ]; then
+                CMD=$(jq -r '.content' /tmp/mc-command.json \
+                  | base64 --decode | tr -d '\r\n')
+
+                LAST_SHA="$SHA"
+
+                if [ "$CMD" = "STOP" ] || [ "$CMD" = "stop" ]; then
+                  printf 'save-all\n' >&3
+                elif [ -n "$CMD" ]; then
+                  printf '%s\n' "$CMD" >&3
+                fi
+
+                jq -n \
+                  --arg message "Consume Minecraft command [skip ci]" \
+                  --arg branch "$BRANCH" \
+                  --arg sha "$SHA" \
+                  '{message: $message, branch: $branch, sha: $sha}' \
+                  > /tmp/mc-delete-command.json
+
+                gh api -X DELETE \
+                  "repos/$REPO/contents/command.txt" \
+                  --input /tmp/mc-delete-command.json \
+                  >/dev/null 2>&1 || true
+
+                if [ "$CMD" = "STOP" ] || [ "$CMD" = "stop" ]; then
+                  echo "Получена команда остановки."
+                  break
+                fi
               fi
             fi
 
-            NOW=$(date +%s)
-            if [ $((NOW - LAST_TUNNEL_CHECK)) -ge 300 ]; then
-              if ! kill -0 "$(cat ../tunnel.pid)" 2>/dev/null; then
-                echo "Туннель отключился, перезапускаю..."
-                start_tunnel
-                update_tunnel_url
-              fi
-              LAST_TUNNEL_CHECK=$NOW
-            fi
-
-            sleep 2
+            sleep 15
           done
 
-          echo "Сохраняю мир..."
-          echo "save-all" > mc_pipe 2>/dev/null || true
-          sleep 10
-          echo "stop" > mc_pipe 2>/dev/null || true
-          sleep 10
+          if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+            echo "::error::Minecraft неожиданно завершился."
+            tail -n 160 ../server.log
+            exit 1
+          fi
 
-      - name: Stop only
-        if: github.event.inputs.action == 'stop'
+      - name: Подготовка резервной копии
+        if: always()
         run: |
-          echo "Остановку выполняет активный workflow через command.txt = STOP."
-          echo "Если сервер не запущен, делать нечего."
+          set -euo pipefail
+          mkdir -p backups
 
-      - name: Upload logs
+          # Не создаём пустой бэкап поверх предыдущего.
+          if [ ! -f server/world/level.dat ]; then
+            echo "Мира пока нет — резервную копию не создаём."
+            exit 0
+          fi
+
+          cd server
+
+          ITEMS=(world)
+          for item in \
+            whitelist.json ops.json \
+            banned-players.json banned-ips.json \
+            config defaultconfigs; do
+            if [ -e "$item" ]; then
+              ITEMS+=("$item")
+            fi
+          done
+
+          tar -czf ../backups/world.tar.gz "${ITEMS[@]}"
+
+      - name: Сохранение мира
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: minecraft-logs-${{ github.run_id }}
+          name: mc-world
+          path: backups/world.tar.gz
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Сохранение логов
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mc-debug-${{ github.run_id }}
           path: |
             server.log
-            tunnel.log
+            playit.log
             server/logs/latest.log
+            server/crash-reports/
           if-no-files-found: ignore
-          retention-days: 3
+          retention-days: 7
