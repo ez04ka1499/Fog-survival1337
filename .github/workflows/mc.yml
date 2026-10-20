@@ -37,13 +37,12 @@ jobs:
           cd server
           echo "eula=true" > eula.txt
           
-          # Скачиваем официальный установщик Forge 1.20.1 (версия 47.2.0)
+          # Скачиваем установщик Forge 1.20.1 (версия 47.2.0)
           curl -o installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
           
-          # Запускаем установку сервера в беззвучном режиме
+          # Устанавливаем сервер
           java -jar installer.jar --installServer
           
-          # Удаляем установщик за ненадобностью
           rm installer.jar
 
       - name: Start Minecraft Server & Tunnel
@@ -53,8 +52,8 @@ jobs:
           # Создаем FIFO пайп для управления консолью
           mkfifo mc_pipe
           
-          # Запуск сервера Forge в фоне (использует нативные аргументы сборки)
-          java @user_jvm_args.txt @unix_args.txt nogui < mc_pipe &
+          # Надежный запуск Forge сервера через универсальный jar-файл библиотек
+          java -Xmx3G -Xms1G -jar libraries/net/minecraftforge/forge/1.20.1-47.2.0/win_server/forge-1.20.1-47.2.0-server.jar nogui < mc_pipe &
           
           echo "Сервер Forge запускается, ждем инициализацию мира..."
           sleep 50
