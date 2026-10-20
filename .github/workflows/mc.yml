@@ -1,4 +1,4 @@
-name: Forge 1.20.1 Minecraft Server
+name: Forge 1.20.1 Optimized Server
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       runtime_minutes:
         description: "Сколько минут держать сервер"
         required: true
-        default: "120"
+        default: "180"
         type: string
 
       max_players:
@@ -30,7 +30,7 @@ on:
       motd:
         description: "Сообщение в списке серверов"
         required: true
-        default: "GitHub Forge 1.20.1 Server"
+        default: "Optimized GitHub Forge 1.20.1"
         type: string
 
       admin_nickname:
@@ -64,8 +64,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create server directory
-        run: mkdir -p ${{ env.SERVER_DIR }}
+      - name: Create directories
+        run: mkdir -p ${{ env.SERVER_DIR }} my_mods
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -81,7 +81,7 @@ jobs:
             ${{ env.SERVER_DIR }}/libraries
             ${{ env.SERVER_DIR }}/minecraft_server-${{ env.MC_VERSION }}.jar
             ${{ env.SERVER_DIR }}/run.sh
-          key: forge-${{ env.MC_VERSION }}-${{ env.FORGE_VERSION }}-v2
+          key: forge-${{ env.MC_VERSION }}-${{ env.FORGE_VERSION }}-optimized-v1
 
       - name: Install Forge server
         if: steps.forge-cache.outputs.cache-hit != 'true'
@@ -100,38 +100,36 @@ jobs:
 
           echo "eula=true" > eula.txt
 
-      - name: Configure server
+      - name: Configure server & optimization
         working-directory: ${{ env.SERVER_DIR }}
         env:
           MAX_PLAYERS: ${{ github.event.inputs.max_players }}
           VIEW_DISTANCE: ${{ github.event.inputs.view_distance }}
           SIMULATION_DISTANCE: ${{ github.event.inputs.simulation_distance }}
           MOTD: ${{ github.event.inputs.motd }}
-          ADMIN: ${{ github.event.inputs.admin_nickname }}
           MEMORY_GB: ${{ github.event.inputs.memory_gb }}
         run: |
           set -euo pipefail
           mkdir -p mods config
 
-          # Aikar flags: уменьшают фризы, но НЕ пинг
+          # Ультра-оптимизированные JVM флаги (Aikar's flags + G1GC tuning)
           MEM="${MEMORY_GB}"
           cat > user_jvm_args.txt <<EOF
           -Xms${MEM}G
           -Xmx${MEM}G
           -XX:+UseG1GC
           -XX:+ParallelRefProcEnabled
-          -XX:MaxGCPauseMillis=200
+          -XX:MaxGCPauseMillis=100
           -XX:+UnlockExperimentalVMOptions
           -XX:+DisableExplicitGC
           -XX:+AlwaysPreTouch
           -XX:G1NewSizePercent=30
           -XX:G1MaxNewSizePercent=40
-          -XX:G1HeapRegionSize=8M
-          -XX:G1ReservePercent=20
+          -XX:G1HeapRegionSize=16M
+          -XX:G1ReservePercent=15
           -XX:G1HeapWastePercent=5
           -XX:G1MixedGCCountTarget=4
           -XX:InitiatingHeapOccupancyPercent=15
-          -XX:G1MixedGCLiveThresholdPercent=90
           -XX:G1RSetUpdatingPauseTimePercent=5
           -XX:SurvivorRatio=32
           -XX:+PerfDisableSharedMem
@@ -140,6 +138,7 @@ jobs:
           -Daikars.new.flags=true
           EOF
 
+          # Оптимизированный server.properties для низкого пинга и отклика
           cat > server.properties <<EOF
           online-mode=false
           max-players=${MAX_PLAYERS}
@@ -149,7 +148,7 @@ jobs:
           spawn-protection=0
           enable-command-block=true
           enable-status=true
-          network-compression-threshold=256
+          network-compression-threshold=128
           sync-chunk-writes=false
           max-tick-time=60000
           player-idle-timeout=0
@@ -158,78 +157,103 @@ jobs:
           op-permission-level=4
           EOF
 
-          # Offline-mode UUID для ника администратора
-          ADMIN_UUID=$(python3 - <<'PY'
-          import uuid
-          import hashlib
-
-          name = "${ADMIN}"
-          data = b"OfflinePlayer:" + name.encode("utf-8")
-          md5_hash = hashlib.md5(data).digest()
-          byte_array = bytearray(md5_hash)
-          byte_array[6] = (byte_array[6] & 0x0F) | 0x30
-          byte_array[8] = (byte_array[8] & 0x3F) | 0x80
-          print(str(uuid.UUID(bytes=bytes(byte_array))))
-          PY
-          )
-
-          cat > ops.json <<EOF
-          [
-            {
-              "uuid": "${ADMIN_UUID}",
-              "name": "${ADMIN}",
-              "level": 4,
-              "bypassesPlayerLimit": true
-            }
-          ]
-          EOF
-
-          echo "Admin: ${ADMIN}"
-          echo "Admin UUID: ${ADMIN_UUID}"
-
-      - name: Download e4mc mod
+      - name: Download essential optimization mods & e4mc
         working-directory: ${{ env.SERVER_DIR }}
         run: |
           set -euo pipefail
 
-          URL=$(curl -fsSL \
-            "https://api.modrinth.com/v2/project/e4mc/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" \
-            | jq -r '.[0].files[0].url')
+          echo "Скачивание e4mc..."
+          URL_E4MC=$(curl -fsSL "https://api.modrinth.com/v2/project/e4mc/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
+          curl -fL --retry 3 --retry-delay 2 -o mods/e4mc.jar "$URL_E4MC"
 
-          curl -fL --retry 3 --retry-delay 2 -o mods/e4mc.jar "$URL"
+          echo "Скачивание FerriteCore (Оптимизация RAM)..."
+          URL_FC=$(curl -fsSL "https://api.modrinth.com/v2/project/ferrite-core/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
+          curl -fL --retry 3 --retry-delay 2 -o mods/ferritecore.jar "$URL_FC"
 
-      - name: Copy custom mods
+          echo "Скачивание ModernFix (Ускорение запуска и потоков)..."
+          URL_MF=$(curl -fsSL "https://api.modrinth.com/v2/project/modernfix/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
+          curl -fL --retry 3 --retry-delay 2 -o mods/modernfix.jar "$URL_MF"
+
+          echo "Скачивание Embeddium (Оптимизация рендеринга)..."
+          URL_EM=$(curl -fsSL "https://api.modrinth.com/v2/project/embeddium/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
+          curl -fL --retry 3 --retry-delay 2 -o mods/embeddium.jar "$URL_EM"
+
+      - name: Copy custom mods from my_mods
         run: |
           set -euo pipefail
-
           if [ -d my_mods ]; then
-            find my_mods -type f -name "*.jar" \
-              -exec cp -v {} "${{ env.SERVER_DIR }}/mods/" \;
+            find my_mods -type f -name "*.jar" -exec cp -v {} "${{ env.SERVER_DIR }}/mods/" \;
           fi
 
       - name: Restore world backup
         run: |
           set -euo pipefail
-
           if [ -d "$WORLD_BACKUP_DIR" ]; then
             rm -rf "${{ env.SERVER_DIR }}/world"
             mkdir -p "${{ env.SERVER_DIR }}/world"
             cp -a "$WORLD_BACKUP_DIR/." "${{ env.SERVER_DIR }}/world/"
           fi
 
-      - name: Start Forge server
+      - name: Start Forge server with Auto-OP Wrapper
         working-directory: ${{ env.SERVER_DIR }}
         env:
           RUNTIME_MINUTES: ${{ github.event.inputs.runtime_minutes }}
+          ADMIN: ${{ github.event.inputs.admin_nickname }}
         run: |
-          set +e
           chmod +x run.sh
 
-          timeout "${RUNTIME_MINUTES}m" ./run.sh nogui
-          EXIT_CODE=$?
+          # Запускаем Python-скрипт управления сервером (автоматический OP и контроль таймера)
+          python3 - << 'PY'
+          import subprocess
+          import sys
+          import time
+          import os
 
-          echo "SERVER_EXIT_CODE=$EXIT_CODE" >> "$GITHUB_ENV"
-          exit 0
+          runtime_minutes = int(os.environ.get("RUNTIME_MINUTES", 120))
+          admin_name = os.environ.get("ADMIN", "TWIX_EXTRATOP")
+
+          print(f"[*] Запуск сервера Forge с лимитом {runtime_minutes} минут...")
+          process = subprocess.Popen(
+              ["./run.sh", "nogui"],
+              stdin=subprocess.PIPE,
+              stdout=subprocess.PIPE,
+              stderr=subprocess.STDOUT,
+              text=True,
+              bufsize=1
+          )
+
+          op_sent = False
+          start_time = time.time()
+          timeout_seconds = runtime_minutes * 60
+
+          try:
+              while True:
+                  if time.time() - start_time > timeout_seconds:
+                      print("\n[*] Время работы вышло. Отправляем команду остановки (stop)...")
+                      process.stdin.write("stop\n")
+                      process.stdin.flush()
+                      break
+
+                  line = process.stdout.readline()
+                  if not line and process.poll() is not None:
+                      break
+
+                  if line:
+                      print(line, end="")
+                      # Как только сервер полностью запущен — даем админку
+                      if "Done (" in line and not op_sent:
+                          print(f"\n[+] Сервер запущен! Выдаем права оператора игроку: {admin_name}\n")
+                          process.stdin.write(f"op {admin_name}\n")
+                          process.stdin.flush()
+                          op_sent = True
+
+          except KeyboardInterrupt:
+              process.stdin.write("stop\n")
+              process.stdin.flush()
+
+          process.wait()
+          print("[*] Сервер успешно остановлен.")
+          PY
 
       - name: Save world backup
         if: always()
