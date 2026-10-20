@@ -1,250 +1,100 @@
-name: Minecraft Forge Server
+name: Forge 1.20.1 Minecraft Server
 
 on:
-  workflow_dispatch:
-    inputs:
-      memory:
-        description: "Память Minecraft"
-        type: choice
-        options:
-          - 3G
-          - 4G
-          - 6G
-        default: 4G
-
-      view_distance:
-        description: "View distance"
-        default: "6"
-
-      simulation_distance:
-        description: "Simulation distance"
-        default: "4"
-
-      online_mode:
-        description: "Проверка лицензий"
-        type: choice
-        options:
-          - "true"
-          - "false"
-        default: "false"
-
-      difficulty:
-        description: "Сложность"
-        type: choice
-        options:
-          - peaceful
-          - easy
-          - normal
-          - hard
-        default: normal
-
-      max_players:
-        description: "Игроков"
-        default: "10"
-
-      motd:
-        description: "Описание сервера"
-        default: "Fog Survival"
-
-permissions:
-  contents: write
-
-concurrency:
-  group: minecraft-server
-  cancel-in-progress: false
+  workflow_dispatch: # Запуск вручную по кнопке
 
 jobs:
-  server:
+  run-server:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
-
-    env:
-      GH_TOKEN: ${{ github.token }}
-      REPO: ${{ github.repository }}
-      BRANCH: ${{ github.ref_name }}
-      MC_MEMORY: ${{ inputs.memory }}
-      MC_VIEW: ${{ inputs.view_distance }}
-      MC_SIM: ${{ inputs.simulation_distance }}
-      MC_ONLINE: ${{ inputs.online_mode }}
-      MC_DIFFICULTY: ${{ inputs.difficulty }}
-      MC_PLAYERS: ${{ inputs.max_players }}
-      MC_MOTD: ${{ inputs.motd }}
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Java 17
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: "17"
+          distribution: 'temurin'
+          java-version: '17' # Для Forge 1.20.1 нужна Java 17
 
-      - name: Кэш установки Forge
-        uses: actions/cache@v4
-        with:
-          path: |
-            server/libraries
-            server/run.sh
-          key: forge-1.20.1-47.2.0-v7
-
-      - name: Установка Forge
+      - name: Install Dependencies
         run: |
-          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y wget curl git
+
+      - name: Setup Forge 1.20.1 Server
+        run: |
           mkdir -p server
           cd server
 
-          ARGS="libraries/net/minecraftforge/forge/1.20.1-47.2.0/unix_args.txt"
+          # Скачивание и установка Forge 1.20.1 (версия 47.3.0)
+          FORGE_VERSION="1.20.1-47.3.0"
+          echo "Скачиваем Forge $FORGE_VERSION..."
+          wget -q -O forge-installer.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_VERSION}/forge-${FORGE_VERSION}-installer.jar"
+          
+          echo "Устанавливаем сервер Forge..."
+          java -jar forge-installer.jar --installServer > /dev/null
 
-          if [ ! -f run.sh ] || [ ! -f "$ARGS" ]; then
-            curl -fL --retry 5 -o installer.jar \
-              https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
-
-            java -jar installer.jar --installServer
-            rm -f installer.jar
-          fi
-
-          test -f run.sh
-          test -f "$ARGS"
-
-      - name: Настройки сервера
-        run: |
-          set -euo pipefail
-
-          cd server
+          # Авто-принятие EULA
           echo "eula=true" > eula.txt
 
-          cat > user_jvm_args.txt <<EOF
-          -Xms1G
-          -Xmx${MC_MEMORY}
-          -XX:+UseG1GC
-          -XX:MaxGCPauseMillis=200
-          -XX:+ParallelRefProcEnabled
-          -XX:+UnlockExperimentalVMOptions
-          -XX:G1NewSizePercent=30
-          -XX:G1MaxNewSizePercent=40
-          -XX:G1HeapRegionSize=8M
-          -XX:InitiatingHeapOccupancyPercent=15
-          EOF
+      - name: Download e4mc Mod & User Mods
+        run: |
+          cd server
+          mkdir -p mods
 
-          cat > server.properties <<EOF
-          server-port=25565
-          online-mode=${MC_ONLINE}
-          difficulty=${MC_DIFFICULTY}
-          max-players=${MC_PLAYERS}
-          view-distance=${MC_VIEW}
-          simulation-distance=${MC_SIM}
-          motd=${MC_MOTD}
-          sync-chunk-writes=false
+          # Скачивание мода e4mc для Forge 1.20.1
+          echo "Скачиваем мод e4mc..."
+          curl -s https://api.modrinth.com/v2/project/e4mc/version | jq -r '.[] | select(.game_versions[] | contains("1.20.1")) | select(.loaders[] | contains("forge")) | .files[0].url' | head -n 1 | xargs wget -O mods/e4mc.jar
+
+          # Восстанавливаем ваши моды из репозитория, если вы их туда добавите (папка my_mods)
+          if [ -d "../my_mods" ]; then
+            echo "Копируем пользовательские моды..."
+            cp -r ../my_mods/* mods/
+          fi
+
+      - name: Configure server.properties
+        run: |
+          cd server
+          cat <<EOF > server.properties
+          online-mode=false
+          view-distance=8
+          simulation-distance=6
+          max-players=5
           spawn-protection=0
           enable-command-block=true
+          motd=GitHub Forge 1.20.1 Server
           EOF
 
-      - name: Установка bore
+      - name: Restore World from Git
         run: |
-          set -euo pipefail
-          curl -fL --retry 5 \
-            -o /tmp/bore.tar.gz \
-            https://github.com/ekzhang/bore/releases/latest/download/bore-v0.5.0-x86_64-unknown-linux-musl.tar.gz
+          if [ -d "world_backup" ]; then
+            echo "Восстанавливаем сохраненный мир..."
+            cp -r world_backup/* server/
+          fi
 
-          mkdir -p /tmp/bore
-          tar -xzf /tmp/bore.tar.gz -C /tmp/bore
-          sudo install /tmp/bore/bore /usr/local/bin/bore
-          bore --version
-
-      - name: Запуск Minecraft и bore
+      - name: Run Forge Server
         run: |
-          set -euo pipefail
-
           cd server
 
-          rm -f mc_pipe
-          mkfifo mc_pipe
+          # Запуск сервера Forge через официальный user_args.txt / run.sh
+          # Настраиваем выделение памяти на 6GB
+          echo "-Xms4G" > user_args.txt
+          echo "-Xmx6G" >> user_args.txt
 
-          exec 3<>mc_pipe
+          echo "Запускаем сервер Minecraft..."
+          bash run.sh || true
 
-          bash run.sh nogui <&3 > ../server.log 2>&1 &
-          SERVER_PID=$!
-
-          echo "Ждём запуск Minecraft..."
-          READY=false
-
-          for i in $(seq 1 140); do
-            if grep -q "Done (" ../server.log; then
-              READY=true
-              break
-            fi
-
-            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
-              echo "::error::Minecraft упал при запуске"
-              tail -n 160 ../server.log
-              exit 1
-            fi
-
-            sleep 3
-          done
-
-          if [ "$READY" != true ]; then
-            echo "::error::Minecraft не запустился вовремя"
-            tail -n 160 ../server.log
-            exit 1
-          fi
-
-          echo "Minecraft запущен. Поднимаю bore.pub..."
-
-          bore local 25565 --to bore.pub > ../bore.log 2>&1 &
-          BORE_PID=$!
-
-          sleep 5
-
-          if ! kill -0 "$BORE_PID" 2>/dev/null; then
-            echo "::error::bore не запустился"
-            cat ../bore.log || true
-            exit 1
-          fi
-
-          ADDRESS=$(grep -oE 'bore\.pub:[0-9]+' ../bore.log | head -n 1 || true)
-
-          if [ -z "$ADDRESS" ]; then
-            echo "::error::Не удалось получить адрес bore.pub"
-            cat ../bore.log || true
-            exit 1
-          fi
-
-          echo "Адрес сервера: $ADDRESS"
-
-          CONTENT=$(printf '%s' "$ADDRESS" | base64 -w0)
-          SHA=$(gh api "repos/$REPO/contents/tunnel.txt?ref=$BRANCH" --jq .sha 2>/dev/null || true)
-
-          if [ -n "$SHA" ]; then
-            jq -n --arg c "$CONTENT" --arg s "$SHA" \
-              '{message:"Update MC address [skip ci]",content:$c,branch:env.BRANCH,sha:$s}' \
-              > /tmp/body.json
-          else
-            jq -n --arg c "$CONTENT" \
-              '{message:"Update MC address [skip ci]",content:$c,branch:env.BRANCH}' \
-              > /tmp/body.json
-          fi
-
-          gh api -X PUT "repos/$REPO/contents/tunnel.txt" \
-            --input /tmp/body.json >/dev/null
-
-          echo "$ADDRESS" > ../tunnel.txt
-
-          while kill -0 "$SERVER_PID" 2>/dev/null; do
-            sleep 5
-          done
-
-          echo "Minecraft остановлен."
-
-      - name: Логи
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: mc-logs-${{ github.run_id }}
-          path: |
-            server.log
-            bore.log
-            server/logs/latest.log
-          if-no-files-found: ignore
-          retention-days: 3
+      - name: Save World & Commit to Git
+        if: always() # Выполнять сохранение ВСЕГДА (даже при нажатии Cancel)
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "action@github.com"
+          
+          mkdir -p world_backup
+          # Копируем миры
+          [ -d "server/world" ] && cp -r server/world world_backup/
+          
+          git add world_backup/
+          git commit -m "Автосохранение мира Forge [skip ci]" || echo "Изменений в мире нет."
+          git push
