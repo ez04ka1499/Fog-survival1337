@@ -37,33 +37,34 @@ jobs:
           cd server
           echo "eula=true" > eula.txt
           
-          # Скачиваем установщик Forge 1.20.1 (версия 47.2.0)
+          # Скачиваем официальный установщик Forge 1.20.1 (версия 47.2.0)
           curl -o installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
           
-          # Устанавливаем сервер
+          # Устанавливаем сервер в тихом режиме
           java -jar installer.jar --installServer
           
+          # Удаляем инсталлятор, чтобы не занимал место
           rm installer.jar
 
       - name: Start Minecraft Server & Tunnel
         run: |
           cd server
           
-          # Создаем FIFO пайп для управления консолью
+          # Создаем FIFO пайп для управления консолью с сайта
           mkfifo mc_pipe
           
-          # Надежный запуск Forge сервера через универсальный jar-файл библиотек
-          java -Xmx3G -Xms1G -jar libraries/net/minecraftforge/forge/1.20.1-47.2.0/win_server/forge-1.20.1-47.2.0-server.jar nogui < mc_pipe &
+          # Запускаем сервер через официальный скрипт run.sh (он сам подставит все пути к библиотекам)
+          sh run.sh nogui < mc_pipe &
           
           echo "Сервер Forge запускается, ждем инициализацию мира..."
-          sleep 50
+          sleep 60
 
-          # Запуск SSH TCP-туннеля (Serveo)
+          # Запуск нативного SSH TCP-туннеля (Serveo) для порта 25565
           ssh -o StrictHostKeyChecking=no -R 25565:localhost:25565 serveo.net > ../tunnel.log 2>&1 &
           
           sleep 5
           
-          # Вытаскиваем адрес туннеля и сохраняем
+          # Вытаскиваем адрес туннеля и сохраняем в файл для сайта
           TUNNEL_URL=$(grep -o 'serveo.net:[0-9]*' ../tunnel.log | head -n 1 || echo "Ожидание туннеля...")
           echo "$TUNNEL_URL" > ../tunnel.txt
           
