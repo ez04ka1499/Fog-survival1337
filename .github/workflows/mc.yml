@@ -3,10 +3,6 @@ name: Minecraft Forge 1.20.1 Server
 on:
   workflow_dispatch:
 
-env:
-  FORGE_VERSION: "1.20.1-47.3.0"
-  JAVA_VERSION: "17"
-
 jobs:
   start-server:
     runs-on: ubuntu-latest
@@ -29,11 +25,11 @@ jobs:
           wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.0/forge-1.20.1-47.3.0-installer.jar"
           
       - name: 🔨 Установка Forge Server
-        run: java -jar forge-*-installer.jar --installServer --no-user-input
+        run: java -jar forge-1.20.1-47.3.0-installer.jar --installServer
         
       - name: 🌐 Установка e4mc
         run: |
-          E4MC_URL=$(curl -s https://api.modrinth.com/v2/project/e4mc/version?game_versions=["1.20.1"]&loaders=["forge"] | jq -r '.[0].files[0].url')
+          E4MC_URL=$(curl -s "https://api.modrinth.com/v2/project/e4mc/version?game_versions=[\"1.20.1\"]&loaders=[\"forge\"]" | jq -r '.[0].files[0].url')
           echo "Скачивание e4mc: $E4MC_URL"
           wget -q "$E4MC_URL" -O server/mods/e4mc.jar
           
@@ -60,31 +56,29 @@ jobs:
       - name: ⚙️ Создание server.properties
         run: |
           cat <<EOF > server/server.properties
-          server-port=25565
-          online-mode=false
-          enable-status=true
-          max-tick-time=-1
-          network-compression-threshold=256
-          simulation-distance=8
-          view-distance=10
-          sync-chunk-writes=false
-          use-native-transport=true
-          EOF
+server-port=25565
+online-mode=false
+enable-status=true
+max-tick-time=-1
+network-compression-threshold=256
+simulation-distance=8
+view-distance=10
+sync-chunk-writes=false
+use-native-transport=true
+EOF
           
       - name: 👑 Настройка операторов (TWIX_EXTRATOP)
         run: |
-          mkdir -p server/world
-          echo "TWIX_EXTRATOP" > server/ops.json
           cat <<EOF > server/ops.json
-          [
-            {
-              "uuid": "",
-              "name": "TWIX_EXTRATOP",
-              "level": 4,
-              "bypassesPlayerLimit": false
-            }
-          ]
-          EOF
+[
+  {
+    "uuid": "",
+    "name": "TWIX_EXTRATOP",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]
+EOF
           
       - name: 📜 Принятие EULA
         run: echo "eula=true" > server/eula.txt
@@ -98,12 +92,9 @@ jobs:
           
           java -Xms6G -Xmx6G \
             -XX:+UseZGC \
-            -XX:+ZGenerational \
             -XX:+AlwaysPreTouch \
             -XX:+DisableExplicitGC \
             -XX:+UnlockExperimentalVMOptions \
-            -XX:ZCollectionInterval=5 \
-            -XX:ZAllocationSpikeTolerance=5 \
             -Dfml.queryResult=confirm \
             -Dterminal.jline=false \
             -Dterminal.ansi=true \
