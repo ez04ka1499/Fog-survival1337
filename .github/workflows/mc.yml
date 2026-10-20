@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       runtime_minutes:
-        description: "Сколько минут держать сервер"
+        description: "Сколько минут держать сервер ПОСЛЕ запуска"
         required: true
-        default: "180"
+        default: "120"
         type: string
 
       max_players:
@@ -16,7 +16,7 @@ on:
         type: string
 
       view_distance:
-        description: "View distance (4-12; меньше = меньше нагрузки)"
+        description: "View distance (4-12)"
         required: true
         default: "6"
         type: string
@@ -30,7 +30,7 @@ on:
       motd:
         description: "Сообщение в списке серверов"
         required: true
-        default: "Optimized GitHub Forge 1.20.1"
+        default: "GitHub Forge 1.20.1 Server"
         type: string
 
       admin_nickname:
@@ -42,7 +42,7 @@ on:
       memory_gb:
         description: "ОЗУ для Minecraft, GB"
         required: true
-        default: "6"
+        default: "4"
         type: string
 
 concurrency:
@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create directories
-        run: mkdir -p ${{ env.SERVER_DIR }} my_mods
+        run: mkdir -p "${{ env.SERVER_DIR }}" my_mods
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -81,7 +81,8 @@ jobs:
             ${{ env.SERVER_DIR }}/libraries
             ${{ env.SERVER_DIR }}/minecraft_server-${{ env.MC_VERSION }}.jar
             ${{ env.SERVER_DIR }}/run.sh
-          key: forge-${{ env.MC_VERSION }}-${{ env.FORGE_VERSION }}-optimized-v1
+            ${{ env.SERVER_DIR }}/args.txt
+          key: forge-${{ env.MC_VERSION }}-${{ env.FORGE_VERSION }}-optimized-v3
 
       - name: Install Forge server
         if: steps.forge-cache.outputs.cache-hit != 'true'
@@ -98,9 +99,7 @@ jobs:
 
           java -jar "$INSTALLER" --installServer
 
-          echo "eula=true" > eula.txt
-
-      - name: Configure server & optimization
+      - name: Configure server, EULA and optimization
         working-directory: ${{ env.SERVER_DIR }}
         env:
           MAX_PLAYERS: ${{ github.event.inputs.max_players }}
@@ -112,8 +111,11 @@ jobs:
           set -euo pipefail
           mkdir -p mods config
 
-          # Ультра-оптимизированные JVM флаги (Aikar's flags + G1GC tuning)
+          # ВАЖНО: создаётся при каждом запуске, а не только при установке Forge
+          echo "eula=true" > eula.txt
+
           MEM="${MEMORY_GB}"
+
           cat > user_jvm_args.txt <<EOF
           -Xms${MEM}G
           -Xmx${MEM}G
@@ -138,7 +140,6 @@ jobs:
           -Daikars.new.flags=true
           EOF
 
-          # Оптимизированный server.properties для низкого пинга и отклика
           cat > server.properties <<EOF
           online-mode=false
           max-players=${MAX_PLAYERS}
@@ -157,33 +158,28 @@ jobs:
           op-permission-level=4
           EOF
 
-      - name: Download essential optimization mods & e4mc
+      - name: Download e4mc & FerriteCore
         working-directory: ${{ env.SERVER_DIR }}
         run: |
           set -euo pipefail
 
-          echo "Скачивание e4mc..."
           URL_E4MC=$(curl -fsSL "https://api.modrinth.com/v2/project/e4mc/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
           curl -fL --retry 3 --retry-delay 2 -o mods/e4mc.jar "$URL_E4MC"
 
-          echo "Скачивание FerriteCore (Оптимизация RAM)..."
           URL_FC=$(curl -fsSL "https://api.modrinth.com/v2/project/ferrite-core/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
           curl -fL --retry 3 --retry-delay 2 -o mods/ferritecore.jar "$URL_FC"
 
-          echo "Скачивание ModernFix (Ускорение запуска и потоков)..."
-          URL_MF=$(curl -fsSL "https://api.modrinth.com/v2/project/modernfix/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
-          curl -fL --retry 3 --retry-delay 2 -o mods/modernfix.jar "$URL_MF"
-
-          echo "Скачивание Embeddium (Оптимизация рендеринга)..."
-          URL_EM=$(curl -fsSL "https://api.modrinth.com/v2/project/embeddium/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
-          curl -fL --retry 3 --retry-delay 2 -o mods/embeddium.jar "$URL_EM"
-
-      - name: Copy custom mods from my_mods
+      - name: Copy and clean mods
         run: |
           set -euo pipefail
+          mkdir -p "${{ env.SERVER_DIR }}/mods"
+
           if [ -d my_mods ]; then
             find my_mods -type f -name "*.jar" -exec cp -v {} "${{ env.SERVER_DIR }}/mods/" \;
           fi
+
+          cd "${{ env.SERVER_DIR }}/mods"
+          rm -f *oculus* *zume* *embeddium* *rubidium* *iris* *entityculling* *immediatelyfast* || true
 
       - name: Restore world backup
         run: |
@@ -194,65 +190,81 @@ jobs:
             cp -a "$WORLD_BACKUP_DIR/." "${{ env.SERVER_DIR }}/world/"
           fi
 
-      - name: Start Forge server with Auto-OP Wrapper
+      - name: Start Forge server with runtime timer
         working-directory: ${{ env.SERVER_DIR }}
         env:
           RUNTIME_MINUTES: ${{ github.event.inputs.runtime_minutes }}
           ADMIN: ${{ github.event.inputs.admin_nickname }}
         run: |
+          set -euo pipefail
           chmod +x run.sh
 
-          # Запускаем Python-скрипт управления сервером (автоматический OP и контроль таймера)
           python3 - << 'PY'
-          import subprocess
-          import sys
-          import time
           import os
+          import subprocess
+          import time
 
-          runtime_minutes = int(os.environ.get("RUNTIME_MINUTES", 120))
+          runtime_minutes = int(os.environ.get("RUNTIME_MINUTES", "120"))
           admin_name = os.environ.get("ADMIN", "TWIX_EXTRATOP")
+          timeout_seconds = runtime_minutes * 60
 
-          print(f"[*] Запуск сервера Forge с лимитом {runtime_minutes} минут...")
+          print(f"[*] Запуск Forge {os.environ.get('MC_VERSION', '1.20.1')}...")
+
           process = subprocess.Popen(
-              ["./run.sh", "nogui"],
+              ["./run.sh"],
               stdin=subprocess.PIPE,
               stdout=subprocess.PIPE,
               stderr=subprocess.STDOUT,
               text=True,
-              bufsize=1
+              bufsize=1,
           )
 
           op_sent = False
-          start_time = time.time()
-          timeout_seconds = runtime_minutes * 60
+          ready_time = None
+
+          def send_command(command):
+              try:
+                  if process.stdin and not process.stdin.closed:
+                      process.stdin.write(command + "\n")
+                      process.stdin.flush()
+                      return True
+              except (BrokenPipeError, OSError):
+                  pass
+              return False
 
           try:
               while True:
-                  if time.time() - start_time > timeout_seconds:
-                      print("\n[*] Время работы вышло. Отправляем команду остановки (stop)...")
-                      process.stdin.write("stop\n")
-                      process.stdin.flush()
-                      break
-
                   line = process.stdout.readline()
+
                   if not line and process.poll() is not None:
+                      print("[!] Сервер завершился раньше времени. Проверь лог выше: обычно это несовместимый мод, нехватка ОЗУ или ошибка Forge.")
                       break
 
                   if line:
-                      print(line, end="")
-                      # Как только сервер полностью запущен — даем админку
+                      print(line, end="", flush=True)
+
                       if "Done (" in line and not op_sent:
-                          print(f"\n[+] Сервер запущен! Выдаем права оператора игроку: {admin_name}\n")
-                          process.stdin.write(f"op {admin_name}\n")
-                          process.stdin.flush()
+                          print(f"\n[+] Сервер запущен. Выдаём OP: {admin_name}")
+                          send_command(f"op {admin_name}")
                           op_sent = True
+                          ready_time = time.time()
 
-          except KeyboardInterrupt:
-              process.stdin.write("stop\n")
-              process.stdin.flush()
+                  if ready_time is not None and time.time() - ready_time >= timeout_seconds:
+                      print("\n[*] Время работы истекло. Останавливаем сервер...")
+                      send_command("stop")
+                      break
 
-          process.wait()
-          print("[*] Сервер успешно остановлен.")
+          finally:
+              if process.poll() is None:
+                  send_command("stop")
+
+              try:
+                  process.wait(timeout=120)
+              except subprocess.TimeoutExpired:
+                  process.kill()
+                  process.wait()
+
+              print("[*] Сессия сервера завершена.")
           PY
 
       - name: Save world backup
