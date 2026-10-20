@@ -80,19 +80,18 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Кэш установки Forge и модов
+      - name: Кэш установки Forge
         uses: actions/cache@v4
         with:
           path: |
             server/libraries
             server/run.sh
-            server/mods
-          key: forge-1.20.1-47.2.0-e4mc-v4
+          key: forge-1.20.1-47.2.0-v7
 
       - name: Установка Forge
         run: |
           set -euo pipefail
-          mkdir -p server/mods
+          mkdir -p server
           cd server
 
           ARGS="libraries/net/minecraftforge/forge/1.20.1-47.2.0/unix_args.txt"
@@ -107,23 +106,6 @@ jobs:
 
           test -f run.sh
           test -f "$ARGS"
-
-      - name: Установка мода e4mc для туннеля
-        run: |
-          set -euo pipefail
-          cd server/mods
-          rm -f e4mc*.jar e4all*.jar
-          
-          echo "Получаем актуальную ссылку на мод через Modrinth API..."
-          DOWNLOAD_URL=$(curl -s "https://api.modrinth.com/v2/project/fB1gJLGX/version?loaders=%5B%22forge%22%5D&game_versions=%5B%221.20.1%22%5D" | jq -r '.[0].files[0].url')
-          
-          if [ -z "$DOWNLOAD_URL" ] || [ "$DOWNLOAD_URL" = "null" ]; then
-            echo "::error::Не удалось найти версию мода для Forge 1.20.1"
-            exit 1
-          fi
-          
-          echo "Скачиваем: $DOWNLOAD_URL"
-          curl -fL --retry 5 -o e4mc.jar "$DOWNLOAD_URL"
 
       - name: Настройки сервера
         run: |
@@ -158,7 +140,19 @@ jobs:
           enable-command-block=true
           EOF
 
-      - name: Запуск Minecraft и e4mc туннеля
+      - name: Установка bore
+        run: |
+          set -euo pipefail
+          curl -fL --retry 5 \
+            -o /tmp/bore.tar.gz \
+            https://github.com/ekzhang/bore/releases/latest/download/bore-v0.5.0-x86_64-unknown-linux-musl.tar.gz
+
+          mkdir -p /tmp/bore
+          tar -xzf /tmp/bore.tar.gz -C /tmp/bore
+          sudo install /tmp/bore/bore /usr/local/bin/bore
+          bore --version
+
+      - name: Запуск Minecraft и bore
         run: |
           set -euo pipefail
 
@@ -167,26 +161,18 @@ jobs:
           rm -f mc_pipe
           mkfifo mc_pipe
 
-          # Открываем FIFO с обеих сторон, чтобы Java не зависла.
           exec 3<>mc_pipe
 
           bash run.sh nogui <&3 > ../server.log 2>&1 &
           SERVER_PID=$!
 
-          echo "Ждём запуск Minecraft и генерацию ссылки e4mc..."
+          echo "Ждём запуск Minecraft..."
           READY=false
-          ADDRESS=""
 
           for i in $(seq 1 140); do
             if grep -q "Done (" ../server.log; then
               READY=true
-            fi
-
-            if grep -qE '[a-zA-Z0-9-]+\.e4mc\.link' ../server.log; then
-              ADDRESS=$(grep -oE '[a-zA-Z0-9-]+\.e4mc\.link' ../server.log | tail -n 1)
-              if [ -n "$ADDRESS" ]; then
-                break
-              fi
+              break
             fi
 
             if ! kill -0 "$SERVER_PID" 2>/dev/null; then
@@ -198,9 +184,30 @@ jobs:
             sleep 3
           done
 
-          if [ -z "$ADDRESS" ]; then
-            echo "::error::Не удалось получить адрес e4mc. Проверьте логи."
+          if [ "$READY" != true ]; then
+            echo "::error::Minecraft не запустился вовремя"
             tail -n 160 ../server.log
+            exit 1
+          fi
+
+          echo "Minecraft запущен. Поднимаю bore.pub..."
+
+          bore local 25565 --to bore.pub > ../bore.log 2>&1 &
+          BORE_PID=$!
+
+          sleep 5
+
+          if ! kill -0 "$BORE_PID" 2>/dev/null; then
+            echo "::error::bore не запустился"
+            cat ../bore.log || true
+            exit 1
+          fi
+
+          ADDRESS=$(grep -oE 'bore\.pub:[0-9]+' ../bore.log | head -n 1 || true)
+
+          if [ -z "$ADDRESS" ]; then
+            echo "::error::Не удалось получить адрес bore.pub"
+            cat ../bore.log || true
             exit 1
           fi
 
@@ -237,6 +244,7 @@ jobs:
           name: mc-logs-${{ github.run_id }}
           path: |
             server.log
+            bore.log
             server/logs/latest.log
           if-no-files-found: ignore
           retention-days: 3
