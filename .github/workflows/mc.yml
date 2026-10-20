@@ -4,15 +4,46 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'Command or Action'
+        description: "start | stop"
         required: true
-        default: 'start'
+        default: "start"
+      memory:
+        description: "RAM, например 6G"
+        required: false
+        default: "6G"
+      view_distance:
+        description: "View distance 4-12"
+        required: false
+        default: "6"
+      simulation_distance:
+        description: "Simulation distance 4-10"
+        required: false
+        default: "5"
+      online_mode:
+        description: "true = лицензии, false = пиратки"
+        required: false
+        default: "false"
+      difficulty:
+        description: "peaceful | easy | normal | hard"
+        required: false
+        default: "normal"
+      max_players:
+        description: "Максимум игроков"
+        required: false
+        default: "20"
+      motd:
+        description: "Описание сервера"
+        required: false
+        default: "Minecraft on GitHub Actions"
+      pinggy_token:
+        description: "Pinggy token для долгого туннеля"
+        required: false
+        default: ""
 
 jobs:
   run-server:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
-    
+    timeout-minutes: 355
     permissions:
       contents: write
 
@@ -23,77 +54,199 @@ jobs:
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: temurin
+          java-version: "17"
 
-      - name: Setup Git Identity
-        run: |
-          git config --global user.name "MC Bot"
-          git config --global user.email "bot@github.com"
+      - name: Cache Forge server
+        uses: actions/cache@v4
+        with:
+          path: server
+          key: forge-1.20.1-47.2.0-server-v1
 
-      - name: Prepare Forge 1.20.1 Server Environment
+      - name: Prepare Forge server
         run: |
           mkdir -p server
           cd server
-          echo "eula=true" > eula.txt
-          
-          if [ ! -f "run.sh" ]; then
-            curl -o installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
+
+          if [ ! -f run.sh ]; then
+            echo "Первая установка Forge..."
+            curl -fL --retry 5 -o installer.jar \
+              https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
             java -jar installer.jar --installServer
-            rm installer.jar
+            rm -f installer.jar
           fi
 
-      - name: Start Minecraft Server & Tunnel
-        run: |
-          cd server
-          mkfifo mc_pipe
-          
-          # Автоматически отключаем лицензию (делаем сервер пиратским)
-          if [ -f "server.properties" ]; then
-            sed -i 's/online-mode=true/online-mode=false/g' server.properties
+          echo "eula=true" > eula.txt
+
+          cat > user_jvm_args.txt <<EOF
+          -Xms${{ github.event.inputs.memory }}
+          -Xmx${{ github.event.inputs.memory }}
+          -XX:+UseG1GC
+          -XX:+ParallelRefProcEnabled
+          -XX:MaxGCPauseMillis=200
+          -XX:+UnlockExperimentalVMOptions
+          -XX:+DisableExplicitGC
+          -XX:+AlwaysPreTouch
+          -XX:G1NewSizePercent=30
+          -XX:G1MaxNewSizePercent=40
+          -XX:G1HeapRegionSize=8M
+          -XX:G1ReservePercent=20
+          -XX:G1MixedGCCountTarget=4
+          -XX:InitiatingHeapOccupancyPercent=15
+          -XX:G1MixedGCLiveThresholdPercent=90
+          -XX:G1RSetUpdatingPauseTimePercent=5
+          -XX:SurvivorRatio=32
+          -XX:+PerfDisableSharedMem
+          -XX:MaxTenuringThreshold=1
+          -Dusing.aikars.flags=https://mcflags.emc.gs
+          -Daikars.new.flags=true
+          EOF
+
+          if [ ! -f server.properties ]; then
+            cat > server.properties <<EOF
+          server-port=25565
+          online-mode=${{ github.event.inputs.online_mode }}
+          difficulty=${{ github.event.inputs.difficulty }}
+          max-players=${{ github.event.inputs.max_players }}
+          motd=${{ github.event.inputs.motd }}
+          view-distance=${{ github.event.inputs.view_distance }}
+          simulation-distance=${{ github.event.inputs.simulation_distance }}
+          spawn-protection=0
+          allow-flight=true
+          enable-command-block=true
+          sync-chunk-writes=false
+          EOF
           else
-            echo "online-mode=false" > server.properties
+            sed -i "s/^online-mode=.*/online-mode=${{ github.event.inputs.online_mode }}/" server.properties
+            sed -i "s/^difficulty=.*/difficulty=${{ github.event.inputs.difficulty }}/" server.properties
+            sed -i "s/^max-players=.*/max-players=${{ github.event.inputs.max_players }}/" server.properties
+            sed -i "s/^motd=.*/motd=${{ github.event.inputs.motd }}/" server.properties
+            sed -i "s/^view-distance=.*/view-distance=${{ github.event.inputs.view_distance }}/" server.properties
+            sed -i "s/^simulation-distance=.*/simulation-distance=${{ github.event.inputs.simulation_distance }}/" server.properties
+            sed -i "s/^sync-chunk-writes=.*/sync-chunk-writes=false/" server.properties
           fi
-          
-          # Запуск сервера
+
+      - name: Configure Git
+        run: |
+          git config user.name "MC Bot"
+          git config user.email "bot@github.com"
+
+      - name: Start server
+        if: github.event.inputs.action == 'start'
+        working-directory: server
+        run: |
+          set -u
+          mkfifo mc_pipe
+
           sh run.sh nogui < mc_pipe > ../server.log 2>&1 &
-          
-          echo "Ожидание запуска сервера..."
-          
-          for i in {1..45}; do
+          SERVER_PID=$!
+          echo "$SERVER_PID" > ../server.pid
+
+          echo "Ожидание запуска Minecraft..."
+          STARTED=false
+          for i in $(seq 1 100); do
             if grep -q "Done (" ../server.log; then
-              echo "Сервер успешно запущен!"
+              echo "Сервер запущен."
+              STARTED=true
               break
             fi
             sleep 3
           done
 
-          echo "Поднимаем публичный TCP-туннель через Pinggy..."
-          ssh -o StrictHostKeyChecking=no -p 443 -R0:localhost:25565 tcp@free.pinggy.io > ../tunnel.log 2>&1 &
-          
-          sleep 8
-          
-          TUNNEL_URL=$(grep -o 'tcp://[a-zA-Z0-9.-]*:[0-9]*' ../tunnel.log | head -n 1 || echo "")
+          if [ "$STARTED" != "true" ]; then
+            echo "::error::Сервер не запустился за 5 минут"
+            tail -n 120 ../server.log
+            exit 1
+          fi
 
-          echo "$TUNNEL_URL" > ../tunnel.txt
-          echo "Полученный публичный адрес: $TUNNEL_URL"
+          start_tunnel() {
+            if [ -n "${{ github.event.inputs.pinggy_token }}" ]; then
+              ssh -o StrictHostKeyChecking=no -p 443 \
+                -R0:localhost:25565 \
+                "${{ github.event.inputs.pinggy_token }}@free.pinggy.io" \
+                > ../tunnel.log 2>&1 &
+            else
+              ssh -o StrictHostKeyChecking=no -p 443 \
+                -R0:localhost:25565 \
+                tcp@free.pinggy.io \
+                > ../tunnel.log 2>&1 &
+            fi
+            echo "$!" > ../tunnel.pid
+          }
 
-          git add ../tunnel.txt
-          git commit -m "Update server tunnel address [skip ci]" || true
-          git push || true
+          update_tunnel_url() {
+            sleep 8
+            URL=$(grep -oE 'tcp://[a-zA-Z0-9.-]+:[0-9]+' ../tunnel.log | head -n 1 || true)
+            if [ -n "$URL" ]; then
+              echo "$URL" > ../tunnel.txt
+              echo "Публичный адрес: $URL"
+
+              git add ../tunnel.txt || true
+              git commit -m "Update tunnel [skip ci]" || true
+              git push || true
+            fi
+          }
+
+          start_tunnel
+          update_tunnel_url
+
+          LAST_TUNNEL_CHECK=$(date +%s)
 
           while true; do
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo "Minecraft остановился."
+              break
+            fi
+
             if [ -f ../command.txt ]; then
-              CMD=$(cat ../command.txt)
-              rm ../command.txt
-              
-              if [ "$CMD" == "STOP" ]; then
+              CMD=$(tr -d '\r\n' < ../command.txt)
+              rm -f ../command.txt
+
+              if [ "$CMD" = "STOP" ]; then
+                echo "Получена команда STOP."
                 echo "stop" > mc_pipe
                 break
               fi
-              
-              echo "Выполняю команду: $CMD"
-              echo "$CMD" > mc_pipe
+
+              if [ -n "$CMD" ]; then
+                echo "Выполняю: $CMD"
+                echo "$CMD" > mc_pipe
+              fi
             fi
-            sleep 3
+
+            NOW=$(date +%s)
+            if [ $((NOW - LAST_TUNNEL_CHECK)) -ge 300 ]; then
+              if ! kill -0 "$(cat ../tunnel.pid)" 2>/dev/null; then
+                echo "Туннель отключился, перезапускаю..."
+                start_tunnel
+                update_tunnel_url
+              fi
+              LAST_TUNNEL_CHECK=$NOW
+            fi
+
+            sleep 2
           done
+
+          echo "Сохраняю мир..."
+          echo "save-all" > mc_pipe 2>/dev/null || true
+          sleep 10
+          echo "stop" > mc_pipe 2>/dev/null || true
+          sleep 10
+
+      - name: Stop only
+        if: github.event.inputs.action == 'stop'
+        run: |
+          echo "Остановку выполняет активный workflow через command.txt = STOP."
+          echo "Если сервер не запущен, делать нечего."
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: minecraft-logs-${{ github.run_id }}
+          path: |
+            server.log
+            tunnel.log
+            server/logs/latest.log
+          if-no-files-found: ignore
+          retention-days: 3
