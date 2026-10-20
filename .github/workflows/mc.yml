@@ -1,4 +1,4 @@
-name: Minecraft Server
+name: Minecraft Forge Server
 
 on:
   workflow_dispatch:
@@ -20,34 +20,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java 21
+      - name: Set up Java 17 (Required for Forge 1.20.1)
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '17'
 
       - name: Setup Git Identity
         run: |
           git config --global user.name "MC Bot"
           git config --global user.email "bot@github.com"
 
-      - name: Prepare Server Environment
+      - name: Prepare Forge 1.20.1 Server Environment
         run: |
           mkdir server
           cd server
           echo "eula=true" > eula.txt
           
-          # Надежное скачивание актуальной версии PaperMC через Python API запрос
-          python3 -c '
-          import urllib.request, json
-          url = "https://api.papermc.io/v2/projects/paper/versions/1.20.4"
-          data = json.loads(urllib.request.urlopen(url).read().decode())
-          latest_build = data["builds"][-1]
-          jar_name = f"paper-1.20.4-{latest_build}.jar"
-          jar_url = f"https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/{latest_build}/downloads/{jar_name}"
-          print("Скачиваем сервер по адресу:", jar_url)
-          urllib.request.urlretrieve(jar_url, "server.jar")
-          '
+          # Скачиваем официальный установщик Forge 1.20.1 (версия 47.2.0)
+          curl -o installer.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar
+          
+          # Запускаем установку сервера в беззвучном режиме
+          java -jar installer.jar --installServer
+          
+          # Удаляем установщик за ненадобностью
+          rm installer.jar
 
       - name: Start Minecraft Server & Tunnel
         run: |
@@ -56,11 +53,11 @@ jobs:
           # Создаем FIFO пайп для управления консолью
           mkfifo mc_pipe
           
-          # Запуск сервера в фоне
-          java -Xmx3G -Xms1G -jar server.jar nogui < mc_pipe &
+          # Запуск сервера Forge в фоне (использует нативные аргументы сборки)
+          java @user_jvm_args.txt @unix_args.txt nogui < mc_pipe &
           
-          echo "Сервер запущен, ждем инициализацию мира..."
-          sleep 35
+          echo "Сервер Forge запускается, ждем инициализацию мира..."
+          sleep 50
 
           # Запуск SSH TCP-туннеля (Serveo)
           ssh -o StrictHostKeyChecking=no -R 25565:localhost:25565 serveo.net > ../tunnel.log 2>&1 &
@@ -75,7 +72,7 @@ jobs:
           git commit -m "Update server tunnel address [skip ci]" || true
           git push || true
 
-          # Цикл обработки команд
+          # Цикл обработки команд из консоли сайта
           while true; do
             if [ -f ../command.txt ]; then
               CMD=$(cat ../command.txt)
