@@ -15,13 +15,15 @@ on:
 jobs:
   run-server:
     runs-on: ubuntu-latest
-    timeout-minutes: 360 # Максимальное время работы (6 часов)
+    timeout-minutes: 360 # Сервер будет работать до 6 часов
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_TOKEN }} # Важно для сохранения мира!
+          # ИСПРАВЛЕНИЕ ОШИБКИ: Используем встроенный токен GitHub
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -32,7 +34,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq wget curl git jq screen ssh
+          sudo apt-get install -y -qq wget curl git jq screen openssh-client
 
       - name: Setup Forge 1.20.1 Server
         run: |
@@ -40,73 +42,79 @@ jobs:
           cd server
           FORGE_VERSION="1.20.1-47.3.0"
           
-          if [ ! -f "forge-${FORGE_VERSION}-installer.jar" ]; then
-            echo "📥 Скачиваем Forge..."
+          echo "📥 Скачиваем Forge..."
+          if [ ! -f "forge-installer.jar" ]; then
             wget -q -O forge-installer.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_VERSION}/forge-${FORGE_VERSION}-installer.jar"
-            java -jar forge-installer.jar --installServer > /dev/null
           fi
+          
+          echo "⚙️ Устанавливаем сервер..."
+          java -jar forge-installer.jar --installServer > /dev/null
           
           echo "eula=true" > eula.txt
           
-          # Оптимизация server.properties под GitHub Actions
+          # Генерация server.properties с твоими настройками
           cat <<EOF > server.properties
-          server-port=25565
-          max-players=${{ github.event.inputs.max_players || '5' }}
-          view-distance=${{ github.event.inputs.view_distance || '8' }}
-          online-mode=false
-          motd=GitHub Actions Forge Server
-          EOF
+server-port=25565
+max-players=${{ github.event.inputs.max_players || '5' }}
+view-distance=${{ github.event.inputs.view_distance || '8' }}
+online-mode=false
+motd=GitHub Actions Forge Server
+level-type=default
+spawn-protection=0
+enable-command-block=true
+EOF
 
       - name: Load User Mods & Configs
         run: |
           mkdir -p server/mods my_mods
           if [ "$(ls -A my_mods 2>/dev/null)" ]; then
-            echo "📦 Копируем моды..."
+            echo "📦 Копируем моды из папки my_mods..."
             cp -r my_mods/* server/mods/
           fi
 
       - name: Restore World from Git
         run: |
           if [ -d "world_backup/world" ]; then
-            echo "🌍 Восстанавливаем мир..."
+            echo "🌍 Восстанавливаем мир из бэкапа..."
             mkdir -p server
             cp -r world_backup/world server/
           fi
 
       - name: Start Tunnel, Server & Console Bridge
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd server
           
-          # Безопасные Aikar's Flags для 7GB RAM машины
+          # Оптимизация памяти (Aikar's Flags) для Ubuntu Latest (7GB RAM)
+          # 6G было слишком много, система убивала процесс. Ставим 5G.
           cat <<EOF > user_jvm_args.txt
-          -Xms4G
-          -Xmx5G
-          -XX:+UseG1GC
-          -XX:+ParallelRefProcEnabled
-          -XX:MaxGCPauseMillis=200
-          -XX:+UnlockExperimentalVMOptions
-          -XX:+DisableExplicitGC
-          -XX:+AlwaysPreTouch
-          -XX:G1NewSizePercent=30
-          -XX:G1MaxNewSizePercent=40
-          -XX:G1HeapRegionSize=8M
-          -XX:G1ReservePercent=20
-          -XX:G1HeapWastePercent=5
-          -XX:G1MixedGCCountTarget=4
-          -XX:InitiatingHeapOccupancyPercent=15
-          -XX:G1MixedGCLiveThresholdPercent=90
-          -XX:RSetUpdatingPauseTimePercent=5
-          -XX:SurvivorRatio=32
-          -XX:+PerfDisableSharedMem
-          -XX:MaxTenuringThreshold=1
-          EOF
+-Xms4G
+-Xmx5G
+-XX:+UseG1GC
+-XX:+ParallelRefProcEnabled
+-XX:MaxGCPauseMillis=200
+-XX:+UnlockExperimentalVMOptions
+-XX:+DisableExplicitGC
+-XX:+AlwaysPreTouch
+-XX:G1NewSizePercent=30
+-XX:G1MaxNewSizePercent=40
+-XX:G1HeapRegionSize=8M
+-XX:G1ReservePercent=20
+-XX:G1HeapWastePercent=5
+-XX:G1MixedGCCountTarget=4
+-XX:InitiatingHeapOccupancyPercent=15
+-XX:G1MixedGCLiveThresholdPercent=90
+-XX:RSetUpdatingPauseTimePercent=5
+-XX:SurvivorRatio=32
+-XX:+PerfDisableSharedMem
+-XX:MaxTenuringThreshold=1
+EOF
 
           echo "🌐 Запускаем SSH-туннель (Serveo)..."
           ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 25565:localhost:25565 serveo.net > ../tunnel.log 2>&1 &
           
-          echo "⏳ Ожидание IP от Serveo..."
+          echo "⏳ Ожидание IP адреса..."
           TUNNEL_URL=""
           for i in {1..30}; do
             TUNNEL_URL=$(grep -oE "[a-zA-Z0-9.-]+\.serveo\.net" ../tunnel.log | head -1 || true)
@@ -117,52 +125,48 @@ jobs:
           done
 
           if [ -z "$TUNNEL_URL" ]; then
-            echo "❌ Не удалось получить адрес от Serveo!"
+            echo "❌ Ошибка: Не удалось получить адрес от Serveo!"
             cat ../tunnel.log
             exit 1
           fi
 
           echo "========================================"
-          echo "✅ SERVER_IP: ${TUNNEL_URL}:25565"
+          echo "✅ ТВОЙ IP АДРЕС: ${TUNNEL_URL}:25565"
           echo "========================================"
           
-          # Записываем IP в файл для dashboard
-          echo "${TUNNEL_URL}:25565" > ../server_ip.txt
+          # Сохраняем IP в файл, чтобы дашборд мог его найти (если настроен API)
+          echo "${TUNNEL_URL}:25565" > ../current_ip.txt
 
-          echo "🚀 Запускаем сервер Minecraft..."
+          echo "🚀 Запускаем Minecraft Server..."
           screen -S mc -d -m bash run.sh
           
-          # Умный мост консоли (без спама git pull)
+          # Умный мост консоли (без git pull каждые 3 секунды!)
           cd ..
           (
             LAST_CMD=""
             while true; do
               sleep 5
-              # Проверяем команду только если файл существует
               if [ -f "command.txt" ]; then
                 CMD=$(cat command.txt 2>/dev/null || true)
                 if [ -n "$CMD" ] && [ "$CMD" != "$LAST_CMD" ]; then
-                  echo "📨 Команда: $CMD"
+                  echo "📨 Команда получена: $CMD"
                   screen -S mc -p 0 -X stuff "$CMD\n"
-                  echo "" > command.txt  # Очищаем после отправки
+                  echo "" > command.txt # Очищаем после выполнения
                   LAST_CMD="$CMD"
                 fi
               fi
             done
           ) &
 
-          # Держим job живым пока работает сервер
+          # Держим задачу живой, пока работает сервер
           while screen -list | grep -q "mc"; do
             sleep 30
-            # Авто-сохранение каждые 30 минут
-            MINUTES_PASSED=$((SECONDS / 60))
-            if (( MINUTES_PASSED % 30 == 0 )) && (( MINUTES_PASSED > 0 )); then
-              screen -S mc -p 0 -X stuff "save-all\n"
-            fi
           done
 
       - name: Save World & Commit to Git
         if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "action@github.com"
@@ -173,7 +177,10 @@ jobs:
             rm -rf world_backup/world
             cp -r server/world world_backup/
             
-            git add world_backup/ server_ip.txt
-            git diff --staged --quiet || git commit -m "💾 Автосохранение мира $(date +%H:%M)"
-            git push https://${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠️ Не удалось запушить сохранение"
+            git add world_backup/ current_ip.txt
+            # Коммитим только если есть изменения
+            git diff --staged --quiet || git commit -m "💾 Автосохранение $(date +%H:%M) [skip ci]"
+            
+            # Пушим обратно используя токен
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠️ Не удалось сохранить прогресс (нужны права write:packages или repo)"
           fi
