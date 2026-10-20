@@ -2,14 +2,26 @@ name: Forge 1.20.1 Minecraft Server Pro
 
 on:
   workflow_dispatch:
+    inputs:
+      max_players:
+        description: 'Макс. игроков'
+        required: false
+        default: '5'
+      view_distance:
+        description: 'Дальность прорисовки'
+        required: false
+        default: '8'
 
 jobs:
   run-server:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 360 # Максимальное время работы (6 часов)
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }} # Важно для сохранения мира!
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -19,48 +31,58 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y wget curl git jq screen
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq wget curl git jq screen ssh
 
       - name: Setup Forge 1.20.1 Server
         run: |
           mkdir -p server
           cd server
-
           FORGE_VERSION="1.20.1-47.3.0"
-          echo "Скачиваем Forge $FORGE_VERSION..."
-          wget -q -O forge-installer.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_VERSION}/forge-${FORGE_VERSION}-installer.jar"
           
-          echo "Устанавливаем сервер Forge..."
-          java -jar forge-installer.jar --installServer > /dev/null
-
+          if [ ! -f "forge-${FORGE_VERSION}-installer.jar" ]; then
+            echo "📥 Скачиваем Forge..."
+            wget -q -O forge-installer.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_VERSION}/forge-${FORGE_VERSION}-installer.jar"
+            java -jar forge-installer.jar --installServer > /dev/null
+          fi
+          
           echo "eula=true" > eula.txt
+          
+          # Оптимизация server.properties под GitHub Actions
+          cat <<EOF > server.properties
+          server-port=25565
+          max-players=${{ github.event.inputs.max_players || '5' }}
+          view-distance=${{ github.event.inputs.view_distance || '8' }}
+          online-mode=false
+          motd=GitHub Actions Forge Server
+          EOF
 
       - name: Load User Mods & Configs
         run: |
-          cd server
-          mkdir -p mods
-
-          if [ -d "../my_mods" ]; then
-            echo "Копируем пользовательские моды..."
-            cp -r ../my_mods/* mods/
+          mkdir -p server/mods my_mods
+          if [ "$(ls -A my_mods 2>/dev/null)" ]; then
+            echo "📦 Копируем моды..."
+            cp -r my_mods/* server/mods/
           fi
 
       - name: Restore World from Git
         run: |
-          if [ -d "world_backup" ]; then
-            echo "Восстанавливаем сохраненный мир..."
-            cp -r world_backup/* server/
+          if [ -d "world_backup/world" ]; then
+            echo "🌍 Восстанавливаем мир..."
+            mkdir -p server
+            cp -r world_backup/world server/
           fi
 
       - name: Start Tunnel, Server & Console Bridge
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           cd server
-
-          # Aikar's Flags для идеальной производительности без лагов
-          cat <<EOF > user_args.txt
+          
+          # Безопасные Aikar's Flags для 7GB RAM машины
+          cat <<EOF > user_jvm_args.txt
           -Xms4G
-          -Xmx6G
+          -Xmx5G
           -XX:+UseG1GC
           -XX:+ParallelRefProcEnabled
           -XX:MaxGCPauseMillis=200
@@ -81,47 +103,62 @@ jobs:
           -XX:MaxTenuringThreshold=1
           EOF
 
-          echo "Запускаем SSH-туннель (Serveo)..."
-          ssh -o StrictHostKeyChecking=no -R 25565:localhost:25565 serveo.net > tunnel.log 2>&1 &
-
-          echo "Ожидание выдачи IP от Serveo..."
+          echo "🌐 Запускаем SSH-туннель (Serveo)..."
+          ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 25565:localhost:25565 serveo.net > ../tunnel.log 2>&1 &
+          
+          echo "⏳ Ожидание IP от Serveo..."
           TUNNEL_URL=""
-          for i in {1..20}; do
-            TUNNEL_URL=$(grep -oE "([a-zA-Z0-9.-]+\.serveo\.net)" tunnel.log || true)
+          for i in {1..30}; do
+            TUNNEL_URL=$(grep -oE "[a-zA-Z0-9.-]+\.serveo\.net" ../tunnel.log | head -1 || true)
             if [ -n "$TUNNEL_URL" ]; then
               break
             fi
-            sleep 1
+            sleep 2
           done
 
-          echo "========================================"
-          echo "SERVER_IP: ${TUNNEL_URL:-Не удалось получить адрес}:25565"
-          echo "========================================"
+          if [ -z "$TUNNEL_URL" ]; then
+            echo "❌ Не удалось получить адрес от Serveo!"
+            cat ../tunnel.log
+            exit 1
+          fi
 
-          echo "Запускаем сервер Minecraft в фоновом screen-сеансе..."
+          echo "========================================"
+          echo "✅ SERVER_IP: ${TUNNEL_URL}:25565"
+          echo "========================================"
+          
+          # Записываем IP в файл для dashboard
+          echo "${TUNNEL_URL}:25565" > ../server_ip.txt
+
+          echo "🚀 Запускаем сервер Minecraft..."
           screen -S mc -d -m bash run.sh
-
-          # Фоновый процесс-мост для консоли: проверяет command.txt и шлет команды в сервер
+          
+          # Умный мост консоли (без спама git pull)
           cd ..
           (
             LAST_CMD=""
             while true; do
-              sleep 3
-              git pull origin main --quiet || true
+              sleep 5
+              # Проверяем команду только если файл существует
               if [ -f "command.txt" ]; then
-                CMD=$(cat command.txt)
+                CMD=$(cat command.txt 2>/dev/null || true)
                 if [ -n "$CMD" ] && [ "$CMD" != "$LAST_CMD" ]; then
-                  echo "Отправка команды в сервер: $CMD"
+                  echo "📨 Команда: $CMD"
                   screen -S mc -p 0 -X stuff "$CMD\n"
+                  echo "" > command.txt  # Очищаем после отправки
                   LAST_CMD="$CMD"
                 fi
               fi
             done
           ) &
 
-          # Ждем завершения работы сервера (пока процесс screen живет)
+          # Держим job живым пока работает сервер
           while screen -list | grep -q "mc"; do
-            sleep 10
+            sleep 30
+            # Авто-сохранение каждые 30 минут
+            MINUTES_PASSED=$((SECONDS / 60))
+            if (( MINUTES_PASSED % 30 == 0 )) && (( MINUTES_PASSED > 0 )); then
+              screen -S mc -p 0 -X stuff "save-all\n"
+            fi
           done
 
       - name: Save World & Commit to Git
@@ -131,8 +168,12 @@ jobs:
           git config --global user.email "action@github.com"
           
           mkdir -p world_backup
-          [ -d "server/world" ] && cp -r server/world world_backup/
-          
-          git add world_backup/
-          git commit -m "Автосохранение мира [skip ci]" || echo "Изменений в мире нет."
-          git push
+          if [ -d "server/world" ]; then
+            echo "💾 Сохраняем мир..."
+            rm -rf world_backup/world
+            cp -r server/world world_backup/
+            
+            git add world_backup/ server_ip.txt
+            git diff --staged --quiet || git commit -m "💾 Автосохранение мира $(date +%H:%M)"
+            git push https://${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠️ Не удалось запушить сохранение"
+          fi
