@@ -1,0 +1,100 @@
+name: Forge 1.20.1 Minecraft Server
+
+on:
+  workflow_dispatch: # Запуск вручную по кнопке
+
+jobs:
+  run-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17' # Для Forge 1.20.1 нужна Java 17
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget curl git
+
+      - name: Setup Forge 1.20.1 Server
+        run: |
+          mkdir -p server
+          cd server
+
+          # Скачивание и установка Forge 1.20.1 (версия 47.3.0)
+          FORGE_VERSION="1.20.1-47.3.0"
+          echo "Скачиваем Forge $FORGE_VERSION..."
+          wget -q -O forge-installer.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_VERSION}/forge-${FORGE_VERSION}-installer.jar"
+          
+          echo "Устанавливаем сервер Forge..."
+          java -jar forge-installer.jar --installServer > /dev/null
+
+          # Авто-принятие EULA
+          echo "eula=true" > eula.txt
+
+      - name: Download e4mc Mod & User Mods
+        run: |
+          cd server
+          mkdir -p mods
+
+          # Скачивание мода e4mc для Forge 1.20.1
+          echo "Скачиваем мод e4mc..."
+          curl -s https://api.modrinth.com/v2/project/e4mc/version | jq -r '.[] | select(.game_versions[] | contains("1.20.1")) | select(.loaders[] | contains("forge")) | .files[0].url' | head -n 1 | xargs wget -O mods/e4mc.jar
+
+          # Восстанавливаем ваши моды из репозитория, если вы их туда добавите (папка my_mods)
+          if [ -d "../my_mods" ]; then
+            echo "Копируем пользовательские моды..."
+            cp -r ../my_mods/* mods/
+          fi
+
+      - name: Configure server.properties
+        run: |
+          cd server
+          cat <<EOF > server.properties
+          online-mode=false
+          view-distance=8
+          simulation-distance=6
+          max-players=5
+          spawn-protection=0
+          enable-command-block=true
+          motd=GitHub Forge 1.20.1 Server
+          EOF
+
+      - name: Restore World from Git
+        run: |
+          if [ -d "world_backup" ]; then
+            echo "Восстанавливаем сохраненный мир..."
+            cp -r world_backup/* server/
+          fi
+
+      - name: Run Forge Server
+        run: |
+          cd server
+
+          # Запуск сервера Forge через официальный user_args.txt / run.sh
+          # Настраиваем выделение памяти на 6GB
+          echo "-Xms4G" > user_args.txt
+          echo "-Xmx6G" >> user_args.txt
+
+          echo "Запускаем сервер Minecraft..."
+          bash run.sh || true
+
+      - name: Save World & Commit to Git
+        if: always() # Выполнять сохранение ВСЕГДА (даже при нажатии Cancel)
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "action@github.com"
+          
+          mkdir -p world_backup
+          # Копируем миры
+          [ -d "server/world" ] && cp -r server/world world_backup/
+          
+          git add world_backup/
+          git commit -m "Автосохранение мира Forge [skip ci]" || echo "Изменений в мире нет."
+          git push
