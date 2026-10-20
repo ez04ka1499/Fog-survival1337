@@ -135,18 +135,41 @@ jobs:
           enable-command-block=true
           EOF
 
-      - name: Установка bore
+           - name: Установка bore
         run: |
           set -euo pipefail
 
-          # bore публикует готовый Linux-бинарник в Releases.
-          curl -fL --retry 5 \
+          # Берём ссылку на актуальный Linux-бинарник из GitHub Releases.
+          BORE_URL=$(curl -fsSL \
+            https://api.github.com/repos/ekzhang/bore/releases/latest \
+            | jq -r '.assets[]
+                | select(.name | test("x86_64-unknown-linux-musl\\.tar\\.gz$"))
+                | .browser_download_url' \
+            | head -n 1)
+
+          if [ -z "$BORE_URL" ]; then
+            echo "::error::Не удалось найти bore для Linux x86_64"
+            exit 1
+          fi
+
+          echo "Скачиваю: $BORE_URL"
+
+          curl -fL --retry 5 --retry-delay 3 \
             -o /tmp/bore.tar.gz \
-            https://github.com/ekzhang/bore/releases/latest/download/bore-v0.5.0-x86_64-unknown-linux-musl.tar.gz
+            "$BORE_URL"
 
           mkdir -p /tmp/bore
           tar -xzf /tmp/bore.tar.gz -C /tmp/bore
-          sudo install /tmp/bore/bore /usr/local/bin/bore
+
+          BORE_BIN=$(find /tmp/bore -type f -name bore | head -n 1)
+
+          if [ -z "$BORE_BIN" ]; then
+            echo "::error::В архиве не найден файл bore"
+            find /tmp/bore -maxdepth 3 -type f
+            exit 1
+          fi
+
+          sudo install "$BORE_BIN" /usr/local/bin/bore
           bore --version
 
       - name: Запуск Minecraft и bore
