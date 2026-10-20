@@ -64,6 +64,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Create server directory
+        run: mkdir -p ${{ env.SERVER_DIR }}
+
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
@@ -158,13 +161,17 @@ jobs:
           # Offline-mode UUID для ника администратора
           ADMIN_UUID=$(python3 - <<'PY'
           import uuid
-          name = "__ADMIN__"
-          data = ("OfflinePlayer:" + name).encode("utf-8")
-          print(str(uuid.uuid3(uuid.NAMESPACE_DUMMY, data.decode())))
+          import hashlib
+
+          name = "${ADMIN}"
+          data = b"OfflinePlayer:" + name.encode("utf-8")
+          md5_hash = hashlib.md5(data).digest()
+          byte_array = bytearray(md5_hash)
+          byte_array[6] = (byte_array[6] & 0x0F) | 0x30
+          byte_array[8] = (byte_array[8] & 0x3F) | 0x80
+          print(str(uuid.UUID(bytes=bytes(byte_array))))
           PY
           )
-
-          ADMIN_UUID=${ADMIN_UUID/__ADMIN__/$ADMIN}
 
           cat > ops.json <<EOF
           [
