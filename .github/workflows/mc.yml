@@ -1,11 +1,64 @@
 name: Forge 1.20.1 Minecraft Server
 
 on:
-  workflow_dispatch: # Запуск вручную по кнопке
+  workflow_dispatch:
+    inputs:
+      runtime_minutes:
+        description: "Сколько минут держать сервер"
+        required: true
+        default: "120"
+        type: string
+
+      max_players:
+        description: "Максимум игроков"
+        required: true
+        default: "5"
+        type: string
+
+      view_distance:
+        description: "View distance (4-12; меньше = меньше нагрузки)"
+        required: true
+        default: "6"
+        type: string
+
+      simulation_distance:
+        description: "Simulation distance (4-10)"
+        required: true
+        default: "5"
+        type: string
+
+      motd:
+        description: "Сообщение в списке серверов"
+        required: true
+        default: "GitHub Forge 1.20.1 Server"
+        type: string
+
+      admin_nickname:
+        description: "Ник администратора"
+        required: true
+        default: "TWIX_EXTRATOP"
+        type: string
+
+      memory_gb:
+        description: "ОЗУ для Minecraft, GB"
+        required: true
+        default: "6"
+        type: string
+
+concurrency:
+  group: minecraft-server
+  cancel-in-progress: true
+
+env:
+  MC_VERSION: "1.20.1"
+  FORGE_VERSION: "47.3.0"
+  SERVER_DIR: server
+  WORLD_BACKUP_DIR: world_backup
 
 jobs:
   run-server:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
 
     steps:
       - name: Checkout repository
@@ -14,87 +67,185 @@ jobs:
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17' # Для Forge 1.20.1 нужна Java 17
+          distribution: temurin
+          java-version: "17"
 
-      - name: Install Dependencies
+      - name: Cache Forge server
+        id: forge-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.SERVER_DIR }}/libraries
+            ${{ env.SERVER_DIR }}/minecraft_server-${{ env.MC_VERSION }}.jar
+            ${{ env.SERVER_DIR }}/run.sh
+          key: forge-${{ env.MC_VERSION }}-${{ env.FORGE_VERSION }}-v2
+
+      - name: Install Forge server
+        if: steps.forge-cache.outputs.cache-hit != 'true'
+        working-directory: ${{ env.SERVER_DIR }}
         run: |
-          sudo apt-get update
-          sudo apt-get install -y wget curl git
+          set -euo pipefail
 
-      - name: Setup Forge 1.20.1 Server
-        run: |
-          mkdir -p server
-          cd server
+          FORGE_FULL="${MC_VERSION}-${FORGE_VERSION}"
+          INSTALLER="forge-${FORGE_FULL}-installer.jar"
 
-          # Скачивание и установка Forge 1.20.1 (версия 47.3.0)
-          FORGE_VERSION="1.20.1-47.3.0"
-          echo "Скачиваем Forge $FORGE_VERSION..."
-          wget -q -O forge-installer.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_VERSION}/forge-${FORGE_VERSION}-installer.jar"
-          
-          echo "Устанавливаем сервер Forge..."
-          java -jar forge-installer.jar --installServer > /dev/null
+          curl -fL --retry 3 --retry-delay 2 \
+            -o "$INSTALLER" \
+            "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_FULL}/${INSTALLER}"
 
-          # Авто-принятие EULA
+          java -jar "$INSTALLER" --installServer
+
           echo "eula=true" > eula.txt
 
-      - name: Download e4mc Mod & User Mods
+      - name: Configure server
+        working-directory: ${{ env.SERVER_DIR }}
+        env:
+          MAX_PLAYERS: ${{ github.event.inputs.max_players }}
+          VIEW_DISTANCE: ${{ github.event.inputs.view_distance }}
+          SIMULATION_DISTANCE: ${{ github.event.inputs.simulation_distance }}
+          MOTD: ${{ github.event.inputs.motd }}
+          ADMIN: ${{ github.event.inputs.admin_nickname }}
+          MEMORY_GB: ${{ github.event.inputs.memory_gb }}
         run: |
-          cd server
-          mkdir -p mods
+          set -euo pipefail
+          mkdir -p mods config
 
-          # Скачивание мода e4mc для Forge 1.20.1
-          echo "Скачиваем мод e4mc..."
-          curl -s https://api.modrinth.com/v2/project/e4mc/version | jq -r '.[] | select(.game_versions[] | contains("1.20.1")) | select(.loaders[] | contains("forge")) | .files[0].url' | head -n 1 | xargs wget -O mods/e4mc.jar
-
-          # Восстанавливаем ваши моды из репозитория, если вы их туда добавите (папка my_mods)
-          if [ -d "../my_mods" ]; then
-            echo "Копируем пользовательские моды..."
-            cp -r ../my_mods/* mods/
-          fi
-
-      - name: Configure server.properties
-        run: |
-          cd server
-          cat <<EOF > server.properties
-          online-mode=false
-          view-distance=8
-          simulation-distance=6
-          max-players=5
-          spawn-protection=0
-          enable-command-block=true
-          motd=GitHub Forge 1.20.1 Server
+          # Aikar flags: уменьшают фризы, но НЕ пинг
+          MEM="${MEMORY_GB}"
+          cat > user_jvm_args.txt <<EOF
+          -Xms${MEM}G
+          -Xmx${MEM}G
+          -XX:+UseG1GC
+          -XX:+ParallelRefProcEnabled
+          -XX:MaxGCPauseMillis=200
+          -XX:+UnlockExperimentalVMOptions
+          -XX:+DisableExplicitGC
+          -XX:+AlwaysPreTouch
+          -XX:G1NewSizePercent=30
+          -XX:G1MaxNewSizePercent=40
+          -XX:G1HeapRegionSize=8M
+          -XX:G1ReservePercent=20
+          -XX:G1HeapWastePercent=5
+          -XX:G1MixedGCCountTarget=4
+          -XX:InitiatingHeapOccupancyPercent=15
+          -XX:G1MixedGCLiveThresholdPercent=90
+          -XX:G1RSetUpdatingPauseTimePercent=5
+          -XX:SurvivorRatio=32
+          -XX:+PerfDisableSharedMem
+          -XX:MaxTenuringThreshold=1
+          -Dusing.aikars.flags=https://mcflags.emc.gs
+          -Daikars.new.flags=true
           EOF
 
-      - name: Restore World from Git
+          cat > server.properties <<EOF
+          online-mode=false
+          max-players=${MAX_PLAYERS}
+          view-distance=${VIEW_DISTANCE}
+          simulation-distance=${SIMULATION_DISTANCE}
+          motd=${MOTD}
+          spawn-protection=0
+          enable-command-block=true
+          enable-status=true
+          network-compression-threshold=256
+          sync-chunk-writes=false
+          max-tick-time=60000
+          player-idle-timeout=0
+          prevent-proxy-connections=false
+          enforce-secure-profile=false
+          op-permission-level=4
+          EOF
+
+          # Offline-mode UUID для ника администратора
+          ADMIN_UUID=$(python3 - <<'PY'
+          import uuid
+          name = "__ADMIN__"
+          data = ("OfflinePlayer:" + name).encode("utf-8")
+          print(str(uuid.uuid3(uuid.NAMESPACE_DUMMY, data.decode())))
+          PY
+          )
+
+          ADMIN_UUID=${ADMIN_UUID/__ADMIN__/$ADMIN}
+
+          cat > ops.json <<EOF
+          [
+            {
+              "uuid": "${ADMIN_UUID}",
+              "name": "${ADMIN}",
+              "level": 4,
+              "bypassesPlayerLimit": true
+            }
+          ]
+          EOF
+
+          echo "Admin: ${ADMIN}"
+          echo "Admin UUID: ${ADMIN_UUID}"
+
+      - name: Download e4mc mod
+        working-directory: ${{ env.SERVER_DIR }}
         run: |
-          if [ -d "world_backup" ]; then
-            echo "Восстанавливаем сохраненный мир..."
-            cp -r world_backup/* server/
+          set -euo pipefail
+
+          URL=$(curl -fsSL \
+            "https://api.modrinth.com/v2/project/e4mc/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" \
+            | jq -r '.[0].files[0].url')
+
+          curl -fL --retry 3 --retry-delay 2 -o mods/e4mc.jar "$URL"
+
+      - name: Copy custom mods
+        run: |
+          set -euo pipefail
+
+          if [ -d my_mods ]; then
+            find my_mods -type f -name "*.jar" \
+              -exec cp -v {} "${{ env.SERVER_DIR }}/mods/" \;
           fi
 
-      - name: Run Forge Server
+      - name: Restore world backup
         run: |
-          cd server
+          set -euo pipefail
 
-          # Запуск сервера Forge через официальный user_args.txt / run.sh
-          # Настраиваем выделение памяти на 6GB
-          echo "-Xms4G" > user_args.txt
-          echo "-Xmx6G" >> user_args.txt
+          if [ -d "$WORLD_BACKUP_DIR" ]; then
+            rm -rf "${{ env.SERVER_DIR }}/world"
+            mkdir -p "${{ env.SERVER_DIR }}/world"
+            cp -a "$WORLD_BACKUP_DIR/." "${{ env.SERVER_DIR }}/world/"
+          fi
 
-          echo "Запускаем сервер Minecraft..."
-          bash run.sh || true
-
-      - name: Save World & Commit to Git
-        if: always() # Выполнять сохранение ВСЕГДА (даже при нажатии Cancel)
+      - name: Start Forge server
+        working-directory: ${{ env.SERVER_DIR }}
+        env:
+          RUNTIME_MINUTES: ${{ github.event.inputs.runtime_minutes }}
         run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "action@github.com"
-          
-          mkdir -p world_backup
-          # Копируем миры
-          [ -d "server/world" ] && cp -r server/world world_backup/
-          
-          git add world_backup/
-          git commit -m "Автосохранение мира Forge [skip ci]" || echo "Изменений в мире нет."
+          set +e
+          chmod +x run.sh
+
+          timeout "${RUNTIME_MINUTES}m" ./run.sh nogui
+          EXIT_CODE=$?
+
+          echo "SERVER_EXIT_CODE=$EXIT_CODE" >> "$GITHUB_ENV"
+          exit 0
+
+      - name: Save world backup
+        if: always()
+        run: |
+          set -euo pipefail
+
+          if [ ! -d "${{ env.SERVER_DIR }}/world" ]; then
+            echo "No world directory."
+            exit 0
+          fi
+
+          rm -rf "$WORLD_BACKUP_DIR"
+          mkdir -p "$WORLD_BACKUP_DIR"
+          cp -a "${{ env.SERVER_DIR }}/world/." "$WORLD_BACKUP_DIR/"
+
+          if [ -z "$(git status --porcelain -- "$WORLD_BACKUP_DIR")" ]; then
+            echo "No world changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "$WORLD_BACKUP_DIR"
+          git commit -m "chore: backup Minecraft world [skip ci]"
           git push
