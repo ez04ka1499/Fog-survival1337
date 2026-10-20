@@ -87,7 +87,7 @@ jobs:
             server/libraries
             server/run.sh
             server/mods
-          key: forge-1.20.1-47.2.0-e4all-v1
+          key: forge-1.20.1-47.2.0-e4mc-v4
 
       - name: Установка Forge
         run: |
@@ -108,19 +108,22 @@ jobs:
           test -f run.sh
           test -f "$ARGS"
 
-      - name: Установка мода e4all для туннеля
+      - name: Установка мода e4mc для туннеля
         run: |
           set -euo pipefail
           cd server/mods
-          # Скачиваем последнюю версию e4all для Forge 1.20.1 с Modrinth (если файл еще не кэширован)
-          if [ ! -f e4all*.jar ]; then
-            # Удаляем старые версии если были
-            rm -f e4all*.jar
-            curl -fL --retry 5 -o e4all.jar \
-              https://cdn.modrinth.com/data/X57z0X0g/versions/latest/e4all-forge-1.20.1.jar || \
-            curl -fL --retry 5 -o e4all.jar \
-              https://github.com/Synquox/e4all/releases/latest/download/e4all-forge-1.20.1.jar
+          rm -f e4mc*.jar e4all*.jar
+          
+          echo "Получаем актуальную ссылку на мод через Modrinth API..."
+          DOWNLOAD_URL=$(curl -s "https://api.modrinth.com/v2/project/fB1gJLGX/version?loaders=%5B%22forge%22%5D&game_versions=%5B%221.20.1%22%5D" | jq -r '.[0].files[0].url')
+          
+          if [ -z "$DOWNLOAD_URL" ] || [ "$DOWNLOAD_URL" = "null" ]; then
+            echo "::error::Не удалось найти версию мода для Forge 1.20.1"
+            exit 1
           fi
+          
+          echo "Скачиваем: $DOWNLOAD_URL"
+          curl -fL --retry 5 -o e4mc.jar "$DOWNLOAD_URL"
 
       - name: Настройки сервера
         run: |
@@ -155,7 +158,7 @@ jobs:
           enable-command-block=true
           EOF
 
-      - name: Запуск Minecraft и e4all туннеля
+      - name: Запуск Minecraft и e4mc туннеля
         run: |
           set -euo pipefail
 
@@ -170,17 +173,15 @@ jobs:
           bash run.sh nogui <&3 > ../server.log 2>&1 &
           SERVER_PID=$!
 
-          echo "Ждём запуск Minecraft и генерацию ссылки e4all..."
+          echo "Ждём запуск Minecraft и генерацию ссылки e4mc..."
           READY=false
           ADDRESS=""
 
           for i in $(seq 1 140); do
-            # Проверяем, запустился ли сервер
             if grep -q "Done (" ../server.log; then
               READY=true
             fi
 
-            # Ищем адрес e4all в логах (обычно выглядит как abcde.e4mc.link)
             if grep -qE '[a-zA-Z0-9-]+\.e4mc\.link' ../server.log; then
               ADDRESS=$(grep -oE '[a-zA-Z0-9-]+\.e4mc\.link' ../server.log | tail -n 1)
               if [ -n "$ADDRESS" ]; then
@@ -198,14 +199,13 @@ jobs:
           done
 
           if [ -z "$ADDRESS" ]; then
-            echo "::error::Не удалось получить адрес e4all. Проверьте логи."
+            echo "::error::Не удалось получить адрес e4mc. Проверьте логи."
             tail -n 160 ../server.log
             exit 1
           fi
 
           echo "Адрес сервера: $ADDRESS"
 
-          # Пишем адрес для файла / репозитория
           CONTENT=$(printf '%s' "$ADDRESS" | base64 -w0)
           SHA=$(gh api "repos/$REPO/contents/tunnel.txt?ref=$BRANCH" --jq .sha 2>/dev/null || true)
 
@@ -224,7 +224,6 @@ jobs:
 
           echo "$ADDRESS" > ../tunnel.txt
 
-          # Ждём остановки сервера.
           while kill -0 "$SERVER_PID" 2>/dev/null; do
             sleep 5
           done
