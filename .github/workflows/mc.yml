@@ -1,294 +1,111 @@
-name: Forge 1.20.1 Optimized Server
+name: Minecraft Forge 1.20.1 Optimized Server
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Ручной запуск через вкладку Actions
     inputs:
-      runtime_minutes:
-        description: "Сколько минут держать сервер ПОСЛЕ запуска"
-        required: true
-        default: "120"
-        type: string
-
-      max_players:
-        description: "Максимум игроков"
-        required: true
-        default: "5"
-        type: string
-
-      view_distance:
-        description: "View distance (4-12)"
-        required: true
-        default: "6"
-        type: string
-
-      simulation_distance:
-        description: "Simulation distance (4-10)"
-        required: true
-        default: "5"
-        type: string
-
-      motd:
-        description: "Сообщение в списке серверов"
-        required: true
-        default: "GitHub Forge 1.20.1 Server"
-        type: string
-
-      admin_nickname:
-        description: "Ник администратора"
-        required: true
-        default: "TWIX_EXTRATOP"
-        type: string
-
-      memory_gb:
-        description: "ОЗУ для Minecraft, GB"
-        required: true
-        default: "4"
-        type: string
-
-concurrency:
-  group: minecraft-server
-  cancel-in-progress: true
+      e4mc_version:
+        description: 'Версия e4mc (оставьте latest для автопоиска)'
+        required: false
+        default: 'latest'
 
 env:
-  MC_VERSION: "1.20.1"
-  FORGE_VERSION: "47.3.0"
-  SERVER_DIR: server
-  WORLD_BACKUP_DIR: world_backup
+  FORGE_VERSION: "1.20.1-47.3.0"
+  JAVA_VERSION: "17"
+  SERVER_RAM: "6G"
+  # Агрессивная оптимизация GC для минимизации input lag
+  JAVA_OPTS: >-
+    -Xms${{ env.SERVER_RAM }} 
+    -Xmx${{ env.SERVER_RAM }} 
+    -XX:+UseZGC 
+    -XX:+ZGenerational 
+    -XX:+AlwaysPreTouch 
+    -XX:+DisableExplicitGC 
+    -XX:+UnlockExperimentalVMOptions 
+    -XX:ZCollectionInterval=5 
+    -XX:ZAllocationSpikeTolerance=5 
+    -Dfml.queryResult=confirm 
+    -Dterminal.jline=false 
+    -Dterminal.ansi=true
 
 jobs:
-  run-server:
+  start-server:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
-
+    timeout-minutes: 360 # Максимальное время работы (6 часов)
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Create directories
-        run: mkdir -p "${{ env.SERVER_DIR }}" my_mods
-
-      - name: Set up Java 17
+      - name: 🧹 Очистка места и подготовка
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
+          mkdir -p server/mods
+          
+      - name: ☕ Установка Java ${{ env.JAVA_VERSION }}
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: "17"
-
-      - name: Cache Forge server
-        id: forge-cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ env.SERVER_DIR }}/libraries
-            ${{ env.SERVER_DIR }}/minecraft_server-${{ env.MC_VERSION }}.jar
-            ${{ env.SERVER_DIR }}/run.sh
-            ${{ env.SERVER_DIR }}/args.txt
-          key: forge-${{ env.MC_VERSION }}-${{ env.FORGE_VERSION }}-optimized-v3
-
-      - name: Install Forge server
-        if: steps.forge-cache.outputs.cache-hit != 'true'
-        working-directory: ${{ env.SERVER_DIR }}
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          
+      - name: ⬇️ Скачивание Forge Installer
         run: |
-          set -euo pipefail
-
-          FORGE_FULL="${MC_VERSION}-${FORGE_VERSION}"
-          INSTALLER="forge-${FORGE_FULL}-installer.jar"
-
-          curl -fL --retry 3 --retry-delay 2 \
-            -o "$INSTALLER" \
-            "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_FULL}/${INSTALLER}"
-
-          java -jar "$INSTALLER" --installServer
-
-      - name: Configure server, EULA and optimization
-        working-directory: ${{ env.SERVER_DIR }}
-        env:
-          MAX_PLAYERS: ${{ github.event.inputs.max_players }}
-          VIEW_DISTANCE: ${{ github.event.inputs.view_distance }}
-          SIMULATION_DISTANCE: ${{ github.event.inputs.simulation_distance }}
-          MOTD: ${{ github.event.inputs.motd }}
-          MEMORY_GB: ${{ github.event.inputs.memory_gb }}
+          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/${{ env.FORGE_VERSION }}/forge-${{ env.FORGE_VERSION }}-installer.jar"
+          
+      - name: 🔨 Установка Forge Server
+        run: java -jar forge-*-installer.jar --installServer --no-user-input
+        
+      - name: 🌐 Установка e4mc
         run: |
-          set -euo pipefail
-          mkdir -p mods config
-
-          # ВАЖНО: создаётся при каждом запуске, а не только при установке Forge
-          echo "eula=true" > eula.txt
-
-          MEM="${MEMORY_GB}"
-
-          cat > user_jvm_args.txt <<EOF
-          -Xms${MEM}G
-          -Xmx${MEM}G
-          -XX:+UseG1GC
-          -XX:+ParallelRefProcEnabled
-          -XX:MaxGCPauseMillis=100
-          -XX:+UnlockExperimentalVMOptions
-          -XX:+DisableExplicitGC
-          -XX:+AlwaysPreTouch
-          -XX:G1NewSizePercent=30
-          -XX:G1MaxNewSizePercent=40
-          -XX:G1HeapRegionSize=16M
-          -XX:G1ReservePercent=15
-          -XX:G1HeapWastePercent=5
-          -XX:G1MixedGCCountTarget=4
-          -XX:InitiatingHeapOccupancyPercent=15
-          -XX:G1RSetUpdatingPauseTimePercent=5
-          -XX:SurvivorRatio=32
-          -XX:+PerfDisableSharedMem
-          -XX:MaxTenuringThreshold=1
-          -Dusing.aikars.flags=https://mcflags.emc.gs
-          -Daikars.new.flags=true
-          EOF
-
-          cat > server.properties <<EOF
+          if [ "${{ github.event.inputs.e4mc_version }}" = "latest" ]; then
+            E4MC_URL=$(curl -s https://api.modrinth.com/rest/v2/project/e4mc/version?game_versions=["1.20.1"]&loaders=["forge"] | jq -r '.[0].files[0].url')
+          else
+            E4MC_URL="https://cdn.modrinth.com/data/qANg5Jrr/versions/${{ github.event.inputs.e4mc_version }}/e4mc-${{ github.event.inputs.e4mc_version }}.jar"
+          fi
+          echo "Скачивание e4mc: $E4MC_URL"
+          wget -q "$E4MC_URL" -O server/mods/e4mc.jar
+          
+      - name: ⚡ Установка модов оптимизации (Anti-Lag)
+        run: |
+          # Функция для скачивания последнего релиза с Modrinth по slug
+          download_mod() {
+            local slug=$1
+            local url=$(curl -s "https://api.modrinth.com/rest/v2/project/$slug/version?game_versions=[\"1.20.1\"]&loaders=[\"forge\"]" | jq -r '.[0].files[0].url')
+            if [ "$url" != "null" ] && [ -n "$url" ]; then
+              wget -q "$url" -P server/mods/
+              echo "✅ Установлен: $slug"
+            else
+              echo "❌ Не найден: $slug"
+            fi
+          }
+          
+          # Критически важные моды для стабильного TPS и низкого пинга
+          download_mod "modernfix"       # Оптимизация памяти и загрузки
+          download_mod "ferritecore"     # Снижение потребления RAM
+          download_mod "embeddium"       # Оптимизация рендеринга (серверная часть)
+          download_mod "entityculling"   # Пропуск тиков невидимых сущностей
+          download_mod "spark"           # Профайлер (для мониторинга лагов)
+          download_mod "krypton-reforged"# Оптимизация сетевого стека (снижение пинга)
+          
+      - name: ⚙️ Создание server.properties
+        run: |
+          cat <<EOF > server/server.properties
+          server-port=25565
           online-mode=false
-          max-players=${MAX_PLAYERS}
-          view-distance=${VIEW_DISTANCE}
-          simulation-distance=${SIMULATION_DISTANCE}
-          motd=${MOTD}
-          spawn-protection=0
-          enable-command-block=true
           enable-status=true
-          network-compression-threshold=128
+          max-tick-time=-1
+          network-compression-threshold=256
+          simulation-distance=8
+          view-distance=10
           sync-chunk-writes=false
-          max-tick-time=60000
-          player-idle-timeout=0
-          prevent-proxy-connections=false
-          enforce-secure-profile=false
-          op-permission-level=4
+          use-native-transport=true
           EOF
-
-      - name: Download e4mc & FerriteCore
-        working-directory: ${{ env.SERVER_DIR }}
+          
+      - name: 📜 Принятие EULA
+        run: echo "eula=true" > server/eula.txt
+        
+      - name: 🚀 Запуск сервера с e4mc
+        working-directory: ./server
         run: |
-          set -euo pipefail
-
-          URL_E4MC=$(curl -fsSL "https://api.modrinth.com/v2/project/e4mc/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
-          curl -fL --retry 3 --retry-delay 2 -o mods/e4mc.jar "$URL_E4MC"
-
-          URL_FC=$(curl -fsSL "https://api.modrinth.com/v2/project/ferrite-core/version?game_versions=%5B%221.20.1%22%5D&loaders=%5B%22forge%22%5D" | jq -r '.[0].files[0].url')
-          curl -fL --retry 3 --retry-delay 2 -o mods/ferritecore.jar "$URL_FC"
-
-      - name: Copy and clean mods
-        run: |
-          set -euo pipefail
-          mkdir -p "${{ env.SERVER_DIR }}/mods"
-
-          if [ -d my_mods ]; then
-            find my_mods -type f -name "*.jar" -exec cp -v {} "${{ env.SERVER_DIR }}/mods/" \;
-          fi
-
-          cd "${{ env.SERVER_DIR }}/mods"
-          rm -f *oculus* *zume* *embeddium* *rubidium* *iris* *entityculling* *immediatelyfast* || true
-
-      - name: Restore world backup
-        run: |
-          set -euo pipefail
-          if [ -d "$WORLD_BACKUP_DIR" ]; then
-            rm -rf "${{ env.SERVER_DIR }}/world"
-            mkdir -p "${{ env.SERVER_DIR }}/world"
-            cp -a "$WORLD_BACKUP_DIR/." "${{ env.SERVER_DIR }}/world/"
-          fi
-
-      - name: Start Forge server with runtime timer
-        working-directory: ${{ env.SERVER_DIR }}
-        env:
-          RUNTIME_MINUTES: ${{ github.event.inputs.runtime_minutes }}
-          ADMIN: ${{ github.event.inputs.admin_nickname }}
-        run: |
-          set -euo pipefail
-          chmod +x run.sh
-
-          python3 - << 'PY'
-          import os
-          import subprocess
-          import time
-
-          runtime_minutes = int(os.environ.get("RUNTIME_MINUTES", "120"))
-          admin_name = os.environ.get("ADMIN", "TWIX_EXTRATOP")
-          timeout_seconds = runtime_minutes * 60
-
-          print(f"[*] Запуск Forge {os.environ.get('MC_VERSION', '1.20.1')}...")
-
-          process = subprocess.Popen(
-              ["./run.sh"],
-              stdin=subprocess.PIPE,
-              stdout=subprocess.PIPE,
-              stderr=subprocess.STDOUT,
-              text=True,
-              bufsize=1,
-          )
-
-          op_sent = False
-          ready_time = None
-
-          def send_command(command):
-              try:
-                  if process.stdin and not process.stdin.closed:
-                      process.stdin.write(command + "\n")
-                      process.stdin.flush()
-                      return True
-              except (BrokenPipeError, OSError):
-                  pass
-              return False
-
-          try:
-              while True:
-                  line = process.stdout.readline()
-
-                  if not line and process.poll() is not None:
-                      print("[!] Сервер завершился раньше времени. Проверь лог выше: обычно это несовместимый мод, нехватка ОЗУ или ошибка Forge.")
-                      break
-
-                  if line:
-                      print(line, end="", flush=True)
-
-                      if "Done (" in line and not op_sent:
-                          print(f"\n[+] Сервер запущен. Выдаём OP: {admin_name}")
-                          send_command(f"op {admin_name}")
-                          op_sent = True
-                          ready_time = time.time()
-
-                  if ready_time is not None and time.time() - ready_time >= timeout_seconds:
-                      print("\n[*] Время работы истекло. Останавливаем сервер...")
-                      send_command("stop")
-                      break
-
-          finally:
-              if process.poll() is None:
-                  send_command("stop")
-
-              try:
-                  process.wait(timeout=120)
-              except subprocess.TimeoutExpired:
-                  process.kill()
-                  process.wait()
-
-              print("[*] Сессия сервера завершена.")
-          PY
-
-      - name: Save world backup
-        if: always()
-        run: |
-          set -euo pipefail
-
-          if [ ! -d "${{ env.SERVER_DIR }}/world" ]; then
-            echo "No world directory."
-            exit 0
-          fi
-
-          rm -rf "$WORLD_BACKUP_DIR"
-          mkdir -p "$WORLD_BACKUP_DIR"
-          cp -a "${{ env.SERVER_DIR }}/world/." "$WORLD_BACKUP_DIR/"
-
-          if [ -z "$(git status --porcelain -- "$WORLD_BACKUP_DIR")" ]; then
-            echo "No world changes."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add "$WORLD_BACKUP_DIR"
-          git commit -m "chore: backup Minecraft world [skip ci]"
-          git push
+          echo "=== ЗАПУСК СЕРВЕРА ==="
+          echo "После появления ссылки e4mc скопируйте её для подключения!"
+          echo "Сервер будет работать до истечения таймаута или ручной отмены."
+          
+          # Запуск через bash для корректной обработки сигналов
+          java $JAVA_OPTS @user_jvm_args.txt @libraries/net/minecraftforge/forge/${{ env.FORGE_VERSION }}/unix_args.txt nogui
