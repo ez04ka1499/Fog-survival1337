@@ -1,7 +1,7 @@
 name: Forge 1.20.1 Minecraft Server (Custom Tunnel)
 
 on:
-  workflow_dispatch: # Запуск вручную по кнопке
+  workflow_dispatch:
 
 jobs:
   run-server:
@@ -73,16 +73,15 @@ jobs:
           echo "-Xms4G" > user_args.txt
           echo "-Xmx6G" >> user_args.txt
 
-          # Запускаем фоновый процесс создания быстрого европейского TCP-туннеля (без регистрации и ключей)
-          echo "Запускаем кастомный туннель через SSH (localhost.run)..."
-          # Пробрасываем порт 25565 наружу через европейский узел без ключей
+          echo "Запускаем SSH-туннель (localhost.run)..."
           ssh -o StrictHostKeyChecking=no -R 80:localhost:25565 localhost.run > tunnel.log 2>&1 &
 
-          # Небольшая пауза, чтобы туннель успел получить адрес
           sleep 5
           
-          echo "=== АДРЕС ТУННЕЛЯ ДЛЯ ПОДКЛЮЧЕНИЯ ==="
-          cat tunnel.log | grep -oE "https://[a-zA-Z0-9.-]+" || echo "Ищем адрес в логах туннеля..."
+          # Находим адрес туннеля и выводим его с четким префиксом
+          TUNNEL_IP=$(grep -oE "lh\.lh\.run:[0-9]+" tunnel.log || grep -oE "[a-zA-Z0-9.-]+\.lh\.run" tunnel.log || echo "Инициализация...")
+          echo "========================================"
+          echo "SERVER_IP: $TUNNEL_IP"
           echo "========================================"
 
           echo "Запускаем сервер Minecraft..."
