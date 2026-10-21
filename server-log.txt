@@ -100,4 +100,6 @@
 [m> [K[32m[06:29:28] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
 [m> [K[32m[06:29:28] [Server thread/INFO] [minecraft/RconThread]: RCON running on 0.0.0.0:25575
 [m> [K[32m[06:29:28] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[m> [K[32m[06:31:25] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:48104] logged in with entity id 376 at (14.5, 66.0, -2.5)
+[m> [K[32m[06:31:25] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [m> 
