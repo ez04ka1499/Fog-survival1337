@@ -1,4 +1,3 @@
-[m[33m[11:38:27] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: create:whistle_train Expected: 1871 Got: 1988
 [m[33m[11:38:27] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: create:haunted_bell_convert Expected: 1872 Got: 1989
 [m[33m[11:38:27] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: create:train Expected: 1873 Got: 1990
 [m[33m[11:38:27] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: create:whistle_train_manual_end Expected: 1874 Got: 1991
@@ -297,4 +296,5 @@
 [m> [K[32m[11:38:35] [Server thread/INFO] [minecraft/RconThread]: RCON running on 0.0.0.0:25575
 [m> [K[32m[11:38:35] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
 [m> [K[33m[11:38:35] [Server thread/WARN] [ModernFix/]: Dedicated server took 31.62 seconds to load
+[m> [K[32m[11:41:28] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@f448e4c[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:55540) lost connection: Disconnected
 [m> 
