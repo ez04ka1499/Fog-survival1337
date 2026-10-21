@@ -1,300 +1,300 @@
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.laviathanSpawnRolls was corrected from null to its default, 1. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.cosmawSpawnWeight was corrected from null to its default, 9. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.cosmawSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.toucanSpawnWeight was corrected from null to its default, 23. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.toucanSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.manedWolfSpawnWeight was corrected from null to its default, 8. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.manedWolfSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.anacondaSpawnWeight was corrected from null to its default, 12. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.anacondaSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.anteaterSpawnWeight was corrected from null to its default, 7. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.anteaterSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.rockyRollerSpawnWeight was corrected from null to its default, 60. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.rockyRollerSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.flutterSpawnWeight was corrected from null to its default, 13. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.flutterSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.geladaMonkeySpawnWeight was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.geladaMonkeySpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.jerboaSpawnWeight was corrected from null to its default, 12. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.jerboaSpawnRolls was corrected from null to its default, 2. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.terrapinSpawnWeight was corrected from null to its default, 4. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.terrapinSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.combJellySpawnWeight was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.combJellySpawnRolls was corrected from null to its default, 1. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.cosmicCodSpawnWeight was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.cosmicCodSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.bunfungusSpawnWeight was corrected from null to its default, 3. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.bunfungusSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.bisonSpawnWeight was corrected from null to its default, 9. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.bisonSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.giantSquidSpawnWeight was corrected from null to its default, 3. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.giantSquidSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.devilsHolePupfishSpawnWeight was corrected from null to its default, 23. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.devilsHolePupfishSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.catfishSpawnWeight was corrected from null to its default, 4. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.catfishSpawnRolls was corrected from null to its default, 2. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.flyingFishSpawnWeight was corrected from null to its default, 8. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.flyingFishSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.skelewagSpawnWeight was corrected from null to its default, 15. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.skelewagSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.rainFrogSpawnWeight was corrected from null to its default, 10. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.rainFrogSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.potooSpawnWeight was corrected from null to its default, 15. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.potooSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.mudskipperSpawnWeight was corrected from null to its default, 28. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.mudskipperSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.rhinocerosSpawnWeight was corrected from null to its default, 24. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.rhinocerosSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.sugarGliderSpawnWeight was corrected from null to its default, 15. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.sugarGliderSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.farseerSpawnWeight was corrected from null to its default, 30. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.farseerSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.skreecherSpawnWeight was corrected from null to its default, 10. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.skreecherSpawnRolls was corrected from null to its default, 1. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.underminerSpawnWeight was corrected from null to its default, 50. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.underminerSpawnRolls was corrected from null to its default, 1. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.murmurSpawnWeight was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.murmurSpawnRolls was corrected from null to its default, 1. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.skunkSpawnWeight was corrected from null to its default, 7. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.skunkSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.bananaSlugSpawnWeight was corrected from null to its default, 14. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.bananaSlugSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.blueJaySpawnWeight was corrected from null to its default, 16. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.blueJaySpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.caimanSpawnWeight was corrected from null to its default, 29. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.caimanSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.triopsSpawnWeight was corrected from null to its default, 8. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.triopsSpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.caveCentipedeSpawnHeight was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.blobfishSpawnHeight was corrected from null to its default, 25. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.beachedCachalotWhales was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.beachedCachalotWhaleSpawnChance was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.beachedCachalotWhaleSpawnDelay was corrected from null to its default, 24000. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.leafcutterAnthillSpawnChance was corrected from null to its default, 0.004999999888241291. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.geladaMonkeySpawnRolls was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.restrictPupfishSpawns was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.pupfishChunkSpawnDistance was corrected from null to its default, 2000. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.restrictSkelewagSpawns was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.restrictFarseerSpawns was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.restrictUnderminerSpawns was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.farseerBorderSpawnDistance was corrected from null to its default, 100. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key uniqueSpawning.murmurSpawnHeight was corrected from null to its default, -30. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key dangerZone was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key dangerZone.superSecretSettings was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key dangerZone.pathfindingThreads was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/Weather2/Tornado.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_RefinedGrabRules was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_NoTornadosOrCyclones was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabPlayer was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabPlayersOnly was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabMobs was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabAnimals was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabVillagers was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabBlocks was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_grabItems was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_GrabCond_StrengthGrabbing was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_GrabCond_List was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_GrabListBlacklistMode was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_GrabList was corrected from null to its default, #fences, #minecraft:fence_gates, #wooden_doors, #wooden_stairs, #wooden_slabs, #flowers, #planks, #wool, #wooden_trapdoors, #wooden_pressure_plates, #cave_vines, #saplings, #banners, #leaves, #small_flowers, #beds, #tall_flowers, #flowers, #candles, #wall_signs, #signs, #fire, #campfires, #replaceable_plants, #wall_post_override. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_maxFlyingEntityBlocks was corrected from null to its default, 200. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_maxBlocksGrabbedPerTick was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_aimAtPlayerOnSpawn was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_aimAtPlayerAngleVariance was corrected from null to its default, 5. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_extraGrabAngle was corrected from null to its default, 20. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Storm_Tornado_fallDamage was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/Weather2/Particle.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Precipitation_Particle_effect_rate was corrected from null to its default, 0.7. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_effect_rate was corrected from null to its default, 1.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_vanilla_precipitation was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_engine_weather2 was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_Tornado_extraParticleCubes was corrected from null to its default, 2. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/Weather2/Debug.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_Reset_Frequency was corrected from null to its default, 0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_engine_render was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.Particle_engine_tick was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/Weather2/Sound.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.leavesVolume was corrected from null to its default, 0.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.tornadoWindVolume was corrected from null to its default, 1.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.tornadoDamageVolume was corrected from null to its default, 1.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.windyStormVolume was corrected from null to its default, 1.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.sirenVolume was corrected from null to its default, 1.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/farmersdelight-common.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key settings was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key settings.enableFarmerFDTrades was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key settings.enableWanderingTraderFDTrades was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key settings.enableRopeReeling was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key settings.canvasSignDarkBackgroundList was corrected from null to its default, [gray, purple, blue, brown, green, red, black]. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key farming was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key farming.richSoilBoostChance was corrected from null to its default, 0.2. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key farming.enableTomatoVineClimbingTaggedRopes was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key farming.defaultTomatoVineRope was corrected from null to its default, farmersdelight:rope. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key crafting was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key crafting.enableCookingPotRecipeBook was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key crafting.enableVanillaCropCrates was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key crafting.cuttingBoardFortuneBonus was corrected from null to its default, 0.1. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.enableVanillaSoupExtraEffects was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.enableRabbitStewJumpBoost was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.enablePumpkinPieSneakToPlace was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.enableCuttingBoardDispenserBehavior was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.stack_size was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.stack_size.enableStackableSoupItems was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key overrides.stack_size.soupItemList was corrected from null to its default, [minecraft:mushroom_stew, minecraft:beetroot_soup, minecraft:rabbit_stew]. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key world was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key world.generateFDChestLoot was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key world.generateVillageCompostHeaps was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key world.generateFDCropsOnVillageFarms was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key debug was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key debug.enableTomatoRopePermanence was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/webdisplays_common.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hard_recipes was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key join_message was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key disable_ownership_thief was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key mini_server was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key mini_server.miniserv_port was corrected from null to its default, 25566. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key mini_server.miniserv_quota was corrected from null to its default, 1920. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key screen_options was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key screen_options.max_resolution_x was corrected from null to its default, 1920. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key screen_options.max_resolution_y was corrected from null to its default, 1080. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key screen_options.max_width was corrected from null to its default, 16. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key screen_options.max_height was corrected from null to its default, 16. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key browser_options was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key browser_options.blacklist was corrected from null to its default, . 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key browser_options.home_page was corrected from null to its default, mod://webdisplays/main.html. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/CoroUtil/General.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.useLoggingLog was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.useLoggingDebug was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.useLoggingError was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/framedblocks-common.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.fireproofBlocks was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/create-common.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key worldgen was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key worldgen.disableWorldGen was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/man_config.toml is not correct. Correcting
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.enable_spawning was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_spawn_rate was corrected from null to its default, 5000.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_spawn_rate was corrected from null to its default, 20000.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.jumpscare was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_chase_duration was corrected from null to its default, 400.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_chase_duration was corrected from null to its default, 1000.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.climbing was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.vanish_distance was corrected from null to its default, 30.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_at_day was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect_duration was corrected from null to its default, 150.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.break_blocks was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.lightnings was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_sounds was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage1_spawn_rate was corrected from null to its default, 600.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage2_spawn_rate was corrected from null to its default, 900.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.old_stalk_mechanic was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.legacy_man was corrected from null to its default, false. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.search_mechanic was corrected from null to its default, true. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness was corrected from null to its default, 2.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness_search was corrected from null to its default, 5.0. 
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_break_timer was corrected from null to its default, 10.0. 
-[m[32m[11:58:51] [modloading-worker-0/INFO] [me.st.kr.mo.sh.Krypton/]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
-[m[32m[11:58:51] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
-[m[32m[11:58:52] [main/INFO] [journeymap/]: Initializing Packet Registries
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[m[32m[11:58:52] [main/INFO] [Moonlight/]: Initialized color sets in 28ms
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
-[m[32m[11:58:52] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
-[m[32m[11:58:52] [main/INFO] [Framework/SYNCED_ENTITY_DATA]: Registered synced data key refurbished_furniture:lock_yaw for refurbished_furniture:seat
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.10
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
-[m[32m[11:58:52] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
-[m[32m[11:58:52] [modloading-worker-0/INFO] [we.Weather/]: Got IMC []
-[m[32m[11:58:52] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.kiwi.customization.compat.jade.JadeCompat
-[m[32m[11:58:52] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.vanilla.VanillaPlugin
-[m[32m[11:58:52] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.universal.UniversalPlugin
-[m[32m[11:58:52] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.core.CorePlugin
-[m[32m[11:58:52] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at xfacthd.framedblocks.common.compat.jade.FramedJadePlugin
-[m[32m[11:58:52] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
-[m[32m[11:58:52] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
-[m[32m[11:58:52] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
-[m[32m[11:58:53] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[m[33m[11:58:54] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23205!/assets/.mcassetsroot' uses unexpected schema
-[m[33m[11:58:54] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23205!/data/.mcassetsroot' uses unexpected schema
-[m[32m[11:58:54] [main/INFO] [co.si.cr.Create/]: Created 331 recipes which will be injected into the game
-[m[32m[11:58:54] [main/INFO] [co.si.cr.Create/]: Created 1 tags which will be injected into the game
-[m[32m[11:58:54] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@37c4444]
-[m[32m[11:58:54] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
-[m[32m[11:58:54] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 35 ms (multithreaded)
-[m[32m[11:58:54] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 36 ms
-[m[32m[11:58:55] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
-[m[1;31m[11:58:56] [Worker-Main-3/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
-[m[32m[11:58:56] [main/INFO] [minecraft/RecipeManager]: Loaded 35 recipes
-[m[32m[11:58:57] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
-[m[32m[11:58:57] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
-[m[32m[11:58:57] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
-[m[32m[11:58:57] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[m[32m[11:58:57] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[m[32m[11:58:57] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[m[32m[11:58:57] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[m[?1h=[?2004h> [K[32m[11:58:57] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
-[m> [K[32m[11:58:57] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[m> [K[33m[11:58:57] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[m> [K[33m[11:58:57] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[m> [K[33m[11:58:57] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[m> [K[33m[11:58:57] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[m> [K[32m[11:58:57] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
-[m> [K[32m[11:58:57] [Server thread/INFO] [Framework/]: Loading server configs...
-[m> [K[32m[11:58:57] [Thread-0/INFO] [ModernFix/]: Please use /mfsrc to reload any changed mod config files
-[m> [K[32m[11:58:57] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
-[m> [K[32m[11:58:57] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
-[m> [K[32m[11:58:57] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
-[m> [K[32m[11:58:58] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[m> [K[32m[11:58:59] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[11:58:59] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[11:58:59] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[11:58:59] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 7%
-[m> [K[32m[11:59:00] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 72%
-[m> [K[32m[11:59:00] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2184 ms
-[m> [K[32m[11:59:00] [Server thread/INFO] [minecraft/DedicatedServer]: Done (3.093s)! For help, type "help"
-[m> [K[32m[11:59:00] [Server thread/INFO] [minecraft/DedicatedServer]: Starting remote control listener
-[m> [K[32m[11:59:00] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
-[m> [K[32m[11:59:00] [Server thread/INFO] [minecraft/RconThread]: RCON running on 0.0.0.0:25575
-[m> [K[32m[11:59:00] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
-[m> [K[32m[11:59:00] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
-[m> [K[33m[11:59:00] [Server thread/WARN] [ModernFix/]: Dedicated server took 26.745 seconds to load
-[m> [K[32m[11:59:16] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@7ed7e664[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:32796) lost connection: Disconnected
-[m> [K[32m[11:59:24] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@7c6ccdd8[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:33652) lost connection: Disconnected
-[m> [K[32m[12:05:18] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@197a8322[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:36156) lost connection: Disconnected
-[m> [K[32m[12:08:24] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@52ff3e9c[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:42668) lost connection: Timed out
-[m> [K[32m[12:08:42] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@1e0f3d5b[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:35922) lost connection: Disconnected
-[m> [K[32m[12:08:52] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@4616087b[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:55002) lost connection: Disconnected
-[m> [K[32m[12:15:08] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@471a2080[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:39400) lost connection: Disconnected
-[m> [K[32m[12:17:26] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@3139adc8[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:52186) lost connection: Disconnected
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_entity_stalking_alt Expected: 299 Got: 322
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_entity_staring_alt Expected: 300 Got: 323
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:im_still_sorrow Expected: 301 Got: 324
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_entity_dreamworld Expected: 302 Got: 325
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_entity_nightmare Expected: 303 Got: 326
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon_shy Expected: 304 Got: 327
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:no_one_speech Expected: 305 Got: 328
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:lithic Expected: 306 Got: 329
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:lithic_block_projectile Expected: 307 Got: 330
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_eye_following Expected: 308 Got: 331
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_eye_chasing Expected: 309 Got: 332
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_entity_chasing Expected: 310 Got: 333
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:watching Expected: 311 Got: 334
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_fate Expected: 312 Got: 335
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_red_eye_following Expected: 313 Got: 336
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_red_eye_chasing Expected: 314 Got: 337
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:someone Expected: 315 Got: 338
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:sorrow_idle Expected: 316 Got: 339
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:flicker Expected: 317 Got: 340
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_spawn_chase Expected: 318 Got: 341
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:wondertree_chasing Expected: 319 Got: 342
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:eyed_flesh_jumpscare Expected: 320 Got: 343
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_eyed Expected: 321 Got: 344
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:angel Expected: 322 Got: 345
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:messenger Expected: 323 Got: 346
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:siren Expected: 324 Got: 347
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:carrier Expected: 325 Got: 348
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:helpless Expected: 326 Got: 349
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:wasonce Expected: 327 Got: 350
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:skinless_chase Expected: 328 Got: 351
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon Expected: 329 Got: 352
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_hoarder_chase Expected: 330 Got: 353
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:woodseeker Expected: 331 Got: 354
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:yourmind_chase Expected: 332 Got: 355
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:pillar_idle Expected: 333 Got: 356
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:pillar_aggro Expected: 334 Got: 357
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:wanderer_gift Expected: 335 Got: 358
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_sphere_chase Expected: 336 Got: 359
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:demonic_fish Expected: 337 Got: 360
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:remember_me Expected: 338 Got: 361
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:no_one Expected: 339 Got: 362
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:somebody Expected: 340 Got: 363
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_spawn_flee Expected: 341 Got: 364
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:hoarder_jumpscare Expected: 342 Got: 365
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:summoner Expected: 343 Got: 366
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:lurker Expected: 344 Got: 367
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_spawn_cow Expected: 345 Got: 368
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_spawn_pig Expected: 346 Got: 369
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon_torment Expected: 347 Got: 370
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:apparition Expected: 348 Got: 371
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:apparition_passive Expected: 349 Got: 372
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:wrath Expected: 350 Got: 373
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:forget_me_not Expected: 351 Got: 374
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:forget_me_not_spawning Expected: 352 Got: 375
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:keeper Expected: 353 Got: 376
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:demonic_cross_dormant Expected: 354 Got: 377
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:demonic_cross_aggressive Expected: 355 Got: 378
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_brawn_chase Expected: 356 Got: 379
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_brawn_sneak Expected: 357 Got: 380
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_brawn_skinned_chase Expected: 358 Got: 381
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_brawn_skinned_stare Expected: 359 Got: 382
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:the_brawn_spawning Expected: 360 Got: 383
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:sanguine Expected: 361 Got: 384
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon_hunt Expected: 362 Got: 385
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:fragmentation Expected: 363 Got: 386
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:remember_me_rest Expected: 364 Got: 387
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:remember_me_hang Expected: 365 Got: 388
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon_torment_alt Expected: 366 Got: 389
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon_twist Expected: 367 Got: 390
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:i_love_blocks Expected: 368 Got: 391
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:eyeless Expected: 369 Got: 392
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:silhouette_idle Expected: 370 Got: 393
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:silhouette_chase Expected: 371 Got: 394
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:err_66 Expected: 372 Got: 395
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:argus Expected: 373 Got: 396
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:err_66_fake_exit Expected: 374 Got: 397
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:blue_eye_following Expected: 375 Got: 398
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:blue_eye_chasing Expected: 376 Got: 399
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:rotten_eyed_flesh Expected: 377 Got: 400
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:know_me_so Expected: 378 Got: 401
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:know_me_so_spawning Expected: 379 Got: 402
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:remembrance_cross_dormant Expected: 380 Got: 403
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:remembrance_cross_aggressive Expected: 381 Got: 404
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:compliance_angel Expected: 382 Got: 405
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:projectile_stone_projectile Expected: 383 Got: 406
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type: Object did not get ID it asked for. Name: the_wonderland:ethereal_demon_chud Expected: 384 Got: 407
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:painting_variant: Object did not get ID it asked for. Name: tacz:blood_strike_1 Expected: 30 Got: 32
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:wonderland_portal Expected: 25 Got: 26
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:winter_wonderland_portal Expected: 26 Got: 27
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:what_once_was_portal Expected: 27 Got: 28
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:tunnels_portal Expected: 28 Got: 29
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:torture_portal Expected: 29 Got: 30
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:the_vault_portal Expected: 30 Got: 31
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:the_slip_portal Expected: 31 Got: 32
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:snowy_bridges_portal Expected: 32 Got: 33
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:skyways_portal Expected: 33 Got: 34
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:shattered_dreams_portal Expected: 34 Got: 35
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:sequence_portal Expected: 35 Got: 36
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:sarcophagus_portal Expected: 36 Got: 37
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:reservoir_portal Expected: 37 Got: 38
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:repetition_portal Expected: 38 Got: 39
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:remembrance_portal Expected: 39 Got: 40
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:pipes_portal Expected: 40 Got: 41
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:no_mans_land_portal Expected: 41 Got: 42
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:maze_portal Expected: 42 Got: 43
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:lapis_labyrinth_portal Expected: 43 Got: 44
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:jungle_warehouse_portal Expected: 44 Got: 45
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:inconsistency_portal Expected: 45 Got: 46
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:hellways_portal Expected: 46 Got: 47
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:fools_paradise_portal Expected: 47 Got: 48
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:false_wonderland_portal Expected: 48 Got: 49
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:entrails_portal Expected: 49 Got: 50
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:endless_library_portal Expected: 50 Got: 51
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:endless_house_portal Expected: 51 Got: 52
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:endless_forest_portal Expected: 52 Got: 53
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:endless_field_portal Expected: 53 Got: 54
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:dreamworld_portal Expected: 54 Got: 55
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:dream_6_portal Expected: 55 Got: 56
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:dlrowmaerd_portal Expected: 56 Got: 57
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:depths_portal Expected: 57 Got: 58
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:corners_portal Expected: 58 Got: 59
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:compliance_portal Expected: 59 Got: 60
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:chasms_portal Expected: 60 Got: 61
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:catacombs_portal Expected: 61 Got: 62
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:bridges_portal Expected: 62 Got: 63
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:brickways_portal Expected: 63 Got: 64
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:bedrock_hallways_portal Expected: 64 Got: 65
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:answer_dimension_portal Expected: 65 Got: 66
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:accountability_portal Expected: 66 Got: 67
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:acceptance_portal Expected: 67 Got: 68
+[m[33m[16:43:52] [main/WARN] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type: Object did not get ID it asked for. Name: the_wonderland:abyss_portal Expected: 68 Got: 69
+[m[33m[16:43:52] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23209!/assets/.mcassetsroot' uses unexpected schema
+[m[33m[16:43:52] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23209!/data/.mcassetsroot' uses unexpected schema
+[m[32m[16:43:53] [main/INFO] [co.si.cr.Create/]: Created 332 recipes which will be injected into the game
+[m[32m[16:43:53] [main/INFO] [co.si.cr.Create/]: Created 3 tags which will be injected into the game
+[m[33m[16:43:53] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
+[m[33m[16:43:53] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[16:43:53] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false. 
+[m[32m[16:43:53] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
+[m[32m[16:43:53] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
+[m[32m[16:43:53] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[m[32m[16:43:53] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[m[32m[16:43:53] [main/INFO] [minecraft/MinecraftServer]: Found new data pack tacz_resources, loading it automatically
+[m[32m[16:43:53] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@1e56b412]
+[m[32m[16:43:53] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
+[m[32m[16:43:54] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 58 ms (multithreaded)
+[m[32m[16:43:54] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 59 ms
+[m[32m[16:43:55] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
+[m[1;31m[16:43:56] [Worker-Main-1/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
+[m[32m[16:43:57] [main/INFO] [minecraft/RecipeManager]: Loaded 36 recipes
+[m[32m[16:43:57] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
+[m[32m[16:43:57] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
+[m[32m[16:43:57] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
+[m[32m[16:43:58] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
+[m[32m[16:43:58] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[m[32m[16:43:58] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[m[32m[16:43:58] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[m[?1h=[?2004h> [K[32m[16:43:58] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
+[m> [K[32m[16:43:58] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[m> [K[33m[16:43:58] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[m> [K[33m[16:43:58] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[m> [K[33m[16:43:58] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[m> [K[33m[16:43:58] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/tacz-server.toml is not correct. Correcting
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistBlocks was corrected from null to its default, []. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyWhitelistEntities was corrected from null to its default, []. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistBlocks was corrected from null to its default, []. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key interact_key.InteractKeyBlacklistEntities was corrected from null to its default, []. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.DamageBaseMultiplier was corrected from null to its default, 1.0. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.ArmorIgnoreBaseMultiplier was corrected from null to its default, 1.0. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.HeadShotBaseMultiplier was corrected from null to its default, 1.0. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key base_multiplier.WeightSpeedMultiplier was corrected from null to its default, 0.015. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.HeadShotAABB was corrected from null to its default, []. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.AmmoBoxStackSize was corrected from null to its default, 3. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ClientGunPackDownloadUrls was corrected from null to its default, []. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableCrawl was corrected from null to its default, true. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.EnableDefaultGunSmithTableFilter was corrected from null to its default, true. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootNetworkCheck was corrected from null to its default, true. 
+[m> [K[33m[16:43:58] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootCooldownCheck was corrected from null to its default, true. 
+[m> [K[32m[16:43:58] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
+[m> [K[32m[16:43:58] [Server thread/INFO] [Framework/]: Loading server configs...
+[m> [K[32m[16:43:58] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
+[m> [K[32m[16:43:59] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
+[m> [K[32m[16:43:59] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+[m> [K[32m[16:43:59] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[m> [K[32m[16:44:01] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[16:44:01] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[16:44:01] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[16:44:01] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[16:44:01] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 34%
+[m> [K[32m[16:44:02] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 84%
+[m> [K[32m[16:44:02] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2619 ms
+[m> [K[32m[16:44:02] [Server thread/INFO] [minecraft/DedicatedServer]: Done (3.995s)! For help, type "help"
+[m> [K[32m[16:44:02] [Server thread/INFO] [minecraft/DedicatedServer]: Starting remote control listener
+[m> [K[32m[16:44:02] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
+[m> [K[32m[16:44:02] [Server thread/INFO] [minecraft/RconThread]: RCON running on 0.0.0.0:25575
+[m> [K[32m[16:44:02] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
+[m> [K[32m[16:44:02] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
+[m> [K[33m[16:44:02] [Server thread/WARN] [ModernFix/]: Dedicated server took 35.274 seconds to load
 [m> 
