@@ -1,5 +1,9 @@
 name: MC Server
 
+concurrency:
+  group: mc-server-${{ github.ref }}
+  cancel-in-progress: false
+
 on:
   workflow_dispatch:
     inputs:
@@ -29,7 +33,7 @@ env:
 
 jobs:
   server:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 355
 
     steps:
@@ -56,6 +60,7 @@ jobs:
       - name: Load world
         run: |
           rm -rf srv/world
+
           ASSET=$(curl -sf -H "Authorization: Bearer $TK" \
             "https://api.github.com/repos/$REPO/releases/tags/world-save" | \
             python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null || true)
@@ -103,6 +108,33 @@ jobs:
           entity-broadcast-range-percentage=75
           EOF
 
+      - name: Make TWIX_EXTRATOP operator
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, uuid
+
+          name = "TWIX_EXTRATOP"
+          digest = bytearray(hashlib.md5(("OfflinePlayer:" + name).encode("utf-8")).digest())
+
+          digest[6] = (digest[6] & 0x0F) | 0x30
+          digest[8] = (digest[8] & 0x3F) | 0x80
+
+          player_uuid = str(uuid.UUID(bytes=bytes(digest)))
+
+          ops = [{
+              "uuid": player_uuid,
+              "name": name,
+              "level": 4,
+              "bypassesPlayerLimit": True
+          }]
+
+          with open("srv/ops.json", "w", encoding="utf-8") as f:
+              json.dump(ops, f, indent=2)
+
+          print("✅ OP added:", name)
+          print("UUID:", player_uuid)
+          PY
+
       - name: Start Pinggy tunnel
         run: |
           PT="${{ secrets.PINGGY_TOKEN }}"
@@ -136,13 +168,13 @@ jobs:
           fi
 
           echo "$ADDR" > tunnel.txt
-          echo "TUNNEL_ADDR=$ADDR" >> "$GITHUB_ENV"
           echo "✅ Tunnel: $ADDR"
 
       - name: Commit tunnel address
         run: |
           git config user.email "bot@ci"
           git config user.name "MC Bot"
+
           git pull --rebase origin "$BRANCH" || true
           git add tunnel.txt
           git commit -m "🟡 Starting [skip ci]" || true
@@ -150,6 +182,9 @@ jobs:
 
       - name: Start Forge
         run: |
+          tmux kill-server 2>/dev/null || true
+          rm -f /tmp/mc.log
+
           tmux new-session -d -s mc
 
           tmux send-keys -t mc "cd srv && java -Xms2G -Xmx${{ inputs.memory }} @libraries/net/minecraftforge/forge/${FORGE}/unix_args.txt nogui 2>&1 | tee /tmp/mc.log" Enter
@@ -162,7 +197,7 @@ jobs:
 
             if ! tmux has-session -t mc 2>/dev/null; then
               echo "❌ Minecraft crashed"
-              tail -100 /tmp/mc.log || true
+              tail -n 100 /tmp/mc.log || true
               exit 1
             fi
 
@@ -170,7 +205,7 @@ jobs:
           done
 
           echo "❌ Server startup timeout"
-          tail -100 /tmp/mc.log || true
+          tail -n 100 /tmp/mc.log || true
           exit 1
 
       - name: Log pusher
@@ -213,12 +248,12 @@ jobs:
             SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || true)
 
             CMD=$(echo "$R" | python3 -c "
-          import sys,json,base64
+          import sys, json, base64
           try:
-            d=json.load(sys.stdin)
-            print(base64.b64decode(d['content']).decode().strip() if 'content' in d else '')
+              d = json.load(sys.stdin)
+              print(base64.b64decode(d['content']).decode('utf-8').strip() if 'content' in d else '')
           except Exception:
-            print('')
+              print('')
           " 2>/dev/null || true)
 
             if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then
@@ -234,6 +269,7 @@ jobs:
             fi
 
             tmux send-keys -t mc "$CMD" Enter
+            echo "➡️ Sent command: $CMD"
 
             curl -sf -X PUT \
               -H "Authorization: Bearer $TK" \
@@ -267,9 +303,11 @@ jobs:
             else
               echo "$REL" | python3 -c "import sys,json; [print(a['id']) for a in json.load(sys.stdin).get('assets',[])]" | \
               while read -r AID; do
-                [ -n "$AID" ] && curl -sf -X DELETE \
-                  -H "Authorization: Bearer $TK" \
-                  "https://api.github.com/repos/$REPO/releases/assets/$AID" > /dev/null || true
+                if [ -n "$AID" ]; then
+                  curl -sf -X DELETE \
+                    -H "Authorization: Bearer $TK" \
+                    "https://api.github.com/repos/$REPO/releases/assets/$AID" > /dev/null || true
+                fi
               done
             fi
 
@@ -284,6 +322,7 @@ jobs:
 
           git config user.email "bot@ci"
           git config user.name "MC Bot"
+
           git pull --rebase origin "$BRANCH" || true
           git add tunnel.txt
           git commit -m "🔴 Offline [skip ci]" || true
