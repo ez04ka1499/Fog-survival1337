@@ -1,41 +1,3 @@
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SLOPE_BIOMES--------------------.hot_slope_biome_variant was corrected from null to its default, regions_unexplored:rainforest. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.icy_peak_biome was corrected from null to its default, minecraft:frozen_peaks. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.cold_peak_biome was corrected from null to its default, minecraft:jagged_peaks. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.neutral_peak_biome was corrected from null to its default, regions_unexplored:mountains. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.warm_peak_biome was corrected from null to its default, minecraft:stony_peaks. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.hot_peak_biome was corrected from null to its default, regions_unexplored:arid_mountains. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.icy_peak_biome_variant was corrected from null to its default, minecraft:jagged_peaks. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.cold_peak_biome_variant was corrected from null to its default, regions_unexplored:mountains. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.neutral_peak_biome_variant was corrected from null to its default, regions_unexplored:mountains. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.warm_peak_biome_variant was corrected from null to its default, minecraft:stony_peaks. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.hot_peak_biome_variant was corrected from null to its default, regions_unexplored:arid_mountains. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.icy_arid was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.icy_dry was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.icy_neutral was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.icy_wet was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.icy_humid was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.cool_arid was corrected from null to its default, regions_unexplored:cold_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.cool_dry was corrected from null to its default, regions_unexplored:cold_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.cool_neutral was corrected from null to its default, regions_unexplored:cold_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.cool_wet was corrected from null to its default, regions_unexplored:muddy_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.cool_humid was corrected from null to its default, regions_unexplored:muddy_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.neutral_arid was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.neutral_dry was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.neutral_neutral was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.neutral_wet was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.neutral_humid was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.warm_arid was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.warm_dry was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.warm_neutral was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.warm_wet was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.warm_humid was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.hot_arid was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.hot_dry was corrected from null to its default, minecraft:river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.hot_neutral was corrected from null to its default, regions_unexplored:tropical_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.hot_wet was corrected from null to its default, regions_unexplored:tropical_river. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.hot_humid was corrected from null to its default, regions_unexplored:tropical_river. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_arid was corrected from null to its default, minecraft:frozen_river. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_dry was corrected from null to its default, minecraft:frozen_river. 
@@ -297,4 +259,42 @@
 [m> [K[33m[07:25:45] [Server thread/WARN] [ModernFix/]: Dedicated server took 27.245 seconds to load
 [m> [K[32m[07:26:39] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:55480] logged in with entity id 270 at (-1.449037488000685, 72.0, 88.6492461780055)
 [m> [K[32m[07:26:39] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[m> [K[32m[07:26:54] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
 [m> 
