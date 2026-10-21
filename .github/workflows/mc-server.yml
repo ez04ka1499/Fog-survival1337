@@ -208,6 +208,14 @@ jobs:
           tail -n 100 /tmp/mc.log || true
           exit 1
 
+                - name: Downloadable mod configs uses: actions/upload-artifact@v4 with:
+          name: mod-configs
+          path: |
+            srv/config/
+            srv/world/serverconfig/
+            srv/defaultconfigs/
+          if-no-files-found: warn
+
       - name: Log pusher
         run: |
           while tmux has-session -t mc 2>/dev/null; do
