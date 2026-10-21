@@ -1,5 +1,3 @@
-[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_humid was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_arid was corrected from null to its default, regions_unexplored:cold_river. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_dry was corrected from null to its default, regions_unexplored:cold_river. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_neutral was corrected from null to its default, regions_unexplored:cold_river. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_wet was corrected from null to its default, regions_unexplored:muddy_river. 
@@ -297,4 +295,6 @@
 [m> [K[32m[07:54:38] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ну играть норм?
 [m> [K[32m[07:54:50] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> пингует не много но норм
 [m> [K[32m[07:54:57] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ну да
+[m> [K[32m[07:55:43] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:51350] logged in with entity id 527 at (16.5, 69.0, 3.5)
+[m> [K[32m[07:55:43] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
 [m> 
