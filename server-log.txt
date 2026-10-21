@@ -293,3 +293,9 @@
 [17:12:41] [Server thread/WARN] [ModernFix/]: Dedicated server took 24.116 seconds to load
 [17:12:42] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
 [manager] Server ready
+[17:13:44] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:54540] logged in with entity id 241 at (10.138718100305807, 70.0, -12.00496255962364)
+[17:13:44] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[17:13:44] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[17:13:49] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[17:14:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [The internet is for...]
+[17:14:12] [Server thread/INFO] [ne.mo.wd.ut.Log/]: Player literal{TWIX_EXTRATOP} (UUID 173072de-cda8-33d1-9173-1d7b95d87ae2) created a screen at X: 4, Y: 70, Z: -21 of size 5x3
