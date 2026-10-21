@@ -100,7 +100,7 @@ jobs:
           max-players=${{ inputs.max_players }}
           motd=${{ inputs.motd }}
           enable-rcon=true
-          rcon.password=mcgh_rcon
+          rcon.password=${{ secrets.RCON_PASSWORD }}
           rcon.port=25575
           spawn-protection=0
           use-native-transport=true
@@ -235,25 +235,78 @@ jobs:
               -d "$PAYLOAD" > /dev/null || true
           done
 
-      - name: Command relay
+      - name: RCON command relay
+        env:
+          RCON_PASS: ${{ secrets.RCON_PASSWORD }}
         run: |
+          cat > /tmp/rcon.py <<'PY'
+          import socket, struct, sys
+
+          def make_packet(packet_type, payload, request_id=1):
+              body = struct.pack("<ii", request_id, packet_type)
+              body += payload.encode("utf-8") + b"\x00\x00"
+              return struct.pack("<i", len(body)) + body
+
+          def read_packet(sock):
+              size_data = b""
+              while len(size_data) < 4:
+                  chunk = sock.recv(4 - len(size_data))
+                  if not chunk:
+                      return None, None
+                  size_data += chunk
+
+              size = struct.unpack("<i", size_data)[0]
+              data = b""
+
+              while len(data) < size:
+                  chunk = sock.recv(size - len(data))
+                  if not chunk:
+                      break
+                  data += chunk
+
+              request_id, packet_type = struct.unpack("<ii", data[:8])
+              payload = data[8:-2].decode("utf-8", errors="replace")
+              return request_id, payload
+
+          password = sys.argv[1]
+          command = sys.argv[2]
+
+          sock = socket.create_connection(("127.0.0.1", 25575), timeout=5)
+          sock.sendall(make_packet(3, password))
+
+          auth_id, _ = read_packet(sock)
+
+          if auth_id == -1:
+              print("❌ RCON authentication failed")
+              sys.exit(1)
+
+          sock.sendall(make_packet(2, command, request_id=2))
+          _, response = read_packet(sock)
+          print(response or "✅ Command sent")
+          PY
+
           LAST_SHA=""
 
           while tmux has-session -t mc 2>/dev/null; do
-            sleep 5
+            sleep 3
 
-            R=$(curl -sf -H "Authorization: Bearer $TK" \
+            if ! timeout 2 bash -c "</dev/tcp/127.0.0.1/25575" 2>/dev/null; then
+              continue
+            fi
+
+            R=$(curl -sf \
+              -H "Authorization: Bearer $TK" \
               "https://api.github.com/repos/$REPO/contents/command.txt?ref=$BRANCH" 2>/dev/null || echo '{}')
 
             SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || true)
 
             CMD=$(echo "$R" | python3 -c "
-          import sys, json, base64
+          import sys,json,base64
           try:
-              d = json.load(sys.stdin)
-              print(base64.b64decode(d['content']).decode('utf-8').strip() if 'content' in d else '')
+            d=json.load(sys.stdin)
+            print(base64.b64decode(d['content']).decode().strip())
           except Exception:
-              print('')
+            print('')
           " 2>/dev/null || true)
 
             if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then
@@ -261,28 +314,36 @@ jobs:
             fi
 
             LAST_SHA="$SHA"
+            echo "→ RCON: $CMD"
 
             if [ "$CMD" = "STOP" ]; then
-              tmux send-keys -t mc "stop" Enter
+              python3 /tmp/rcon.py "$RCON_PASS" "stop" || true
               sleep 25
               break
             fi
 
-            tmux send-keys -t mc "$CMD" Enter
-            echo "➡️ Sent command: $CMD"
+            OUT=$(python3 /tmp/rcon.py "$RCON_PASS" "$CMD" 2>&1 || true)
+
+            echo "[$(date -u +%H:%M:%S)] $CMD" >> /tmp/rcon-history.log
+            echo "$OUT" >> /tmp/rcon-history.log
+            echo "$OUT"
+
+            NEW_CONTENT=$(printf '\n' | base64 -w 0)
 
             curl -sf -X PUT \
               -H "Authorization: Bearer $TK" \
               -H "Content-Type: application/json" \
               "https://api.github.com/repos/$REPO/contents/command.txt" \
-              -d "{\"message\":\"cmd [skip ci]\",\"content\":\"Cg==\",\"sha\":\"$SHA\",\"branch\":\"$BRANCH\"}" > /dev/null || true
+              -d "{\"message\":\"cmd [skip ci]\",\"content\":\"$NEW_CONTENT\",\"sha\":\"$SHA\",\"branch\":\"$BRANCH\"}" > /dev/null || true
           done
 
       - name: Save world
         if: always()
         run: |
           if tmux has-session -t mc 2>/dev/null; then
-            tmux send-keys -t mc "stop" Enter
+            python3 /tmp/rcon.py "${{ secrets.RCON_PASSWORD }}" "save-all" 2>/dev/null || true
+            sleep 5
+            python3 /tmp/rcon.py "${{ secrets.RCON_PASSWORD }}" "stop" 2>/dev/null || true
             sleep 25
           fi
 
