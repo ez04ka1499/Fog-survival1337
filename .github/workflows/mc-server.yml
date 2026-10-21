@@ -1,398 +1,727 @@
 name: MC Server
 
-concurrency:
-  group: mc-server-${{ github.ref }}
-  cancel-in-progress: false
-
 on:
   workflow_dispatch:
     inputs:
       memory:
+        description: Java heap
+        required: true
         default: '6G'
-      view_distance:
-        default: '7'
-      simulation_distance:
-        default: '5'
-      online_mode:
-        default: 'false'
-      difficulty:
-        default: normal
-      max_players:
-        default: '20'
-      motd:
-        default: 'Minecraft on GitHub'
+        type: choice
+        options:
+          - '3G'
+          - '4G'
+          - '6G'
+      world_source:
+        description: 'repository = сохранить мир; new = новый; import = ZIP из Release'
+        required: true
+        default: repository
+        type: choice
+        options:
+          - repository
+          - new
+          - import
 
 permissions:
   contents: write
 
-env:
-  FORGE: 1.20.1-47.4.0
-  TK: ${{ secrets.GITHUB_TOKEN }}
-  REPO: ${{ github.repository }}
-  BRANCH: ${{ github.ref_name }}
+concurrency:
+  group: mc-server-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   server:
     runs-on: ubuntu-24.04
     timeout-minutes: 355
 
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PINGGY_TOKEN: ${{ secrets.PINGGY_TOKEN }}
+      REPO: ${{ github.repository }}
+      BRANCH: ${{ github.ref_name }}
+      FORGE: '1.20.1-47.4.0'
+      MC_MEMORY: ${{ inputs.memory }}
+      WORLD_SOURCE: ${{ inputs.world_source }}
+      OP_NAME: TWIX_EXTRATOP
+
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-java@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          java-version: '17'
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
           distribution: temurin
-
-      - uses: actions/cache@v4
-        id: forge
-        with:
-          path: srv
-          key: forge-${{ env.FORGE }}
+          java-version: '17'
 
       - name: Install Forge
-        if: steps.forge.outputs.cache-hit != 'true'
         run: |
-          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE}/forge-${FORGE}-installer.jar"
-          java -jar "forge-${FORGE}-installer.jar" --installServer ./srv
-          echo "eula=true" > srv/eula.txt
+          set -euo pipefail
+          mkdir -p srv
 
-      - name: Load world
+          curl --fail --location --retry 3 \
+            "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE}/forge-${FORGE}-installer.jar" \
+            -o /tmp/forge-installer.jar
+
+          java -jar /tmp/forge-installer.jar --installServer ./srv
+
+      - name: Create server manager
         run: |
-          rm -rf srv/world
+          cat > /tmp/mc-manager.py <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import shutil
+          import signal
+          import subprocess
+          import tarfile
+          import threading
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          import uuid
+          import zipfile
+          from collections import deque
+          from pathlib import Path
 
-          ASSET=$(curl -sf -H "Authorization: Bearer $TK" \
-            "https://api.github.com/repos/$REPO/releases/tags/world-save" | \
-            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null || true)
+          ROOT = Path.cwd()
+          SRV = ROOT / "srv"
+          TOKEN = os.environ["GH_TOKEN"]
+          REPO = os.environ["REPO"]
+          BRANCH = os.environ["BRANCH"]
+          FORGE = os.environ["FORGE"]
+          MEMORY = os.environ["MC_MEMORY"]
+          SOURCE = os.environ["WORLD_SOURCE"]
 
-          if [ -n "$ASSET" ]; then
-            wget -q "$ASSET" -O world.tar.gz
-            tar -xzf world.tar.gz -C srv/
-            echo "✅ World loaded"
-          else
-            echo "🌍 Fresh world"
-          fi
+          log_lines = deque(maxlen=350)
+          log_lock = threading.Lock()
+          stopping = threading.Event()
+          ready = threading.Event()
 
-      - name: Mods and server.properties
-        run: |
-          rm -rf srv/mods
-          mkdir -p srv/mods
+          process = None
+          tunnel = None
+          world_prepared = False
+          runtime_started = False
+          last_command_sha = None
 
-          if [ -d mods ]; then
-            cp -r mods/. srv/mods/
-            echo "📦 $(find srv/mods -type f | wc -l) mod files"
-          fi
+          def message(text):
+              line = "[manager] " + str(text)
+              print(line, flush=True)
+              with log_lock:
+                  log_lines.append(line)
 
-          MODS=$(curl -sf -H "Authorization: Bearer $TK" \
-            "https://api.github.com/repos/$REPO/releases/tags/mods-pack" | \
-            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null || true)
+          def api(method, path, payload=None, accept=None):
+              url = "https://api.github.com" + path
+              data = None if payload is None else json.dumps(payload).encode()
+              headers = {
+                  "Authorization": "Bearer " + TOKEN,
+                  "Accept": accept or "application/vnd.github+json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+                  "User-Agent": "mc-server-manager",
+              }
+              if data is not None:
+                  headers["Content-Type"] = "application/json"
+              req = urllib.request.Request(
+                  url, data=data, method=method, headers=headers
+              )
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  raw = response.read()
+                  return json.loads(raw) if raw else None
 
-          if [ -n "$MODS" ]; then
-            wget -q "$MODS" -O mods.tar.gz
-            tar -xzf mods.tar.gz -C srv/mods/
-          fi
+          def get_file(name):
+              path = urllib.parse.quote(name, safe="/")
+              ref = urllib.parse.quote(BRANCH, safe="")
+              try:
+                  return api(
+                      "GET",
+                      f"/repos/{REPO}/contents/{path}?ref={ref}"
+                  )
+              except urllib.error.HTTPError as error:
+                  if error.code == 404:
+                      return None
+                  raise
 
-          cat > srv/server.properties <<EOF
-          online-mode=${{ inputs.online_mode }}
-          view-distance=${{ inputs.view_distance }}
-          simulation-distance=${{ inputs.simulation_distance }}
-          difficulty=${{ inputs.difficulty }}
-          max-players=${{ inputs.max_players }}
-          motd=${{ inputs.motd }}
-          enable-rcon=true
-          rcon.password=${{ secrets.RCON_PASSWORD }}
-          rcon.port=25575
-          spawn-protection=0
-          use-native-transport=true
-          network-compression-threshold=256
-          entity-broadcast-range-percentage=75
-          EOF
+          def put_file(name, text, expected_sha=None):
+              current = get_file(name)
+              current_sha = current.get("sha") if current else None
 
-      - name: Make TWIX_EXTRATOP operator
-        run: |
-          python3 - <<'PY'
-          import hashlib, json, uuid
+              if expected_sha is not None and current_sha != expected_sha:
+                  raise RuntimeError(
+                      f"{name} changed while processing; not overwriting"
+                  )
 
-          name = "TWIX_EXTRATOP"
-          digest = bytearray(hashlib.md5(("OfflinePlayer:" + name).encode("utf-8")).digest())
+              encoded = base64.b64encode(text.encode("utf-8")).decode()
+              if current and current.get("content"):
+                  old = base64.b64decode(current["content"]).decode("utf-8")
+                  if old == text:
+                      return
 
-          digest[6] = (digest[6] & 0x0F) | 0x30
-          digest[8] = (digest[8] & 0x3F) | 0x80
+              payload = {
+                  "message": f"MC: update {name} [skip ci]",
+                  "content": encoded,
+                  "branch": BRANCH,
+              }
+              if current_sha:
+                  payload["sha"] = current_sha
 
-          player_uuid = str(uuid.UUID(bytes=bytes(digest)))
+              path = urllib.parse.quote(name, safe="/")
+              api("PUT", f"/repos/{REPO}/contents/{path}", payload)
 
-          ops = [{
-              "uuid": player_uuid,
-              "name": name,
-              "level": 4,
-              "bypassesPlayerLimit": True
-          }]
+          def release_asset(tag, filename, destination, optional=False):
+              tag = urllib.parse.quote(tag, safe="")
+              try:
+                  release = api(
+                      "GET", f"/repos/{REPO}/releases/tags/{tag}"
+                  )
+              except urllib.error.HTTPError as error:
+                  if optional and error.code == 404:
+                      return False
+                  raise
 
-          with open("srv/ops.json", "w", encoding="utf-8") as f:
-              json.dump(ops, f, indent=2)
+              asset = next(
+                  (a for a in release["assets"] if a["name"] == filename),
+                  None
+              )
+              if asset is None:
+                  if optional:
+                      message(f"No {filename} in release {tag}")
+                      return False
+                  raise RuntimeError(
+                      f"Release {tag} must contain {filename}"
+                  )
 
-          print("✅ OP added:", name)
-          print("UUID:", player_uuid)
+              subprocess.run([
+                  "gh", "api",
+                  "-H", "Accept: application/octet-stream",
+                  f"/repos/{REPO}/releases/assets/{asset['id']}",
+              ], stdout=open(destination, "wb"), check=True)
+              return True
+
+          def safe_target(base, name):
+              target = (base / name).resolve()
+              if not target.is_relative_to(base.resolve()):
+                  raise RuntimeError("Unsafe archive path: " + name)
+              return target
+
+          def extract_mods(archive):
+              destination = SRV / "mods"
+              with tarfile.open(archive, "r:gz") as bundle:
+                  for member in bundle.getmembers():
+                      safe_target(destination, member.name)
+                      if not (member.isfile() or member.isdir()):
+                          raise RuntimeError(
+                              "Links and special files are not allowed in mods archive"
+                          )
+                  bundle.extractall(destination)
+
+              nested = list(destination.rglob("*.jar"))
+              wrong = [p for p in nested if p.parent != destination]
+              if wrong:
+                  raise RuntimeError(
+                      "JAR files must be at archive root, not inside a mods folder"
+                  )
+
+          def copy_tree(source, destination):
+              if source.is_dir():
+                  shutil.copytree(
+                      source, destination, dirs_exist_ok=True
+                  )
+
+          def export_missing(source, destination):
+              if not source.is_dir():
+                  return
+              for item in source.rglob("*"):
+                  if not item.is_file() or item.is_symlink():
+                      continue
+                  target = destination / item.relative_to(source)
+                  if not target.exists():
+                      target.parent.mkdir(parents=True, exist_ok=True)
+                      shutil.copy2(item, target)
+
+          def read_properties(path):
+              result = {}
+              for line in path.read_text(encoding="utf-8").splitlines():
+                  line = line.strip()
+                  if not line or line.startswith(("#", "!")):
+                      continue
+                  if "=" in line:
+                      key, value = line.split("=", 1)
+                      result[key.strip()] = value.strip()
+              return result
+
+          def prepare():
+              global world_prepared
+
+              for name in ("config", "serverconfig", "defaultconfigs", "mods"):
+                  (ROOT / name).mkdir(exist_ok=True)
+
+              properties = ROOT / "server.properties"
+              if not properties.exists():
+                  properties.write_text(
+                      "level-name=world\n"
+                      "level-seed=\n"
+                      "online-mode=false\n"
+                      "white-list=false\n"
+                      "enforce-whitelist=true\n"
+                      "server-port=25565\n"
+                      "server-ip=\n"
+                      "motd=Minecraft on GitHub\n"
+                      "difficulty=normal\n"
+                      "gamemode=survival\n"
+                      "max-players=20\n"
+                      "view-distance=7\n"
+                      "simulation-distance=5\n"
+                      "spawn-protection=0\n"
+                      "enable-command-block=false\n"
+                      "enable-rcon=false\n"
+                      "enable-query=false\n"
+                      "use-native-transport=true\n"
+                      "network-compression-threshold=256\n",
+                      encoding="utf-8"
+                  )
+
+              settings = read_properties(properties)
+              if settings.get("level-name") != "world":
+                  raise RuntimeError(
+                      "Keep level-name=world: this manager saves the world/ directory"
+                  )
+              if settings.get("server-port", "25565") != "25565":
+                  raise RuntimeError("Keep server-port=25565 for this tunnel")
+
+              shutil.copy2(properties, SRV / "server.properties")
+              (SRV / "eula.txt").write_text("eula=true\n")
+
+              destination = SRV / "world"
+              if destination.exists():
+                  shutil.rmtree(destination)
+
+              if SOURCE == "repository":
+                  if (ROOT / "world" / "level.dat").is_file():
+                      copy_tree(ROOT / "world", destination)
+                      message("Loaded world/ from repository")
+                  elif (ROOT / "world").exists() and any((ROOT / "world").iterdir()):
+                      raise RuntimeError(
+                          "world/ exists but has no level.dat; refusing to overwrite it"
+                      )
+                  else:
+                      message("No saved world; Minecraft will generate a new one")
+
+              elif SOURCE == "new":
+                  message("New world requested; old world will not be loaded")
+
+              elif SOURCE == "import":
+                  archive = Path("/tmp/import-world.zip")
+                  release_asset("world-import", "world.zip", archive)
+                  temp = Path("/tmp/import-world")
+                  if temp.exists():
+                      shutil.rmtree(temp)
+                  temp.mkdir()
+
+                  with zipfile.ZipFile(archive) as bundle:
+                      for info in bundle.infolist():
+                          safe_target(temp, info.filename)
+                      bundle.extractall(temp)
+
+                  candidates = list(temp.rglob("level.dat"))
+                  if len(candidates) != 1:
+                      raise RuntimeError(
+                          "world.zip must contain exactly one world with level.dat"
+                      )
+                  copy_tree(candidates[0].parent, destination)
+                  message("Imported world.zip")
+              else:
+                  raise RuntimeError("Unknown world_source")
+
+              copy_tree(ROOT / "config", SRV / "config")
+              copy_tree(ROOT / "defaultconfigs", SRV / "defaultconfigs")
+              copy_tree(ROOT / "serverconfig", destination / "serverconfig")
+
+              for name, initial in (
+                  ("ops.json", "[]\n"),
+                  ("whitelist.json", "[]\n"),
+                  ("banned-players.json", "[]\n"),
+                  ("banned-ips.json", "[]\n"),
+              ):
+                  source = ROOT / name
+                  if not source.exists():
+                      source.write_text(initial)
+                  json.loads(source.read_text(encoding="utf-8"))
+                  shutil.copy2(source, SRV / name)
+
+              name = os.environ.get("OP_NAME", "").strip()
+              if name and settings.get("online-mode") == "false":
+                  digest = hashlib.md5(
+                      ("OfflinePlayer:" + name).encode("utf-8")
+                  ).digest()
+                  player_uuid = str(uuid.UUID(bytes=digest, version=3))
+                  ops_path = SRV / "ops.json"
+                  ops = json.loads(ops_path.read_text())
+                  ops = [entry for entry in ops if entry.get("uuid") != player_uuid]
+                  ops.append({
+                      "uuid": player_uuid,
+                      "name": name,
+                      "level": 4,
+                      "bypassesPlayerLimit": True,
+                  })
+                  ops_path.write_text(json.dumps(ops, indent=2))
+
+              (SRV / "mods").mkdir(exist_ok=True)
+              copy_tree(ROOT / "mods", SRV / "mods")
+              archive = Path("/tmp/mods.tar.gz")
+              if release_asset(
+                  "mods-pack", "mods.tar.gz", archive, optional=True
+              ):
+                  extract_mods(archive)
+
+              for jar in sorted((SRV / "mods").glob("*.jar")):
+                  message("Mod: " + jar.name)
+
+              world_prepared = True
+
+          def start_tunnel():
+              global tunnel
+              token = os.environ.get("PINGGY_TOKEN", "").strip()
+              host = (
+                  token + "+tcp@pro.pinggy.io"
+                  if token else "tcp@free.pinggy.io"
+              )
+              output = open("/tmp/pinggy.log", "w")
+              tunnel = subprocess.Popen([
+                  "ssh", "-T",
+                  "-o", "StrictHostKeyChecking=no",
+                  "-o", "ServerAliveInterval=30",
+                  "-o", "ServerAliveCountMax=3",
+                  "-o", "ExitOnForwardFailure=yes",
+                  "-p", "443",
+                  "-R", "0:127.0.0.1:25565",
+                  host,
+              ], stdin=subprocess.DEVNULL, stdout=output,
+                 stderr=subprocess.STDOUT)
+
+              for _ in range(90):
+                  text = Path("/tmp/pinggy.log").read_text(errors="replace")
+                  text = re.sub(r"\x1b\[[0-9;]*[A-Za-z]", "", text)
+                  match = re.search(r"tcp://[A-Za-z0-9.-]+:\d+", text)
+                  if match:
+                      address = match.group(0)
+                      put_file("tunnel.txt", address + "\n")
+                      message("Tunnel: " + address)
+                      return
+                  if tunnel.poll() is not None:
+                      break
+                  time.sleep(1)
+              raise RuntimeError("Pinggy failed; see pinggy.log artifact")
+
+          def read_output():
+              with open("/tmp/mc.log", "w", encoding="utf-8") as log:
+                  for line in process.stdout:
+                      log.write(line)
+                      log.flush()
+                      print(line, end="", flush=True)
+                      with log_lock:
+                          log_lines.append(line.rstrip())
+                      if "Done (" in line:
+                          ready.set()
+
+          def send(command):
+              if process is None or process.poll() is not None:
+                  raise RuntimeError("Minecraft is not running")
+              process.stdin.write(command + "\n")
+              process.stdin.flush()
+
+          def publish_logs():
+              with log_lock:
+                  text = "\n".join(log_lines) + "\n"
+              put_file("server-log.txt", text)
+
+          def poll_command():
+              global last_command_sha
+              item = get_file("command.txt")
+              if item is None:
+                  put_file("command.txt", "\n")
+                  return
+              command = base64.b64decode(
+                  item.get("content", "")
+              ).decode("utf-8").strip()
+
+              if not command:
+                  last_command_sha = None
+                  return
+              if item["sha"] == last_command_sha:
+                  return
+              if "\n" in command or "\r" in command:
+                  raise RuntimeError("Use one command per command.txt")
+
+              command = command.lstrip("/")
+              if command.upper() == "STOP":
+                  command = "stop"
+
+              # Mark this particular file version before sending.
+              last_command_sha = item["sha"]
+              send(command)
+              message("Submitted to Minecraft: " + command)
+
+              # Clear only the version we actually read.
+              put_file("command.txt", "\n", expected_sha=item["sha"])
+              if command.lower() == "stop":
+                  stopping.set()
+
+          def run_server():
+              global process, runtime_started
+
+              args = (
+                  f"libraries/net/minecraftforge/forge/{FORGE}/unix_args.txt"
+              )
+              process = subprocess.Popen([
+                  "java", "-Xms1G", "-Xmx" + MEMORY,
+                  "@" + args, "nogui"
+              ], cwd=SRV, stdin=subprocess.PIPE,
+                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                 text=True, encoding="utf-8", errors="replace", bufsize=1)
+
+              runtime_started = True
+              reader = threading.Thread(target=read_output, daemon=True)
+              reader.start()
+
+              started = time.monotonic()
+              next_log = 0
+              configs_exported = False
+
+              while process.poll() is None and not stopping.is_set():
+                  now = time.monotonic()
+
+                  # Leave time for shutdown, git push and artifacts.
+                  if now - started > 300 * 60:
+                      message("Session limit reached; stopping safely")
+                      stopping.set()
+                      break
+
+                  if not ready.is_set() and now - started > 15 * 60:
+                      raise RuntimeError("Minecraft startup timeout")
+
+                  if ready.is_set():
+                      if not configs_exported:
+                          export_missing(SRV / "config", ROOT / "config")
+                          export_missing(
+                              SRV / "defaultconfigs", ROOT / "defaultconfigs"
+                          )
+                          export_missing(
+                              SRV / "world/serverconfig", ROOT / "serverconfig"
+                          )
+                          message("Server ready")
+                          configs_exported = True
+
+                      try:
+                          poll_command()
+                      except Exception as error:
+                          message("Command relay: " + str(error))
+
+                  if now >= next_log:
+                      try:
+                          publish_logs()
+                      except Exception as error:
+                          message("Log upload: " + str(error))
+                      next_log = now + 60
+
+                  if tunnel is not None and tunnel.poll() is not None:
+                      raise RuntimeError("Pinggy disconnected")
+
+                  stopping.wait(5)
+
+              if process.poll() not in (None, 0):
+                  raise RuntimeError(
+                      f"Minecraft exited with code {process.returncode}"
+                  )
+
+          def stop_server():
+              if process is None:
+                  return True
+              if process.poll() is not None:
+                  return process.returncode == 0
+
+              try:
+                  send("stop")
+                  process.wait(timeout=120)
+              except subprocess.TimeoutExpired:
+                  message("Graceful shutdown timed out")
+                  process.terminate()
+                  try:
+                      process.wait(timeout=20)
+                  except subprocess.TimeoutExpired:
+                      process.kill()
+                      process.wait()
+                  return False
+              except Exception as error:
+                  message("Shutdown: " + str(error))
+                  return False
+
+              return process.returncode == 0
+
+          def git(*args):
+              subprocess.run(["git", *args], check=True)
+
+          def save_repository(clean_shutdown):
+              # Refresh first so web edits to settings are preserved.
+              git("fetch", "origin", BRANCH)
+              git("reset", "--hard", "FETCH_HEAD")
+
+              # Export only missing configs, never overwrite web edits.
+              export_missing(SRV / "config", ROOT / "config")
+              export_missing(SRV / "defaultconfigs", ROOT / "defaultconfigs")
+              export_missing(
+                  SRV / "world/serverconfig", ROOT / "serverconfig"
+              )
+
+              properties = ROOT / "server.properties"
+              if not properties.exists() and (SRV / "server.properties").exists():
+                  shutil.copy2(SRV / "server.properties", properties)
+
+              for name in (
+                  "ops.json", "whitelist.json",
+                  "banned-players.json", "banned-ips.json"
+              ):
+                  # Avoid replacing existing repository edits.
+                  if not (ROOT / name).exists() and (SRV / name).exists():
+                      shutil.copy2(SRV / name, ROOT / name)
+
+              if clean_shutdown and (SRV / "world/level.dat").is_file():
+                  target = ROOT / "world"
+                  if target.exists():
+                      shutil.rmtree(target)
+                  copy_tree(SRV / "world", target)
+                  (target / "session.lock").unlink(missing_ok=True)
+              else:
+                  message(
+                      "Not replacing repository world: shutdown was not clean "
+                      "or level.dat is missing"
+                  )
+
+              (ROOT / "tunnel.txt").write_text("")
+              (ROOT / "command.txt").write_text("\n")
+              with log_lock:
+                  (ROOT / "server-log.txt").write_text(
+                      "\n".join(log_lines) + "\n", encoding="utf-8"
+                  )
+
+              paths = [
+                  "server.properties", "config", "serverconfig",
+                  "defaultconfigs", "world", "ops.json",
+                  "whitelist.json", "banned-players.json",
+                  "banned-ips.json", "tunnel.txt",
+                  "command.txt", "server-log.txt",
+              ]
+              existing = [p for p in paths if (ROOT / p).exists()]
+
+              oversized = [
+                  str(p.relative_to(ROOT))
+                  for folder in existing
+                  for p in (
+                      (ROOT / folder).rglob("*")
+                      if (ROOT / folder).is_dir()
+                      else [ROOT / folder]
+                  )
+                  if p.is_file() and p.stat().st_size >= 100 * 1024 * 1024
+              ]
+              if oversized:
+                  raise RuntimeError(
+                      "Files too large for Git; use artifact backup: "
+                      + ", ".join(oversized)
+                  )
+
+              git("config", "user.name", "MC Bot")
+              git("config", "user.email", "mc-bot@users.noreply.github.com")
+              git("add", "-f", "--", *existing)
+
+              result = subprocess.run(["git", "diff", "--cached", "--quiet"])
+              if result.returncode == 0:
+                  message("No repository changes")
+                  return
+
+              git("commit", "-m", "MC: save world and configs [skip ci]")
+
+              for attempt in range(3):
+                  result = subprocess.run([
+                      "git", "push", "origin", f"HEAD:refs/heads/{BRANCH}"
+                  ])
+                  if result.returncode == 0:
+                      message("World and settings saved to repository")
+                      return
+                  git("pull", "--rebase", "origin", BRANCH)
+                  time.sleep(2)
+
+              raise RuntimeError("Git push failed; download recovery artifact")
+
+          def handle_signal(signum, frame):
+              stopping.set()
+
+          signal.signal(signal.SIGTERM, handle_signal)
+          signal.signal(signal.SIGINT, handle_signal)
+
+          failed = False
+          try:
+              prepare()
+              start_tunnel()
+              run_server()
+          except Exception as error:
+              failed = True
+              message("ERROR: " + str(error))
+          finally:
+              clean = stop_server()
+              if tunnel is not None:
+                  tunnel.terminate()
+
+              if runtime_started and world_prepared:
+                  try:
+                      save_repository(clean)
+                  except Exception as error:
+                      failed = True
+                      message("SAVE ERROR: " + str(error))
+
+              try:
+                  put_file("tunnel.txt", "")
+              except Exception as error:
+                  message("Could not clear tunnel status: " + str(error))
+
+          if failed:
+              raise SystemExit(1)
           PY
 
-      - name: Start Pinggy tunnel
-        run: |
-          PT="${{ secrets.PINGGY_TOKEN }}"
+      - name: Run Minecraft and save data
+        run: python3 -u /tmp/mc-manager.py
 
-          if [ -n "$PT" ]; then
-            HOST="${PT}+tcp@pro.pinggy.io"
-          else
-            HOST="tcp@a.pinggy.io"
+      - name: Prepare recovery archive
+        if: always()
+        run: |
+          mkdir -p /tmp/mc-recovery
+
+          if [ -d srv/world ]; then
+            tar -czf /tmp/mc-recovery/world.tar.gz -C srv world
           fi
 
-          rm -f /tmp/pinggy.log
-
-          ssh -o StrictHostKeyChecking=no \
-              -o ServerAliveInterval=30 \
-              -o ExitOnForwardFailure=yes \
-              -p 443 \
-              -R 0:127.0.0.1:25565 \
-              "$HOST" > /tmp/pinggy.log 2>&1 &
-
-          ADDR=""
-          for i in $(seq 1 45); do
-            ADDR=$(grep -oE 'tcp://[^[:space:]]+' /tmp/pinggy.log | head -n 1 || true)
-            [ -n "$ADDR" ] && break
-            sleep 2
-          done
-
-          if [ -z "$ADDR" ]; then
-            echo "❌ Pinggy tunnel failed"
-            cat /tmp/pinggy.log
-            exit 1
+          if [ -f /tmp/mc.log ]; then
+            cp /tmp/mc.log /tmp/mc-recovery/
           fi
 
-          echo "$ADDR" > tunnel.txt
-          echo "✅ Tunnel: $ADDR"
+          if [ -f /tmp/pinggy.log ]; then
+            cp /tmp/pinggy.log /tmp/mc-recovery/
+          fi
 
-      - name: Commit tunnel address
-        run: |
-          git config user.email "bot@ci"
-          git config user.name "MC Bot"
-
-          git pull --rebase origin "$BRANCH" || true
-          git add tunnel.txt
-          git commit -m "🟡 Starting [skip ci]" || true
-          git push origin HEAD:"$BRANCH"
-
-      - name: Start Forge
-        run: |
-          tmux kill-server 2>/dev/null || true
-          rm -f /tmp/mc.log
-
-          tmux new-session -d -s mc
-
-          tmux send-keys -t mc "cd srv && java -Xms2G -Xmx${{ inputs.memory }} @libraries/net/minecraftforge/forge/${FORGE}/unix_args.txt nogui 2>&1 | tee /tmp/mc.log" Enter
-
-          for i in $(seq 1 180); do
-            if grep -q "Done (" /tmp/mc.log 2>/dev/null; then
-              echo "✅ Server ready!"
-              exit 0
-            fi
-
-            if ! tmux has-session -t mc 2>/dev/null; then
-              echo "❌ Minecraft crashed"
-              tail -n 100 /tmp/mc.log || true
-              exit 1
-            fi
-
-            sleep 5
-          done
-
-          echo "❌ Server startup timeout"
-          tail -n 100 /tmp/mc.log || true
-          exit 1
-
-                - name: Downloadable mod configs uses: actions/upload-artifact@v4 with:
-          name: mod-configs
+      - name: Upload recovery and configs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mc-recovery-${{ github.run_id }}
+          retention-days: 7
+          if-no-files-found: warn
+          include-hidden-files: true
           path: |
+            /tmp/mc-recovery/
             srv/config/
             srv/world/serverconfig/
             srv/defaultconfigs/
-          if-no-files-found: warn
-
-      - name: Log pusher
-        run: |
-          while tmux has-session -t mc 2>/dev/null; do
-            sleep 15
-
-            [ -f /tmp/mc.log ] || continue
-
-            CONTENT=$(tail -n 300 /tmp/mc.log | base64 -w 0)
-
-            CUR=$(curl -sf -H "Authorization: Bearer $TK" \
-              "https://api.github.com/repos/$REPO/contents/server-log.txt?ref=$BRANCH" | \
-              python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || true)
-
-            PAYLOAD="{\"message\":\"log [skip ci]\",\"content\":\"$CONTENT\",\"branch\":\"$BRANCH\""
-
-            if [ -n "$CUR" ]; then
-              PAYLOAD="$PAYLOAD,\"sha\":\"$CUR\""
-            fi
-
-            PAYLOAD="$PAYLOAD}"
-
-            curl -sf -X PUT \
-              -H "Authorization: Bearer $TK" \
-              "https://api.github.com/repos/$REPO/contents/server-log.txt" \
-              -d "$PAYLOAD" > /dev/null || true
-          done
-
-      - name: RCON command relay
-        env:
-          RCON_PASS: ${{ secrets.RCON_PASSWORD }}
-        run: |
-          cat > /tmp/rcon.py <<'PY'
-          import socket, struct, sys
-
-          def make_packet(packet_type, payload, request_id=1):
-              body = struct.pack("<ii", request_id, packet_type)
-              body += payload.encode("utf-8") + b"\x00\x00"
-              return struct.pack("<i", len(body)) + body
-
-          def read_packet(sock):
-              size_data = b""
-              while len(size_data) < 4:
-                  chunk = sock.recv(4 - len(size_data))
-                  if not chunk:
-                      return None, None
-                  size_data += chunk
-
-              size = struct.unpack("<i", size_data)[0]
-              data = b""
-
-              while len(data) < size:
-                  chunk = sock.recv(size - len(data))
-                  if not chunk:
-                      break
-                  data += chunk
-
-              request_id, packet_type = struct.unpack("<ii", data[:8])
-              payload = data[8:-2].decode("utf-8", errors="replace")
-              return request_id, payload
-
-          password = sys.argv[1]
-          command = sys.argv[2]
-
-          sock = socket.create_connection(("127.0.0.1", 25575), timeout=5)
-          sock.sendall(make_packet(3, password))
-
-          auth_id, _ = read_packet(sock)
-
-          if auth_id == -1:
-              print("❌ RCON authentication failed")
-              sys.exit(1)
-
-          sock.sendall(make_packet(2, command, request_id=2))
-          _, response = read_packet(sock)
-          print(response or "✅ Command sent")
-          PY
-
-          LAST_SHA=""
-
-          while tmux has-session -t mc 2>/dev/null; do
-            sleep 3
-
-            if ! timeout 2 bash -c "</dev/tcp/127.0.0.1/25575" 2>/dev/null; then
-              continue
-            fi
-
-            R=$(curl -sf \
-              -H "Authorization: Bearer $TK" \
-              "https://api.github.com/repos/$REPO/contents/command.txt?ref=$BRANCH" 2>/dev/null || echo '{}')
-
-            SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || true)
-
-            CMD=$(echo "$R" | python3 -c "
-          import sys,json,base64
-          try:
-            d=json.load(sys.stdin)
-            print(base64.b64decode(d['content']).decode().strip())
-          except Exception:
-            print('')
-          " 2>/dev/null || true)
-
-            if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then
-              continue
-            fi
-
-            LAST_SHA="$SHA"
-            echo "→ RCON: $CMD"
-
-            if [ "$CMD" = "STOP" ]; then
-              python3 /tmp/rcon.py "$RCON_PASS" "stop" || true
-              sleep 25
-              break
-            fi
-
-            OUT=$(python3 /tmp/rcon.py "$RCON_PASS" "$CMD" 2>&1 || true)
-
-            echo "[$(date -u +%H:%M:%S)] $CMD" >> /tmp/rcon-history.log
-            echo "$OUT" >> /tmp/rcon-history.log
-            echo "$OUT"
-
-            NEW_CONTENT=$(printf '\n' | base64 -w 0)
-
-            curl -sf -X PUT \
-              -H "Authorization: Bearer $TK" \
-              -H "Content-Type: application/json" \
-              "https://api.github.com/repos/$REPO/contents/command.txt" \
-              -d "{\"message\":\"cmd [skip ci]\",\"content\":\"$NEW_CONTENT\",\"sha\":\"$SHA\",\"branch\":\"$BRANCH\"}" > /dev/null || true
-          done
-
-      - name: Save world
-        if: always()
-        run: |
-          if tmux has-session -t mc 2>/dev/null; then
-            python3 /tmp/rcon.py "${{ secrets.RCON_PASSWORD }}" "save-all" 2>/dev/null || true
-            sleep 5
-            python3 /tmp/rcon.py "${{ secrets.RCON_PASSWORD }}" "stop" 2>/dev/null || true
-            sleep 25
-          fi
-
-          if [ -d srv/world ]; then
-            tar -czf world.tar.gz -C srv world/
-
-            REL=$(curl -sf -H "Authorization: Bearer $TK" \
-              "https://api.github.com/repos/$REPO/releases/tags/world-save" || echo '{}')
-
-            RID=$(echo "$REL" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || true)
-
-            if [ -z "$RID" ]; then
-              RID=$(curl -sf -X POST \
-                -H "Authorization: Bearer $TK" \
-                "https://api.github.com/repos/$REPO/releases" \
-                -d '{"tag_name":"world-save","name":"World Save","prerelease":true}' | \
-                python3 -c "import sys,json; print(json.load(sys.stdin)['id'])")
-            else
-              echo "$REL" | python3 -c "import sys,json; [print(a['id']) for a in json.load(sys.stdin).get('assets',[])]" | \
-              while read -r AID; do
-                if [ -n "$AID" ]; then
-                  curl -sf -X DELETE \
-                    -H "Authorization: Bearer $TK" \
-                    "https://api.github.com/repos/$REPO/releases/assets/$AID" > /dev/null || true
-                fi
-              done
-            fi
-
-            curl -sf -X POST \
-              -H "Authorization: Bearer $TK" \
-              -H "Content-Type: application/gzip" \
-              "https://uploads.github.com/repos/$REPO/releases/$RID/assets?name=world.tar.gz" \
-              --data-binary @world.tar.gz > /dev/null && echo "✅ World saved"
-          fi
-
-          echo "" > tunnel.txt
-
-          git config user.email "bot@ci"
-          git config user.name "MC Bot"
-
-          git pull --rebase origin "$BRANCH" || true
-          git add tunnel.txt
-          git commit -m "🔴 Offline [skip ci]" || true
-          git push origin HEAD:"$BRANCH" || true
