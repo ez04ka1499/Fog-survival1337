@@ -1,4 +1,3 @@
-[m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_arid was corrected from null to its default, minecraft:river. 
 [m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_dry was corrected from null to its default, minecraft:river. 
 [m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_neutral was corrected from null to its default, minecraft:river. 
 [m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_wet was corrected from null to its default, minecraft:river. 
@@ -297,4 +296,5 @@
 [m> [K[33m[07:18:58] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
 [m> [K[33m[07:18:58] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
 [m> [K[32m[07:21:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has reached the goal [Feeling Watched]
+[m> [K[32m[07:21:56] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Surge Protector]
 [m> 
