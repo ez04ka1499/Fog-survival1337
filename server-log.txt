@@ -1,4 +1,3 @@
-[m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.froststalkerSpawnWeight was corrected from null to its default, 20. 
 [m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.froststalkerSpawnRolls was corrected from null to its default, 0. 
 [m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.tusklinSpawnWeight was corrected from null to its default, 18. 
 [m[33m[11:58:51] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key spawning.tusklinSpawnRolls was corrected from null to its default, 0. 
@@ -297,4 +296,5 @@
 [m> [K[32m[11:59:16] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@7ed7e664[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:32796) lost connection: Disconnected
 [m> [K[32m[11:59:24] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@7c6ccdd8[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:33652) lost connection: Disconnected
 [m> [K[32m[12:05:18] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@197a8322[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:36156) lost connection: Disconnected
+[m> [K[32m[12:08:24] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@52ff3e9c[id=<null>,name=illkob,properties={},legacy=false] (/127.0.0.1:42668) lost connection: Timed out
 [m> 
