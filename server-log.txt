@@ -1,5 +1,3 @@
-[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_neutral was corrected from null to its default, regions_unexplored:marsh. 
-[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_wet was corrected from null to its default, regions_unexplored:marsh. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_humid was corrected from null to its default, regions_unexplored:marsh. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_arid was corrected from null to its default, regions_unexplored:fungal_fen. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_dry was corrected from null to its default, regions_unexplored:fungal_fen. 
@@ -297,4 +295,6 @@
 [m> [K[32m[08:06:11] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> или по другому пишетчя?
 [m> [K[32m[08:06:12] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> tupl1k
 [m> [K[32m[08:06:19] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ок
+[m> [K[32m[08:06:29] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Removed tuplik from the whitelist]
+[m> [K[32m[08:06:37] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Added Tupl1k to the whitelist]
 [m> 
