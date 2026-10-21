@@ -1,4 +1,3 @@
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_arid was corrected from null to its default, minecraft:frozen_river. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_dry was corrected from null to its default, minecraft:frozen_river. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_neutral was corrected from null to its default, minecraft:frozen_river. 
@@ -297,4 +296,5 @@
 [m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
 [m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
 [m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[32m[07:27:57] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set the time to 1000]
 [m> 
