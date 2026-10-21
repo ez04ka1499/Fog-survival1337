@@ -1,101 +1,171 @@
-name: Minecraft Forge 1.20.1 Server
+name: MC Server
 
 on:
   workflow_dispatch:
+    inputs:
+      memory:              { default: 6G }
+      view_distance:       { default: '7' }
+      simulation_distance: { default: '5' }
+      online_mode:         { default: 'false' }
+      difficulty:          { default: normal }
+      max_players:         { default: '20' }
+      motd:                { default: 'Minecraft on GitHub' }
+      pinggy_token:        { default: '' }
+
+permissions:
+  contents: write
+
+env:
+  FORGE:  1.20.1-47.4.0        # ← поменяй если версия другая
+  TK:     ${{ secrets.GITHUB_TOKEN }}
+  REPO:   ${{ github.repository }}
+  BRANCH: ${{ github.ref_name }}
 
 jobs:
-  start-server:
+  server:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
-    
+    timeout-minutes: 358
+
     steps:
-      - name: 🧹 Очистка места
-        run: |
-          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
-          mkdir -p server/mods
-          
-      - name: ☕ Установка Java 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'temurin'
-          
-      - name: ⬇️ Скачивание Forge Installer
+          distribution: temurin
+
+      # Forge устанавливается один раз, потом кешируется навсегда
+      - uses: actions/cache@v4
+        id: forge
+        with:
+          path: srv
+          key: forge-${{ env.FORGE }}
+
+      - name: Install Forge
+        if: steps.forge.outputs.cache-hit != 'true'
         run: |
-          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.0/forge-1.20.1-47.3.0-installer.jar"
-          
-      - name: 🔨 Установка Forge Server
-        run: java -jar forge-1.20.1-47.3.0-installer.jar --installServer
-        
-      - name: 🌐 Установка e4mc
+          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/$FORGE/forge-$FORGE-installer.jar"
+          java -jar "forge-$FORGE-installer.jar" --installServer ./srv
+          echo eula=true > srv/eula.txt
+
+      - name: Load world
         run: |
-          E4MC_URL=$(curl -s "https://api.modrinth.com/v2/project/e4mc/version?game_versions=[\"1.20.1\"]&loaders=[\"forge\"]" | jq -r '.[0].files[0].url')
-          echo "Скачивание e4mc: $E4MC_URL"
-          wget -q "$E4MC_URL" -O server/mods/e4mc.jar
-          
-      - name: ⚡ Установка модов оптимизации
+          rm -rf srv/world
+          ASSET=$(curl -sf -H "Authorization: Bearer $TK" \
+            "https://api.github.com/repos/$REPO/releases/tags/world-save" | \
+            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null)
+          [ -n "$ASSET" ] && wget -q "$ASSET" -O- | tar -xzf- -C srv/ && echo "✅ World loaded" || echo "🌍 Fresh world"
+
+      - name: Mods & server.properties
         run: |
-          download_mod() {
-            local slug=$1
-            local url=$(curl -s "https://api.modrinth.com/v2/project/$slug/version?game_versions=[\"1.20.1\"]&loaders=[\"forge\"]" | jq -r '.[0].files[0].url')
-            if [ "$url" != "null" ] && [ -n "$url" ]; then
-              wget -q "$url" -P server/mods/
-              echo "✅ Установлен: $slug"
-            else
-              echo "❌ Не найден: $slug"
+          rm -rf srv/mods && mkdir -p srv/mods
+
+          # Моды из папки mods/ репо
+          [ -d mods ] && cp -r mods/. srv/mods/ && echo "📦 $(ls srv/mods | wc -l) mods"
+
+          # Большой модпак из релиза mods-pack (если есть)
+          MODS=$(curl -sf -H "Authorization: Bearer $TK" \
+            "https://api.github.com/repos/$REPO/releases/tags/mods-pack" | \
+            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null)
+          [ -n "$MODS" ] && wget -q "$MODS" -O- | tar -xzf- -C srv/mods/
+
+          # Оптимизированный server.properties (пинг / перфоманс)
+          {
+            echo "online-mode=${{ inputs.online_mode }}"
+            echo "view-distance=${{ inputs.view_distance }}"
+            echo "simulation-distance=${{ inputs.simulation_distance }}"
+            echo "difficulty=${{ inputs.difficulty }}"
+            echo "max-players=${{ inputs.max_players }}"
+            echo "motd=${{ inputs.motd }}"
+            echo "enable-rcon=true"
+            echo "rcon.password=mcgh_rcon"
+            echo "rcon.port=25575"
+            echo "spawn-protection=0"
+            echo "use-native-transport=true"
+            echo "network-compression-threshold=256"
+            echo "entity-broadcast-range-percentage=75"
+          } > srv/server.properties
+
+      - name: Pinggy tunnel
+        run: |
+          PT="${{ inputs.pinggy_token }}"
+          [ -n "$PT" ] && HOST="tcp+$PT@a.pinggy.io" || HOST="a.pinggy.io"
+          ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=30 \
+            -p 443 -R 0:localhost:25565 "$HOST" 2>&1 | tee /tmp/pinggy.log &
+
+          for i in $(seq 1 30); do
+            ADDR=$(grep -oE 'tcp://[^[:space:]]+' /tmp/pinggy.log | head -1)
+            [ -n "$ADDR" ] && break || sleep 2
+          done
+
+          git config user.email bot@ci && git config user.name "MC Bot"
+          echo "${ADDR:-no tunnel yet}" > tunnel.txt
+          git add tunnel.txt && git commit -m "🟡 Starting [skip ci]" && git push
+
+      - name: Start Forge
+        run: |
+          tmux new-session -d -s mc
+          tmux send-keys -t mc \
+            "cd srv && java -Xms2G -Xmx${{ inputs.memory }} @libraries/net/minecraftforge/forge/$FORGE/unix_args.txt nogui 2>&1 | tee /tmp/mc.log" \
+            Enter
+
+          for i in $(seq 1 180); do
+            grep -q "Done (" /tmp/mc.log 2>/dev/null && { echo "✅ Server ready!"; break; }
+            ! tmux has-session -t mc 2>/dev/null && { tail -50 /tmp/mc.log; exit 1; }
+            sleep 5
+          done
+
+      - name: Command relay
+        run: |
+          LAST_SHA=""
+          while tmux has-session -t mc 2>/dev/null; do
+            sleep 5
+            R=$(curl -sf -H "Authorization: Bearer $TK" \
+              "https://api.github.com/repos/$REPO/contents/command.txt" 2>/dev/null || echo '{}')
+            SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null)
+            CMD=$(echo "$R" | python3 -cimport sys,json,base64d=json.load(sys.stdin)print(base64.b64decode(d['content']).decode().strip() if 'content' in d else '')" 2>/dev/null)
+
+            if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then continue; fi
+            LAST_SHA="$SHA"
+
+            if [ "$CMD" = "STOP" ]; then
+              tmux send-keys -t mc "stop" Enter; sleep 20; break
             fi
-          }
-          
-          download_mod "modernfix"
-          download_mod "ferritecore"
-          download_mod "embeddium"
-          download_mod "entityculling"
-          download_mod "spark"
-          download_mod "krypton-reforged"
-          
-      - name: ⚙️ Создание server.properties
+
+            tmux send-keys -t mc "$CMD" Enter
+            # Очистить command.txt
+            curl -sf -X PUT -H "Authorization: Bearer $TK" -H "Content-Type: application/json" \
+              "https://api.github.com/repos/$REPO/contents/command.txt" \
+              -d "{\"message\":\"cmd [skip ci]\",\"content\":\"Cg==\",\"sha\":\"$SHA\",\"branch\":\"$BRANCH\"}" >/dev/null
+          done
+
+      - name: Save world
+        if: always()
         run: |
-          cat <<EOF > server/server.properties
-server-port=25565
-online-mode=false
-enable-status=true
-max-tick-time=-1
-network-compression-threshold=256
-simulation-distance=8
-view-distance=10
-sync-chunk-writes=false
-use-native-transport=true
-EOF
-          
-      - name: 👑 Настройка операторов (TWIX_EXTRATOP)
-        run: |
-          cat <<EOF > server/ops.json
-[
-  {
-    "uuid": "",
-    "name": "TWIX_EXTRATOP",
-    "level": 4,
-    "bypassesPlayerLimit": false
-  }
-]
-EOF
-          
-      - name: 📜 Принятие EULA
-        run: echo "eula=true" > server/eula.txt
-        
-      - name: 🚀 Запуск сервера
-        working-directory: ./server
-        run: |
-          echo "=== ЗАПУСК СЕРВЕРА ==="
-          echo "Игрок TWIX_EXTRATOP получит права оператора автоматически"
-          echo "После появления ссылки e4mc скопируйте её для подключения!"
-          
-          java -Xms6G -Xmx6G \
-            -XX:+UseZGC \
-            -XX:+AlwaysPreTouch \
-            -XX:+DisableExplicitGC \
-            -XX:+UnlockExperimentalVMOptions \
-            -Dfml.queryResult=confirm \
-            -Dterminal.jline=false \
-            -Dterminal.ansi=true \
-            @user_jvm_args.txt @libraries/net/minecraftforge/forge/1.20.1-47.3.0/unix_args.txt nogui
+          tmux send-keys -t mc "stop" Enter 2>/dev/null; sleep 20
+
+          if [ -d srv/world ]; then
+            tar -czf world.tar.gz -C srv world/
+            REL=$(curl -sf -H "Authorization: Bearer $TK" \
+              "https://api.github.com/repos/$REPO/releases/tags/world-save" || echo '{}')
+            RID=$(echo "$REL" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null)
+
+            if [ -z "$RID" ]; then
+              RID=$(curl -sf -X POST -H "Authorization: Bearer $TK" \
+                "https://api.github.com/repos/$REPO/releases" \
+                -d '{"tag_name":"world-save","name":"World Save","prerelease":true}' | \
+                python3 -c "import sys,json; print(json.load(sys.stdin)['id'])")
+            else
+              echo "$REL" | python3 -c "import sys,json; [print(a['id']) for a in json.load(sys.stdin).get('assets',[])]" | \
+              xargs -I{} curl -sf -X DELETE -H "Authorization: Bearer $TK" \
+                "https://api.github.com/repos/$REPO/releases/assets/{}"
+            fi
+
+            curl -sf -X POST -H "Authorization: Bearer $TK" -H "Content-Type: application/gzip" \
+              "https://uploads.github.com/repos/$REPO/releases/$RID/assets?name=world.tar.gz" \
+              --data-binary @world.tar.gz >/dev/null && echo "✅ World saved"
+          fi
+
+          git config user.email bot@ci 2>/dev/null; git config user.name "MC Bot" 2>/dev/null
+          git pull --rebase 2>/dev/null; echo "" > tunnel.txt
+          git add tunnel.txt && git commit -m "🔴 Offline [skip ci]" && git push 2>/dev/null || true
