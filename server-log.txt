@@ -1,300 +1,300 @@
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_icy was corrected from null to its default, regions_unexplored:hyacinth_deeps. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_cool was corrected from null to its default, minecraft:deep_cold_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_neutral was corrected from null to its default, minecraft:deep_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_warm was corrected from null to its default, minecraft:deep_lukewarm_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_hot was corrected from null to its default, minecraft:warm_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.icy was corrected from null to its default, minecraft:frozen_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.cool was corrected from null to its default, minecraft:cold_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.neutral was corrected from null to its default, minecraft:ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.warm was corrected from null to its default, minecraft:lukewarm_ocean. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.hot was corrected from null to its default, regions_unexplored:rocky_reef. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.icy_beach_biome was corrected from null to its default, minecraft:snowy_beach. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.cold_beach_biome was corrected from null to its default, regions_unexplored:gravel_beach. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.neutral_beach_biome was corrected from null to its default, regions_unexplored:grassy_beach. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.warm_beach_biome was corrected from null to its default, regions_unexplored:grassy_beach. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.hot_beach_biome was corrected from null to its default, minecraft:beach. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.cold_stone_beach_biome was corrected from null to its default, minecraft:stony_shore. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.hot_stone_beach_biome was corrected from null to its default, regions_unexplored:chalk_cliffs. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_1_biome was corrected from null to its default, minecraft:lush_caves. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_2_biome was corrected from null to its default, minecraft:dripstone_caves. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_3_biome was corrected from null to its default, minecraft:deep_dark. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_4_biome was corrected from null to its default, regions_unexplored:bioshroom_caves. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_5_biome was corrected from null to its default, regions_unexplored:ancient_delta. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_6_biome was corrected from null to its default, regions_unexplored:prismachasm. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_7_biome was corrected from null to its default, regions_unexplored:redstone_caves. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_8_biome was corrected from null to its default, regions_unexplored:scorching_caves. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.icy_island_biome was corrected from null to its default, regions_unexplored:alpha_grove. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.cool_island_biome was corrected from null to its default, regions_unexplored:alpha_grove. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.neutral_island_biome was corrected from null to its default, regions_unexplored:ashen_woodland. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.warm_island_biome was corrected from null to its default, regions_unexplored:tropics. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.hot_island_biome was corrected from null to its default, regions_unexplored:tropics. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OTHER_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OTHER_BIOMES--------------------.shattered_cliff_biome was corrected from null to its default, regions_unexplored:towering_cliffs. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/bloodmoon-common.toml is not correct. Correcting
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.scanDepth was corrected from null to its default, 30. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.chunksPerBatch was corrected from null to its default, 6. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.delayPerBatch was corrected from null to its default, 4. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.pendingChunkScansPerTick was corrected from null to its default, 3. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.torchScanRange was corrected from null to its default, 20. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/man_config.toml is not correct. Correcting
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.enable_spawning was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_spawn_rate was corrected from null to its default, 5000.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_spawn_rate was corrected from null to its default, 20000.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.jumpscare was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_chase_duration was corrected from null to its default, 400.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_chase_duration was corrected from null to its default, 1000.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.climbing was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.vanish_distance was corrected from null to its default, 30.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_at_day was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect_duration was corrected from null to its default, 150.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.break_blocks was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.lightnings was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_sounds was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage1_spawn_rate was corrected from null to its default, 600.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage2_spawn_rate was corrected from null to its default, 900.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.old_stalk_mechanic was corrected from null to its default, false. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.legacy_man was corrected from null to its default, false. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.search_mechanic was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness was corrected from null to its default, 2.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness_search was corrected from null to its default, 5.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_break_timer was corrected from null to its default, 10.0. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/knocker.toml is not correct. Correcting
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client.spawn_rate was corrected from null to its default, common. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client.respect_difficulty was corrected from null to its default, true. 
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client.spawn_sound was corrected from null to its default, false. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/amendments-client.toml is not correct. Correcting
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.tooltip_hints was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.custom_configured_screen was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign.pixel_consistent was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign.text_color_multiplier was corrected from null to its default, 1.2. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign.sign_blacklist was corrected from null to its default, []. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.snowball_3d was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.fireball_3d was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.ghast_fireball_trail was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.dragon_fireball_trail was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.charges_tumble was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.projectiles_tumble was corrected from null to its default, false. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.dragon_fireball was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.dragon_fireball.dragon_breath_emissive was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lily_pad was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lily_pad.y_offset was corrected from null to its default, -0.016625. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key bell was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key bell.chain_attachment was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key brewing_stand was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key brewing_stand.brewing_stand_colors was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key arrows was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key arrows.crossbows_colors was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key tripwire_hook was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key tripwire_hook.fast_hooks was corrected from null to its default, false. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.item_pixel_scale was corrected from null to its default, 10.0. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.swinging_signs was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.sign_attachment was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.swing_physics was corrected from null to its default, SimpleCommentedConfig:{min_angle=0.79999995, collision_force=15.0, damping=0.525, collision_inertia=1.0, collision_considers_entity_hitbox=true, frequency=0.6, max_angle=60.0}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.fast_lanterns was corrected from null to its default, false. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.swing_physics was corrected from null to its default, SimpleCommentedConfig:{min_angle=0.79999995, collision_force=15.0, damping=0.525, collision_inertia=1.0, collision_considers_entity_hitbox=true, frequency=0.6, max_angle=60.0}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.lantern_item_size was corrected from null to its default, 0.625. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.lantern_item_holding was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.lantern_item_holding_up was corrected from null to its default, false. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cauldron was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cauldron.potion_texture was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key jukebox was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key jukebox.new_model was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key jukebox.disc_spin was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc was corrected from null to its default, SimpleCommentedConfig:{}. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.torch_item_holding was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.torch_item_size was corrected from null to its default, 1.0. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.candle_holder_item_holding was corrected from null to its default, true. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.handle_holder_item_size was corrected from null to its default, 0.625. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.fixed_holding_animations was corrected from null to its default, false. 
-[m[33m[07:25:35] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.campfire_smoke_through_blocks was corrected from null to its default, false. 
-[m[32m[07:25:35] [main/INFO] [journeymap/]: Initializing Packet Registries
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
-[m[32m[07:25:36] [main/INFO] [Moonlight/]: Initialized color sets in 50ms
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
-[m[32m[07:25:36] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[m[32m[07:25:36] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[m[32m[07:25:36] [main/INFO] [terrablender/]: Registered region regions_unexplored:primary to index 1 for type OVERWORLD
-[m[32m[07:25:36] [main/INFO] [terrablender/]: Registered region regions_unexplored:secondary to index 2 for type OVERWORLD
-[m[32m[07:25:36] [main/INFO] [terrablender/]: Registered region regions_unexplored:nether to index 1 for type NETHER
-[m[32m[07:25:36] [main/INFO] [Framework/SYNCED_ENTITY_DATA]: Registered synced data key refurbished_furniture:lock_yaw for refurbished_furniture:seat
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
-[m[32m[07:25:36] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [sound_physics_remastered] Starting version check at https://update.maxhenkel.de/forge/sound_physics_remastered
-[m[32m[07:25:36] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
-[m[32m[07:25:36] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
-[m[32m[07:25:36] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [sound_physics_remastered] Found status: AHEAD Current: 1.20.1-1.5.1 Target: null
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.10
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [moonlight] Starting version check at https://api.modrinth.com/updates/moonlight/forge_updates.json
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [moonlight] Found status: OUTDATED Current: 1.20-2.16.30 Target: 1.20-2.16.37-forge
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [presencefootsteps] Starting version check at https://forge.curseupdate.com/433068/presencefootsteps
-[m[32m[07:25:37] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[m[32m[07:25:37] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [presencefootsteps] Found status: BETA Current: 1.20.1-1.9.1-beta.1 Target: 1.20.1-1.9.1-beta.1
-[m[33m[07:25:37] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23199!/assets/.mcassetsroot' uses unexpected schema
-[m[33m[07:25:37] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23199!/data/.mcassetsroot' uses unexpected schema
-[m[32m[07:25:37] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@64b37125]
-[m[32m[07:25:37] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
-[m[32m[07:25:38] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 43 ms (multithreaded)
-[m[32m[07:25:38] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 44 ms
-[m[32m[07:25:39] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
-[m[32m[07:25:40] [main/INFO] [minecraft/RecipeManager]: Loaded 17 recipes
-[m[32m[07:25:40] [main/INFO] [minecraft/AdvancementList]: Loaded 3601 advancements
-[m[32m[07:25:40] [main/INFO] [tempest/]: Loaded weather noise maps for 1 levels
-[m[32m[07:25:40] [main/INFO] [tempest/]: Loaded 0 weather spawn providers
-[m[32m[07:25:41] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
-[m[32m[07:25:41] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
-[m[32m[07:25:41] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[m[32m[07:25:41] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[m[32m[07:25:41] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[m[32m[07:25:41] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[m[?1h=[?2004h> [K[32m[07:25:41] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
-[m> [K[32m[07:25:41] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[m> [K[33m[07:25:41] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[m> [K[33m[07:25:41] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[m> [K[33m[07:25:41] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[m> [K[33m[07:25:41] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[m> [K[32m[07:25:41] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
-[m> [K[32m[07:25:41] [Server thread/INFO] [Framework/]: Loading server configs...
-[m> [K[32m[07:25:41] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
-[m> [K[32m[07:25:41] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
-[m> [K[32m[07:25:41] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
-[m> [K[32m[07:25:42] [Server thread/INFO] [ne.re.RegionsUnexploredMod/]: Loading dimension "minecraft:the_nether" with biome source: "minecraft:multi_noise".
-[m> [K[32m[07:25:42] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[m> [K[32m[07:25:43] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[07:25:43] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[07:25:43] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[07:25:44] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[m> [K[32m[07:25:44] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 35%
-[m> [K[32m[07:25:44] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 99%
-[m> [K[32m[07:25:45] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2505 ms
-[m> [K[32m[07:25:45] [Server thread/INFO] [minecraft/DedicatedServer]: Done (3.599s)! For help, type "help"
-[m> [K[32m[07:25:45] [Server thread/INFO] [minecraft/DedicatedServer]: Starting remote control listener
-[m> [K[32m[07:25:45] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
-[m> [K[32m[07:25:45] [Server thread/INFO] [minecraft/RconThread]: RCON running on 0.0.0.0:25575
-[m> [K[32m[07:25:45] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
-[m> [K[32m[07:25:45] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
-[m> [K[33m[07:25:45] [Server thread/WARN] [ModernFix/]: Dedicated server took 27.245 seconds to load
-[m> [K[32m[07:26:39] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:55480] logged in with entity id 270 at (-1.449037488000685, 72.0, 88.6492461780055)
-[m> [K[32m[07:26:39] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[m> [K[32m[07:26:54] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[33m[07:26:59] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
-[m> [K[32m[07:27:57] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set the time to 1000]
-[m> [K[32m[07:29:01] [Server thread/INFO] [minecraft/PlayerList]: Tupl1k[/127.0.0.1:47600] logged in with entity id 613 at (18.5, 67.0, 0.5)
-[m> [K[32m[07:29:01] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k joined the game
-[m> [K[32m[07:29:06] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> вопрос
-[m> [K[32m[07:29:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> первое
-[m> [K[32m[07:29:29] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> я фиг знает как сделал себя администратором потому что на сайте эта долбанная консоль сервера не работает
-[m> [K[32m[07:29:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> а второ КАКОГО ФИГА ТУТ ВСЁ ЗАМЕРЗАЕТ
-[m> [K[32m[07:29:40] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Tupl1k lost connection: Disconnected
-[m> [K[32m[07:29:40] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k left the game
-[m> [K[32m[07:32:15] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[m> [K[32m[07:32:25] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[m> [K[32m[07:32:29] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Spectator Mode]
-[m> [K[33m[07:32:40] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 3128ms or 62 ticks behind
-[m> [K[33m[07:32:41] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP moved too quickly! -13.767042612277578,0.0,0.34614156208323266
-[m> [K[32m[07:32:46] [Server thread/INFO] [minecraft/PlayerList]: Tupl1k[/127.0.0.1:36348] logged in with entity id 2539 at (18.5, 67.0, 0.5)
-[m> [K[32m[07:32:46] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k joined the game
-[m> [K[32m[07:33:13] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[m> [K[32m[07:33:23] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k has made the advancement [Minecraft Comes Alive]
-[m> [K[32m[07:33:24] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k has reached the goal [Feeling Watched]
-[m> [K[32m[07:33:24] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to Tupl1k]
-[m> [K[32m[07:33:30] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> знаешь что
-[m> [K[32m[07:33:38] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> я ели как себя сделал админом
-[m> [K[32m[07:33:48] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> как поменять жителя на игрока?
-[m> [K[32m[07:33:53] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> хз
-[m> [K[32m[07:33:57] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> бля
-[m> [K[32m[07:33:58] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> уже никак
-[m> [K[32m[07:34:09] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> помоги
-[m> [K[32m[07:34:14] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> короче главное что попробуй как для тебя норм играть или не?
-[m> [K[32m[07:34:18] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[m> [K[32m[07:34:23] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> я в колодце
-[m> [K[32m[07:34:33] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> помоги
-[m> [K[32m[07:34:44] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ты че невидимый
-[m> [K[32m[07:34:47] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> ага
-[m> [K[32m[07:34:54] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Removed every effect from Tupl1k]
-[m> [K[32m[07:35:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ломай
-[m> [K[32m[07:35:07] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> Я ЧЕРНЫЙ!!!
-[m> [K[32m[07:35:14] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> аххахахахаа негр
-[m> [K[32m[07:35:22] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> ыыы
-[m> [K[32m[07:35:33] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k was slain by Iron Golem
-[m> [K[32m[07:35:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP burned to death
-[m> [K[32m[07:36:19] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> что делает шейдер офф
-[m> [K[32m[07:37:07] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k was slain by Iron Golem
-[m> [K[32m[07:37:40] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> МЛЯ Я ПОШЕЛ СОЗДАВАТЬ НОВЫЙ АКК ПОТОМУ ЧТО Я НЕ ХОЧУ БЫТЬ ЧЕРНЫМ
-[m> [K[32m[07:39:51] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> а
-[m> [K[32m[07:39:59] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ща я тебе редактора включу
-[m> [K[32m[07:40:19] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Player data reset.]
-[m> [K[32m[07:40:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> а неэ
-[m> [K[32m[07:41:05] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[m> [K[32m[07:41:32] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> rта ты не черный
-[m> [K[32m[07:41:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> просто темная кожае
-[m> [K[32m[07:41:40] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> норм
-[m> [K[32m[07:45:30] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> я еще афк буду
-[m> [K[32m[07:49:51] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> ты тут?
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_arid was corrected from null to its default, minecraft:frozen_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_dry was corrected from null to its default, minecraft:frozen_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_neutral was corrected from null to its default, minecraft:frozen_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_wet was corrected from null to its default, minecraft:frozen_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_humid was corrected from null to its default, minecraft:frozen_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_arid was corrected from null to its default, regions_unexplored:cold_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_dry was corrected from null to its default, regions_unexplored:cold_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_neutral was corrected from null to its default, regions_unexplored:cold_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_wet was corrected from null to its default, regions_unexplored:muddy_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.cool_humid was corrected from null to its default, regions_unexplored:muddy_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_arid was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_dry was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_neutral was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_wet was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.neutral_humid was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.warm_arid was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.warm_dry was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.warm_neutral was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.warm_wet was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.warm_humid was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.hot_arid was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.hot_dry was corrected from null to its default, minecraft:river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.hot_neutral was corrected from null to its default, regions_unexplored:tropical_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.hot_wet was corrected from null to its default, regions_unexplored:tropical_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.hot_humid was corrected from null to its default, regions_unexplored:tropical_river. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.icy_arid was corrected from null to its default, regions_unexplored:spires. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.icy_dry was corrected from null to its default, regions_unexplored:spires. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.icy_neutral was corrected from null to its default, regions_unexplored:spires. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.icy_wet was corrected from null to its default, regions_unexplored:spires. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.icy_humid was corrected from null to its default, regions_unexplored:spires. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.cool_arid was corrected from null to its default, regions_unexplored:fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.cool_dry was corrected from null to its default, regions_unexplored:fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.cool_neutral was corrected from null to its default, regions_unexplored:fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.cool_wet was corrected from null to its default, regions_unexplored:fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.cool_humid was corrected from null to its default, regions_unexplored:fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.neutral_arid was corrected from null to its default, regions_unexplored:old_growth_bayou. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.neutral_dry was corrected from null to its default, regions_unexplored:bayou. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.neutral_neutral was corrected from null to its default, regions_unexplored:bayou. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.neutral_wet was corrected from null to its default, regions_unexplored:bayou. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.neutral_humid was corrected from null to its default, regions_unexplored:old_growth_bayou. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_arid was corrected from null to its default, regions_unexplored:marsh. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_dry was corrected from null to its default, regions_unexplored:marsh. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_neutral was corrected from null to its default, regions_unexplored:marsh. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_wet was corrected from null to its default, regions_unexplored:marsh. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_humid was corrected from null to its default, regions_unexplored:marsh. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_arid was corrected from null to its default, regions_unexplored:fungal_fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_dry was corrected from null to its default, regions_unexplored:fungal_fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_neutral was corrected from null to its default, regions_unexplored:fungal_fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_wet was corrected from null to its default, regions_unexplored:fungal_fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_humid was corrected from null to its default, regions_unexplored:fungal_fen. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_icy was corrected from null to its default, regions_unexplored:hyacinth_deeps. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_cool was corrected from null to its default, minecraft:deep_cold_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_neutral was corrected from null to its default, minecraft:deep_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_warm was corrected from null to its default, minecraft:deep_lukewarm_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.deep_hot was corrected from null to its default, minecraft:warm_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.icy was corrected from null to its default, minecraft:frozen_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.cool was corrected from null to its default, minecraft:cold_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.neutral was corrected from null to its default, minecraft:ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.warm was corrected from null to its default, minecraft:lukewarm_ocean. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OCEAN_BIOMES--------------------.hot was corrected from null to its default, regions_unexplored:rocky_reef. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.icy_beach_biome was corrected from null to its default, minecraft:snowy_beach. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.cold_beach_biome was corrected from null to its default, regions_unexplored:gravel_beach. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.neutral_beach_biome was corrected from null to its default, regions_unexplored:grassy_beach. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.warm_beach_biome was corrected from null to its default, regions_unexplored:grassy_beach. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.hot_beach_biome was corrected from null to its default, minecraft:beach. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.cold_stone_beach_biome was corrected from null to its default, minecraft:stony_shore. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SHORE_BIOMES--------------------.hot_stone_beach_biome was corrected from null to its default, regions_unexplored:chalk_cliffs. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_1_biome was corrected from null to its default, minecraft:lush_caves. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_2_biome was corrected from null to its default, minecraft:dripstone_caves. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_3_biome was corrected from null to its default, minecraft:deep_dark. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_4_biome was corrected from null to its default, regions_unexplored:bioshroom_caves. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_5_biome was corrected from null to its default, regions_unexplored:ancient_delta. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_6_biome was corrected from null to its default, regions_unexplored:prismachasm. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_7_biome was corrected from null to its default, regions_unexplored:redstone_caves. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------UNDERGROUND_BIOMES--------------------.cave_8_biome was corrected from null to its default, regions_unexplored:scorching_caves. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.icy_island_biome was corrected from null to its default, regions_unexplored:alpha_grove. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.cool_island_biome was corrected from null to its default, regions_unexplored:alpha_grove. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.neutral_island_biome was corrected from null to its default, regions_unexplored:ashen_woodland. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.warm_island_biome was corrected from null to its default, regions_unexplored:tropics. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------ISLAND_BIOMES--------------------.hot_island_biome was corrected from null to its default, regions_unexplored:tropics. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OTHER_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------OTHER_BIOMES--------------------.shattered_cliff_biome was corrected from null to its default, regions_unexplored:towering_cliffs. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/bloodmoon-common.toml is not correct. Correcting
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.scanDepth was corrected from null to its default, 30. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.chunksPerBatch was corrected from null to its default, 6. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.delayPerBatch was corrected from null to its default, 4. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.pendingChunkScansPerTick was corrected from null to its default, 3. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.torchScanRange was corrected from null to its default, 20. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/man_config.toml is not correct. Correcting
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.enable_spawning was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_spawn_rate was corrected from null to its default, 5000.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_spawn_rate was corrected from null to its default, 20000.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.jumpscare was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_chase_duration was corrected from null to its default, 400.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_chase_duration was corrected from null to its default, 1000.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.climbing was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.vanish_distance was corrected from null to its default, 30.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_at_day was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect_duration was corrected from null to its default, 150.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.break_blocks was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.lightnings was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_sounds was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage1_spawn_rate was corrected from null to its default, 600.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage2_spawn_rate was corrected from null to its default, 900.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.old_stalk_mechanic was corrected from null to its default, false. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.legacy_man was corrected from null to its default, false. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.search_mechanic was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness was corrected from null to its default, 2.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness_search was corrected from null to its default, 5.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_break_timer was corrected from null to its default, 10.0. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/knocker.toml is not correct. Correcting
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client.spawn_rate was corrected from null to its default, common. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client.respect_difficulty was corrected from null to its default, true. 
+[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server and client.spawn_sound was corrected from null to its default, false. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/amendments-client.toml is not correct. Correcting
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.tooltip_hints was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.custom_configured_screen was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign.pixel_consistent was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign.text_color_multiplier was corrected from null to its default, 1.2. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key sign.sign_blacklist was corrected from null to its default, []. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.snowball_3d was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.fireball_3d was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.ghast_fireball_trail was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.dragon_fireball_trail was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.charges_tumble was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.projectiles_tumble was corrected from null to its default, false. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.dragon_fireball was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key projectiles.dragon_fireball.dragon_breath_emissive was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lily_pad was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lily_pad.y_offset was corrected from null to its default, -0.016625. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key bell was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key bell.chain_attachment was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key brewing_stand was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key brewing_stand.brewing_stand_colors was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key arrows was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key arrows.crossbows_colors was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key tripwire_hook was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key tripwire_hook.fast_hooks was corrected from null to its default, false. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.item_pixel_scale was corrected from null to its default, 10.0. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.swinging_signs was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.sign_attachment was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key hanging_sign.swing_physics was corrected from null to its default, SimpleCommentedConfig:{min_angle=0.79999995, collision_force=15.0, damping=0.525, collision_inertia=1.0, collision_considers_entity_hitbox=true, frequency=0.6, max_angle=60.0}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.fast_lanterns was corrected from null to its default, false. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.swing_physics was corrected from null to its default, SimpleCommentedConfig:{min_angle=0.79999995, collision_force=15.0, damping=0.525, collision_inertia=1.0, collision_considers_entity_hitbox=true, frequency=0.6, max_angle=60.0}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.lantern_item_size was corrected from null to its default, 0.625. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.lantern_item_holding was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key lantern.lantern_item_holding_up was corrected from null to its default, false. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cauldron was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cauldron.potion_texture was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key jukebox was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key jukebox.new_model was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key jukebox.disc_spin was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc was corrected from null to its default, SimpleCommentedConfig:{}. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.torch_item_holding was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.torch_item_size was corrected from null to its default, 1.0. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.candle_holder_item_holding was corrected from null to its default, true. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.handle_holder_item_size was corrected from null to its default, 0.625. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.fixed_holding_animations was corrected from null to its default, false. 
+[m[33m[07:52:33] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.campfire_smoke_through_blocks was corrected from null to its default, false. 
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
+[m[32m[07:52:33] [main/INFO] [journeymap/]: Initializing Packet Registries
+[m[32m[07:52:33] [main/INFO] [Moonlight/]: Initialized color sets in 29ms
+[m[32m[07:52:33] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[m[32m[07:52:33] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[m[32m[07:52:33] [main/INFO] [terrablender/]: Registered region regions_unexplored:primary to index 1 for type OVERWORLD
+[m[32m[07:52:33] [main/INFO] [terrablender/]: Registered region regions_unexplored:secondary to index 2 for type OVERWORLD
+[m[32m[07:52:33] [main/INFO] [terrablender/]: Registered region regions_unexplored:nether to index 1 for type NETHER
+[m[32m[07:52:33] [main/INFO] [Framework/SYNCED_ENTITY_DATA]: Registered synced data key refurbished_furniture:lock_yaw for refurbished_furniture:seat
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
+[m[32m[07:52:33] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [sound_physics_remastered] Starting version check at https://update.maxhenkel.de/forge/sound_physics_remastered
+[m[32m[07:52:34] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
+[m[32m[07:52:34] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
+[m[32m[07:52:34] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
+[m[32m[07:52:34] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [sound_physics_remastered] Found status: AHEAD Current: 1.20.1-1.5.1 Target: null
+[m[32m[07:52:34] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[m[32m[07:52:34] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.10
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [moonlight] Starting version check at https://api.modrinth.com/updates/moonlight/forge_updates.json
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [moonlight] Found status: OUTDATED Current: 1.20-2.16.30 Target: 1.20-2.16.37-forge
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [presencefootsteps] Starting version check at https://forge.curseupdate.com/433068/presencefootsteps
+[m[32m[07:52:35] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [presencefootsteps] Found status: BETA Current: 1.20.1-1.9.1-beta.1 Target: 1.20.1-1.9.1-beta.1
+[m[33m[07:52:35] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23199!/assets/.mcassetsroot' uses unexpected schema
+[m[33m[07:52:35] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23199!/data/.mcassetsroot' uses unexpected schema
+[m[32m[07:52:35] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@340e986d]
+[m[32m[07:52:35] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
+[m[32m[07:52:35] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 39 ms (multithreaded)
+[m[32m[07:52:35] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 39 ms
+[m[32m[07:52:37] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
+[m[32m[07:52:38] [main/INFO] [minecraft/RecipeManager]: Loaded 17 recipes
+[m[32m[07:52:38] [main/INFO] [minecraft/AdvancementList]: Loaded 3601 advancements
+[m[32m[07:52:38] [main/INFO] [tempest/]: Loaded weather noise maps for 1 levels
+[m[32m[07:52:38] [main/INFO] [tempest/]: Loaded 0 weather spawn providers
+[m[32m[07:52:38] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
+[m[32m[07:52:38] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
+[m[32m[07:52:38] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
+[m[32m[07:52:38] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[m[32m[07:52:38] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[m[32m[07:52:38] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[m[?1h=[?2004h> [K[32m[07:52:38] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
+[m> [K[32m[07:52:38] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[m> [K[33m[07:52:38] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[m> [K[33m[07:52:38] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[m> [K[33m[07:52:38] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[m> [K[33m[07:52:38] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[m> [K[32m[07:52:38] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
+[m> [K[32m[07:52:38] [Server thread/INFO] [Framework/]: Loading server configs...
+[m> [K[32m[07:52:39] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
+[m> [K[32m[07:52:39] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
+[m> [K[32m[07:52:39] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+[m> [K[32m[07:52:39] [Server thread/INFO] [ne.re.RegionsUnexploredMod/]: Loading dimension "minecraft:the_nether" with biome source: "minecraft:multi_noise".
+[m> [K[32m[07:52:39] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[m> [K[32m[07:52:40] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[07:52:40] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[07:52:40] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[m> [K[32m[07:52:40] [Netty Epoll Server IO #1/INFO] [ne.mi.se.ServerLifecycleHooks/SERVERHOOKS]: Disconnecting Player (server is still starting): literal{Server is still starting! Please wait before reconnecting.}
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 14%
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 74%
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CEnumParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[33m[07:52:41] [Server thread/WARN] [minecraft/SynchedEntityData]: defineId called for: class forge.net.mca.entity.ZombieVillagerEntityMCA from class forge.net.mca.util.network.datasync.CDataParameter
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2234 ms
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/DedicatedServer]: Done (3.209s)! For help, type "help"
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/DedicatedServer]: Starting remote control listener
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
+[m> [K[32m[07:52:41] [Server thread/INFO] [minecraft/RconThread]: RCON running on 0.0.0.0:25575
+[m> [K[32m[07:52:41] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
+[m> [K[32m[07:52:41] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
+[m> [K[33m[07:52:41] [Server thread/WARN] [ModernFix/]: Dedicated server took 26.552 seconds to load
+[m> [K[32m[07:52:44] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:41464] logged in with entity id 265 at (-3.989154093689028, 76.0, 68.82359776553005)
+[m> [K[32m[07:52:44] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[m> [K[32m[07:52:56] [Server thread/INFO] [minecraft/PlayerList]: Tupl1k[/127.0.0.1:60898] logged in with entity id 273 at (-9.306858014859277, 75.0, 61.00259510003091)
+[m> [K[32m[07:52:56] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k joined the game
 [m> 
