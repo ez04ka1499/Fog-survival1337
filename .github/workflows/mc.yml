@@ -115,6 +115,25 @@ jobs:
             sleep 5
           done
 
+      - name: Log pusher
+        run: |
+          (
+            while tmux has-session -t mc 2>/dev/null; do
+              sleep 12
+              [ ! -f /tmp/mc.log ] && continue
+              CONTENT=$(tail -300 /tmp/mc.log | base64 -w 0)
+              CUR=$(curl -sf -H "Authorization: Bearer $TK" \
+                "https://api.github.com/repos/$REPO/contents/server-log.txt?ref=$BRANCH" | \
+                python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null)
+              PAYLOAD="{\"message\":\"log [skip ci]\",\"content\":\"$CONTENT\",\"branch\":\"$BRANCH\""
+              [ -n "$CUR" ] && PAYLOAD="$PAYLOAD,\"sha\":\"$CUR\""
+              PAYLOAD="$PAYLOAD}"
+              curl -sf -X PUT -H "Authorization: Bearer $TK" \
+                "https://api.github.com/repos/$REPO/contents/server-log.txt" \
+                -d "$PAYLOAD" >/dev/null 2>&1
+            done
+          ) &
+
       - name: Command relay
         run: |
           LAST_SHA=""
@@ -123,7 +142,7 @@ jobs:
             R=$(curl -sf -H "Authorization: Bearer $TK" \
               "https://api.github.com/repos/$REPO/contents/command.txt" 2>/dev/null || echo '{}')
             SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null)
-            CMD=$(echo "$R" | python3 -cimport sys,json,base64d=json.load(sys.stdin)print(base64.b64decode(d['content']).decode().strip() if 'content' in d else '')" 2>/dev/null)
+            CMD=$(echo "$R" | python3 -c "import sys,json,base64; d=json.load(sys.stdin); print(base64.b64decode(d['content']).decode().strip() if 'content' in d else '')" 2>/dev/null)
 
             if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then continue; fi
             LAST_SHA="$SHA"
