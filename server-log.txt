@@ -1,5 +1,3 @@
-[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_arid was corrected from null to its default, minecraft:frozen_river. 
-[m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_dry was corrected from null to its default, minecraft:frozen_river. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_neutral was corrected from null to its default, minecraft:frozen_river. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_wet was corrected from null to its default, minecraft:frozen_river. 
 [m[33m[07:52:33] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES_VARIANT--------------------.icy_humid was corrected from null to its default, minecraft:frozen_river. 
@@ -297,4 +295,6 @@
 [m> [K[32m[07:52:44] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [m> [K[32m[07:52:56] [Server thread/INFO] [minecraft/PlayerList]: Tupl1k[/127.0.0.1:60898] logged in with entity id 273 at (-9.306858014859277, 75.0, 61.00259510003091)
 [m> [K[32m[07:52:56] [Server thread/INFO] [minecraft/MinecraftServer]: Tupl1k joined the game
+[m> [K[32m[07:54:35] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> нго а вообще как тоби серв?
+[m> [K[32m[07:54:38] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ну играть норм?
 [m> 
