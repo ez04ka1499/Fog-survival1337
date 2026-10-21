@@ -1,4 +1,3 @@
-[m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_wet was corrected from null to its default, regions_unexplored:marsh. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.warm_humid was corrected from null to its default, regions_unexplored:marsh. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_arid was corrected from null to its default, regions_unexplored:fungal_fen. 
 [m[33m[07:25:35] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------SWAMP_BIOMES--------------------.hot_dry was corrected from null to its default, regions_unexplored:fungal_fen. 
@@ -297,4 +296,5 @@
 [m> [K[32m[07:37:40] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Tupl1k> МЛЯ Я ПОШЕЛ СОЗДАВАТЬ НОВЫЙ АКК ПОТОМУ ЧТО Я НЕ ХОЧУ БЫТЬ ЧЕРНЫМ
 [m> [K[32m[07:39:51] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> а
 [m> [K[32m[07:39:59] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ща я тебе редактора включу
+[m> [K[32m[07:40:19] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Player data reset.]
 [m> 
