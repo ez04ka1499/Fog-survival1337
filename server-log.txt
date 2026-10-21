@@ -47,4 +47,5 @@
 [m> [K[32m[06:36:31] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
 [m> [K[32m[06:37:24] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:55514] logged in with entity id 240 at (10.699999988079071, 64.0, -4.300000011920929)
 [m> [K[32m[06:37:24] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[m> [K[32m[06:38:26] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP hit the ground too hard
 [m> 
