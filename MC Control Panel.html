@@ -1,0 +1,772 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>MC Control Panel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* ── Tokens ── */
+:root {
+  --bg:    #0d1117;
+  --surf:  #161b22;
+  --card:  #1c2128;
+  --line:  #30363d;
+  --text:  #e6edf3;
+  --muted: #7d8590;
+  --dim:   #3d444d;
+  --green: #3fb950;
+  --red:   #f85149;
+  --yel:   #d29922;
+  --blue:  #388bfd;
+  --cyan:  #79c0ff;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+body {
+  background: var(--bg); color: var(--text);
+  font: 400 14px/1.6 Inter, system-ui, sans-serif;
+  padding-left:  max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 56px;
+}
+.wrap { max-width: 1100px; margin: 0 auto }
+
+/* ── Header ── */
+.hdr { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 22px; flex-wrap: wrap }
+.hdr h1 { font-size: 18px; font-weight: 700; letter-spacing: -.3px; display: flex; align-items: center; gap: 8px }
+.hdr p  { font-size: 12px; color: var(--muted); margin-top: 2px }
+.badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 12px; border-radius: 999px; flex-shrink: 0;
+  background: var(--surf); border: 1px solid var(--line); font-size: 12px; font-weight: 500;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex-shrink: 0; transition: background .3s, box-shadow .3s }
+.dot.on   { background: var(--green); box-shadow: 0 0 8px var(--green) }
+.dot.off  { background: var(--red);   box-shadow: 0 0 6px rgba(248,81,73,.5) }
+.dot.wait { background: var(--yel);   animation: blink 1s infinite }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+/* ── Grid ── */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; margin-bottom: 14px }
+.mb { margin-bottom: 14px }
+
+/* ── Card ── */
+.card { background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 18px }
+.ctitle {
+  font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 14px; display: flex; align-items: center; gap: 7px;
+}
+
+/* ── Forms ── */
+label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 4px }
+label:first-of-type { margin-top: 0 }
+input, select {
+  width: 100%; padding: 8px 10px; background: var(--card); border: 1px solid var(--line);
+  border-radius: 7px; color: var(--text); font: 13px Inter, sans-serif; outline: none; transition: border-color .15s;
+}
+input:focus, select:focus { border-color: var(--blue) }
+input[type=password] { font-family: 'JetBrains Mono', monospace; letter-spacing: 3px; font-size: 12px }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px }
+.sep  { height: 1px; background: var(--line); margin: 14px 0 }
+
+/* ── Buttons ── */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  width: 100%; padding: 9px 14px; margin-top: 10px; border: none; border-radius: 8px;
+  cursor: pointer; font: 600 13px Inter, sans-serif; color: #fff;
+  background: var(--blue); transition: filter .15s, opacity .15s;
+}
+.btn:hover:not(:disabled) { filter: brightness(1.12) }
+.btn:disabled { opacity: .4; cursor: not-allowed }
+.btn.green { background: var(--green); color: #0d1117 }
+.btn.red   { background: var(--red) }
+.btn.ghost { background: var(--card); color: var(--text); border: 1px solid var(--line) }
+.btn-row   { display: flex; gap: 8px; margin-top: 10px }
+.btn-row .btn { margin-top: 0 }
+
+/* ── IP box ── */
+.ip-box {
+  display: flex; align-items: center; gap: 8px; margin-top: 8px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-width: 0;
+}
+.ip-text { flex: 1; min-width: 0; font: 500 13px 'JetBrains Mono', monospace; color: var(--cyan); word-break: break-all }
+.copy-btn { background: none; border: none; cursor: pointer; color: var(--muted); padding: 2px; line-height: 0; transition: color .15s; flex-shrink: 0 }
+.copy-btn:hover { color: var(--text) }
+
+/* ── Console ── */
+.console {
+  height: 400px; overflow-y: auto; overflow-x: hidden; min-width: 0;
+  background: #010409; border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px;
+  font: 12px/1.75 'JetBrains Mono', monospace; color: #adbac7;
+  scroll-behavior: smooth;
+}
+.console::-webkit-scrollbar { width: 6px }
+.console::-webkit-scrollbar-track { background: transparent }
+.console::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px }
+.console::-webkit-scrollbar-thumb:hover { background: var(--muted) }
+.log-line { display: block }
+.lt { color: #3d444d }          /* timestamp */
+.lw { color: var(--yel) }       /* warn */
+.le { color: var(--red) }       /* error/fatal */
+.lg { color: var(--green) }     /* joined / done */
+.ll { color: #f85149 }          /* left */
+.lc { color: var(--cyan) }      /* chat */
+.ls { color: var(--blue); font-style: italic } /* system */
+
+.cmd-row { display: flex; gap: 0; margin-top: 10px }
+.cmd-row input  { flex: 1; border-radius: 8px 0 0 8px; border-right: none; font: 12px/1 'JetBrains Mono', monospace; margin: 0 }
+.cmd-row .btn   { margin: 0; border-radius: 0 8px 8px 0; width: auto; padding: 8px 14px; flex-shrink: 0 }
+.console-bar    { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px }
+.console-bar .btn { margin: 0; width: auto; padding: 5px 10px; font-size: 11px }
+
+/* quick cmds */
+.quick { display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 6px; margin-top: 10px }
+.quick .btn { margin: 0; padding: 7px 8px; font-size: 11px; background: var(--card) }
+
+/* tabs */
+.tabs { display: flex; gap: 6px; margin-bottom: 12px }
+.tab  { padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 500; background: var(--card); border: 1px solid var(--line); color: var(--muted); transition: all .15s }
+.tab.on { background: rgba(56,139,253,.12); border-color: rgba(56,139,253,.4); color: var(--text) }
+
+/* ── Mod drop ── */
+.drop-zone {
+  border: 2px dashed var(--line); border-radius: 10px; padding: 24px 16px; text-align: center;
+  cursor: pointer; color: var(--muted); font-size: 13px; transition: border-color .15s, background .15s;
+}
+.drop-zone:hover, .drop-zone.drag { border-color: var(--blue); background: rgba(56,139,253,.05) }
+.drop-zone input { display: none }
+.drop-zone strong { display: block; margin-bottom: 4px; color: var(--text) }
+.mod-list { display: flex; flex-direction: column; gap: 5px; margin-top: 10px }
+.mod-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 7px; font: 12px 'JetBrains Mono', monospace;
+}
+.mod-item span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.mod-rm { background: none; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; padding: 1px 7px; font-size: 11px; color: var(--muted); flex-shrink: 0 }
+.mod-rm:hover { border-color: var(--red); color: var(--red) }
+.prog { height: 3px; background: var(--green); border-radius: 3px; margin-top: 3px; width: 0; transition: width .3s }
+
+/* ── Runs ── */
+.run { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); gap: 8px; font-size: 13px }
+.run:last-child { border-bottom: none }
+.run-info { min-width: 0 }
+.run-num  { font-weight: 600 }
+.run-evt  { font-size: 11px; color: var(--muted); margin-top: 1px }
+.pill {
+  font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 999px;
+  background: var(--card); border: 1px solid var(--line); flex-shrink: 0;
+}
+.pill.s  { color: var(--green); border-color: rgba(63,185,80,.3) }
+.pill.f  { color: var(--red);   border-color: rgba(248,81,73,.3) }
+.pill.r  { color: var(--yel);   border-color: rgba(210,153,34,.3) }
+
+/* ── Toast ── */
+.toast-wrap { position: fixed; bottom: max(20px, env(safe-area-inset-bottom, 16px)); left: 50%; transform: translateX(-50%); z-index: 99; display: flex; flex-direction: column; align-items: center; gap: 6px; pointer-events: none }
+.toast { padding: 8px 16px; border-radius: 999px; font-size: 13px; background: var(--surf); border: 1px solid var(--line); box-shadow: 0 4px 20px rgba(0,0,0,.5); animation: tin .2s ease }
+.toast.ok  { border-color: rgba(63,185,80,.4); color: var(--green) }
+.toast.err { border-color: rgba(248,81,73,.4); color: var(--red) }
+@keyframes tin { from { opacity:0; transform: translateY(8px) } to { opacity:1; transform: none } }
+
+.note { font-size: 12px; color: var(--muted); margin-top: 8px; line-height: 1.5 }
+.warn-box { border-left: 3px solid var(--yel); padding: 10px 12px; background: rgba(210,153,34,.08); border-radius: 0 8px 8px 0; font-size: 12px; color: #fbbf24; margin-bottom: 14px }
+
+@media (max-width: 520px) {
+  .row3 { grid-template-columns: 1fr 1fr }
+  .quick { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)) }
+}
+</style>
+
+<div class="wrap">
+
+  <div class="hdr">
+    <div>
+      <h1>🎮 MC Control Panel</h1>
+      <p>Forge 1.20.1 · GitHub Actions</p>
+    </div>
+    <div class="badge">
+      <span class="dot" id="dot"></span>
+      <span id="statusTxt">Неизвестно</span>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <!-- Config -->
+    <div class="card">
+      <div class="ctitle">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"/></svg>
+        Подключение
+      </div>
+      <label>Репозиторий</label>
+      <input id="repo" placeholder="username/minecraft-server" oninput="saveQ()">
+      <div class="row2">
+        <div>
+          <label>Ветка</label>
+          <input id="branch" placeholder="main" oninput="saveQ()">
+        </div>
+        <div>
+          <label>Workflow файл</label>
+          <input id="wf" placeholder=".github/workflows/mc.yml" oninput="saveQ()">
+        </div>
+      </div>
+      <label>GitHub Token <span style="color:var(--dim)">(repo + workflow)</span></label>
+      <input id="token" type="password" placeholder="ghp_..." oninput="saveQ()">
+      <div class="btn-row" style="margin-top:10px">
+        <button class="btn ghost" onclick="testConn()">🔍 Проверить</button>
+        <button class="btn" onclick="loadRuns(); fetchIp()">🔄 Обновить</button>
+      </div>
+    </div>
+
+    <!-- Server -->
+    <div class="card">
+      <div class="ctitle">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h13A1.5 1.5 0 0 1 16 2.5v2A1.5 1.5 0 0 1 14.5 6h-13A1.5 1.5 0 0 1 0 4.5Zm1.5-.5a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5ZM0 9.5A1.5 1.5 0 0 1 1.5 8h13A1.5 1.5 0 0 1 16 9.5v2A1.5 1.5 0 0 1 14.5 13h-13A1.5 1.5 0 0 1 0 11.5Zm1.5-.5a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5Z"/></svg>
+        Сервер
+      </div>
+      <div style="font-size:12px;color:var(--muted)">Адрес подключения</div>
+      <div class="ip-box">
+        <span class="ip-text" id="ipTxt">Ещё не запущен</span>
+        <button class="copy-btn" onclick="copyIp()" title="Скопировать">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+        </button>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="btn-row">
+        <button class="btn green" id="btnStart" onclick="startSrv()">🚀 Запустить</button>
+        <button class="btn red"   id="btnStop"  onclick="stopSrv()" disabled>🛑 Остановить</button>
+      </div>
+      <p class="note">После запуска жди 2–3 минуты — Forge поднимается, потом появится адрес.</p>
+    </div>
+  </div>
+
+  <!-- Launch settings -->
+  <div class="card mb">
+    <div class="ctitle">⚙️ Настройки запуска</div>
+    <div class="row3">
+      <div>
+        <label>RAM</label>
+        <select id="ram">
+          <option>4G</option><option selected>6G</option><option>8G</option>
+        </select>
+      </div>
+      <div>
+        <label>View distance</label>
+        <input id="vd" type="number" min="4" max="12" value="6">
+      </div>
+      <div>
+        <label>Sim. distance</label>
+        <input id="sd" type="number" min="4" max="10" value="5">
+      </div>
+    </div>
+    <div class="row3" style="margin-top:10px">
+      <div>
+        <label>Сложность</label>
+        <select id="diff">
+          <option>peaceful</option><option>easy</option>
+          <option selected>normal</option><option>hard</option>
+        </select>
+      </div>
+      <div>
+        <label>Аккаунты</label>
+        <select id="online">
+          <option value="false" selected>Пиратка</option>
+          <option value="true">Лицензия</option>
+        </select>
+      </div>
+      <div>
+        <label>Игроков макс.</label>
+        <input id="maxp" type="number" min="1" max="100" value="20">
+      </div>
+    </div>
+    <label>MOTD</label>
+    <input id="motd" value="Minecraft on GitHub Actions">
+    <label>Pinggy Token <span style="color:var(--dim)">(необязательно — для туннеля дольше 60 мин)</span></label>
+    <input id="pingtok" type="password" placeholder="Оставь пустым если нет">
+  </div>
+
+  <!-- Console -->
+  <div class="card mb">
+    <div class="console-bar">
+      <div class="ctitle" style="margin:0">💻 Консоль сервера</div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <span id="logAge" style="font-size:11px;color:var(--muted)"></span>
+        <button class="btn ghost" style="margin:0;width:auto;padding:5px 10px;font-size:11px" onclick="clearCons()">🧹 Очистить</button>
+        <button class="btn" style="margin:0;width:auto;padding:5px 10px;font-size:11px" onclick="pollLogs(true)">↺ Обновить</button>
+      </div>
+    </div>
+
+    <div id="cons" class="console" style="margin-top:10px">
+      <span class="ls">[ Панель запущена. Нажми «Запустить сервер» или «Обновить» для загрузки логов. ]</span>
+    </div>
+
+    <div class="tabs" style="margin-top:12px">
+      <div class="tab on" id="tab-cmd" onclick="switchTab('cmd')">Команда</div>
+      <div class="tab"    id="tab-quick" onclick="switchTab('quick')">Быстрые</div>
+    </div>
+
+    <div id="panel-cmd">
+      <div class="cmd-row">
+        <input id="cmdIn" placeholder="say Привет / op Nick / gamemode creative Nick" onkeydown="if(event.key==='Enter')sendCmd()">
+        <button class="btn" onclick="sendCmd()">▶ Отправить</button>
+      </div>
+    </div>
+    <div id="panel-quick" hidden>
+      <div class="quick">
+        <button class="btn ghost" onclick="qcmd('list')">👥 Игроки</button>
+        <button class="btn ghost" onclick="qcmd('save-all')">💾 Сохранить</button>
+        <button class="btn ghost" onclick="qcmd('whitelist on')">✅ WL on</button>
+        <button class="btn ghost" onclick="qcmd('whitelist off')">🚫 WL off</button>
+        <button class="btn ghost" onclick="qcmd('difficulty peaceful')">☮ Peaceful</button>
+        <button class="btn ghost" onclick="qcmd('difficulty normal')">⚔ Normal</button>
+        <button class="btn ghost" onclick="qcmd('difficulty hard')">🔥 Hard</button>
+        <button class="btn ghost" onclick="qcmd('weather clear')">☀ Clear</button>
+        <button class="btn ghost" onclick="qcmd('time set day')">🌅 День</button>
+        <button class="btn ghost" onclick="qcmd('time set night')">🌙 Ночь</button>
+        <button class="btn ghost" onclick="qcmd('tps')">📊 TPS</button>
+        <button class="btn ghost" onclick="qcmd('forge tps')">⚡ Forge TPS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mods -->
+  <div class="card mb">
+    <div class="ctitle">📦 Загрузка модов в репо</div>
+    <div class="warn-box">Файлы коммитятся напрямую в папку <code style="background:#0d1117;padding:1px 5px;border-radius:3px">mods/</code> репозитория. При следующем запуске сервер подхватит их автоматически.</div>
+    <div class="drop-zone" id="dropZone" onclick="document.getElementById('modFile').click()">
+      <input type="file" id="modFile" accept=".jar" multiple onchange="onModFiles(this.files)">
+      <strong>Перетащи .jar или нажми для выбора</strong>
+      <span>Можно несколько файлов сразу</span>
+    </div>
+    <div class="mod-list" id="modList"></div>
+    <div id="modProg" style="display:none">
+      <div style="font-size:12px;color:var(--muted);margin-top:8px" id="modProgTxt">Загружаю…</div>
+      <div class="prog" id="modProgBar"></div>
+    </div>
+    <button class="btn green" id="btnUpload" onclick="uploadMods()" disabled style="margin-top:12px">📤 Закоммитить в репо</button>
+  </div>
+
+  <!-- Runs -->
+  <div class="card">
+    <div class="ctitle">📋 Последние запуски</div>
+    <div id="runsBox">Нажми «Проверить» или «Обновить» чтобы загрузить.</div>
+    <button class="btn ghost" onclick="loadRuns()" style="margin-top:12px">🔄 Обновить запуски</button>
+  </div>
+
+</div>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<script>
+/* ── Utils ── */
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+function toast(msg, type='ok', ms=3000) {
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  el.textContent = msg;
+  $('toasts').appendChild(el);
+  setTimeout(() => el.remove(), ms);
+}
+
+/* ── Config persistence ── */
+const CFG_KEYS = ['repo','branch','wf','token','ram','vd','sd','diff','online','maxp','motd','pingtok'];
+function saveQ() { try { CFG_KEYS.forEach(k => { const el=$(k); if(el) localStorage.setItem('mc_'+k, el.type==='checkbox'?el.checked:el.value) }) } catch(e){} }
+function loadCfg() {
+  try {
+    CFG_KEYS.forEach(k => {
+      const v = localStorage.getItem('mc_'+k); const el=$(k);
+      if(v !== null && el) el.value = v;
+    });
+    if (!$('branch').value) $('branch').value = 'main';
+    if (!$('wf').value)     $('wf').value = '.github/workflows/mc.yml';
+    if (!$('ram').value)    $('ram').value = '6G';
+  } catch(e){}
+}
+
+function cfg() {
+  saveQ();
+  return {
+    repo:   $('repo').value.trim(),
+    branch: $('branch').value.trim() || 'main',
+    token:  $('token').value.trim(),
+    wf:     $('wf').value.trim()
+  };
+}
+
+/* ── GitHub API ── */
+async function api(path, opts={}) {
+  const { token } = cfg();
+  return fetch('https://api.github.com' + path, {
+    ...opts,
+    headers: {
+      Authorization: 'Bearer ' + token,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(opts.headers||{})
+    }
+  });
+}
+
+/* ── Status ── */
+function setStatus(state, text) {
+  $('dot').className = 'dot ' + state;
+  $('statusTxt').textContent = text;
+  $('btnStop').disabled  = (state !== 'on' && state !== 'wait');
+  $('btnStart').disabled = (state === 'wait');
+}
+
+/* ── IP / tunnel ── */
+let lastIp = '';
+async function fetchIp() {
+  const { repo, branch } = cfg(); if(!repo) return;
+  try {
+    const r = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/tunnel.txt?t=${Date.now()}`);
+    if (!r.ok) throw 0;
+    const ip = (await r.text()).trim();
+    if (ip && ip !== lastIp) {
+      lastIp = ip;
+      $('ipTxt').textContent = ip;
+      if (ip.startsWith('tcp://') || ip.includes(':')) setStatus('on', 'Сервер онлайн');
+    } else if (!ip) {
+      $('ipTxt').textContent = 'Сервер ещё запускается…';
+    }
+  } catch { $('ipTxt').textContent = 'Нет данных'; }
+}
+
+function copyIp() {
+  const ip = $('ipTxt').textContent;
+  if (!ip || ip.includes('…') || ip.includes('Нет')) return;
+  try {
+    navigator.clipboard.writeText(ip).then(() => toast('Адрес скопирован')).catch(() => {
+      const r = document.createRange(); r.selectNode($('ipTxt'));
+      window.getSelection()?.removeAllRanges(); window.getSelection()?.addRange(r);
+    });
+  } catch(e){}
+}
+
+/* ── Logs ── */
+let lastLogEtag = '', lastLogText = '', autoScroll = true;
+const CONS = $('cons');
+
+CONS.addEventListener('scroll', () => {
+  autoScroll = CONS.scrollHeight - CONS.scrollTop - CONS.clientHeight < 60;
+});
+
+function colorLine(raw) {
+  // [HH:MM:SS] [Thread/LEVEL]: Message
+  const m = raw.match(/^\[(\d{2}:\d{2}:\d{2})\] \[([^\]]+)\/([A-Z]+)\]: (.*)$/);
+  if (!m) {
+    if (raw.trim() === '') return null;
+    return `<span class="log-line ls">${esc(raw)}</span>`;
+  }
+  const [,time,thread,lvl,msg] = m;
+  const th  = `<span class="lt">[${time}] [${thread}/${lvl}]:</span> `;
+
+  let mc;
+  if      (lvl==='WARN')                        mc = `<span class="lw">${esc(msg)}</span>`;
+  else if (lvl==='ERROR'||lvl==='FATAL')        mc = `<span class="le">${esc(msg)}</span>`;
+  else if (msg.includes('joined the game'))     mc = `<span class="lg">${esc(msg)}</span>`;
+  else if (msg.includes('left the game'))       mc = `<span class="ll">${esc(msg)}</span>`;
+  else if (msg.startsWith('<'))                 mc = `<span class="lc">${esc(msg)}</span>`;
+  else if (msg.startsWith('Done ('))            mc = `<span class="lg" style="font-weight:700">${esc(msg)}</span>`;
+  else                                          mc = esc(msg);
+
+  return `<span class="log-line">${th}${mc}</span>`;
+}
+
+function appendLines(text) {
+  const newLines = text.slice(lastLogText.length);
+  if (!newLines.trim()) return;
+  lastLogText = text;
+
+  const frag = document.createDocumentFragment();
+  newLines.split('\n').forEach(raw => {
+    const html = colorLine(raw);
+    if (html !== null) {
+      const el = document.createElement('span');
+      el.innerHTML = html + '\n';
+      frag.appendChild(el);
+    }
+  });
+  CONS.appendChild(frag);
+  if (autoScroll) CONS.scrollTop = CONS.scrollHeight;
+}
+
+function setLogAge(date) {
+  if (!date) { $('logAge').textContent = ''; return; }
+  const sec = Math.round((Date.now() - date) / 1000);
+  $('logAge').textContent = sec < 5 ? 'только что' : `${sec}с назад`;
+}
+
+let lastFetchTime = null;
+async function pollLogs(force=false) {
+  const { repo, branch } = cfg(); if(!repo) return;
+  try {
+    const headers = { 'Cache-Control': 'no-cache' };
+    if (!force && lastLogEtag) headers['If-None-Match'] = lastLogEtag;
+
+    const r = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/server-log.txt?t=${Date.now()}`, { headers });
+    if (r.status === 304) { setLogAge(lastFetchTime); return; }
+    if (!r.ok) return;
+
+    lastLogEtag   = r.headers.get('etag') || '';
+    lastFetchTime = Date.now();
+    const text    = await r.text();
+    setLogAge(lastFetchTime);
+
+    if (text !== lastLogText) appendLines(text);
+  } catch(e){}
+}
+
+function clearCons() {
+  CONS.innerHTML = '<span class="ls">[ Очищено ]</span>\n';
+  lastLogText = ''; lastLogEtag = ''; lastFetchTime = null;
+}
+
+/* ── Workflow dispatch ── */
+async function startSrv() {
+  const { repo, branch, wf, token } = cfg();
+  if (!repo || !token) { toast('Заполни репозиторий и токен', 'err'); return; }
+  setStatus('wait','Запускается…');
+  sysLog('🚀 Запускаем сервер…');
+
+  const res = await api(`/repos/${repo}/actions/workflows/${encodeURIComponent(wf)}/dispatches`, {
+    method: 'POST',
+    body: JSON.stringify({
+      ref: branch,
+      inputs: {
+        memory:              $('ram').value,
+        view_distance:       $('vd').value,
+        simulation_distance: $('sd').value,
+        online_mode:         $('online').value,
+        difficulty:          $('diff').value,
+        max_players:         $('maxp').value,
+        motd:                $('motd').value,
+        pinggy_token:        $('pingtok').value
+      }
+    })
+  });
+
+  if (res.status === 204) {
+    toast('Workflow запущен!');
+    sysLog('✅ Workflow принят. Через 2–3 мин появятся логи и адрес.');
+    setTimeout(loadRuns, 4000);
+  } else {
+    const t = await res.text();
+    toast(`Ошибка ${res.status}`, 'err');
+    sysLog(`❌ ${res.status}: ${t}`);
+    setStatus('off','Ошибка запуска');
+  }
+}
+
+async function stopSrv() {
+  if (!confirm('Остановить сервер? Мир будет сохранён.')) return;
+  sysLog('🛑 Отправляю команду остановки…');
+  await writeCmd('STOP');
+  setStatus('off','Останавливается…');
+  sysLog('✅ Команда STOP отправлена. Мир сохранится автоматически.');
+}
+
+/* ── Command relay ── */
+async function writeCmd(cmd) {
+  const { repo, branch, token } = cfg();
+  if (!repo||!token) { toast('Нет репо или токена','err'); return; }
+
+  let sha;
+  try {
+    const r = await api(`/repos/${repo}/contents/command.txt?ref=${encodeURIComponent(branch)}`);
+    if (r.ok) sha = (await r.json()).sha;
+  } catch(e){}
+
+  const body = {
+    message: 'cmd [skip ci]',
+    content: btoa(unescape(encodeURIComponent(cmd))),
+    branch
+  };
+  if (sha) body.sha = sha;
+
+  const res = await api(`/repos/${repo}/contents/command.txt`, { method:'PUT', body:JSON.stringify(body) });
+  if (res.ok) {
+    toast('Отправлено: ' + cmd);
+    sysLog('> ' + cmd);
+  } else {
+    toast('Ошибка отправки команды','err');
+  }
+}
+
+function sendCmd() {
+  const v = $('cmdIn').value.trim(); if(!v) return;
+  writeCmd(v); $('cmdIn').value = '';
+}
+
+function qcmd(c) { writeCmd(c) }
+
+/* ── Runs ── */
+async function loadRuns() {
+  const { repo, wf, token } = cfg(); if(!repo||!token) return;
+  const res = await api(`/repos/${repo}/actions/workflows/${encodeURIComponent(wf)}/runs?per_page=8`);
+  const box = $('runsBox');
+  if (!res.ok) { box.textContent = 'Не удалось загрузить запуски.'; return; }
+  const data = await res.json();
+  const runs = data.workflow_runs || [];
+  if (!runs.length) { box.textContent = 'Запусков пока нет.'; return; }
+
+  box.innerHTML = runs.map(r => {
+    const cls = r.conclusion==='success'?'s' : r.status!=='completed'?'r' : 'f';
+    const label = r.status !== 'completed' ? r.status : r.conclusion;
+    const d = new Date(r.created_at).toLocaleString('ru',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    return `<div class="run">
+      <div class="run-info">
+        <div class="run-num">#${r.run_number} · ${r.event}</div>
+        <div class="run-evt">${d}</div>
+      </div>
+      <span class="pill ${cls}">${label}</span>
+    </div>`;
+  }).join('');
+
+  const active = runs.find(r => r.status !== 'completed');
+  if (active) setStatus('wait', `Workflow #${active.run_number}`);
+  else if (lastIp && lastIp.includes(':')) setStatus('on','Сервер онлайн');
+  else setStatus('off','Нет активных workflow');
+}
+
+/* ── Connection test ── */
+async function testConn() {
+  const { repo, token } = cfg();
+  if (!repo||!token) { toast('Заполни репо и токен','err'); return; }
+  sysLog('🔍 Проверяю подключение…');
+  const res = await api(`/repos/${repo}`);
+  if (res.ok) {
+    const d = await res.json();
+    toast('Подключение ОК: ' + d.full_name);
+    sysLog(`✅ Репозиторий: ${d.full_name} [${d.default_branch}]`);
+    if (!$('branch').value) $('branch').value = d.default_branch;
+    loadRuns(); fetchIp();
+  } else {
+    toast(`Ошибка ${res.status} — проверь токен и репо`, 'err');
+    sysLog(`❌ ${res.status}`);
+  }
+}
+
+/* ── Mods upload ── */
+let pendingMods = [];
+
+function onModFiles(files) {
+  pendingMods = [...files].filter(f => f.name.endsWith('.jar'));
+  renderModList();
+}
+
+function renderModList() {
+  const box = $('modList');
+  box.innerHTML = pendingMods.map((f,i)=>
+    `<div class="mod-item">
+       <span>${esc(f.name)}</span>
+       <span style="color:var(--muted);font-size:11px">${(f.size/1024/1024).toFixed(1)} MB</span>
+       <button class="mod-rm" onclick="removeMod(${i})">✕</button>
+     </div>`
+  ).join('');
+  $('btnUpload').disabled = pendingMods.length === 0;
+}
+
+function removeMod(i) { pendingMods.splice(i,1); renderModList(); }
+
+// drag & drop
+const dz = $('dropZone');
+dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag') });
+dz.addEventListener('dragleave', () => dz.classList.remove('drag'));
+dz.addEventListener('drop', e => {
+  e.preventDefault(); dz.classList.remove('drag');
+  onModFiles(e.dataTransfer.files);
+});
+
+async function uploadMods() {
+  const { repo, branch, token } = cfg();
+  if (!repo||!token) { toast('Нет репо или токена','err'); return; }
+  if (!pendingMods.length) return;
+
+  $('modProg').style.display = 'block';
+  $('btnUpload').disabled = true;
+
+  for (let i = 0; i < pendingMods.length; i++) {
+    const file = pendingMods[i];
+    $('modProgTxt').textContent = `Загружаю ${file.name} (${i+1}/${pendingMods.length})…`;
+    $('modProgBar').style.width = `${(i/pendingMods.length)*100}%`;
+
+    try {
+      const buf  = await file.arrayBuffer();
+      const bytes = new Uint8Array(buf);
+      let bin = '';
+      const chunk = 8192;
+      for (let c = 0; c < bytes.length; c += chunk)
+        bin += String.fromCharCode(...bytes.subarray(c, c+chunk));
+      const content = btoa(bin);
+
+      // check existing sha
+      let sha;
+      const ex = await api(`/repos/${repo}/contents/mods/${encodeURIComponent(file.name)}?ref=${encodeURIComponent(branch)}`);
+      if (ex.ok) sha = (await ex.json()).sha;
+
+      const body = { message:`mod: ${file.name} [skip ci]`, content, branch };
+      if (sha) body.sha = sha;
+
+      const res = await api(`/repos/${repo}/contents/mods/${encodeURIComponent(file.name)}`, { method:'PUT', body:JSON.stringify(body) });
+      if (res.ok) {
+        sysLog(`✅ Загружен мод: ${file.name}`);
+      } else {
+        const t = await res.text(); sysLog(`❌ ${file.name}: ${res.status} ${t}`);
+      }
+    } catch(e) { sysLog(`❌ ${file.name}: ${e}`); }
+  }
+
+  $('modProgBar').style.width = '100%';
+  $('modProgTxt').textContent = 'Готово!';
+  toast('Все моды загружены!');
+  pendingMods = []; renderModList();
+  setTimeout(() => { $('modProg').style.display='none'; $('modProgBar').style.width='0' }, 2000);
+}
+
+/* ── Tabs ── */
+function switchTab(name) {
+  $('tab-cmd').classList.toggle('on', name==='cmd');
+  $('tab-quick').classList.toggle('on', name==='quick');
+  $('panel-cmd').hidden  = name !== 'cmd';
+  $('panel-quick').hidden = name !== 'quick';
+}
+
+/* ── System console messages ── */
+function sysLog(msg) {
+  const el = document.createElement('span');
+  el.innerHTML = `<span class="log-line ls">${esc(msg)}</span>\n`;
+  CONS.appendChild(el);
+  if (autoScroll) CONS.scrollTop = CONS.scrollHeight;
+}
+
+/* ── Auto-refresh ── */
+let logTimer, statusTimer;
+
+function startPolling() {
+  clearInterval(logTimer);   logTimer    = setInterval(pollLogs,    8000);
+  clearInterval(statusTimer); statusTimer = setInterval(() => { fetchIp(); loadRuns(); }, 20000);
+  pollLogs(); fetchIp();
+  if ($('token').value.trim()) loadRuns();
+}
+
+/* ── Log age update ── */
+setInterval(() => setLogAge(lastFetchTime), 5000);
+
+/* ── Init ── */
+loadCfg();
+if ($('repo').value) startPolling();
+$('repo').addEventListener('change', () => { if($('repo').value) startPolling() });
+$('token').addEventListener('change', () => { if($('repo').value && $('token').value) { loadRuns(); fetchIp() } });
+
+// settings auto-save
+['ram','vd','sd','diff','online','maxp','motd','pingtok'].forEach(id => {
+  const el = $(id); if(el) el.addEventListener('change', saveQ);
+});
+</script>
+
+</body></html>
