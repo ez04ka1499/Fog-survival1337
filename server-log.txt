@@ -1,56 +1,350 @@
-[manager] New world requested; old world will not be loaded
-[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
-[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
-[manager] Mod: FramedBlocks-9.4.3.jar
-[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
-[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
-[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
-[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
-[manager] Mod: KryptonReforged-0.2.3.jar
-[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
-[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
-[manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
-[manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
-[manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
-[manager] Mod: aaa_particles-forge-1.20.1-2.3.0-beta.1.jar
-[manager] Mod: alexsmobs-1.22.9.jar
-[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
-[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
-[manager] Mod: architectury-9.2.14-forge.jar
-[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
-[manager] Mod: citadel-2.6.3-1.20.1.jar
-[manager] Mod: cloth-config-11.1.136-forge.jar
-[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
-[manager] Mod: create-1.20.1-6.0.8 (1).jar
-[manager] Mod: cristellib-1.1.6-forge.jar
-[manager] Mod: embeddium-0.3.31mc1.20.1.jar
-[manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
-[manager] Mod: entityculling-forge-1.7.4-mc1.20.1.jar
-[manager] Mod: ferritecore-6.0.1-forge.jar
-[manager] Mod: flerovium-forge-1.20.1-1.2.10-all.jar
-[manager] Mod: framework-forge-1.20.1-0.8.0.jar
-[manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
-[manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
-[manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
-[manager] Mod: inventoryhud.forge.1.20.1-3.4.26.jar
-[manager] Mod: jei-1.20.1-forge-15.62.0.214.jar
-[manager] Mod: journeymap-1.20.1-5.10.3-forge.jar
-[manager] Mod: mcef-forge-2.1.6-1.20.1.jar
-[manager] Mod: mcw-doors-1.1.5-mc1.20.1forge.jar
-[manager] Mod: mcw-furniture-3.4.1-mc1.20.1forge.jar
-[manager] Mod: mcw-mcwstairs-1.0.2-mc1.20.1forge.jar
-[manager] Mod: mcw-mcwwindows-2.4.2-mc1.20.1forge.jar
-[manager] Mod: minecraft-comes-alive-7.7.1-beta.3+1.20.1-universal.jar
-[manager] Mod: modernfix-forge-5.21.0+mc1.20.1.jar
-[manager] Mod: moonlight-1.20-2.16.35-forge.jar
-[manager] Mod: noisium-forge-2.3.0+mc1.20-1.20.1.jar
-[manager] Mod: puddles-1.20.1-4.0.1.jar
-[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
-[manager] Mod: riautomobility-1.0.3.jar
-[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
-[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
-[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
-[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
-[manager] Mod: weather2-1.20.1-2.8.3.jar
-[manager] Mod: webdisplays-2.0.2-1.20.1.jar
-[manager] Tunnel: tcp://vwswj-20-29-38-98.run.pinggy-free.link:36129
+[16:58:05] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/forge-server.toml is not correct. Correcting
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/jei-server.toml is not correct. Correcting
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForOp was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForCreative was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForGive was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/framedblocks-server.toml is not correct. Correcting
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.allowBlockEntities was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.enableIntangibleFeature was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.intangibleMarkerItem was corrected from null to its default, minecraft:phantom_membrane.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.oneWayWindowOwnable was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.consumeCamoItem was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.glowstoneLightLevel was corrected from null to its default, 15.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/create-server.toml is not correct. Correcting
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key infrastructure was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key infrastructure.tickrateSyncTimer was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.bulkPressing was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.bulkCutting was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.allowBrewingInMixer was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.allowShapelessInMixer was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.allowShapedSquareInPress was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.allowRegularCraftingInCrafter was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.maxFireworkIngredientsInCrafter was corrected from null to its default, 9.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.allowStonecuttingOnSaw was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.allowCastingBySpout was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.displayLogStrippingRecipes was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.lightSourceCountForRefinedRadiance was corrected from null to its default, 10.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.enableRefinedRadianceRecipe was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key recipes.enableShadowSteelRecipe was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.disableStress was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxBeltLength was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxChainConveyorLength was corrected from null to its default, 32.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxChainConveyorConnections was corrected from null to its default, 4.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.crushingDamage was corrected from null to its default, 4.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxRotationSpeed was corrected from null to its default, 256.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.ignoreDeployerAttacks was corrected from null to its default, CREEPERS.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.kineticValidationFrequency was corrected from null to its default, 60.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.crankHungerMultiplier was corrected from null to its default, 0.009999999776482582.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.minimumWindmillSails was corrected from null to its default, 8.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.windmillSailsPerRPM was corrected from null to its default, 8.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxEjectorDistance was corrected from null to its default, 32.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.ejectorScanInterval was corrected from null to its default, 120.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanPushDistance was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanPullDistance was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanBlockCheckRate was corrected from null to its default, 30.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanRotationArgmax was corrected from null to its default, 256.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanProcessingTime was corrected from null to its default, 150.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxBlocksMoved was corrected from null to its default, 2048.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxChassisRange was corrected from null to its default, 16.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxPistonPoles was corrected from null to its default, 64.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxRopeLength was corrected from null to its default, 384.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxCartCouplingLength was corrected from null to its default, 32.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.rollerFillDepth was corrected from null to its default, 12.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.survivalContraptionPickup was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.movableSpawners was corrected from null to its default, NO_PICKUP.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.amethystMovement was corrected from null to its default, NO_PICKUP.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.movableObsidian was corrected from null to its default, UNMOVABLE.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.movableReinforcedDeepslate was corrected from null to its default, UNMOVABLE.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.moveItemsToStorage was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.harvestPartiallyGrown was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.harvesterReplants was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.minecartContraptionInContainers was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.stabiliseStableContraptions was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.syncPlayerPickupHitboxWithContraptionHitbox was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.noDropWhenContraptionReplaceBlocks was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.mediumSpeed was corrected from null to its default, 30.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.fastSpeed was corrected from null to its default, 100.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.mediumStressImpact was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.highStressImpact was corrected from null to its default, 8.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.mediumCapacity was corrected from null to its default, 256.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.highCapacity was corrected from null to its default, 1024.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2 was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.brass_encased_shaft was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.turntable was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.clutch was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_mixer was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.gearbox was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_bearing was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.copper_backtank was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.hose_pulley was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.display_board was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.crushing_wheel was corrected from null to its default, 8.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.adjustable_chain_gearshift was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.millstone was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.rotation_speed_controller was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.sticky_mechanical_piston was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_crafter was corrected from null to its default, 2.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.deployer was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.elevator_pulley was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.stressometer was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cogwheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.encased_chain_drive was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.belt was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.brass_encased_large_cogwheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.weighted_ejector was corrected from null to its default, 2.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.chain_conveyor was corrected from null to its default, 1.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_saw was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.flywheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_piston was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.speedometer was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.brass_encased_cogwheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.clockwork_bearing was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_press was corrected from null to its default, 8.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_drill was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.andesite_encased_shaft was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.netherite_backtank was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_arm was corrected from null to its default, 2.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.sequenced_gearshift was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.andesite_encased_large_cogwheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.shaft was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cuckoo_clock was corrected from null to its default, 1.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.gearshift was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.rope_pulley was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.andesite_encased_cogwheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.large_cogwheel was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.encased_fan was corrected from null to its default, 2.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mysterious_cuckoo_clock was corrected from null to its default, 1.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.gantry_shaft was corrected from null to its default, 0.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_pump was corrected from null to its default, 4.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.steam_engine was corrected from null to its default, 1024.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.water_wheel was corrected from null to its default, 32.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.copper_valve_handle was corrected from null to its default, 8.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.hand_crank was corrected from null to its default, 8.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.creative_motor was corrected from null to its default, 16384.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.large_water_wheel was corrected from null to its default, 128.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.windmill_bearing was corrected from null to its default, 512.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.fluidTankCapacity was corrected from null to its default, 8.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.fluidTankMaxHeight was corrected from null to its default, 32.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.mechanicalPumpRange was corrected from null to its default, 16.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.hosePulleyRange was corrected from null to its default, 128.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.hosePulleyBlockThreshold was corrected from null to its default, 10000.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.fillInfinite was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.bottomlessFluidMode was corrected from null to its default, ALLOW_BY_TAG.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.fluidFillPlaceFluidSourceBlocks was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key fluids.pipesPlaceFluidSourceBlocks was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.defaultExtractionTimer was corrected from null to its default, 8.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.psiTimeout was corrected from null to its default, 60.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.mechanicalArmRange was corrected from null to its default, 5.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.packagePortRange was corrected from null to its default, 5.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.linkRange was corrected from null to its default, 256.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.displayLinkRange was corrected from null to its default, 64.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.vaultCapacity was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.chainConveyorCapacity was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.brassTunnelTimer was corrected from null to its default, 10.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.factoryGaugeTimer was corrected from null to its default, 100.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key logistics.seatHostileMobs was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.creativePrintIncludesAir was corrected from null to its default, false.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.maxSchematics was corrected from null to its default, 10.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.maxTotalSchematicSize was corrected from null to its default, 256.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.maxSchematicPacketSize was corrected from null to its default, 1024.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicIdleTimeout was corrected from null to its default, 600.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicannon was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicannon.schematicannonDelay was corrected from null to its default, 10.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicannon.schematicannonShotsPerGunpowder was corrected from null to its default, 400.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.maxSymmetryWandRange was corrected from null to its default, 50.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.placementAssistRange was corrected from null to its default, 12.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.toolboxRange was corrected from null to its default, 10.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.airInBacktank was corrected from null to its default, 900.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.enchantedBacktankCapacity was corrected from null to its default, 300.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.maxExtendoGripActions was corrected from null to its default, 1000.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key equipment.maxPotatoCannonShots was corrected from null to its default, 200.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.trainsCauseDamage was corrected from null to its default, true.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.maxTrackPlacementLength was corrected from null to its default, 32.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.maxAssemblyLength was corrected from null to its default, 128.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.maxBogeyCount was corrected from null to its default, 20.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.manualTrainSpeedModifier was corrected from null to its default, 0.75.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats.trainTopSpeed was corrected from null to its default, 28.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats.trainTurningTopSpeed was corrected from null to its default, 14.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats.trainAcceleration was corrected from null to its default, 3.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats was corrected from null to its default, SimpleCommentedConfig:{}.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats.poweredTrainTopSpeed was corrected from null to its default, 40.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats.poweredTrainTurningTopSpeed was corrected from null to its default, 20.0.
+[16:58:05] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats.poweredTrainAcceleration was corrected from null to its default, 3.0.
+[16:58:05] [Server thread/INFO] [Framework/]: Loading server configs...
+[16:58:05] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
+[16:58:05] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
+[16:58:05] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+[16:58:11] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[16:58:11] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[16:58:11] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[16:58:12] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[16:58:12] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 1%
+[16:58:13] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 3%
+[16:58:13] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 4%
+[16:58:14] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 5%
+[16:58:14] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 7%
+[16:58:16] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 8%
+[16:58:16] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 8%
+[16:58:16] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 9%
+[16:58:16] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 10%
+[16:58:17] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 13%
+[16:58:17] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 15%
+[16:58:18] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 18%
+[16:58:18] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 20%
+[16:58:19] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 24%
+[16:58:19] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 26%
+[16:58:20] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 30%
+[16:58:20] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 33%
+[16:58:21] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 35%
+[16:58:22] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 36%
+[16:58:22] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 37%
+[16:58:22] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 40%
+[16:58:23] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 43%
+[16:58:23] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 46%
+[16:58:24] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 50%
+[16:58:24] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 54%
+[16:58:25] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 57%
+[16:58:25] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 59%
+[16:58:26] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 63%
+[16:58:26] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 66%
+[16:58:27] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 69%
+[16:58:27] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 72%
+[16:58:28] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 76%
+[16:58:28] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 80%
+[16:58:29] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 83%
+[16:58:29] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 86%
+[16:58:30] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 89%
+[16:58:30] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 93%
+[16:58:31] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 97%
+[16:58:31] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 20292 ms
+[16:58:31] [Server thread/INFO] [minecraft/DedicatedServer]: Done (26.416s)! For help, type "help"
+[16:58:31] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[16:58:31] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
+[16:58:31] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
+[16:58:31] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
+[16:58:31] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
+[16:58:31] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
+[16:58:31] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
+[16:58:31] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
+[16:58:31] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
+[16:58:31] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
+[16:58:31] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
+[16:58:31] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
+[16:58:31] [Server thread/WARN] [ModernFix/]: Dedicated server took 46.847 seconds to load
+[16:58:32] [Server thread/INFO] [co.gi.al.al.AlexsMobs/]: Found Pupfish chunk at 15 ~ 336 after 37 tries
+[manager] Server ready
+[manager] Submitted to Minecraft: time set night
+[16:58:36] [Server thread/INFO] [minecraft/MinecraftServer]: Set the time to 13000
