@@ -1,6 +1,3 @@
-[m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.cold_peak_biome_variant was corrected from null to its default, regions_unexplored:mountains. 
-[m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.neutral_peak_biome_variant was corrected from null to its default, regions_unexplored:mountains. 
-[m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.warm_peak_biome_variant was corrected from null to its default, minecraft:stony_peaks. 
 [m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------PEAK_BIOMES--------------------.hot_peak_biome_variant was corrected from null to its default, regions_unexplored:arid_mountains. 
 [m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES-------------------- was corrected from null to its default, SimpleCommentedConfig:{}. 
 [m[33m[07:12:06] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key -----------------RIVER_BIOMES--------------------.icy_arid was corrected from null to its default, minecraft:frozen_river. 
@@ -297,4 +294,7 @@
 [m> [K[32m[07:12:25] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
 [m> [K[33m[07:12:25] [Server thread/WARN] [ModernFix/]: Dedicated server took 40.085 seconds to load
 [m> [K[32m[07:12:30] [Server thread/INFO] [co.gi.al.al.AlexsMobs/]: Found Pupfish chunk at -1425 ~ -336 after 70 tries
+[m> [K[32m[07:13:19] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:58064] logged in with entity id 294 at (-8.306970343594339, 67.0, 45.83580997459438)
+[m> [K[32m[07:13:19] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[m> [K[32m[07:13:20] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Minecraft Comes Alive]
 [m> 
