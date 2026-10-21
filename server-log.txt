@@ -1,66 +1,3 @@
-[manager] Loaded world/ from repository
-[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
-[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
-[manager] Mod: FramedBlocks-9.4.3.jar
-[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
-[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
-[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
-[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
-[manager] Mod: KryptonReforged-0.2.3.jar
-[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
-[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
-[manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
-[manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
-[manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
-[manager] Mod: aaa_particles-forge-1.20.1-2.3.0-beta.1.jar
-[manager] Mod: alexsmobs-1.22.9.jar
-[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
-[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
-[manager] Mod: architectury-9.2.14-forge.jar
-[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
-[manager] Mod: citadel-2.6.3-1.20.1.jar
-[manager] Mod: cloth-config-11.1.136-forge.jar
-[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
-[manager] Mod: create-1.20.1-6.0.8 (1).jar
-[manager] Mod: cristellib-1.1.6-forge.jar
-[manager] Mod: embeddium-0.3.31mc1.20.1.jar
-[manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
-[manager] Mod: entityculling-forge-1.7.4-mc1.20.1.jar
-[manager] Mod: ferritecore-6.0.1-forge.jar
-[manager] Mod: flerovium-forge-1.20.1-1.2.10-all.jar
-[manager] Mod: framework-forge-1.20.1-0.8.0.jar
-[manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
-[manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
-[manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
-[manager] Mod: inventoryhud.forge.1.20.1-3.4.26.jar
-[manager] Mod: jei-1.20.1-forge-15.62.0.214.jar
-[manager] Mod: journeymap-1.20.1-5.10.3-forge.jar
-[manager] Mod: mcef-forge-2.1.6-1.20.1.jar
-[manager] Mod: mcw-doors-1.1.5-mc1.20.1forge.jar
-[manager] Mod: mcw-furniture-3.4.1-mc1.20.1forge.jar
-[manager] Mod: mcw-mcwstairs-1.0.2-mc1.20.1forge.jar
-[manager] Mod: mcw-mcwwindows-2.4.2-mc1.20.1forge.jar
-[manager] Mod: minecraft-comes-alive-7.7.1-beta.3+1.20.1-universal.jar
-[manager] Mod: modernfix-forge-5.21.0+mc1.20.1.jar
-[manager] Mod: moonlight-1.20-2.16.35-forge.jar
-[manager] Mod: noisium-forge-2.3.0+mc1.20-1.20.1.jar
-[manager] Mod: puddles-1.20.1-4.0.1.jar
-[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
-[manager] Mod: riautomobility-1.0.3.jar
-[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
-[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
-[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
-[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
-[manager] Mod: weather2-1.20.1-2.8.3.jar
-[manager] Mod: webdisplays-2.0.2-1.20.1.jar
-[manager] Tunnel: tcp://jnuuo-172-169-255-134.run.pinggy-free.link:38925
-2026-10-21 17:12:19,355 main WARN Advanced terminal features are not available in this environment
-[17:12:19] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
-[17:12:19] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.20.1 by Eclipse Adoptium; OS Linux arch amd64 version 7.0.0-1017-azure
-[17:12:20] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
-[17:12:20] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
-[17:12:20] [main/WARN] [ne.mi.fm.lo.mo.ModDiscoverer/SCAN]: Locator {mods folder locator at /home/runner/work/Fog-survival1337/Fog-survival1337/srv/mods} returned 2 files which are client-side-only mods, but we're on a dedicated server. They will be skipped!
-[17:12:20] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/fmlcore/1.20.1-47.4.0/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
 [17:12:20] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.4.0/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
 [17:12:20] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.4.0/lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
 [17:12:20] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/mclanguage/1.20.1-47.4.0/mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
@@ -299,3 +236,115 @@
 [17:13:49] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
 [17:14:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [The internet is for...]
 [17:14:12] [Server thread/INFO] [ne.mo.wd.ut.Log/]: Player literal{TWIX_EXTRATOP} (UUID 173072de-cda8-33d1-9173-1d7b95d87ae2) created a screen at X: 4, Y: 70, Z: -21 of size 5x3
+[17:14:26] [Server thread/INFO] [ne.mo.wd.ut.Log/]: URL received: http://youtube.com
+[17:14:51] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
+[17:14:56] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule keepInventory is now set to: true]
+[17:15:07] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule playersSleepingPercentage is now set to: 1]
+[17:15:22] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[17:15:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[manager] Submitted to Minecraft: stop
+[17:15:29] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping the server
+[17:15:29] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[17:15:29] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[17:15:29] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[17:15:30] [Immersive Optimization Worker/INFO] [Immersive Optimization/]: Shutting down Immersive Optimization worker
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:acceptance
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:dlrowmaerd
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:the_vault
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_field
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:lapis_labyrinth
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:what_once_was
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:snowy_bridges
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:skyways
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:bridges
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:jungle_warehouse
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:tunnels
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:chasms
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:repetition
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:bedrock_hallways
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:catacombs
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:hellways
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:maze
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:no_mans_land
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:corners
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:fools_paradise
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:false_wonderland
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:abyss
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:sarcophagus
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:sequence
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:compliance
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:inconsistency
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:reservoir
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:answer_dimension
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_house
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:winter_wonderland
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:the_slip
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:accountability
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:dream_6
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:entrails
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:remembrance
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:depths
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_forest
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:wonderland
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:dreamworld
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_library
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:brickways
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:shattered_dreams
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:torture
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:pipes
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (acceptance): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dlrowmaerd): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (the_vault): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_field): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (lapis_labyrinth): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (what_once_was): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (snowy_bridges): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (skyways): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (bridges): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (jungle_warehouse): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (tunnels): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (chasms): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (repetition): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (bedrock_hallways): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (catacombs): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (hellways): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (maze): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (no_mans_land): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (corners): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (fools_paradise): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (false_wonderland): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (abyss): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (sarcophagus): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (sequence): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (compliance): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (inconsistency): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (reservoir): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (answer_dimension): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_house): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (winter_wonderland): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (the_slip): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (accountability): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dream_6): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (entrails): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (remembrance): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (depths): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_forest): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (wonderland): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dreamworld): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_library): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (brickways): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (shattered_dreams): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (torture): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (pipes): All chunks are saved
+[17:15:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[17:15:30] [Server thread/INFO] [ne.mo.wd.ut.Log/]: Miniserv server stopped
+[17:15:30] [Server thread/INFO] [Framework/]: Unloading server configs...
+[17:15:30] [Server thread/INFO] [Framework/]: Sending config unload event for refurbished_furniture.server.toml
+[17:15:30] [Server thread/INFO] [Framework/]: Finished unloading server configs
+[17:15:30] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
