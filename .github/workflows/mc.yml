@@ -3,28 +3,34 @@ name: MC Server
 on:
   workflow_dispatch:
     inputs:
-      memory:              { default: 6G }
-      view_distance:       { default: '7' }
-      simulation_distance: { default: '5' }
-      online_mode:         { default: 'false' }
-      difficulty:          { default: normal }
-      max_players:         { default: '20' }
-      motd:                { default: 'Minecraft on GitHub' }
-      pinggy_token:        { default: '' }
+      memory:
+        default: '6G'
+      view_distance:
+        default: '7'
+      simulation_distance:
+        default: '5'
+      online_mode:
+        default: 'false'
+      difficulty:
+        default: normal
+      max_players:
+        default: '20'
+      motd:
+        default: 'Minecraft on GitHub'
 
 permissions:
   contents: write
 
 env:
-  FORGE:  1.20.1-47.4.0        # ← поменяй если версия другая
-  TK:     ${{ secrets.GITHUB_TOKEN }}
-  REPO:   ${{ github.repository }}
+  FORGE: 1.20.1-47.4.0
+  TK: ${{ secrets.GITHUB_TOKEN }}
+  REPO: ${{ github.repository }}
   BRANCH: ${{ github.ref_name }}
 
 jobs:
   server:
     runs-on: ubuntu-latest
-    timeout-minutes: 358
+    timeout-minutes: 355
 
     steps:
       - uses: actions/checkout@v4
@@ -34,7 +40,6 @@ jobs:
           java-version: '17'
           distribution: temurin
 
-      # Forge устанавливается один раз, потом кешируется навсегда
       - uses: actions/cache@v4
         id: forge
         with:
@@ -44,147 +49,242 @@ jobs:
       - name: Install Forge
         if: steps.forge.outputs.cache-hit != 'true'
         run: |
-          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/$FORGE/forge-$FORGE-installer.jar"
-          java -jar "forge-$FORGE-installer.jar" --installServer ./srv
-          echo eula=true > srv/eula.txt
+          wget -q "https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE}/forge-${FORGE}-installer.jar"
+          java -jar "forge-${FORGE}-installer.jar" --installServer ./srv
+          echo "eula=true" > srv/eula.txt
 
       - name: Load world
         run: |
           rm -rf srv/world
           ASSET=$(curl -sf -H "Authorization: Bearer $TK" \
             "https://api.github.com/repos/$REPO/releases/tags/world-save" | \
-            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null)
-          [ -n "$ASSET" ] && wget -q "$ASSET" -O- | tar -xzf- -C srv/ && echo "✅ World loaded" || echo "🌍 Fresh world"
+            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null || true)
 
-      - name: Mods & server.properties
+          if [ -n "$ASSET" ]; then
+            wget -q "$ASSET" -O world.tar.gz
+            tar -xzf world.tar.gz -C srv/
+            echo "✅ World loaded"
+          else
+            echo "🌍 Fresh world"
+          fi
+
+      - name: Mods and server.properties
         run: |
-          rm -rf srv/mods && mkdir -p srv/mods
+          rm -rf srv/mods
+          mkdir -p srv/mods
 
-          # Моды из папки mods/ репо
-          [ -d mods ] && cp -r mods/. srv/mods/ && echo "📦 $(ls srv/mods | wc -l) mods"
+          if [ -d mods ]; then
+            cp -r mods/. srv/mods/
+            echo "📦 $(find srv/mods -type f | wc -l) mod files"
+          fi
 
-          # Большой модпак из релиза mods-pack (если есть)
           MODS=$(curl -sf -H "Authorization: Bearer $TK" \
             "https://api.github.com/repos/$REPO/releases/tags/mods-pack" | \
-            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null)
-          [ -n "$MODS" ] && wget -q "$MODS" -O- | tar -xzf- -C srv/mods/
+            python3 -c "import sys,json; a=json.load(sys.stdin).get('assets',[]); print(a[0]['browser_download_url'] if a else '')" 2>/dev/null || true)
 
-          # Оптимизированный server.properties (пинг / перфоманс)
-          {
-            echo "online-mode=${{ inputs.online_mode }}"
-            echo "view-distance=${{ inputs.view_distance }}"
-            echo "simulation-distance=${{ inputs.simulation_distance }}"
-            echo "difficulty=${{ inputs.difficulty }}"
-            echo "max-players=${{ inputs.max_players }}"
-            echo "motd=${{ inputs.motd }}"
-            echo "enable-rcon=true"
-            echo "rcon.password=mcgh_rcon"
-            echo "rcon.port=25575"
-            echo "spawn-protection=0"
-            echo "use-native-transport=true"
-            echo "network-compression-threshold=256"
-            echo "entity-broadcast-range-percentage=75"
-          } > srv/server.properties
+          if [ -n "$MODS" ]; then
+            wget -q "$MODS" -O mods.tar.gz
+            tar -xzf mods.tar.gz -C srv/mods/
+          fi
 
-      - name: Pinggy tunnel
+          cat > srv/server.properties <<EOF
+          online-mode=${{ inputs.online_mode }}
+          view-distance=${{ inputs.view_distance }}
+          simulation-distance=${{ inputs.simulation_distance }}
+          difficulty=${{ inputs.difficulty }}
+          max-players=${{ inputs.max_players }}
+          motd=${{ inputs.motd }}
+          enable-rcon=true
+          rcon.password=mcgh_rcon
+          rcon.port=25575
+          spawn-protection=0
+          use-native-transport=true
+          network-compression-threshold=256
+          entity-broadcast-range-percentage=75
+          EOF
+
+      - name: Start Pinggy tunnel
         run: |
-          PT="${{ inputs.pinggy_token }}"
-          [ -n "$PT" ] && HOST="tcp+$PT@a.pinggy.io" || HOST="a.pinggy.io"
-          ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=30 \
-            -p 443 -R 0:localhost:25565 "$HOST" 2>&1 | tee /tmp/pinggy.log &
+          PT="${{ secrets.PINGGY_TOKEN }}"
 
-          for i in $(seq 1 30); do
-            ADDR=$(grep -oE 'tcp://[^[:space:]]+' /tmp/pinggy.log | head -1)
-            [ -n "$ADDR" ] && break || sleep 2
+          if [ -n "$PT" ]; then
+            HOST="${PT}+tcp@pro.pinggy.io"
+          else
+            HOST="tcp@a.pinggy.io"
+          fi
+
+          rm -f /tmp/pinggy.log
+
+          ssh -o StrictHostKeyChecking=no \
+              -o ServerAliveInterval=30 \
+              -o ExitOnForwardFailure=yes \
+              -p 443 \
+              -R 0:127.0.0.1:25565 \
+              "$HOST" > /tmp/pinggy.log 2>&1 &
+
+          ADDR=""
+          for i in $(seq 1 45); do
+            ADDR=$(grep -oE 'tcp://[^[:space:]]+' /tmp/pinggy.log | head -n 1 || true)
+            [ -n "$ADDR" ] && break
+            sleep 2
           done
 
-          git config user.email bot@ci && git config user.name "MC Bot"
-          echo "${ADDR:-no tunnel yet}" > tunnel.txt
-          git add tunnel.txt && git commit -m "🟡 Starting [skip ci]" && git push
+          if [ -z "$ADDR" ]; then
+            echo "❌ Pinggy tunnel failed"
+            cat /tmp/pinggy.log
+            exit 1
+          fi
+
+          echo "$ADDR" > tunnel.txt
+          echo "TUNNEL_ADDR=$ADDR" >> "$GITHUB_ENV"
+          echo "✅ Tunnel: $ADDR"
+
+      - name: Commit tunnel address
+        run: |
+          git config user.email "bot@ci"
+          git config user.name "MC Bot"
+          git pull --rebase origin "$BRANCH" || true
+          git add tunnel.txt
+          git commit -m "🟡 Starting [skip ci]" || true
+          git push origin HEAD:"$BRANCH"
 
       - name: Start Forge
         run: |
           tmux new-session -d -s mc
-          tmux send-keys -t mc \
-            "cd srv && java -Xms2G -Xmx${{ inputs.memory }} @libraries/net/minecraftforge/forge/$FORGE/unix_args.txt nogui 2>&1 | tee /tmp/mc.log" \
-            Enter
+
+          tmux send-keys -t mc "cd srv && java -Xms2G -Xmx${{ inputs.memory }} @libraries/net/minecraftforge/forge/${FORGE}/unix_args.txt nogui 2>&1 | tee /tmp/mc.log" Enter
 
           for i in $(seq 1 180); do
-            grep -q "Done (" /tmp/mc.log 2>/dev/null && { echo "✅ Server ready!"; break; }
-            ! tmux has-session -t mc 2>/dev/null && { tail -50 /tmp/mc.log; exit 1; }
+            if grep -q "Done (" /tmp/mc.log 2>/dev/null; then
+              echo "✅ Server ready!"
+              exit 0
+            fi
+
+            if ! tmux has-session -t mc 2>/dev/null; then
+              echo "❌ Minecraft crashed"
+              tail -100 /tmp/mc.log || true
+              exit 1
+            fi
+
             sleep 5
           done
 
+          echo "❌ Server startup timeout"
+          tail -100 /tmp/mc.log || true
+          exit 1
+
       - name: Log pusher
         run: |
-          (
-            while tmux has-session -t mc 2>/dev/null; do
-              sleep 12
-              [ ! -f /tmp/mc.log ] && continue
-              CONTENT=$(tail -300 /tmp/mc.log | base64 -w 0)
-              CUR=$(curl -sf -H "Authorization: Bearer $TK" \
-                "https://api.github.com/repos/$REPO/contents/server-log.txt?ref=$BRANCH" | \
-                python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null)
-              PAYLOAD="{\"message\":\"log [skip ci]\",\"content\":\"$CONTENT\",\"branch\":\"$BRANCH\""
-              [ -n "$CUR" ] && PAYLOAD="$PAYLOAD,\"sha\":\"$CUR\""
-              PAYLOAD="$PAYLOAD}"
-              curl -sf -X PUT -H "Authorization: Bearer $TK" \
-                "https://api.github.com/repos/$REPO/contents/server-log.txt" \
-                -d "$PAYLOAD" >/dev/null 2>&1
-            done
-          ) &
+          while tmux has-session -t mc 2>/dev/null; do
+            sleep 15
+
+            [ -f /tmp/mc.log ] || continue
+
+            CONTENT=$(tail -n 300 /tmp/mc.log | base64 -w 0)
+
+            CUR=$(curl -sf -H "Authorization: Bearer $TK" \
+              "https://api.github.com/repos/$REPO/contents/server-log.txt?ref=$BRANCH" | \
+              python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || true)
+
+            PAYLOAD="{\"message\":\"log [skip ci]\",\"content\":\"$CONTENT\",\"branch\":\"$BRANCH\""
+
+            if [ -n "$CUR" ]; then
+              PAYLOAD="$PAYLOAD,\"sha\":\"$CUR\""
+            fi
+
+            PAYLOAD="$PAYLOAD}"
+
+            curl -sf -X PUT \
+              -H "Authorization: Bearer $TK" \
+              "https://api.github.com/repos/$REPO/contents/server-log.txt" \
+              -d "$PAYLOAD" > /dev/null || true
+          done
 
       - name: Command relay
         run: |
           LAST_SHA=""
+
           while tmux has-session -t mc 2>/dev/null; do
             sleep 5
-            R=$(curl -sf -H "Authorization: Bearer $TK" \
-              "https://api.github.com/repos/$REPO/contents/command.txt" 2>/dev/null || echo '{}')
-            SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null)
-            CMD=$(echo "$R" | python3 -c "import sys,json,base64; d=json.load(sys.stdin); print(base64.b64decode(d['content']).decode().strip() if 'content' in d else '')" 2>/dev/null)
 
-            if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then continue; fi
+            R=$(curl -sf -H "Authorization: Bearer $TK" \
+              "https://api.github.com/repos/$REPO/contents/command.txt?ref=$BRANCH" 2>/dev/null || echo '{}')
+
+            SHA=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || true)
+
+            CMD=$(echo "$R" | python3 -c "
+          import sys,json,base64
+          try:
+            d=json.load(sys.stdin)
+            print(base64.b64decode(d['content']).decode().strip() if 'content' in d else '')
+          except Exception:
+            print('')
+          " 2>/dev/null || true)
+
+            if [ -z "$CMD" ] || [ "$SHA" = "$LAST_SHA" ]; then
+              continue
+            fi
+
             LAST_SHA="$SHA"
 
             if [ "$CMD" = "STOP" ]; then
-              tmux send-keys -t mc "stop" Enter; sleep 20; break
+              tmux send-keys -t mc "stop" Enter
+              sleep 25
+              break
             fi
 
             tmux send-keys -t mc "$CMD" Enter
-            # Очистить command.txt
-            curl -sf -X PUT -H "Authorization: Bearer $TK" -H "Content-Type: application/json" \
+
+            curl -sf -X PUT \
+              -H "Authorization: Bearer $TK" \
+              -H "Content-Type: application/json" \
               "https://api.github.com/repos/$REPO/contents/command.txt" \
-              -d "{\"message\":\"cmd [skip ci]\",\"content\":\"Cg==\",\"sha\":\"$SHA\",\"branch\":\"$BRANCH\"}" >/dev/null
+              -d "{\"message\":\"cmd [skip ci]\",\"content\":\"Cg==\",\"sha\":\"$SHA\",\"branch\":\"$BRANCH\"}" > /dev/null || true
           done
 
       - name: Save world
         if: always()
         run: |
-          tmux send-keys -t mc "stop" Enter 2>/dev/null; sleep 20
+          if tmux has-session -t mc 2>/dev/null; then
+            tmux send-keys -t mc "stop" Enter
+            sleep 25
+          fi
 
           if [ -d srv/world ]; then
             tar -czf world.tar.gz -C srv world/
+
             REL=$(curl -sf -H "Authorization: Bearer $TK" \
               "https://api.github.com/repos/$REPO/releases/tags/world-save" || echo '{}')
-            RID=$(echo "$REL" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null)
+
+            RID=$(echo "$REL" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || true)
 
             if [ -z "$RID" ]; then
-              RID=$(curl -sf -X POST -H "Authorization: Bearer $TK" \
+              RID=$(curl -sf -X POST \
+                -H "Authorization: Bearer $TK" \
                 "https://api.github.com/repos/$REPO/releases" \
                 -d '{"tag_name":"world-save","name":"World Save","prerelease":true}' | \
                 python3 -c "import sys,json; print(json.load(sys.stdin)['id'])")
             else
               echo "$REL" | python3 -c "import sys,json; [print(a['id']) for a in json.load(sys.stdin).get('assets',[])]" | \
-              xargs -I{} curl -sf -X DELETE -H "Authorization: Bearer $TK" \
-                "https://api.github.com/repos/$REPO/releases/assets/{}"
+              while read -r AID; do
+                [ -n "$AID" ] && curl -sf -X DELETE \
+                  -H "Authorization: Bearer $TK" \
+                  "https://api.github.com/repos/$REPO/releases/assets/$AID" > /dev/null || true
+              done
             fi
 
-            curl -sf -X POST -H "Authorization: Bearer $TK" -H "Content-Type: application/gzip" \
+            curl -sf -X POST \
+              -H "Authorization: Bearer $TK" \
+              -H "Content-Type: application/gzip" \
               "https://uploads.github.com/repos/$REPO/releases/$RID/assets?name=world.tar.gz" \
-              --data-binary @world.tar.gz >/dev/null && echo "✅ World saved"
+              --data-binary @world.tar.gz > /dev/null && echo "✅ World saved"
           fi
 
-          git config user.email bot@ci 2>/dev/null; git config user.name "MC Bot" 2>/dev/null
-          git pull --rebase 2>/dev/null; echo "" > tunnel.txt
-          git add tunnel.txt && git commit -m "🔴 Offline [skip ci]" && git push 2>/dev/null || true
+          echo "" > tunnel.txt
+
+          git config user.email "bot@ci"
+          git config user.name "MC Bot"
+          git pull --rebase origin "$BRANCH" || true
+          git add tunnel.txt
+          git commit -m "🔴 Offline [skip ci]" || true
+          git push origin HEAD:"$BRANCH" || true
