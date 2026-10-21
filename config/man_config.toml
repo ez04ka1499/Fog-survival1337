@@ -23,7 +23,7 @@
 	#the duration in ticks of the darkness effect
 	darkness_effect_duration = 150.0
 	#if true, it can break doors and glass/glass panes while it chases the player
-	break_blocks = true
+	break_blocks = false
 	#if true, it will summon fake lightnings when despawning or spawning
 	lightnings = true
 	#if true, it will play one of five spawn sounds when spawning or getting closer
