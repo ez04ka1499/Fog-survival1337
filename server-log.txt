@@ -314,3 +314,4 @@
 [13:22:00] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ладно не будем о таких темах разговаривать
 [13:22:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
 [13:22:09] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ты ещё маленький сильно)
+[13:23:33] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Gorilla
