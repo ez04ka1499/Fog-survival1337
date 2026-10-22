@@ -318,3 +318,7 @@
 [13:24:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Stone Age]
 [13:24:25] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Stone Age]
 [13:24:39] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Getting an Upgrade]
+[13:25:10] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Getting an Upgrade]
+[13:25:33] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> признавайся)
+[13:25:45] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> хотя я спрашивал у тебя будешь ли ты этот делать кекс в 18 или не
+[13:25:49] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> но все равно
