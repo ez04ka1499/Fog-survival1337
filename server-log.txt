@@ -1,350 +1,56 @@
-[13:15:40] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
-[13:15:40] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
-[13:15:41] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[13:15:41] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23209!/assets/.mcassetsroot' uses unexpected schema
-[13:15:41] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23209!/data/.mcassetsroot' uses unexpected schema
-[13:15:42] [main/INFO] [co.si.cr.Create/]: Created 332 recipes which will be injected into the game
-[13:15:42] [main/INFO] [co.si.cr.Create/]: Created 3 tags which will be injected into the game
-[13:15:42] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
-[13:15:42] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}.
-[13:15:42] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false.
-[13:15:42] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
-[13:15:42] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
-[13:15:42] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
-[13:15:42] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
-[13:15:42] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@7ded50d1]
-[13:15:42] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
-[13:15:43] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 46 ms (multithreaded)
-[13:15:43] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 47 ms
-[13:15:44] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
-[13:15:45] [Worker-Main-2/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
-[13:15:46] [main/INFO] [minecraft/RecipeManager]: Loaded 36 recipes
-[13:15:46] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
-[13:15:46] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
-[13:15:46] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
-[13:15:47] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[13:15:47] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[13:15:47] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[13:15:47] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[13:15:47] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
-[13:15:47] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[13:15:47] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[13:15:47] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[13:15:47] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[13:15:47] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[13:15:47] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
-[13:15:47] [Server thread/INFO] [Framework/]: Loading server configs...
-[13:15:48] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
-[13:15:48] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
-[13:15:48] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
-[13:15:48] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[13:15:50] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[13:15:50] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[13:15:50] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[13:15:50] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[13:15:50] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 19%
-[13:15:51] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 75%
-[13:15:51] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2678 ms
-[13:15:51] [Server thread/INFO] [minecraft/DedicatedServer]: Done (4.007s)! For help, type "help"
-[13:15:51] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[13:15:51] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
-[13:15:51] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
-[13:15:51] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
-[13:15:51] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
-[13:15:51] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
-[13:15:51] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
-[13:15:51] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
-[13:15:51] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
-[13:15:51] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
-[13:15:51] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
-[13:15:51] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
-[13:15:51] [Server thread/WARN] [ModernFix/]: Dedicated server took 34.556 seconds to load
-[13:15:51] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
-[manager] Server ready
-[13:16:03] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:46484] logged in with entity id 244 at (9.017890419043836, 70.0, -18.077185244630286)
-[13:16:03] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[13:16:03] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[13:16:13] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:51864] logged in with entity id 248 at (-1.5, 69.0, 0.5)
-[13:16:13] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
-[13:16:13] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
-[13:17:00] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has reached the goal [Feeling Watched]
-[13:17:02] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> я не понимаю нафига мне друг скинул видео где девочка снимает одежду в том числе и трусы и её трахает собака
-[13:17:24] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule keepInventory is now set to: true]
-[13:17:38] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
-[13:18:24] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> бляяяяяяяяя почему тут нельзя по настоящемус жителями трахаться
-[13:18:42] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule playersSleepingPercentage is now set to: 1]
-[13:19:36] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> короче когда 12 лет станет ты совсем кординально будет по другому воспринимать И РЕАЛЬНО ПРЕДСТАВЛЯТЬ себе трахаться
-[13:21:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has reached the goal [Feeling Watched]
-[13:21:51] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ты меня не наёбешь я знаю что ты трахался с арбузом и там сперма внутри
-[13:22:00] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ладно не будем о таких темах разговаривать
-[13:22:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
-[13:22:09] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ты ещё маленький сильно)
-[13:23:33] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Gorilla
-[13:24:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Stone Age]
-[13:24:25] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Stone Age]
-[13:24:39] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Getting an Upgrade]
-[13:25:10] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Getting an Upgrade]
-[13:25:33] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> признавайся)
-[13:25:45] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> хотя я спрашивал у тебя будешь ли ты этот делать кекс в 18 или не
-[13:25:49] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> но все равно
-[13:25:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> презнавайся)
-[13:27:04] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
-[13:27:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ну типа та жидкость с помощью которой детей рожают
-[13:28:18] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ладно всё полностью не будем о таких темах говорить, ну нафиг
-[13:28:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
-[13:30:30] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
-[13:31:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Monster Hunter]
-[13:32:05] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was shot by Skeleton
-[13:32:55] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was impaled on a stalagmite
-[13:33:58] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Monster Hunter]
-[13:34:11] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Spider
-[13:34:54] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[13:35:58] [Server thread/INFO] [minecraft/MinecraftServer]: illkob tried to swim in lava
-[13:36:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP tried to swim in lava
-[13:36:07] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[13:38:38] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Leafcutter Ant
-[13:38:43] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[13:38:48] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Leafcutter Ant
-[13:39:01] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
-[13:41:30] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Minecraft Comes Alive]
-[13:41:48] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Minecraft Comes Alive]
-[13:42:02] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Crops of the Wild]
-[13:45:45] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Acquire Hardware]
-[13:45:51] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Sweet Dreams]
-[13:46:51] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
-[13:46:59] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
-[13:47:16] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Bison
-[13:49:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [The Tear Of The Man]
-[13:50:58] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=-541, y=100, z=574} BlockPos{x=-542, y=98, z=574}
-[13:53:10] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
-[13:53:18] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
-[13:53:49] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
-[13:54:05] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
-[13:54:48] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
-[13:54:50] [Server thread/INFO] [minecraft/MinecraftServer]: < > olleH
-[13:57:52] [Server thread/INFO] [minecraft/MinecraftServer]: illkob froze to death
-[13:58:13] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Zombie
-[13:58:32] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
-[13:58:56] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Sweet Dreams]
-[13:59:17] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> ща
-[13:59:35] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
-[13:59:43] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[14:03:34] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Isn't It Iron Pick]
-[14:04:02] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Acquire Hardware]
-[14:05:25] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Summoned highwind storm]
-[14:08:25] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
-[14:09:48] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP fell from a high place
-[14:10:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
-[14:10:01] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
-[14:10:01] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[14:10:46] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:45944] logged in with entity id 11944 at (-472.0, 41.59900022015693, 680.0)
-[14:10:46] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[14:10:46] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[14:10:56] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP moved too quickly! 0.0,127.12110171860438,0.0
-[14:10:58] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
-[14:10:58] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
-[14:10:58] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[14:11:03] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:53676] logged in with entity id 11964 at (-475.7461898735728, 90.15736645480598, 678.7157448131671)
-[14:11:03] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[14:11:03] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[14:11:11] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[14:12:02] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Isn't It Iron Pick]
-[14:13:59] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
-[14:14:19] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
-[14:15:07] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
-[14:15:07] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[14:15:15] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Disconnected
-[14:15:15] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
-[manager] ERROR: Pinggy disconnected
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping the server
-[14:15:18] [Immersive Optimization Worker/INFO] [Immersive Optimization/]: Shutting down Immersive Optimization worker
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:inconsistency
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:acceptance
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_field
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:shattered_dreams
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:wonderland
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:dreamworld
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:the_slip
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:no_mans_land
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:dlrowmaerd
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:sarcophagus
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:false_wonderland
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:repetition
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:sequence
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_house
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:brickways
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:lapis_labyrinth
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:answer_dimension
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:torture
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:hellways
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:corners
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:winter_wonderland
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:the_vault
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:bedrock_hallways
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:jungle_warehouse
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:snowy_bridges
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:bridges
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:chasms
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:maze
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:skyways
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_forest
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:pipes
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:remembrance
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:reservoir
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:depths
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:accountability
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:fools_paradise
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:tunnels
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:abyss
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:endless_library
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:entrails
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:what_once_was
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:catacombs
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:compliance
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[world]'/the_wonderland:dream_6
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (inconsistency): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (acceptance): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_field): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (shattered_dreams): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (wonderland): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dreamworld): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (the_slip): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (no_mans_land): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dlrowmaerd): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (sarcophagus): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (false_wonderland): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (repetition): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (sequence): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_house): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (brickways): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (lapis_labyrinth): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (answer_dimension): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (torture): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (hellways): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (corners): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (winter_wonderland): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (the_vault): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (bedrock_hallways): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (jungle_warehouse): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (snowy_bridges): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (bridges): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (chasms): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (maze): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (skyways): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_forest): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (pipes): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (remembrance): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (reservoir): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (depths): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (accountability): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (fools_paradise): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (tunnels): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (abyss): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (endless_library): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (entrails): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (what_once_was): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (catacombs): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (compliance): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dream_6): All chunks are saved
-[14:15:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
-[14:15:19] [Server thread/INFO] [ne.mo.wd.ut.Log/]: Miniserv server stopped
-[14:15:19] [Server thread/INFO] [Framework/]: Unloading server configs...
-[14:15:19] [Server thread/INFO] [Framework/]: Sending config unload event for refurbished_furniture.server.toml
-[14:15:19] [Server thread/INFO] [Framework/]: Finished unloading server configs
-[14:15:19] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
+[manager] Loaded world/ from repository
+[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
+[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
+[manager] Mod: FramedBlocks-9.4.3.jar
+[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
+[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
+[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
+[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
+[manager] Mod: KryptonReforged-0.2.3.jar
+[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
+[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
+[manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
+[manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
+[manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
+[manager] Mod: aaa_particles-forge-1.20.1-2.3.0-beta.1.jar
+[manager] Mod: alexsmobs-1.22.9.jar
+[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
+[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
+[manager] Mod: architectury-9.2.14-forge.jar
+[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
+[manager] Mod: citadel-2.6.3-1.20.1.jar
+[manager] Mod: cloth-config-11.1.136-forge.jar
+[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
+[manager] Mod: create-1.20.1-6.0.8 (1).jar
+[manager] Mod: cristellib-1.1.6-forge.jar
+[manager] Mod: embeddium-0.3.31mc1.20.1.jar
+[manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
+[manager] Mod: entityculling-forge-1.7.4-mc1.20.1.jar
+[manager] Mod: ferritecore-6.0.1-forge.jar
+[manager] Mod: flerovium-forge-1.20.1-1.2.10-all.jar
+[manager] Mod: framework-forge-1.20.1-0.8.0.jar
+[manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
+[manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
+[manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
+[manager] Mod: inventoryhud.forge.1.20.1-3.4.26.jar
+[manager] Mod: jei-1.20.1-forge-15.62.0.214.jar
+[manager] Mod: journeymap-1.20.1-5.10.3-forge.jar
+[manager] Mod: mcef-forge-2.1.6-1.20.1.jar
+[manager] Mod: mcw-doors-1.1.5-mc1.20.1forge.jar
+[manager] Mod: mcw-furniture-3.4.1-mc1.20.1forge.jar
+[manager] Mod: mcw-mcwstairs-1.0.2-mc1.20.1forge.jar
+[manager] Mod: mcw-mcwwindows-2.4.2-mc1.20.1forge.jar
+[manager] Mod: minecraft-comes-alive-7.7.1-beta.3+1.20.1-universal.jar
+[manager] Mod: modernfix-forge-5.21.0+mc1.20.1.jar
+[manager] Mod: moonlight-1.20-2.16.35-forge.jar
+[manager] Mod: noisium-forge-2.3.0+mc1.20-1.20.1.jar
+[manager] Mod: puddles-1.20.1-4.0.1.jar
+[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
+[manager] Mod: riautomobility-1.0.3.jar
+[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
+[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
+[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
+[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
+[manager] Mod: weather2-1.20.1-2.8.3.jar
+[manager] Mod: webdisplays-2.0.2-1.20.1.jar
+[manager] Tunnel: tcp://hugxo-20-172-37-226.run.pinggy-free.link:41475
