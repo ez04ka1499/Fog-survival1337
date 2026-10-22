@@ -1,1 +1,1 @@
-tcp://ncdpj-104-209-10-232.run.pinggy-free.link:40631
+tcp://qsyry-172-185-55-178.run.pinggy-free.link:33595
