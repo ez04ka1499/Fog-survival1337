@@ -315,3 +315,6 @@
 [13:22:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
 [13:22:09] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ты ещё маленький сильно)
 [13:23:33] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Gorilla
+[13:24:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Stone Age]
+[13:24:25] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Stone Age]
+[13:24:39] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Getting an Upgrade]
