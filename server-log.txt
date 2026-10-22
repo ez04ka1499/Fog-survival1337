@@ -323,3 +323,5 @@
 [13:25:45] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> хотя я спрашивал у тебя будешь ли ты этот делать кекс в 18 или не
 [13:25:49] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> но все равно
 [13:25:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> презнавайся)
+[13:27:04] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
+[13:27:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ну типа та жидкость с помощью которой детей рожают
