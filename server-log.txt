@@ -330,3 +330,4 @@
 [13:30:30] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
 [13:31:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Monster Hunter]
 [13:32:05] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was shot by Skeleton
+[13:32:55] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was impaled on a stalagmite
