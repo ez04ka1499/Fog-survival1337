@@ -341,3 +341,4 @@
 [13:38:43] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
 [13:38:48] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Leafcutter Ant
 [13:39:01] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
+[13:41:30] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Minecraft Comes Alive]
