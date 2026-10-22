@@ -331,3 +331,5 @@
 [13:31:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Monster Hunter]
 [13:32:05] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was shot by Skeleton
 [13:32:55] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was impaled on a stalagmite
+[13:33:58] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Monster Hunter]
+[13:34:11] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Spider
