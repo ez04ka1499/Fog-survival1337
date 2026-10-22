@@ -26,7 +26,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: mc-server-${{ github.ref }}
+  group: mc-server-v2-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
