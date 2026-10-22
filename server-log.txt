@@ -302,3 +302,5 @@
 [13:16:13] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:51864] logged in with entity id 248 at (-1.5, 69.0, 0.5)
 [13:16:13] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
 [13:16:13] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
+[13:17:00] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has reached the goal [Feeling Watched]
+[13:17:02] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> я не понимаю нафига мне друг скинул видео где девочка снимает одежду в том числе и трусы и её трахает собака
