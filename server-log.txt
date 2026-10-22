@@ -54,3 +54,183 @@
 [manager] Mod: weather2-1.20.1-2.8.3.jar
 [manager] Mod: webdisplays-2.0.2-1.20.1.jar
 [manager] Tunnel: tcp://jsyna-20-64-204-247.run.pinggy-free.link:43981
+2026-10-22 09:02:09,447 main WARN Advanced terminal features are not available in this environment
+[09:02:09] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
+[09:02:09] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.20.1 by Eclipse Adoptium; OS Linux arch amd64 version 6.17.0-1022-azure
+[09:02:10] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
+[09:02:10] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
+[09:02:10] [main/WARN] [ne.mi.fm.lo.mo.ModDiscoverer/SCAN]: Locator {mods folder locator at /home/runner/work/Fog-survival1337/Fog-survival1337/srv/mods} returned 2 files which are client-side-only mods, but we're on a dedicated server. They will be skipped!
+[09:02:10] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/fmlcore/1.20.1-47.4.0/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[09:02:10] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.4.0/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[09:02:10] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.4.0/lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[09:02:10] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/mclanguage/1.20.1-47.4.0/mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[09:02:11] [main/WARN] [ne.mi.ja.se.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: architectury. Using Mod File: /home/runner/work/Fog-survival1337/Fog-survival1337/srv/mods/architectury-9.2.14-forge.jar
+[09:02:11] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Found 18 dependencies adding them to mods collection
+[09:02:13] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[09:02:13] [main/INFO] [mixin/]: Successfully loaded Mixin Connector [ca.spottedleaf.starlight.mixin.MixinConnector]
+[09:02:13] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments [nogui]
+[09:02:14] [main/INFO] [ModernFix/]: Loaded configuration file for ModernFix 5.21.0+mc1.20.1: 88 options available, 0 override(s) found
+[09:02:14] [main/INFO] [ModernFix/]: Applying Nashorn fix
+[09:02:14] [main/INFO] [ModernFix/]: Applied Forge config corruption patch
+[09:02:14] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 104 options available, 0 override(s) found
+[09:02:14] [main/WARN] [mixin/]: Reference map 'coroutil.refmap.json' for coroutil.mixins.json could not be read. If this is a development environment you can ignore this message
+[09:02:14] [main/WARN] [mixin/]: Reference map 'cristellib-forge-refmap.json' for cristellib.mixins.json could not be read. If this is a development environment you can ignore this message
+[09:02:16] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[09:02:17] [main/INFO] [minecraft/Bootstrap]: ModernFix reached bootstrap stage (10.24 s after launch)
+[09:02:17] [main/WARN] [mixin/]: @Final field delegatesByName:Ljava/util/Map; in modernfix-forge.mixins.json:perf.forge_registry_alloc.ForgeRegistryMixin should be final
+[09:02:17] [main/WARN] [mixin/]: @Final field delegatesByValue:Ljava/util/Map; in modernfix-forge.mixins.json:perf.forge_registry_alloc.ForgeRegistryMixin should be final
+[09:02:17] [main/INFO] [ModernFix/]: Injecting BlockStateBase cache population hook into getOpacityIfCached from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
+[09:02:17] [main/INFO] [ModernFix/]: Injecting BlockStateBase cache population hook into isConditionallyFullOpaque from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
+[09:02:18] [main/INFO] [minecraft/Bootstrap]: Vanilla bootstrap took 1324 milliseconds
+[09:02:19] [main/WARN] [mixin/]: @Inject(@At("INVOKE_ASSIGN")) Shift.BY=2 on refurbished_furniture.common.mixins.json:LevelChunkMixin::handler$znd000$refurbishedFurniture$AfterRemoveBlockEntity exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[09:02:20] [main/WARN] [mixin/]: Static binding violation: PRIVATE @Overwrite method m_47505_ in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[09:02:21] [modloading-worker-0/INFO] [sn.ki.Kiwi/INIT]: Processing 8 KiwiModule annotations
+[09:02:21] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
+[09:02:21] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/2b101225a0983c178c43c737d76def52
+[09:02:21] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
+[09:02:21] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
+[09:02:21] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/9b5bc39f00d53db2acf81d859b596583
+[09:02:21] [modloading-worker-0/INFO] [coroutil/]: forge loader environment detected
+[09:02:21] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[09:02:21] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[09:02:22] [modloading-worker-0/INFO] [co.si.cr.Create/]: Create 6.0.8 initializing! Commit hash: 1a1a9a2819b4f89f78caec41b55ed8cb222fa24b
+[09:02:22] [modloading-worker-0/INFO] [toughasnails/]: Serene Seasons detected. Enabling season modifier.
+[09:02:22] [modloading-worker-0/INFO] [noisium/]: Loading Noisium.
+[09:02:24] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:core] initialized
+[09:02:24] [main/INFO] [sn.ki.Kiwi/INIT]: Module [kiwi:data] initialized
+[09:02:24] [main/INFO] [sn.ki.Kiwi/INIT]: 		recipe_serializer: 3
+[09:02:24] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:enchantment] initialized
+[09:02:24] [main/INFO] [sn.ki.Kiwi/INIT]: 		enchantment: 1
+[09:02:26] [main/INFO] [Moonlight/]: Initialized block sets in 18ms
+[09:02:27] [main/INFO] [ModernFix/]: Bypassed Mojang DFU
+[09:02:27] [main/INFO] [ModernFix/]: Instantiating Mojang DFU
+[09:02:28] [modloading-worker-0/INFO] [me.st.kr.mo.sh.Krypton/]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
+[09:02:28] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
+[09:02:28] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
+[09:02:28] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
+[09:02:28] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
+[09:02:28] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[09:02:29] [Thread-0/INFO] [ModernFix/]: Please use /mfsrc to reload any changed mod config files
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.28
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
+[09:02:29] [main/INFO] [journeymap/]: Initializing Packet Registries
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
+[09:02:29] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
+[09:02:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
+[09:02:29] [main/INFO] [Moonlight/]: Initialized color sets in 92ms
+[09:02:29] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[09:02:29] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[09:02:29] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
+[09:02:29] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
+[09:02:29] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
+[09:02:29] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
+[09:02:29] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
+[09:02:29] [main/INFO] [Framework/SYNCED_ENTITY_DATA]: Registered synced data key refurbished_furniture:lock_yaw for refurbished_furniture:seat
+[09:02:29] [modloading-worker-0/INFO] [we.Weather/]: Got IMC []
+[09:02:29] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.kiwi.customization.compat.jade.JadeCompat
+[09:02:29] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.vanilla.VanillaPlugin
+[09:02:29] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.universal.UniversalPlugin
+[09:02:29] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.core.CorePlugin
+[09:02:29] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at xfacthd.framedblocks.common.compat.jade.FramedJadePlugin
+[09:02:29] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
+[09:02:29] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
+[09:02:29] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
+[09:02:30] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[09:02:30] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23209!/assets/.mcassetsroot' uses unexpected schema
+[09:02:30] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23209!/data/.mcassetsroot' uses unexpected schema
+[09:02:30] [main/INFO] [co.si.cr.Create/]: Created 332 recipes which will be injected into the game
+[09:02:30] [main/INFO] [co.si.cr.Create/]: Created 3 tags which will be injected into the game
+[09:02:30] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
+[09:02:30] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}.
+[09:02:30] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false.
+[09:02:30] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
+[09:02:31] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
+[09:02:31] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[09:02:31] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[09:02:31] [main/INFO] [minecraft/MinecraftServer]: Found new data pack Immersive Weathering Generated Pack, loading it automatically
+[09:02:31] [main/INFO] [minecraft/MinecraftServer]: Found new data pack create:dynamic_data, loading it automatically
+[09:02:31] [main/INFO] [minecraft/MinecraftServer]: Found new data pack tacz_resources, loading it automatically
+[09:02:31] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@5913b999]
+[09:02:31] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
+[09:02:31] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 41 ms (multithreaded)
+[09:02:31] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 42 ms
+[09:02:33] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
+[09:02:33] [Worker-Main-3/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
+[09:02:34] [main/INFO] [minecraft/RecipeManager]: Loaded 36 recipes
+[09:02:35] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
+[09:02:35] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
+[09:02:35] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
+[09:02:35] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
+[09:02:35] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[09:02:35] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[09:02:35] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[09:02:35] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
+[09:02:35] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[09:02:35] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[09:02:35] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[09:02:35] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[09:02:35] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[09:02:35] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
+[09:02:36] [Server thread/INFO] [Framework/]: Loading server configs...
+[09:02:36] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
+[09:02:36] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
+[09:02:36] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+[09:02:45] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[09:02:46] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[09:02:46] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[09:02:46] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[09:02:47] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[09:02:47] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[09:02:48] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[09:02:48] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 1%
+[09:02:49] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 1%
+[09:02:49] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[09:02:50] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 3%
+[09:02:50] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 4%
+[09:02:51] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 5%
+[09:02:51] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 5%
+[09:02:52] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 6%
+[09:02:52] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 7%
+[09:02:53] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 8%
+[09:02:53] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 9%
+[09:02:54] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 9%
+[09:02:54] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 12%
+[09:02:55] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 14%
+[09:02:55] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 15%
+[09:02:56] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 15%
+[09:02:56] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 17%
+[09:02:57] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 19%
+[09:02:57] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 21%
+[09:02:58] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 22%
+[09:02:58] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 23%
+[09:02:59] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 25%
+[09:02:59] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 26%
+[09:03:00] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 29%
+[09:03:00] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 31%
+[09:03:01] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 32%
+[09:03:01] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 34%
+[09:03:02] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 36%
+[09:03:02] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 38%
+[09:03:03] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 40%
+[09:03:03] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 42%
+[09:03:04] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 43%
+[09:03:04] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 44%
+[09:03:05] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 47%
+[09:03:05] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 50%
+[09:03:06] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 52%
+[09:03:06] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 54%
+[09:03:07] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 55%
+[09:03:07] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 57%
