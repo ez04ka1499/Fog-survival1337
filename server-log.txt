@@ -337,3 +337,7 @@
 [13:35:58] [Server thread/INFO] [minecraft/MinecraftServer]: illkob tried to swim in lava
 [13:36:00] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP tried to swim in lava
 [13:36:07] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
+[13:38:38] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Leafcutter Ant
+[13:38:43] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
+[13:38:48] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Leafcutter Ant
+[13:39:01] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
