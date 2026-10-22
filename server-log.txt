@@ -333,3 +333,4 @@
 [13:32:55] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was impaled on a stalagmite
 [13:33:58] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Monster Hunter]
 [13:34:11] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Spider
+[13:34:54] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
