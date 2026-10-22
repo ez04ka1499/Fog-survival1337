@@ -325,3 +325,5 @@
 [13:25:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> презнавайся)
 [13:27:04] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
 [13:27:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ну типа та жидкость с помощью которой детей рожают
+[13:28:18] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> ладно всё полностью не будем о таких темах говорить, ну нафиг
+[13:28:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
