@@ -1,14 +1,3 @@
-[manager] New world requested; old world will not be loaded
-[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
-[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
-[manager] Mod: FramedBlocks-9.4.3.jar
-[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
-[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
-[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
-[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
-[manager] Mod: KryptonReforged-0.2.3.jar
-[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
-[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
 [manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
 [manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
 [manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
@@ -234,3 +223,128 @@
 [09:03:06] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 54%
 [09:03:07] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 55%
 [09:03:07] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 57%
+[09:03:08] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 59%
+[09:03:08] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 61%
+[09:03:09] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 62%
+[09:03:09] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 65%
+[09:03:10] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 68%
+[09:03:10] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 68%
+[09:03:11] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 69%
+[09:03:11] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 71%
+[09:03:12] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 73%
+[09:03:12] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 75%
+[09:03:13] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 77%
+[09:03:13] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 80%
+[09:03:14] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 83%
+[09:03:14] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 84%
+[09:03:15] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 85%
+[09:03:15] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 87%
+[09:03:16] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 89%
+[09:03:16] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 91%
+[09:03:17] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 93%
+[09:03:17] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 96%
+[09:03:18] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 98%
+[09:03:18] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 32946 ms
+[09:03:18] [Server thread/INFO] [minecraft/DedicatedServer]: Done (43.008s)! For help, type "help"
+[09:03:18] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[09:03:18] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
+[09:03:18] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
+[09:03:18] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
+[09:03:18] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
+[09:03:18] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
+[09:03:18] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
+[09:03:18] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
+[09:03:18] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
+[09:03:18] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
+[09:03:19] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
+[09:03:19] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
+[09:03:19] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
+[09:03:19] [Server thread/WARN] [ModernFix/]: Dedicated server took 72.268 seconds to load
+[manager] Server ready
+[09:03:20] [Server thread/INFO] [co.gi.al.al.AlexsMobs/]: Found Pupfish chunk at 1631 ~ -1920 after 34 tries
