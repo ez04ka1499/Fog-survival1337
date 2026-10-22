@@ -1,6 +1,3 @@
-[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
-[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
-[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
 [manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
 [manager] Mod: KryptonReforged-0.2.3.jar
 [manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
@@ -348,3 +345,6 @@
 [13:49:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [The Tear Of The Man]
 [13:50:58] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=-541, y=100, z=574} BlockPos{x=-542, y=98, z=574}
 [13:53:10] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
+[13:53:18] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
+[13:53:49] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
+[13:54:05] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
