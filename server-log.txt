@@ -302,3 +302,4 @@
 [16:22:26] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:42494] logged in with entity id 427 at (-508.69999998807907, 98.0, 681.5944853185979)
 [16:22:26] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
 [16:22:26] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
+[16:25:41] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
