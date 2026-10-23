@@ -294,3 +294,7 @@
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://heiyj-20-168-94-80.run.pinggy-free.link:39753
+[06:42:05] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:60802] logged in with entity id 188 at (-454.9540335476875, 141.0625, 676.6999999880791)
+[06:42:05] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[06:42:05] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[06:42:07] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
