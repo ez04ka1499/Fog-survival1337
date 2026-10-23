@@ -307,3 +307,8 @@
 [16:30:30] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> #mine stone
 [16:30:37] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
 [16:30:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[16:32:50] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:60798] logged in with entity id 2914 at (-550.8034417360554, 96.0, 687.3074867261219)
+[16:32:50] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[16:32:50] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[16:33:27] [Server thread/INFO] [minecraft/MinecraftServer]: illkob burned to death
+[16:33:47] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Zombie
