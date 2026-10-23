@@ -304,3 +304,4 @@
 [06:44:35] [Server thread/INFO] [Jade/]: Syncing config to lober118 (65f402cf-67f6-3d6b-9f6f-d53384f9b62e)
 [06:46:16] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported lober118 to TWIX_EXTRATOP]
 [06:46:24] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has reached the goal [Feeling Watched]
+[06:49:11] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Stone Age]
