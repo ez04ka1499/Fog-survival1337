@@ -1,11 +1,3 @@
-[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
-[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
-[manager] Mod: architectury-9.2.14-forge.jar
-[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
-[manager] Mod: citadel-2.6.3-1.20.1.jar
-[manager] Mod: cloth-config-11.1.136-forge.jar
-[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
-[manager] Mod: create-1.20.1-6.0.8 (1).jar
 [manager] Mod: cristellib-1.1.6-forge.jar
 [manager] Mod: embeddium-0.3.31mc1.20.1.jar
 [manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
@@ -348,3 +340,11 @@
 [16:55:32] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
 [16:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP froze to death
 [16:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
+[16:58:35] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: illkob was kicked for floating too long!
+[16:58:35] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Flying is not enabled on this server
+[16:58:35] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
+[16:58:43] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:37310] logged in with entity id 8040 at (-559.5, 114.06036557019333, 685.5)
+[16:58:43] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
+[16:58:43] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
+[16:58:50] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
+[16:58:51] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
