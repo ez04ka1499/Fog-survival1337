@@ -305,3 +305,5 @@
 [16:25:41] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
 [16:27:40] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=-564, y=94, z=685} BlockPos{x=-564, y=93, z=686}
 [16:30:30] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> #mine stone
+[16:30:37] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[16:30:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
