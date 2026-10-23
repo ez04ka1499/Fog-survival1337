@@ -322,3 +322,6 @@
 [07:04:34] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Spectator Mode]
 [07:04:43] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
 [07:04:43] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP suffocated in a wall
+[07:05:16] [Server thread/INFO] [minecraft/MinecraftServer]: < > ...
+[07:05:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> 18+
+[07:05:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> 911
