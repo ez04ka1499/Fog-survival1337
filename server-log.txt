@@ -326,3 +326,4 @@
 [07:05:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> 18+
 [07:05:52] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> 911
 [07:06:42] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 was slain by TWIX_EXTRATOP
+[07:08:27] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Minecraft Comes Alive]
