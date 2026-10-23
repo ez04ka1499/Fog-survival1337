@@ -1,14 +1,3 @@
-[manager] Loaded world/ from repository
-[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
-[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
-[manager] Mod: FramedBlocks-9.4.3.jar
-[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
-[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
-[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
-[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
-[manager] Mod: KryptonReforged-0.2.3.jar
-[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
-[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
 [manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
 [manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
 [manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
@@ -346,3 +335,16 @@
 [16:51:08] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Warden
 [16:51:47] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
 [16:53:13] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was doomed to fall by Man From The Fog
+[16:54:24] [Server thread/INFO] [minecraft/MinecraftServer]: let's play a game
+[16:54:25] [Server thread/INFO] [minecraft/MinecraftServer]: you have 10 seconds to run away or hide
+[16:54:27] [Server thread/INFO] [minecraft/MinecraftServer]: 10
+[16:54:28] [Server thread/INFO] [minecraft/MinecraftServer]: 9
+[16:54:29] [Server thread/INFO] [minecraft/MinecraftServer]: 8
+[16:54:30] [Server thread/INFO] [minecraft/MinecraftServer]: 7
+[16:54:31] [Server thread/INFO] [minecraft/MinecraftServer]: 6
+[16:54:32] [Server thread/INFO] [minecraft/MinecraftServer]: 5
+[16:54:33] [Server thread/INFO] [minecraft/MinecraftServer]: 4
+[16:54:34] [Server thread/INFO] [minecraft/MinecraftServer]: 3
+[16:54:35] [Server thread/INFO] [minecraft/MinecraftServer]: 2
+[16:54:36] [Server thread/INFO] [minecraft/MinecraftServer]: 1
+[16:54:38] [Server thread/INFO] [minecraft/MinecraftServer]: ready or not, here i come!
