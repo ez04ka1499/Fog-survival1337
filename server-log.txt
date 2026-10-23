@@ -1,13 +1,3 @@
-[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
-[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
-[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
-[manager] Mod: weather2-1.20.1-2.8.3.jar
-[manager] Mod: webdisplays-2.0.2-1.20.1.jar
-2026-10-23 16:20:51,026 main WARN Advanced terminal features are not available in this environment
-[16:20:51] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
-[16:20:51] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.20.1 by Eclipse Adoptium; OS Linux arch amd64 version 6.17.0-1022-azure
-[16:20:51] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
-[16:20:51] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
 [16:20:52] [main/WARN] [ne.mi.fm.lo.mo.ModDiscoverer/SCAN]: Locator {mods folder locator at /home/runner/work/Fog-survival1337/Fog-survival1337/srv/mods} returned 2 files which are client-side-only mods, but we're on a dedicated server. They will be skipped!
 [16:20:52] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/fmlcore/1.20.1-47.4.0/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
 [16:20:52] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.4.0/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
@@ -348,3 +338,13 @@
 [17:18:37] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Hunt and Gather]
 [17:19:52] [Server thread/INFO] [minecraft/MinecraftServer]: follow me
 [17:19:57] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> fig tebe
+[17:21:22] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Disconnected
+[17:21:22] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
+[17:21:22] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[17:21:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[manager] Pinggy disconnected/timeout; reconnecting without stopping Minecraft
+[manager] Starting Pinggy (token supplied)
+[manager] Tunnel: tcp://ttgwt-20-169-101-189.run.pinggy-free.link:45887
+[17:21:55] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:50870] logged in with entity id 12384 at (-565.925529567666, 96.5, 686.3161413447692)
+[17:21:55] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[17:21:55] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
