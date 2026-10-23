@@ -1,13 +1,3 @@
-[16:21:01] [modloading-worker-0/INFO] [noisium/]: Loading Noisium.
-[16:21:04] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:core] initialized
-[16:21:04] [main/INFO] [sn.ki.Kiwi/INIT]: Module [kiwi:data] initialized
-[16:21:04] [main/INFO] [sn.ki.Kiwi/INIT]: 		recipe_serializer: 3
-[16:21:04] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:enchantment] initialized
-[16:21:04] [main/INFO] [sn.ki.Kiwi/INIT]: 		enchantment: 1
-[16:21:05] [main/INFO] [Moonlight/]: Initialized block sets in 13ms
-[16:21:06] [main/INFO] [ModernFix/]: Bypassed Mojang DFU
-[16:21:06] [main/INFO] [ModernFix/]: Instantiating Mojang DFU
-[16:21:07] [modloading-worker-0/INFO] [me.st.kr.mo.sh.Krypton/]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
 [16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
 [16:21:07] [Thread-0/INFO] [ModernFix/]: Please use /mfsrc to reload any changed mod config files
 [16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
@@ -348,3 +338,13 @@
 [17:42:18] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Timed out
 [17:42:18] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
 [17:42:38] [Server thread/INFO] [minecraft/MinecraftServer]: illkob froze to death
+[17:42:54] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:44692] logged in with entity id 16405 at (-567.3073985522065, 95.279555136528, 691.3380530453838)
+[17:42:54] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[17:42:54] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[17:43:14] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[17:43:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
+[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.3445164689558169
+[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.5537110624200068
+[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.7379179712436326
+[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.8971371954268079
+[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.0312201138746104
