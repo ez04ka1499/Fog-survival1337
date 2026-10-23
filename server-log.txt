@@ -1,28 +1,3 @@
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
-[16:21:07] [Thread-0/INFO] [ModernFix/]: Please use /mfsrc to reload any changed mod config files
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
-[16:21:07] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
-[16:21:07] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
-[16:21:08] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
-[16:21:08] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[16:21:08] [main/INFO] [journeymap/]: Initializing Packet Registries
-[16:21:08] [main/INFO] [Moonlight/]: Initialized color sets in 28ms
-[16:21:08] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[16:21:08] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[16:21:08] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
-[16:21:08] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
 [16:21:08] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
 [16:21:08] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
 [16:21:08] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
@@ -348,3 +323,28 @@
 [17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.7379179712436326
 [17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.8971371954268079
 [17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.0312201138746104
+[17:44:01] [Server thread/INFO] [minecraft/MinecraftServer]: < > yeH
+[17:44:03] [Server thread/INFO] [minecraft/MinecraftServer]: < > ereh emoC
+[17:44:06] [Server thread/INFO] [minecraft/MinecraftServer]: < > uoy ot klat annaw I
+[17:44:11] [Server thread/INFO] [minecraft/MinecraftServer]: < > oS
+[17:44:16] [Server thread/INFO] [minecraft/MinecraftServer]: < > pleh ruoy deen I
+[17:44:17] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> hello
+[17:44:18] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> WHAT IS YOUR NAME?
+[17:44:19] [Server thread/INFO] [minecraft/MinecraftServer]: < > olleH
+[17:44:20] [Server thread/INFO] [minecraft/MinecraftServer]: < > ?em pleh ot tnaw uoy oD
+[17:44:25] [Server thread/INFO] [minecraft/MinecraftServer]: < > ...
+[17:44:26] [Server thread/INFO] [minecraft/MinecraftServer]: < > .T'NAC I
+[17:44:27] [Server thread/INFO] [minecraft/MinecraftServer]: < >
+[17:44:28] [Server thread/INFO] [minecraft/MinecraftServer]: < > .dnalrednow ot og
+[17:44:29] [Server thread/INFO] [minecraft/MinecraftServer]: < > and then go there again.
+[17:44:30] [Server thread/INFO] [minecraft/MinecraftServer]: < > and again.
+[17:44:31] [Server thread/INFO] [minecraft/MinecraftServer]: and again.
+[17:44:34] [Server thread/INFO] [minecraft/MinecraftServer]: friends are waiting for us.
+[17:44:48] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.4137197888148876
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.6814400510097585
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.3506796774283885
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.0113917579478766
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.2709960000948968
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.4014076062353524
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.3643282739642473
+[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.4158273284953111
