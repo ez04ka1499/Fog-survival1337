@@ -304,3 +304,4 @@
 [16:22:26] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
 [16:25:41] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
 [16:27:40] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=-564, y=94, z=685} BlockPos{x=-564, y=93, z=686}
+[16:30:30] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> #mine stone
