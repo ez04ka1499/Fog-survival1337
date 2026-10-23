@@ -322,3 +322,4 @@
 [16:38:38] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
 [16:39:23] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
 [16:40:11] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
+[16:44:59] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Diamonds!]
