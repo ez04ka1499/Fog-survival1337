@@ -329,3 +329,17 @@
 [16:46:29] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:57662] logged in with entity id 6046 at (-464.9002371249853, 142.0625, 680.870429877967)
 [16:46:29] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [16:46:29] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[16:46:45] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
+[16:46:45] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
+[16:46:45] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[16:46:49] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:54324] logged in with entity id 6217 at (-465.5, 108.82377107987206, 682.5)
+[16:46:49] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[16:46:50] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[16:46:55] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
+[16:46:56] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
+[16:46:56] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
+[16:46:56] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[16:47:07] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Sneak 100]
+[16:47:32] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:35280] logged in with entity id 6263 at (-466.0, 144.0, 682.0)
+[16:47:32] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[16:47:33] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
