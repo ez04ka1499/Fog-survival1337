@@ -309,3 +309,4 @@
 [06:51:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
 [06:55:00] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Monster Hunter]
 [06:55:57] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Alex's Mobs]
+[06:56:27] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
