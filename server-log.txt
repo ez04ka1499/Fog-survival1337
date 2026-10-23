@@ -323,3 +323,9 @@
 [16:39:23] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
 [16:40:11] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
 [16:44:59] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Diamonds!]
+[16:46:21] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP froze to death
+[16:46:26] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[16:46:26] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[16:46:29] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:57662] logged in with entity id 6046 at (-464.9002371249853, 142.0625, 680.870429877967)
+[16:46:29] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[16:46:29] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
