@@ -328,3 +328,5 @@
 [07:06:42] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 was slain by TWIX_EXTRATOP
 [07:08:27] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Minecraft Comes Alive]
 [07:09:32] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported lober118 to TWIX_EXTRATOP]
+[07:10:21] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[07:10:21] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
