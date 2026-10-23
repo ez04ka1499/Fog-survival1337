@@ -1,4 +1,3 @@
-[manager] Mod: framework-forge-1.20.1-0.8.0.jar
 [manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
 [manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
 [manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
@@ -348,3 +347,4 @@
 [17:02:19] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
 [17:05:55] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
 [17:05:57] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
+[17:06:41] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
