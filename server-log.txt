@@ -345,3 +345,4 @@
 [16:47:33] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [16:51:08] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Warden
 [16:51:47] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
+[16:53:13] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was doomed to fall by Man From The Fog
