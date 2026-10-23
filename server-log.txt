@@ -305,3 +305,5 @@
 [06:46:16] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported lober118 to TWIX_EXTRATOP]
 [06:46:24] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has reached the goal [Feeling Watched]
 [06:49:11] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Stone Age]
+[06:51:13] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Getting an Upgrade]
+[06:51:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
