@@ -301,3 +301,21 @@
 [06:12:22] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
 [06:12:37] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
 [06:12:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[06:26:51] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:43134] logged in with entity id 408 at (-463.38939137772513, 143.0625, 684.1017394360201)
+[06:26:51] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[06:26:51] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[06:27:21] [Server thread/INFO] [minecraft/MinecraftServer]: let's play a game
+[06:27:22] [Server thread/INFO] [minecraft/MinecraftServer]: you have 10 seconds to run away or hide
+[06:27:23] [Server thread/INFO] [minecraft/MinecraftServer]: 10
+[06:27:24] [Server thread/INFO] [minecraft/MinecraftServer]: 9
+[06:27:25] [Server thread/INFO] [minecraft/MinecraftServer]: 8
+[06:27:26] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[06:27:26] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[06:27:26] [Server thread/INFO] [minecraft/MinecraftServer]: 7
+[06:27:27] [Server thread/INFO] [minecraft/MinecraftServer]: 6
+[06:27:28] [Server thread/INFO] [minecraft/MinecraftServer]: 5
+[06:27:29] [Server thread/INFO] [minecraft/MinecraftServer]: 4
+[06:27:30] [Server thread/INFO] [minecraft/MinecraftServer]: 3
+[06:27:31] [Server thread/INFO] [minecraft/MinecraftServer]: 2
+[06:27:32] [Server thread/INFO] [minecraft/MinecraftServer]: 1
+[06:27:34] [Server thread/INFO] [minecraft/MinecraftServer]: ready or not, here i come!
