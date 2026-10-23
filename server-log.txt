@@ -312,3 +312,5 @@
 [06:56:27] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
 [06:57:41] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Acquire Hardware]
 [06:58:23] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 has made the advancement [Suit Up]
+[06:59:30] [Server thread/INFO] [minecraft/MinecraftServer]: lober118 was slain by Man From The Fog
+[06:59:58] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported lober118 to TWIX_EXTRATOP]
