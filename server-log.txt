@@ -320,3 +320,5 @@
 [16:34:18] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [16:34:28] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
 [16:38:38] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
+[16:39:23] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
+[16:40:11] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
