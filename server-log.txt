@@ -1,7 +1,3 @@
-[16:21:01] [modloading-worker-0/INFO] [sn.ki.Kiwi/INIT]: Processing 8 KiwiModule annotations
-[16:21:01] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
-[16:21:01] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/2b101225a0983c178c43c737d76def52
-[16:21:01] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
 [16:21:01] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
 [16:21:01] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/9b5bc39f00d53db2acf81d859b596583
 [16:21:01] [modloading-worker-0/INFO] [coroutil/]: forge loader environment detected
@@ -348,3 +344,7 @@
 [17:38:57] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.0194121585019502
 [17:39:16] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:eyed_flesh but it was marked as removed already
 [17:39:42] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[17:41:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Spectator Mode]
+[17:41:28] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
+[17:41:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[17:41:34] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
