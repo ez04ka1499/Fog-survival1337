@@ -1,5 +1,3 @@
-[manager] Mod: riautomobility-1.0.3.jar
-[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
 [manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
 [manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
 [manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
@@ -348,3 +346,5 @@
 [17:16:03] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
 [17:16:28] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Zombie
 [17:18:37] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Hunt and Gather]
+[17:19:52] [Server thread/INFO] [minecraft/MinecraftServer]: follow me
+[17:19:57] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> fig tebe
