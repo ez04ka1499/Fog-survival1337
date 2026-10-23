@@ -343,3 +343,5 @@
 [16:47:32] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:35280] logged in with entity id 6263 at (-466.0, 144.0, 682.0)
 [16:47:32] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [16:47:33] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[16:51:08] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Warden
+[16:51:47] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
