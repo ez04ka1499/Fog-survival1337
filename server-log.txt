@@ -1,7 +1,3 @@
-[16:20:52] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Found 18 dependencies adding them to mods collection
-[16:20:54] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[16:20:54] [main/INFO] [mixin/]: Successfully loaded Mixin Connector [ca.spottedleaf.starlight.mixin.MixinConnector]
-[16:20:54] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments [nogui]
 [16:20:54] [main/INFO] [ModernFix/]: Loaded configuration file for ModernFix 5.21.0+mc1.20.1: 88 options available, 0 override(s) found
 [16:20:54] [main/INFO] [ModernFix/]: Applying Nashorn fix
 [16:20:54] [main/INFO] [ModernFix/]: Applied Forge config corruption patch
@@ -348,3 +344,7 @@
 [17:25:15] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Cave Spider
 [17:26:28] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Moss Off]
 [17:27:33] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
+[17:29:10] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
+[17:29:20] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
+[17:29:35] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
+[17:29:44] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
