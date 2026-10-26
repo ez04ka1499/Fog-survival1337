@@ -1,8 +1,3 @@
-[16:24:08] [main/INFO] [co.si.cr.Create/]: Created 3 tags which will be injected into the game
-[16:24:08] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
-[16:24:08] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}.
-[16:24:08] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false.
-[16:24:08] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
 [16:24:08] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
 [16:24:08] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
 [16:24:08] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
@@ -348,3 +343,8 @@
 [16:52:31] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
 [16:52:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> hello
 [16:53:17] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Sweet Dreams]
+[16:54:29] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was shot by TWIX_EXTRATOP
+[16:54:32] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[16:54:32] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[16:54:38] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Disconnected
+[16:54:38] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
