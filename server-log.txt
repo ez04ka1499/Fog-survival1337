@@ -1,11 +1,3 @@
-[08:03:48] [main/INFO] [Moonlight/]: Initialized block sets in 18ms
-[08:03:48] [main/INFO] [ModernFix/]: Bypassed Mojang DFU
-[08:03:48] [main/INFO] [ModernFix/]: Instantiating Mojang DFU
-[08:03:49] [Thread-0/INFO] [ModernFix/]: Please use /mfsrc to reload any changed mod config files
-[08:03:49] [modloading-worker-0/INFO] [me.st.kr.mo.sh.Krypton/]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
-[08:03:49] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
 [08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
 [08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
 [08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
@@ -348,3 +340,11 @@
 [manager] Pinggy disconnected/timeout; reconnecting without stopping Minecraft
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://cfinz-20-81-159-33.run.pinggy-free.link:38767
+[09:05:14] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:60150] logged in with entity id 12097 at (-179.04325601608764, 96.53292827534491, 955.8240460032615)
+[09:05:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[09:05:14] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[09:05:22] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:59822] logged in with entity id 12245 at (-182.86354805575482, 96.66000002622604, 950.9165362106412)
+[09:05:22] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
+[09:05:22] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
+[09:05:39] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
+[09:06:01] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
