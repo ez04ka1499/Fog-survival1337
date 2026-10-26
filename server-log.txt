@@ -1,4 +1,3 @@
-[08:03:31] [main/WARN] [ne.mi.fm.lo.mo.ModDiscoverer/SCAN]: Locator {mods folder locator at /home/runner/work/Fog-survival1337/Fog-survival1337/srv/mods} returned 2 files which are client-side-only mods, but we're on a dedicated server. They will be skipped!
 [08:03:31] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/fmlcore/1.20.1-47.4.0/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
 [08:03:31] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.4.0/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
 [08:03:31] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.4.0/lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
@@ -348,3 +347,4 @@
 [08:36:42] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Sweet Dreams]
 [08:36:50] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
 [08:36:51] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Minecraft Comes Alive]
+[08:37:45] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Suit Up]
