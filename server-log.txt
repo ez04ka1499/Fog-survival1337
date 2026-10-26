@@ -303,3 +303,8 @@
 [16:26:19] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
 [16:26:22] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
 [16:27:49] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[16:28:33] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:54600] logged in with entity id 907 at (45.66317234059845, 56.75970494073989, 586.4511423647976)
+[16:28:33] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
+[16:28:33] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
+[16:28:35] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
+[16:28:45] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
