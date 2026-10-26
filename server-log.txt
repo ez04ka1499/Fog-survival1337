@@ -1,350 +1,55 @@
-[16:21:09] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
-[16:21:10] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
-[16:21:10] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
-[16:21:10] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
-[16:21:10] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@2cb30ea5]
-[16:21:10] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
-[16:21:10] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 43 ms (multithreaded)
-[16:21:10] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 44 ms
-[16:21:12] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
-[16:21:12] [Worker-Main-2/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
-[16:21:13] [main/INFO] [minecraft/RecipeManager]: Loaded 36 recipes
-[16:21:13] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
-[16:21:13] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
-[16:21:13] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
-[16:21:13] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[16:21:13] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[16:21:13] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[16:21:13] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[16:21:13] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
-[16:21:14] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[16:21:14] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[16:21:14] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[16:21:14] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[16:21:14] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[16:21:14] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
-[16:21:14] [Server thread/INFO] [Framework/]: Loading server configs...
-[16:21:14] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
-[16:21:14] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
-[16:21:14] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
-[16:21:14] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[16:21:15] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[16:21:15] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[16:21:15] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[16:21:16] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 23%
-[16:21:16] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 94%
-[16:21:16] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2038 ms
-[16:21:16] [Server thread/INFO] [minecraft/DedicatedServer]: Done (2.881s)! For help, type "help"
-[16:21:17] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[16:21:17] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
-[16:21:17] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
-[16:21:17] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
-[16:21:17] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
-[16:21:17] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
-[16:21:17] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
-[16:21:17] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
-[16:21:17] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
-[16:21:17] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
-[16:21:17] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
-[16:21:17] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
-[16:21:17] [Server thread/WARN] [ModernFix/]: Dedicated server took 27.953 seconds to load
-[manager] Server ready
-[manager] Starting Pinggy (token supplied)
-[manager] Tunnel: tcp://sjafr-20-169-101-189.run.pinggy-free.link:43977
-[16:21:38] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:48904] logged in with entity id 188 at (-454.9540335476875, 141.0625, 676.6999999880791)
-[16:21:38] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[16:21:38] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[16:21:39] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
-[16:22:26] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:42494] logged in with entity id 427 at (-508.69999998807907, 98.0, 681.5944853185979)
-[16:22:26] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
-[16:22:26] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
-[16:25:41] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
-[16:27:40] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=-564, y=94, z=685} BlockPos{x=-564, y=93, z=686}
-[16:30:30] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> #mine stone
-[16:30:37] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
-[16:30:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[16:32:50] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:60798] logged in with entity id 2914 at (-550.8034417360554, 96.0, 687.3074867261219)
-[16:32:50] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[16:32:50] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[16:33:27] [Server thread/INFO] [minecraft/MinecraftServer]: illkob burned to death
-[16:33:47] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Zombie
-[16:34:14] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
-[16:34:14] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
-[16:34:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[16:34:18] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:57646] logged in with entity id 3464 at (-472.0, 39.6458239276155, 680.0)
-[16:34:18] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[16:34:18] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[16:34:28] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[16:38:38] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
-[16:39:23] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
-[16:40:11] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
-[16:44:59] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Diamonds!]
-[16:46:21] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP froze to death
-[16:46:26] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
-[16:46:26] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[16:46:29] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:57662] logged in with entity id 6046 at (-464.9002371249853, 142.0625, 680.870429877967)
-[16:46:29] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[16:46:29] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[16:46:45] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
-[16:46:45] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
-[16:46:45] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[16:46:49] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:54324] logged in with entity id 6217 at (-465.5, 108.82377107987206, 682.5)
-[16:46:49] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[16:46:50] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[16:46:55] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[16:46:56] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
-[16:46:56] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
-[16:46:56] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[16:47:07] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Sneak 100]
-[16:47:32] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:35280] logged in with entity id 6263 at (-466.0, 144.0, 682.0)
-[16:47:32] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[16:47:33] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[16:51:08] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Warden
-[16:51:47] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[16:53:13] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was doomed to fall by Man From The Fog
-[16:54:24] [Server thread/INFO] [minecraft/MinecraftServer]: let's play a game
-[16:54:25] [Server thread/INFO] [minecraft/MinecraftServer]: you have 10 seconds to run away or hide
-[16:54:27] [Server thread/INFO] [minecraft/MinecraftServer]: 10
-[16:54:28] [Server thread/INFO] [minecraft/MinecraftServer]: 9
-[16:54:29] [Server thread/INFO] [minecraft/MinecraftServer]: 8
-[16:54:30] [Server thread/INFO] [minecraft/MinecraftServer]: 7
-[16:54:31] [Server thread/INFO] [minecraft/MinecraftServer]: 6
-[16:54:32] [Server thread/INFO] [minecraft/MinecraftServer]: 5
-[16:54:33] [Server thread/INFO] [minecraft/MinecraftServer]: 4
-[16:54:34] [Server thread/INFO] [minecraft/MinecraftServer]: 3
-[16:54:35] [Server thread/INFO] [minecraft/MinecraftServer]: 2
-[16:54:36] [Server thread/INFO] [minecraft/MinecraftServer]: 1
-[16:54:38] [Server thread/INFO] [minecraft/MinecraftServer]: ready or not, here i come!
-[16:55:26] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[16:55:26] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[16:55:32] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[16:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP froze to death
-[16:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[16:58:35] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: illkob was kicked for floating too long!
-[16:58:35] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Flying is not enabled on this server
-[16:58:35] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
-[16:58:43] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:37310] logged in with entity id 8040 at (-559.5, 114.06036557019333, 685.5)
-[16:58:43] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
-[16:58:43] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
-[16:58:50] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
-[16:58:51] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
-[17:00:19] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[17:00:25] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
-[17:00:46] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[17:02:19] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[17:05:55] [Server thread/INFO] [minecraft/MinecraftServer]: illkob hit the ground too hard
-[17:05:57] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[17:06:41] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[17:07:27] [Server thread/INFO] [minecraft/MinecraftServer]: < >
-[17:07:49] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
-[17:07:55] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> what is your name?
-[17:09:12] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[17:09:13] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
-[17:09:13] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
-[17:09:13] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[17:09:36] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:35586] logged in with entity id 10187 at (-561.0, 96.0, 687.0)
-[17:09:36] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[17:09:36] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[17:10:01] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[17:12:44] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
-[17:14:01] [Server thread/INFO] [minecraft/MinecraftServer]: illkob fell from a high place
-[17:14:56] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[17:16:03] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[17:16:28] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Zombie
-[17:18:37] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Hunt and Gather]
-[17:19:52] [Server thread/INFO] [minecraft/MinecraftServer]: follow me
-[17:19:57] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> fig tebe
-[17:21:22] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Disconnected
-[17:21:22] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
-[17:21:22] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
-[17:21:22] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[manager] Pinggy disconnected/timeout; reconnecting without stopping Minecraft
-[manager] Starting Pinggy (token supplied)
-[manager] Tunnel: tcp://ttgwt-20-169-101-189.run.pinggy-free.link:45887
-[17:21:55] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:50870] logged in with entity id 12384 at (-565.925529567666, 96.5, 686.3161413447692)
-[17:21:55] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[17:21:55] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[17:23:00] [Server thread/INFO] [minecraft/PlayerList]: illkob[/127.0.0.1:59334] logged in with entity id 12727 at (-564.0195549863321, 95.0, 686.7542628266282)
-[17:23:00] [Server thread/INFO] [minecraft/MinecraftServer]: illkob joined the game
-[17:23:00] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
-[17:25:15] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Cave Spider
-[17:26:28] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Moss Off]
-[17:27:33] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
-[17:29:10] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[17:29:20] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
-[17:29:35] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[17:29:44] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
-[17:31:01] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[17:31:04] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[17:31:53] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[17:31:54] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[17:32:00] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[17:32:33] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[17:33:35] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
-[17:33:38] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[17:33:45] [Server thread/INFO] [minecraft/MinecraftServer]: < > ...
-[17:36:17] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[17:37:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[17:38:07] [Server thread/INFO] [minecraft/MinecraftServer]: < > em pleH
-[17:38:57] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.0194121585019502
-[17:39:16] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:eyed_flesh but it was marked as removed already
-[17:39:42] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[17:41:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Spectator Mode]
-[17:41:28] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
-[17:41:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
-[17:41:34] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[17:41:48] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:35646] logged in with entity id 16144 at (-567.3073985522065, 95.279555136528, 691.3380530453838)
-[17:41:48] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[17:41:48] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[17:42:15] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[17:42:18] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Timed out
-[17:42:18] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[17:42:38] [Server thread/INFO] [minecraft/MinecraftServer]: illkob froze to death
-[17:42:54] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:44692] logged in with entity id 16405 at (-567.3073985522065, 95.279555136528, 691.3380530453838)
-[17:42:54] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[17:42:54] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[17:43:14] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
-[17:43:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
-[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.3445164689558169
-[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.5537110624200068
-[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.7379179712436326
-[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.8971371954268079
-[17:43:37] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.0312201138746104
-[17:44:01] [Server thread/INFO] [minecraft/MinecraftServer]: < > yeH
-[17:44:03] [Server thread/INFO] [minecraft/MinecraftServer]: < > ereh emoC
-[17:44:06] [Server thread/INFO] [minecraft/MinecraftServer]: < > uoy ot klat annaw I
-[17:44:11] [Server thread/INFO] [minecraft/MinecraftServer]: < > oS
-[17:44:16] [Server thread/INFO] [minecraft/MinecraftServer]: < > pleh ruoy deen I
-[17:44:17] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> hello
-[17:44:18] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> WHAT IS YOUR NAME?
-[17:44:19] [Server thread/INFO] [minecraft/MinecraftServer]: < > olleH
-[17:44:20] [Server thread/INFO] [minecraft/MinecraftServer]: < > ?em pleh ot tnaw uoy oD
-[17:44:25] [Server thread/INFO] [minecraft/MinecraftServer]: < > ...
-[17:44:26] [Server thread/INFO] [minecraft/MinecraftServer]: < > .T'NAC I
-[17:44:27] [Server thread/INFO] [minecraft/MinecraftServer]: < >
-[17:44:28] [Server thread/INFO] [minecraft/MinecraftServer]: < > .dnalrednow ot og
-[17:44:29] [Server thread/INFO] [minecraft/MinecraftServer]: < > and then go there again.
-[17:44:30] [Server thread/INFO] [minecraft/MinecraftServer]: < > and again.
-[17:44:31] [Server thread/INFO] [minecraft/MinecraftServer]: and again.
-[17:44:34] [Server thread/INFO] [minecraft/MinecraftServer]: friends are waiting for us.
-[17:44:48] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.4137197888148876
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.6814400510097585
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.3506796774283885
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.0113917579478766
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.2709960000948968
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.4014076062353524
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.3643282739642473
-[17:44:50] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.4158273284953111
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.6108507322659307
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.9930931675708052
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.3540247018027003
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.6936453349616158
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 2.011955067047552
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.447115609012144
-[17:45:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.35578175673992973
-[17:45:36] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.25500132840923184
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.3700599179649089
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.4659420740230473
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5426477965835375
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6001770856463509
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6385299412116056
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6577063618504204
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6398909881966119
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5967221800108291
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5360409758226297
-[17:45:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.4609299046646811
-[17:45:53] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.3732167394375665
-[17:45:53] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.2741566934751063
-[17:45:55] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Timed out
-[17:45:55] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[17:47:06] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:54336] logged in with entity id 16924 at (-529.5406098786142, 99.0, 892.4037931366956)
-[17:47:06] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[17:47:06] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[manager] New world requested; old world will not be loaded
+[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
+[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
+[manager] Mod: FramedBlocks-9.4.3.jar
+[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
+[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
+[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
+[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
+[manager] Mod: KryptonReforged-0.2.3.jar
+[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
+[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
+[manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
+[manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
+[manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
+[manager] Mod: aaa_particles-forge-1.20.1-2.3.0-beta.1.jar
+[manager] Mod: alexsmobs-1.22.9.jar
+[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
+[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
+[manager] Mod: architectury-9.2.14-forge.jar
+[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
+[manager] Mod: citadel-2.6.3-1.20.1.jar
+[manager] Mod: cloth-config-11.1.136-forge.jar
+[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
+[manager] Mod: create-1.20.1-6.0.8 (1).jar
+[manager] Mod: cristellib-1.1.6-forge.jar
+[manager] Mod: embeddium-0.3.31mc1.20.1.jar
+[manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
+[manager] Mod: entityculling-forge-1.7.4-mc1.20.1.jar
+[manager] Mod: ferritecore-6.0.1-forge.jar
+[manager] Mod: flerovium-forge-1.20.1-1.2.10-all.jar
+[manager] Mod: framework-forge-1.20.1-0.8.0.jar
+[manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
+[manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
+[manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
+[manager] Mod: inventoryhud.forge.1.20.1-3.4.26.jar
+[manager] Mod: jei-1.20.1-forge-15.62.0.214.jar
+[manager] Mod: journeymap-1.20.1-5.10.3-forge.jar
+[manager] Mod: mcef-forge-2.1.6-1.20.1.jar
+[manager] Mod: mcw-doors-1.1.5-mc1.20.1forge.jar
+[manager] Mod: mcw-furniture-3.4.1-mc1.20.1forge.jar
+[manager] Mod: mcw-mcwstairs-1.0.2-mc1.20.1forge.jar
+[manager] Mod: mcw-mcwwindows-2.4.2-mc1.20.1forge.jar
+[manager] Mod: minecraft-comes-alive-7.7.1-beta.3+1.20.1-universal.jar
+[manager] Mod: modernfix-forge-5.21.0+mc1.20.1.jar
+[manager] Mod: moonlight-1.20-2.16.35-forge.jar
+[manager] Mod: noisium-forge-2.3.0+mc1.20-1.20.1.jar
+[manager] Mod: puddles-1.20.1-4.0.1.jar
+[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
+[manager] Mod: riautomobility-1.0.3.jar
+[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
+[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
+[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
+[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
+[manager] Mod: weather2-1.20.1-2.8.3.jar
+[manager] Mod: webdisplays-2.0.2-1.20.1.jar
