@@ -1,21 +1,3 @@
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.28
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
-[08:03:50] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
-[08:03:50] [main/INFO] [journeymap/]: Initializing Packet Registries
-[08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
-[08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
-[08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
-[08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
-[08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
-[08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
 [08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
 [08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
 [08:03:50] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
@@ -348,3 +330,21 @@
 [09:05:22] [Server thread/INFO] [Jade/]: Syncing config to illkob (3af298a5-adc6-3c7b-9e33-85fca7bfd479)
 [09:05:39] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
 [09:06:01] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.26787322823525983
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.504463891964491
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.7410545556937222
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.9776452194229535
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.0
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.0
+[09:06:47] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.26787322823525983
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.2977319825414497
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.5468871528848638
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.7960423232282778
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.045197493571692
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.294352663915106
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.54350783425852
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.792663004601934
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.2977319825414497
+[09:06:49] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.2977319825414497
+[09:07:08] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
+[09:07:10] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
