@@ -1,12 +1,3 @@
-[08:03:56] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[08:03:56] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[08:03:56] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[08:03:56] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[08:03:56] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
-[08:03:57] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[08:03:57] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[08:03:57] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[08:03:57] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
 [08:03:57] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
 [08:03:57] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
 [08:03:57] [Server thread/INFO] [Framework/]: Loading server configs...
@@ -348,3 +339,12 @@
 [09:09:28] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.1917796200762183
 [09:09:28] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.5995396203628047
 [09:09:28] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 2.0127514265255826
+[09:10:36] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[09:10:36] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[09:10:39] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:46618] logged in with entity id 14873 at (129.4253575595763, 70.0, 606.0936388719012)
+[09:10:39] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[09:10:39] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[09:10:39] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: illkob lost connection: Disconnected
+[09:10:39] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
+[09:10:43] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[09:10:43] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
