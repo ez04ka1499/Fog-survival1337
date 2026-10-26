@@ -1,4 +1,3 @@
-[16:24:08] [main/INFO] [co.si.cr.Create/]: Created 332 recipes which will be injected into the game
 [16:24:08] [main/INFO] [co.si.cr.Create/]: Created 3 tags which will be injected into the game
 [16:24:08] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
 [16:24:08] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}.
@@ -348,3 +347,4 @@
 [16:52:04] [Server thread/INFO] [minecraft/MinecraftServer]: <FateXx092> It's. all. my. fault.
 [16:52:31] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
 [16:52:37] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> hello
+[16:53:17] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Sweet Dreams]
