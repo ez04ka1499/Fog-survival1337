@@ -1,6 +1,3 @@
-[08:04:07] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[08:04:07] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[08:04:07] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
 [08:04:08] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
 [08:04:08] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
 [08:04:09] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
@@ -348,3 +345,6 @@
 [manager] Pinggy disconnected/timeout; reconnecting without stopping Minecraft
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://danzj-20-81-159-33.run.pinggy-free.link:40027
+[manager] Pinggy disconnected/timeout; reconnecting without stopping Minecraft
+[manager] Starting Pinggy (token supplied)
+[manager] Tunnel: tcp://ppbpq-20-81-159-33.run.pinggy-free.link:39125
