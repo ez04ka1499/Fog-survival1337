@@ -311,3 +311,5 @@
 [16:29:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
 [16:30:36] [Server thread/INFO] [minecraft/MinecraftServer]: illkob drowned
 [16:30:42] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
+[16:31:59] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[16:32:17] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
