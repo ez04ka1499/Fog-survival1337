@@ -300,3 +300,5 @@
 [16:25:05] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [16:25:05] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [16:25:06] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
+[16:26:19] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[16:26:22] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
