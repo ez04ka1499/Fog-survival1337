@@ -1,4 +1,3 @@
-[08:03:34] [main/INFO] [ModernFix/]: Applied Forge config corruption patch
 [08:03:34] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 104 options available, 0 override(s) found
 [08:03:34] [main/WARN] [mixin/]: Reference map 'coroutil.refmap.json' for coroutil.mixins.json could not be read. If this is a development environment you can ignore this message
 [08:03:35] [main/WARN] [mixin/]: Reference map 'cristellib-forge-refmap.json' for cristellib.mixins.json could not be read. If this is a development environment you can ignore this message
@@ -348,3 +347,4 @@
 [08:48:41] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
 [08:48:52] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by Man From The Fog
 [08:49:00] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported illkob to TWIX_EXTRATOP]
+[08:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Wolf
