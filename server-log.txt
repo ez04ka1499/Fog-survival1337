@@ -1,6 +1,3 @@
-[16:24:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.vanilla.VanillaPlugin
-[16:24:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.universal.UniversalPlugin
-[16:24:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.core.CorePlugin
 [16:24:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at xfacthd.framedblocks.common.compat.jade.FramedJadePlugin
 [16:24:06] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
 [16:24:06] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
@@ -348,3 +345,6 @@
 [16:46:37] [Server thread/INFO] [minecraft/MinecraftServer]: <FateXx092> I killed. them. all.
 [16:47:00] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <illkob> hi
 [16:47:24] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
+[16:47:43] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[16:47:44] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
+[16:48:05] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:angel but it was marked as removed already
