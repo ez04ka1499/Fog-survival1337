@@ -1,6 +1,3 @@
-[08:03:57] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[08:03:57] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
-[08:03:57] [Server thread/INFO] [Framework/]: Loading server configs...
 [08:03:57] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
 [08:03:57] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
 [08:03:57] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
@@ -348,3 +345,6 @@
 [09:10:39] [Server thread/INFO] [minecraft/MinecraftServer]: illkob left the game
 [09:10:43] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
 [09:10:43] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[manager] Pinggy disconnected/timeout; reconnecting without stopping Minecraft
+[manager] Starting Pinggy (token supplied)
+[manager] Tunnel: tcp://pwwjs-20-81-159-33.run.pinggy-free.link:37527
