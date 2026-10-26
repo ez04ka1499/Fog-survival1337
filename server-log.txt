@@ -1,13 +1,3 @@
-[16:24:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
-[16:24:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
-[16:24:06] [main/INFO] [Moonlight/]: Initialized color sets in 38ms
-[16:24:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.28
-[16:24:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
-[16:24:06] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[16:24:06] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[16:24:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
-[16:24:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
-[16:24:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
 [16:24:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
 [16:24:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
 [16:24:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
@@ -348,3 +338,13 @@
 [16:35:13] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 1.0303714994499842
 [16:35:13] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of illkob) moved wrongly! 0.8399540074126435
 [16:35:15] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
+[16:42:28] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
+[16:42:28] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
+[16:42:28] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[16:42:33] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:46448] logged in with entity id 4363 at (130.5, 112.24349098943333, 229.5)
+[16:42:33] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[16:42:33] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[16:42:39] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to illkob]
+[16:42:40] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP was kicked for floating too long!
+[16:42:40] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Flying is not enabled on this server
+[16:42:40] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
