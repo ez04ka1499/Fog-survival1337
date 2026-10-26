@@ -1,5 +1,3 @@
-[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
-[manager] Mod: riautomobility-1.0.3.jar
 [manager] Mod: starlight-1.1.2+forge.1cda73c.jar
 [manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
 [manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
@@ -348,3 +346,5 @@
 [08:26:18] [Server thread/INFO] [minecraft/MinecraftServer]: illkob has made the advancement [Monster Hunter]
 [08:26:39] [Server thread/INFO] [minecraft/MinecraftServer]: illkob was slain by TWIX_EXTRATOP
 [08:27:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by illkob
+[08:27:55] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: illkob moved too quickly! -9.573552193466142,-0.6709083839322858,3.330879504713714
+[08:27:55] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP moved too quickly! -8.893129667248886,1.0435356201475088,4.756814142731038
