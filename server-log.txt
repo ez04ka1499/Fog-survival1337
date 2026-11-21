@@ -89,3 +89,5 @@
 [10:07:59] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
 [10:08:02] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Spectator Mode]
 [10:09:34] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
+[10:26:00] [Server thread/INFO] [minecraft/LocateCommand]: Locating element minecraft:village_desert took 699 ms
+[10:26:07] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to -1023.500000, 104.868136, -415.500000]
