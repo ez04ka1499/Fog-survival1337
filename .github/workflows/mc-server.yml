@@ -307,11 +307,8 @@ jobs:
               (SRV / "mods").mkdir(exist_ok=True)
               copy_tree(ROOT / "mods", SRV / "mods")
               archive = Path("/tmp/mods.tar.gz")
-             message(f"Loading mods.tar.gz from release mods-pack in {REPO}")
-             release_asset("mods-pack", "mods.tar.gz", archive)
-            message(f"Downloaded mods archive: {archive.stat().st_size} bytes")
-            extract_mods(archive)
-            message("Release mods extracted successfully")
+              if release_asset("mods-pack", "mods.tar.gz", archive, optional=True):
+                  extract_mods(archive)
               for jar in sorted((SRV / "mods").glob("*.jar")):
                   message("Mod: " + jar.name)
               world_prepared = True
