@@ -94,3 +94,4 @@
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://ytiqx-20-169-50-44.run.pinggy-free.link:39115
+[17:27:18] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@69e91e01[id=<null>,name=TWIX_EXTRATOP,properties={},legacy=false] (/127.0.0.1:52110) lost connection: Disconnected
