@@ -193,25 +193,14 @@ jobs:
 
           def extract_mods(archive):
               destination = SRV / "mods"
-              destination.mkdir(parents=True, exist_ok=True)
-              extracted_count = 0
               with tarfile.open(archive, "r:gz") as bundle:
                   for member in bundle.getmembers():
                       safe_target(destination, member.name)
-                      if member.issym() or member.islnk() or member.isdev() or member.isfifo():
+                      if not (member.isfile() or member.isdir()):
                           raise RuntimeError("Links/special files not allowed in mods archive")
-                      if member.isfile() and member.name.lower().endswith(".jar"):
-                          jar_name = Path(member.name).name
-                          if not jar_name:
-                              continue
-                          target_jar = safe_target(destination, jar_name)
-                          src = bundle.extractfile(member)
-                          if src is None:
-                              raise RuntimeError("Cannot read mod entry: " + member.name)
-                          with src, open(target_jar, "wb") as out:
-                              shutil.copyfileobj(src, out)
-                          extracted_count += 1
-              message(f"Extracted {extracted_count} mod .jar file(s) into {destination}")
+                  bundle.extractall(destination, filter="data")
+              if any(p.parent != destination for p in destination.rglob("*.jar")):
+                  raise RuntimeError("JAR files must be at archive root")
 
           def copy_tree(source, destination):
               if source.is_dir():
@@ -261,6 +250,7 @@ jobs:
               if settings.get("server-ip", "") not in ("", "0.0.0.0", "127.0.0.1"):
                   raise RuntimeError("Keep server-ip empty for local health checks")
               shutil.copy2(properties, SRV / "server.properties")
+              # The manager needs status replies; the repository file is not rewritten.
               with (SRV / "server.properties").open("a", encoding="utf-8") as output:
                   output.write("\n# Manager local health check\nenable-status=true\n")
               (SRV / "eula.txt").write_text("eula=true\n")
@@ -318,7 +308,6 @@ jobs:
               copy_tree(ROOT / "mods", SRV / "mods")
               archive = Path("/tmp/mods.tar.gz")
               if release_asset("mods-pack", "mods.tar.gz", archive, optional=True):
-                  message(f"Loading mods.tar.gz from release mods-pack in {REPO}")
                   extract_mods(archive)
               for jar in sorted((SRV / "mods").glob("*.jar")):
                   message("Mod: " + jar.name)
@@ -500,6 +489,7 @@ jobs:
               raise ValueError("Invalid VarInt")
 
           def check_minecraft():
+              # Actual Minecraft status request, not only an open TCP port.
               with socket.create_connection(("127.0.0.1", 25565), timeout=5) as sock:
                   sock.settimeout(5)
                   host = b"localhost"
@@ -508,6 +498,7 @@ jobs:
                   size = recv_varint(sock)
                   if not 3 <= size <= 2 * 1024 * 1024:
                       raise ValueError("Invalid Minecraft status length")
+                  # Read the full packet with a total time budget, even if data trickles in.
                   deadline = time.monotonic() + 10
                   data = bytearray()
                   while len(data) < size:
