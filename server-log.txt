@@ -1,8 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'Watching' entity spawn in overworld? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Red Eye spawn in overworld? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Messenger entity spawn? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Alternate Phase System was corrected from null to its default, false.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'TheEntity' spawn in nether? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Ethereal Demons spawn in nether? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Red Eye spawn in nether? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Eyed Flesh spawn in nether? was corrected from null to its default, true.
@@ -348,3 +343,8 @@ Things may not work well.
 [14:03:07] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam froze to death
 [14:04:54] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Kakonsam lost connection: Disconnected
 [14:04:54] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam left the game
+[14:07:07] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:34242] logged in with entity id 6120 at (159.38608249819433, 65.0, -374.54376847872084)
+[14:07:07] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[14:07:07] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[14:07:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Zombie
+[14:07:27] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Made Kakonsam a server operator]
