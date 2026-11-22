@@ -1,5 +1,3 @@
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false.
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/jei-server.toml is not correct. Correcting
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode was corrected from null to its default, SimpleCommentedConfig:{}.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForOp was corrected from null to its default, true.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForCreative was corrected from null to its default, true.
@@ -348,3 +346,5 @@
 [12:57:46] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [12:57:46] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [12:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Alex's Mobs]
+[13:00:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
+[13:00:04] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam was shot by Skeleton
