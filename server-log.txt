@@ -1,10 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'someone' (mining entity) spawn? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Sorrow spawn in overworld? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Fate spawn in overworld? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can rare cave chicken event happen? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'TheEntity' spawn in overworld after you escape the wonderland? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Wanderer spawn in overworld after you escape the wonderland? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Flicker spawn in overworld after you escape the wonderland? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can random structures spawn in overworld? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can entities respond to your messages in the chat? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can TheEntity break torches in overworld? was corrected from null to its default, true.
@@ -348,3 +341,10 @@ Things may not work well.
 [13:41:37] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Creative Mode]
 [13:42:28] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Set own game mode to Survival Mode]
 [13:45:07] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has made the advancement [Ice Bucket Challenge]
+[13:46:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of Kakonsam) moved wrongly! 0.2763540191716822
+[13:46:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of Kakonsam) moved wrongly! 0.8558992959818633
+[13:46:52] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of Kakonsam) moved wrongly! 0.5647732011861422
+[13:47:14] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Disconnected
+[13:47:14] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
+[13:47:42] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Kakonsam lost connection: Disconnected
+[13:47:42] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam left the game
