@@ -1,9 +1,3 @@
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootNetworkCheck was corrected from null to its default, true.
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key misc.ServerShootCooldownCheck was corrected from null to its default, true.
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/journeymap-server.toml is not correct. Correcting
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key admins was corrected from null to its default, SimpleCommentedConfig:{}.
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key admins.opAccess was corrected from null to its default, true.
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key admins.serverAdmins was corrected from null to its default, [mysticdrew, 79f597fe-2877-4ecb-acdf-8c58cc1854ca].
 [12:45:53] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/forge-server.toml is not correct. Correcting
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}.
@@ -348,3 +342,9 @@
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://fpvyj-134-33-68-247.run.pinggy-free.link:41257
+[12:48:22] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@5128f7b5[id=<null>,name=Kakonsam,properties={},legacy=false] (/127.0.0.1:36916) lost connection: Timed out
+[12:48:42] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:40860] logged in with entity id 106 at (-76.5, 70.0, 392.5)
+[12:48:42] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[12:48:42] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[12:48:42] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[12:48:44] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
