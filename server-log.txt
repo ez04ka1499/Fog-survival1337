@@ -1,6 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness was corrected from null to its default, 2.0.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness_search was corrected from null to its default, 5.0.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_break_timer was corrected from null to its default, 10.0.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/Wonderland Configuration.toml is not correct. Correcting
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General was corrected from null to its default, SimpleCommentedConfig:{}.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Should sleeping have chance to teleport you? was corrected from null to its default, true.
@@ -348,3 +345,6 @@ Things may not work well.
 [13:36:48] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has reached the goal [Feeling Watched]
 [13:37:17] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
 [13:37:28] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam froze to death
+[13:38:52] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP froze to death
+[13:39:33] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Bonfire Lit]
+[13:39:35] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam went up in flames
