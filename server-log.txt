@@ -1,4 +1,3 @@
-[12:45:53] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/forge-server.toml is not correct. Correcting
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false.
@@ -348,3 +347,4 @@
 [12:48:42] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
 [12:48:42] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
 [12:48:44] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
+[12:50:40] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has made the advancement [Alex's Mobs]
