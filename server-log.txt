@@ -1,5 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_at_day was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect_duration was corrected from null to its default, 150.0.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.break_blocks was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.lightnings was corrected from null to its default, true.
@@ -348,3 +346,5 @@ Things may not work well.
 [13:28:23] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Kakonsam> <>
 [13:28:23] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> о пливет велити
 [13:28:25] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has reached the goal [Feeling Watched]
+[13:29:33] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule keepInventory is now set to: true]
+[13:29:46] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Kakonsam> 123456
