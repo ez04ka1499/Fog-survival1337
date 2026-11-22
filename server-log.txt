@@ -1,5 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can player breath sound play randomly? was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'Angel' entity spawn? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Wondertree spawn in overworld? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Eyed Flesh spawn in overworld? was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Ethereal Demons spawn in overworld? was corrected from null to its default, true.
@@ -348,3 +346,5 @@ Things may not work well.
 [13:59:01] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:53796] logged in with entity id 3551 at (149.51187422458545, 59.0, -377.53148783488206)
 [13:59:01] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
 [13:59:01] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[14:00:31] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam froze to death
+[14:00:54] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam fell from a high place
