@@ -1,7 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.enable_spawning was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_spawn_rate was corrected from null to its default, 5000.0.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_spawn_rate was corrected from null to its default, 20000.0.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.jumpscare was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_chase_duration was corrected from null to its default, 400.0.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_chase_duration was corrected from null to its default, 1000.0.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.climbing was corrected from null to its default, true.
@@ -348,3 +344,7 @@ Things may not work well.
 [13:26:00] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [13:26:00] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
 [13:26:03] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
+[13:26:20] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Alex's Mobs]
+[13:26:48] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:39344] logged in with entity id 280 at (128.5, 72.0, -103.5)
+[13:26:48] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[13:26:48] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
