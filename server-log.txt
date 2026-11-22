@@ -1,8 +1,3 @@
-[09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true.
-[09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false.
-[09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/jei-server.toml is not correct. Correcting
-[09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode was corrected from null to its default, SimpleCommentedConfig:{}.
-[09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForOp was corrected from null to its default, true.
 [09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForCreative was corrected from null to its default, true.
 [09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForGive was corrected from null to its default, false.
 [09:31:08] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./world/serverconfig/framedblocks-server.toml is not correct. Correcting
@@ -348,3 +343,8 @@
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://anbcm-3-42-157-16.run.pinggy-free.link:42541
+[09:34:38] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:36906] logged in with entity id 138 at (5.5, 96.0, 0.5)
+[09:34:38] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[09:34:38] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[09:34:39] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[09:34:41] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
