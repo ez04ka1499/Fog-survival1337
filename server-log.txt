@@ -1,56 +1,350 @@
-[manager] Imported world.zip
-[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
-[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
-[manager] Mod: FramedBlocks-9.4.3.jar
-[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
-[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
-[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
-[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
-[manager] Mod: KryptonReforged-0.2.3.jar
-[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
-[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
-[manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
-[manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
-[manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
-[manager] Mod: aaa_particles-forge-1.20.1-2.3.0-beta.1.jar
-[manager] Mod: alexsmobs-1.22.9.jar
-[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
-[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
-[manager] Mod: architectury-9.2.14-forge.jar
-[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
-[manager] Mod: burnt-1.10.5.3-forge-1.20.1.jar
-[manager] Mod: citadel-2.6.3-1.20.1.jar
-[manager] Mod: cloth-config-11.1.136-forge.jar
-[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
-[manager] Mod: create-1.20.1-6.0.8 (1).jar
-[manager] Mod: cristellib-1.1.6-forge.jar
-[manager] Mod: embeddium-0.3.31mc1.20.1.jar
-[manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
-[manager] Mod: entityculling-forge-1.7.4-mc1.20.1.jar
-[manager] Mod: ferritecore-6.0.1-forge.jar
-[manager] Mod: flerovium-forge-1.20.1-1.2.10-all.jar
-[manager] Mod: framework-forge-1.20.1-0.8.0.jar
-[manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
-[manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
-[manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
-[manager] Mod: inventoryhud.forge.1.20.1-3.4.26.jar
-[manager] Mod: jei-1.20.1-forge-15.62.0.214.jar
-[manager] Mod: journeymap-1.20.1-5.10.3-forge.jar
-[manager] Mod: mcef-forge-2.1.6-1.20.1.jar
-[manager] Mod: mcw-doors-1.1.5-mc1.20.1forge.jar
-[manager] Mod: mcw-furniture-3.4.1-mc1.20.1forge.jar
-[manager] Mod: mcw-mcwstairs-1.0.2-mc1.20.1forge.jar
-[manager] Mod: mcw-mcwwindows-2.4.2-mc1.20.1forge.jar
-[manager] Mod: minecraft-comes-alive-7.7.1-beta.3+1.20.1-universal.jar
-[manager] Mod: modernfix-forge-5.21.0+mc1.20.1.jar
-[manager] Mod: moonlight-1.20-2.16.35-forge.jar
-[manager] Mod: noisium-forge-2.3.0+mc1.20-1.20.1.jar
-[manager] Mod: puddles-1.20.1-4.0.1.jar
-[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
-[manager] Mod: riautomobility-1.0.3.jar
-[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
-[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
-[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
-[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
-[manager] Mod: weather2-1.20.1-2.8.3.jar
-[manager] Mod: webdisplays-2.0.2-1.20.1.jar
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.enable_spawning was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_spawn_rate was corrected from null to its default, 5000.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_spawn_rate was corrected from null to its default, 20000.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.jumpscare was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_chase_duration was corrected from null to its default, 400.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_chase_duration was corrected from null to its default, 1000.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.climbing was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.vanish_distance was corrected from null to its default, 30.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_at_day was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect_duration was corrected from null to its default, 150.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.break_blocks was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.lightnings was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_sounds was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage1_spawn_rate was corrected from null to its default, 600.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.stage2_spawn_rate was corrected from null to its default, 900.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.old_stalk_mechanic was corrected from null to its default, false.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.legacy_man was corrected from null to its default, false.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.search_mechanic was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness was corrected from null to its default, 2.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_hardness_search was corrected from null to its default, 5.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.block_break_timer was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/Wonderland Configuration.toml is not correct. Correcting
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General was corrected from null to its default, SimpleCommentedConfig:{}.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Should sleeping have chance to teleport you? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can no_one spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'someone' (mining entity) spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Sorrow spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Fate spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can rare cave chicken event happen? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'TheEntity' spawn in overworld after you escape the wonderland? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Wanderer spawn in overworld after you escape the wonderland? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Flicker spawn in overworld after you escape the wonderland? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can random structures spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can entities respond to your messages in the chat? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can TheEntity break torches in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can TheSpawn spawn in overworld caves? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can random noise event happen? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can mining event happen underground? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can invisible follower spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can vanilla music randomly stop? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can player breath sound play randomly? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'Angel' entity spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Wondertree spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Eyed Flesh spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Ethereal Demons spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'Watching' entity spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Red Eye spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Messenger entity spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Alternate Phase System was corrected from null to its default, false.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'TheEntity' spawn in nether? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Ethereal Demons spawn in nether? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Red Eye spawn in nether? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Eyed Flesh spawn in nether? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can dreamworld be entered by sleeping? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Pillar entity spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Demonic Fish spawn in overwolrd? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can remember_me spawn in overworld during post-wonderland phase? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can The Eye invade your house? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Red Eye invade your house? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can The Eye spawn in overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can 'ethereal demon raid' event happen? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can strange events happen with your house? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Summoner entity spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Lurker entity spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Should your world get slowly corrupted on phase 5? was corrected from null to its default, false.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Should wonderflesh blocks be able to spread? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Wrath entity spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Pillar entity send you to a special dimension? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can SoulOfSanguine spawn? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can entities prevent you from sleeping? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Should Hellway blocks regenerate? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Fragmentation spawn in Overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key General.Can Silhouette spawn in Overworld? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances was corrected from null to its default, SimpleCommentedConfig:{}.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.no_one Spawn Chance was corrected from null to its default, 14.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Bed Teleport Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.someone Spawn Chance was corrected from null to its default, 16.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Sorrow Spawn Chance was corrected from null to its default, 18.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Fate Spawn Chance was corrected from null to its default, 15.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.TheEntity Spawn Chance was corrected from null to its default, 30.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Wanderer Spawn Chance was corrected from null to its default, 16.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Flicker Spawn Chance was corrected from null to its default, 21.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Random Structure Spawn Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Grace Period End Chance was corrected from null to its default, 20.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Wonderland Cooldown End Chance was corrected from null to its default, 33.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.TheSpawn Spawn Chance was corrected from null to its default, 19.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Random Noise Chance was corrected from null to its default, 15.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Mining Event Chance was corrected from null to its default, 16.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Invisible Follower Spawn Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Stop Music Event Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Player Breath Chance was corrected from null to its default, 26.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Angel Spawn Chance was corrected from null to its default, 12.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Eyed Flesh Spawn Chance was corrected from null to its default, 35.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Ethereal Demon Spawn Chance was corrected from null to its default, 13.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Watching Spawn Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Red Eye Spawn Chance was corrected from null to its default, 35.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Wondertree Spawn Chance was corrected from null to its default, 30.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Messenger Spawn Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.TheEntity Nether Spawn Chance was corrected from null to its default, 13.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Ethereal Demon Nether Chance was corrected from null to its default, 6.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Red Eye Nether Chance was corrected from null to its default, 15.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Eyed Flesh Nether Chance was corrected from null to its default, 25.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Dreamworld Enter Chance was corrected from null to its default, 5.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Pillar Spawn Chance was corrected from null to its default, 11.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Demonic Fish Spawn Chance was corrected from null to its default, 13.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Remember_me Spawn Chance was corrected from null to its default, 30.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.The Eye House Invasion Chance was corrected from null to its default, 20.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Red Eye House Invasion Chance was corrected from null to its default, 25.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.The Eye Spawn Chance was corrected from null to its default, 30.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Strange Home Event Chance was corrected from null to its default, 25.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Summoner Spawn Chance was corrected from null to its default, 40.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Lurker Spawn Chance was corrected from null to its default, 28.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Chunk Corruption Chance was corrected from null to its default, 5.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Wrath Spawn Chance was corrected from null to its default, 10.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Sanguine Spawn Chance was corrected from null to its default, 45.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Fragmentation Spawn Chance was corrected from null to its default, 25.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Chances.Silhouette Spawn Chance was corrected from null to its default, 32.0.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking was corrected from null to its default, SimpleCommentedConfig:{}.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can TheEntity kick you and crash the game? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can 'yourmind' entity kick you from your world? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can Wondertree kick you from your world? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can 'The Sphere' entity kick you from your world? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can Skinless kick you from your world? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can 'Demonic Cross' entity kick you from your world? was corrected from null to its default, true.
+[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Kicking.Can Apparition/Mastaman9 kick you from your world? was corrected from null to its default, true.
+[13:25:17] [modloading-worker-0/INFO] [me.st.kr.mo.sh.Krypton/]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
+[13:25:17] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.28
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
+[13:25:18] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
+[13:25:18] [main/INFO] [journeymap/]: Initializing Packet Registries
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
+[13:25:18] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
+[13:25:18] [main/INFO] [burnt/]: [Burnt] Burn blocker registered (1 active).
+[13:25:18] [main/INFO] [Moonlight/]: Initialized color sets in 20ms
+[13:25:18] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[13:25:18] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[13:25:18] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
+[13:25:18] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
+[13:25:18] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
+[13:25:18] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
+[13:25:18] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
+[13:25:18] [main/INFO] [Framework/SYNCED_ENTITY_DATA]: Registered synced data key refurbished_furniture:lock_yaw for refurbished_furniture:seat
+[13:25:18] [modloading-worker-0/INFO] [we.Weather/]: Got IMC []
+[13:25:18] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.kiwi.customization.compat.jade.JadeCompat
+[13:25:18] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.vanilla.VanillaPlugin
+[13:25:18] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.universal.UniversalPlugin
+[13:25:18] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.core.CorePlugin
+[13:25:18] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at xfacthd.framedblocks.common.compat.jade.FramedJadePlugin
+[13:25:18] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
+[13:25:18] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
+[13:25:18] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
+[13:25:19] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13:25:19] [main/WARN] [ne.mi.co.ForgeHooks/WP]: The following mods have version differences that were not resolved:
+betterthirdperson (version 1.9.0 -> MISSING)
+entityculling (version 1.11.2 -> MISSING)
+forge (version 47.4.29 -> 47.4.0)
+holdmyitems (version 2.0 -> MISSING)
+mousetweaks (version 2.25.1 -> MISSING)
+oculus (version 1.8.0 -> MISSING)
+transition (version 1.0.25 -> MISSING)
+trender (version 1.0.17 -> MISSING)
+zume (version 1.1.4 -> MISSING)
+Things may not work well.
+[13:25:19] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23211!/assets/.mcassetsroot' uses unexpected schema
+[13:25:19] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23211!/data/.mcassetsroot' uses unexpected schema
+[13:25:20] [main/INFO] [burnt/]: [Burnt] seeded default mapping pack into /home/runner/work/Fog-survival1337/Fog-survival1337/srv/config/burnt/mappings/Burnt Block Mappings 1.20.1
+[13:25:20] [main/INFO] [co.si.cr.Create/]: Created 436 recipes which will be injected into the game
+[13:25:20] [main/INFO] [co.si.cr.Create/]: Created 31 tags which will be injected into the game
+[13:25:20] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
+[13:25:20] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}.
+[13:25:20] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false.
+[13:25:20] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
+[13:25:20] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
+[13:25:20] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
+[13:25:20] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:trender
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:zume
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:mousetweaks
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:oculus
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:holdmyitems
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:entityculling
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:betterthirdperson
+[13:25:20] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:transition
+[13:25:20] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@542adad8]
+[13:25:20] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
+[13:25:20] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 77 ms (multithreaded)
+[13:25:20] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 78 ms
+[13:25:22] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
+[13:25:22] [Worker-Main-2/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
+[13:25:23] [main/INFO] [minecraft/RecipeManager]: Loaded 36 recipes
+[13:25:23] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
+[13:25:23] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:example': unknown source block 'examplemod:example_log' - skipping
+[13:25:23] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:example': unknown source block 'examplemod:example_wood' - skipping
+[13:25:23] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:tfc': unknown source block 'tfc:thatch' - skipping
+[13:25:23] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:tfc': unknown source block 'tfc:thatch_bed' - skipping
+[13:25:23] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:overrides': unknown source block 'yourmod:some_block' - skipping
+[13:25:23] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:overrides': unknown source block 'yourmod:some_other_block' - skipping
+[13:25:23] [main/INFO] [burnt/]: [Burnt] Loaded 2 burn mapping(s) from datapacks.
+[13:25:24] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
+[13:25:24] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
+[13:25:24] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
+[13:25:24] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[13:25:24] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[13:25:24] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[13:25:24] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
+[13:25:24] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[13:25:24] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[13:25:24] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[13:25:24] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[13:25:24] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[13:25:24] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
+[13:25:24] [Server thread/INFO] [Framework/]: Loading server configs...
+[13:25:25] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
+[13:25:25] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
+[13:25:25] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+[13:25:25] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[13:25:26] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[13:25:26] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[13:25:26] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[13:25:26] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 72%
+[13:25:27] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 1625 ms
+[13:25:27] [Server thread/INFO] [minecraft/DedicatedServer]: Done (2.507s)! For help, type "help"
+[13:25:27] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[13:25:27] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
+[13:25:27] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
+[13:25:27] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
+[13:25:27] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
+[13:25:27] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
+[13:25:27] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
+[13:25:27] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
+[13:25:27] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
+[13:25:27] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
+[13:25:27] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
+[13:25:27] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
+[13:25:27] [Server thread/WARN] [ModernFix/]: Dedicated server took 27.756 seconds to load
+[13:25:27] [Server thread/INFO] [burnt/]: [Burnt] Weather2 detected - wind system bridged.
+[manager] Server ready
+[manager] Starting Pinggy (token supplied)
+[manager] Tunnel: tcp://mdctp-3-41-210-71.run.pinggy-free.link:40379
+[13:25:59] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:46852] logged in with entity id 249 at (124.5, 70.0, -86.5)
+[13:25:59] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[13:26:00] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[13:26:00] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[13:26:03] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
