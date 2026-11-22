@@ -1,7 +1,3 @@
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.min_chase_duration was corrected from null to its default, 400.0.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.max_chase_duration was corrected from null to its default, 1000.0.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.climbing was corrected from null to its default, true.
-[13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.vanish_distance was corrected from null to its default, 30.0.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.spawn_at_day was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect was corrected from null to its default, true.
 [13:25:17] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key Server and Client.darkness_effect_duration was corrected from null to its default, 150.0.
@@ -348,3 +344,7 @@ Things may not work well.
 [13:26:48] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:39344] logged in with entity id 280 at (128.5, 72.0, -103.5)
 [13:26:48] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
 [13:26:48] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[13:28:17] [Server thread/INFO] [minecraft/MinecraftServer]: < >
+[13:28:23] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <Kakonsam> <>
+[13:28:23] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> о пливет велити
+[13:28:25] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has reached the goal [Feeling Watched]
