@@ -1,4 +1,3 @@
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode was corrected from null to its default, SimpleCommentedConfig:{}.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForOp was corrected from null to its default, true.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForCreative was corrected from null to its default, true.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key cheat mode.enableCheatModeForGive was corrected from null to its default, false.
@@ -348,3 +347,4 @@
 [12:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Alex's Mobs]
 [13:00:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
 [13:00:04] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam was shot by Skeleton
+[13:01:00] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam was slain by Zombie
