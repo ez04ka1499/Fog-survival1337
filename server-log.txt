@@ -1,5 +1,3 @@
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false.
-[12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05.
 [12:45:53] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler.
@@ -348,3 +346,5 @@
 [12:54:39] [Server thread/INFO] [minecraft/MinecraftServer]: [Kakonsam: Config for holdmyitems of type CLIENT not found]
 [12:54:42] [Server thread/INFO] [minecraft/MinecraftServer]: [Kakonsam: Config for holdmyitems of type COMMON not found]
 [12:54:45] [Server thread/INFO] [minecraft/MinecraftServer]: [Kakonsam: Config for holdmyitems of type SERVER not found]
+[12:55:29] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has reached the goal [Feeling Watched]
+[12:56:03] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam drowned
