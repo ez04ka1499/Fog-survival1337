@@ -1,8 +1,3 @@
-[19:20:57] [main/INFO] [ModernFix/]: Injecting BlockStateBase cache population hook into isConditionallyFullOpaque from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
-[19:20:58] [main/INFO] [minecraft/Bootstrap]: Vanilla bootstrap took 1158 milliseconds
-[19:20:59] [main/WARN] [mixin/]: @Inject(@At("INVOKE_ASSIGN")) Shift.BY=2 on refurbished_furniture.common.mixins.json:LevelChunkMixin::handler$zoi000$refurbishedFurniture$AfterRemoveBlockEntity exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
-[19:21:00] [main/WARN] [mixin/]: Static binding violation: PRIVATE @Overwrite method m_47505_ in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
-[19:21:00] [modloading-worker-0/INFO] [sn.ki.Kiwi/INIT]: Processing 8 KiwiModule annotations
 [19:21:00] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
 [19:21:00] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/2b101225a0983c178c43c737d76def52
 [19:21:00] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
@@ -348,3 +343,8 @@
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://bgtwy-20-169-71-12.run.pinggy-free.link:42801
+[19:22:22] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:41138] logged in with entity id 498 at (-135.5, 64.0, 30.5)
+[19:22:22] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[19:22:22] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[19:22:22] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[19:22:22] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
