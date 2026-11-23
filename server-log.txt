@@ -1,37 +1,3 @@
-[17:27:47] [main/WARN] [mixin/]: Static binding violation: PRIVATE @Overwrite method m_47505_ in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
-[17:27:48] [modloading-worker-0/INFO] [sn.ki.Kiwi/INIT]: Processing 8 KiwiModule annotations
-[17:27:48] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
-[17:27:48] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/2b101225a0983c178c43c737d76def52
-[17:27:48] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
-[17:27:48] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/878ba3ad853235668eff51eb0a40c900
-[17:27:48] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id aaa_particles:main/9b5bc39f00d53db2acf81d859b596583
-[17:27:48] [modloading-worker-0/INFO] [coroutil/]: forge loader environment detected
-[17:27:48] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
-[17:27:48] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
-[17:27:48] [modloading-worker-0/INFO] [burnt_additions/]: Burnt Additions (Forge-family 1.20.1) initializing...
-[17:27:48] [modloading-worker-0/INFO] [burnt_additions/]: AutoConfig registered OK: true
-[17:27:48] [modloading-worker-0/INFO] [co.si.cr.Create/]: Create 6.0.8 initializing! Commit hash: 1a1a9a2819b4f89f78caec41b55ed8cb222fa24b
-[17:27:48] [modloading-worker-0/INFO] [toughasnails/]: Serene Seasons detected. Enabling season modifier.
-[17:27:48] [modloading-worker-0/INFO] [noisium/]: Loading Noisium.
-[17:27:51] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:core] initialized
-[17:27:51] [main/INFO] [sn.ki.Kiwi/INIT]: Module [kiwi:data] initialized
-[17:27:51] [main/INFO] [sn.ki.Kiwi/INIT]: 		recipe_serializer: 3
-[17:27:51] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:enchantment] initialized
-[17:27:51] [main/INFO] [sn.ki.Kiwi/INIT]: 		enchantment: 1
-[17:27:51] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:51] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:52] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:52] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:52] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:52] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [Moonlight/]: Initialized block sets in 16ms
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
 [17:27:53] [main/INFO] [ModernFix/]: Bypassed Mojang DFU
 [17:27:53] [main/INFO] [ModernFix/]: Instantiating Mojang DFU
 [17:27:53] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
@@ -348,3 +314,37 @@
 [17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5369700933265449
 [17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.9537280481565631
 [17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.31044183675703607
+[17:46:38] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.28425207447912726
+[17:47:07] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.9351531669944961
+[17:47:07] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.1474432189015715
+[17:47:07] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.36682201272788
+[17:47:07] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.5931033969472992
+[17:47:07] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.8261152718314406
+[17:47:07] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 2.0728454167592645
+[17:47:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.4853789931180472
+[17:47:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.7523330813866096
+[17:47:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.019811522750956
+[17:47:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.2850045172392583
+[17:47:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.5513584653955377
+[17:47:21] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.818003174712885
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 2.084044081774664
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.29240456998093123
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.29686200135665786
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.299124717717973
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5979921483489079
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.30429122859277413
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6071828683066087
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.29370731070025613
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.3244839195468785
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6475808112036248
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.332837224268701
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.33350198267146425
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.6642777148953201
+[17:47:22] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.3279707621614989
+[17:47:23] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP was slain by Man From The Fog
+[17:47:24] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.1479079133114283
+[17:47:24] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.1479079133114283
+[17:47:24] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.1479079133114283
+[17:47:24] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.7251973068619009
+[17:47:24] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.4938583507191652
+[17:47:24] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.28843689586938126
