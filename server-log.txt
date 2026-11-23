@@ -1,7 +1,3 @@
-[manager] Mod: puddles-1.20.1-4.0.1.jar
-[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
-[manager] Mod: riautomobility-1.0.3.jar
-[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
 [manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
 [manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
 [manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
@@ -348,3 +344,7 @@
 [17:28:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
 [17:28:37] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [17:28:37] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[17:28:42] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:48512] logged in with entity id 608 at (122.5, 70.0, -86.5)
+[17:28:42] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[17:28:42] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[17:28:54] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Monster Hunter]
