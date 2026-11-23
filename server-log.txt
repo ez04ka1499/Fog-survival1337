@@ -1,4 +1,3 @@
-[12:17:00] [main/INFO] [ModernFix/]: Instantiating Mojang DFU
 [12:17:01] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
 [12:17:01] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
 [12:17:01] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
@@ -348,3 +347,4 @@
 [12:46:26] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has made the advancement [Getting an Upgrade]
 [12:47:06] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule playersSleepingPercentage is now set to: 1]
 [12:53:39] [Server thread/WARN] [minecraft/ServerLevel]: Tried to add entity the_wonderland:eyed_flesh but it was marked as removed already
+[12:56:33] [Server thread/INFO] [minecraft/MinecraftServer]: there's nothing to be afraid of
