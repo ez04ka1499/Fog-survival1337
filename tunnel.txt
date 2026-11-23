@@ -1,1 +1,0 @@
-tcp://bgtwy-20-169-71-12.run.pinggy-free.link:42801
