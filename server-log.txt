@@ -1,15 +1,3 @@
-[manager] Mod: riautomobility-1.0.3.jar
-[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
-[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
-[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
-[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
-[manager] Mod: weather2-1.20.1-2.8.3.jar
-[manager] Mod: webdisplays-2.0.2-1.20.1.jar
-2026-11-23 12:16:45,361 main WARN Advanced terminal features are not available in this environment
-[12:16:45] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
-[12:16:45] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.21 by Eclipse Adoptium; OS Linux arch amd64 version 7.0.0-1014-aws
-[12:16:46] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
-[12:16:46] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
 [12:16:46] [main/WARN] [ne.mi.fm.lo.mo.ModDiscoverer/SCAN]: Locator {mods folder locator at /home/runner/work/Fog-survival1337/Fog-survival1337/srv/mods} returned 2 files which are client-side-only mods, but we're on a dedicated server. They will be skipped!
 [12:16:46] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/fmlcore/1.20.1-47.4.0/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
 [12:16:46] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.4.0/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
@@ -348,3 +336,15 @@
 [12:17:46] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
 [12:18:13] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Kakonsam lost connection: Disconnected
 [12:18:13] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam left the game
+[12:18:57] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:40682] logged in with entity id 387 at (160.77644586109443, 65.0, -374.7787735636205)
+[12:18:57] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[12:18:57] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[12:19:09] [Server thread/ERROR] [minecraft/Util]: Invalid entity rotation: NaN, discarding.
+[12:19:19] [Server thread/INFO] [minecraft/MinecraftServer]: < > em pleH
+[12:19:33] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@60b4049a[id=<null>,name=Kakonsam,properties={},legacy=false] (/127.0.0.1:40452) lost connection: Disconnected
+[12:19:37] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:40474] logged in with entity id 860 at (122.5, 70.0, -86.5)
+[12:19:37] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[12:19:37] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[12:19:43] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
+[12:19:45] [Server thread/INFO] [minecraft/MinecraftServer]: < > olleH
+[12:19:54] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> why are you here?
