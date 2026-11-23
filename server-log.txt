@@ -1,5 +1,3 @@
-[19:21:01] [modloading-worker-0/INFO] [noisium/]: Loading Noisium.
-[19:21:03] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:core] initialized
 [19:21:03] [main/INFO] [sn.ki.Kiwi/INIT]: Module [kiwi:data] initialized
 [19:21:03] [main/INFO] [sn.ki.Kiwi/INIT]: 		recipe_serializer: 3
 [19:21:03] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:enchantment] initialized
@@ -348,3 +346,5 @@
 [19:24:31] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
 [19:24:31] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
 [19:24:31] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule keepInventory is now set to: true]
+[19:25:10] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has reached the goal [Feeling Watched]
+[19:25:52] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam was slain by Man From The Fog
