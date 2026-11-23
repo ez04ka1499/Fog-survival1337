@@ -1,7 +1,3 @@
-[12:16:48] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[12:16:48] [main/INFO] [mixin/]: Successfully loaded Mixin Connector [ca.spottedleaf.starlight.mixin.MixinConnector]
-[12:16:48] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments [nogui]
-[12:16:48] [main/INFO] [ModernFix/]: Loaded configuration file for ModernFix 5.21.0+mc1.20.1: 88 options available, 0 override(s) found
 [12:16:48] [main/INFO] [ModernFix/]: Applying Nashorn fix
 [12:16:48] [main/INFO] [ModernFix/]: Applied Forge config corruption patch
 [12:16:49] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 107 options available, 0 override(s) found
@@ -348,3 +344,7 @@
 [12:25:37] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Minecraft Comes Alive]
 [12:25:47] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Sweet Dreams]
 [12:25:51] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam froze to death
+[12:26:20] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to Kakonsam]
+[12:26:29] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hi
+[12:26:32] [Server thread/INFO] [minecraft/MinecraftServer]: [Not Secure] <TWIX_EXTRATOP> hello
+[12:27:15] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Teleported TWIX_EXTRATOP to Kakonsam]
