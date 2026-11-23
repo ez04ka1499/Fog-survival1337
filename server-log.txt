@@ -1,15 +1,3 @@
-[17:27:42] [main/INFO] [ModernFix/]: Applied Forge config corruption patch
-[17:27:42] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 107 options available, 0 override(s) found
-[17:27:42] [main/WARN] [mixin/]: Reference map 'coroutil.refmap.json' for coroutil.mixins.json could not be read. If this is a development environment you can ignore this message
-[17:27:42] [main/WARN] [mixin/]: Reference map 'cristellib-forge-refmap.json' for cristellib.mixins.json could not be read. If this is a development environment you can ignore this message
-[17:27:43] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
-[17:27:44] [main/INFO] [minecraft/Bootstrap]: ModernFix reached bootstrap stage (7.772 s after launch)
-[17:27:44] [main/WARN] [mixin/]: @Final field delegatesByName:Ljava/util/Map; in modernfix-forge.mixins.json:perf.forge_registry_alloc.ForgeRegistryMixin should be final
-[17:27:44] [main/WARN] [mixin/]: @Final field delegatesByValue:Ljava/util/Map; in modernfix-forge.mixins.json:perf.forge_registry_alloc.ForgeRegistryMixin should be final
-[17:27:44] [main/INFO] [ModernFix/]: Injecting BlockStateBase cache population hook into getOpacityIfCached from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
-[17:27:44] [main/INFO] [ModernFix/]: Injecting BlockStateBase cache population hook into isConditionallyFullOpaque from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
-[17:27:45] [main/INFO] [minecraft/Bootstrap]: Vanilla bootstrap took 1075 milliseconds
-[17:27:46] [main/WARN] [mixin/]: @Inject(@At("INVOKE_ASSIGN")) Shift.BY=2 on refurbished_furniture.common.mixins.json:LevelChunkMixin::handler$zoi000$refurbishedFurniture$AfterRemoveBlockEntity exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
 [17:27:47] [main/WARN] [mixin/]: Static binding violation: PRIVATE @Overwrite method m_47505_ in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
 [17:27:48] [modloading-worker-0/INFO] [sn.ki.Kiwi/INIT]: Processing 8 KiwiModule annotations
 [17:27:48] [modloading-worker-0/INFO] [de.ar.ne.fo.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
@@ -348,3 +336,15 @@
 [17:41:23] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=1064, y=65, z=445} BlockPos{x=1065, y=63, z=444}
 [17:43:27] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=1175, y=66, z=-166} BlockPos{x=1175, y=65, z=-167}
 [17:43:27] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=1175, y=66, z=-166} BlockPos{x=1175, y=65, z=-167}
+[17:45:30] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=1741, y=70, z=-273} BlockPos{x=1742, y=68, z=-273}
+[17:45:30] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=1744, y=70, z=-275} BlockPos{x=1745, y=68, z=-276}
+[17:45:34] [Server thread/WARN] [minecraft/ServerPlayerGameMode]: Mismatch in destroy block pos: BlockPos{x=1776, y=69, z=-291} BlockPos{x=1777, y=67, z=-291}
+[17:46:00] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5929583051188274
+[17:46:00] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 3.7668033492007
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 3.12227025370953
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 2.4770196481056246
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.8310522819576818
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 1.1843688471751648
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.5369700933265449
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.9537280481565631
+[17:46:01] [Server thread/WARN] [minecraft/ServerGamePacketListenerImpl]: entity.riautomobility.riautomobile (vehicle of TWIX_EXTRATOP) moved wrongly! 0.31044183675703607
