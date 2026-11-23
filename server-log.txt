@@ -1,5 +1,3 @@
-[manager] Mod: puddles-1.20.1-4.0.1.jar
-[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
 [manager] Mod: riautomobility-1.0.3.jar
 [manager] Mod: starlight-1.1.2+forge.1cda73c.jar
 [manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
@@ -348,3 +346,5 @@
 [12:17:46] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
 [12:17:46] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
 [12:17:46] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[12:18:13] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Kakonsam lost connection: Disconnected
+[12:18:13] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam left the game
