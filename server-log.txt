@@ -1,350 +1,56 @@
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [Moonlight/]: Initialized block sets in 14ms
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:04] [main/INFO] [ModernFix/]: Bypassed Mojang DFU
-[19:21:04] [main/INFO] [ModernFix/]: Instantiating Mojang DFU
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
-[19:21:05] [modloading-worker-0/INFO] [me.st.kr.mo.sh.Krypton/]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
-[19:21:05] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/window.json
-[19:21:06] [Thread-0/INFO] [ModernFix/]: Please use /mfsrc to reload any changed mod config files
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwwindows] Found status: UP_TO_DATE Current: 2.4.2 Target: null
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Starting version check at https://forge.curseupdate.com/32274/journeymap
-[19:21:06] [main/INFO] [journeymap/]: Initializing Packet Registries
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:reload_state for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_aiming for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:sprint_time for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:is_bolting for minecraft:living_entity
-[19:21:06] [main/INFO] [tacz/SYNCED_ENTITY_DATA_TAC_COPY]: Registered synced data key tacz:throwable_using for minecraft:living_entity
-[19:21:06] [main/INFO] [burnt/]: [Burnt] Burn blocker registered (1 active).
-[19:21:06] [main/INFO] [Moonlight/]: Initialized color sets in 23ms
-[19:21:06] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[19:21:06] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[19:21:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
-[19:21:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
-[19:21:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
-[19:21:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
-[19:21:06] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
-[19:21:06] [main/INFO] [Framework/SYNCED_ENTITY_DATA]: Registered synced data key refurbished_furniture:lock_yaw for refurbished_furniture:seat
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [journeymap] Found status: AHEAD Current: 5.10.3 Target: null
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/stairs.json
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwstairs] Found status: UP_TO_DATE Current: 1.0.2 Target: null
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/doors.json
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwdoors] Found status: AHEAD Current: 1.1.5 Target: null
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.0 Target: 47.4.28
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Starting version check at https://raw.githubusercontent.com/DmitryLovin/pluginUpdate/master/invupdate.json
-[19:21:06] [modloading-worker-0/INFO] [we.Weather/]: Got IMC []
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [inventoryhud] Found status: UP_TO_DATE Current: 3.4.26 Target: null
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Starting version check at https://raw.githubusercontent.com/sketchmacaw/macawsmods/master/furniture.json
-[19:21:06] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [mcwfurnitures] Found status: UP_TO_DATE Current: 3.4.1 Target: null
-[19:21:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.kiwi.customization.compat.jade.JadeCompat
-[19:21:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.vanilla.VanillaPlugin
-[19:21:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.universal.UniversalPlugin
-[19:21:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at snownee.jade.addon.core.CorePlugin
-[19:21:06] [modloading-worker-0/INFO] [Jade/]: Start loading plugin at xfacthd.framedblocks.common.compat.jade.FramedJadePlugin
-[19:21:06] [main/INFO] [citadel/]: adding citadel surface rules via terrablender...
-[19:21:06] [main/INFO] [citadel/]: Added 0 vanilla biome surface rule types via terrablender
-[19:21:06] [main/INFO] [citadel/]: Added 0 modded biome surface rule types via terrablender
-[19:21:07] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[19:21:07] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23211!/assets/.mcassetsroot' uses unexpected schema
-[19:21:07] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/Fog-survival1337/Fog-survival1337/srv/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23211!/data/.mcassetsroot' uses unexpected schema
-[19:21:07] [main/INFO] [co.si.cr.Create/]: Created 436 recipes which will be injected into the game
-[19:21:07] [main/INFO] [co.si.cr.Create/]: Created 31 tags which will be injected into the game
-[19:21:07] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz-pre.toml is not correct. Correcting
-[19:21:07] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack was corrected from null to its default, SimpleCommentedConfig:{}.
-[19:21:07] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key gunpack.DefaultPackDebug was corrected from null to its default, false.
-[19:21:07] [main/INFO] [tacz/]: Exporting resource pack /assets/tacz/custom/tacz_default_gun to /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz/tacz_default_gun
-[19:21:08] [main/INFO] [tacz/GunPackFinder]: Start scanning for gun packs in /home/runner/work/Fog-survival1337/Fog-survival1337/srv/tacz
-[19:21:08] [main/INFO] [tacz/GunPackFinder]: - tacz_default_gun, Main namespace: tacz
-[19:21:08] [main/INFO] [tacz/GunPackFinder]: Found 1 possible gunpack(s) and added them to resource set.
-[19:21:08] [main/INFO] [minecraft/MinecraftServer]: Found new data pack Immersive Weathering Generated Pack, loading it automatically
-[19:21:08] [main/INFO] [minecraft/MinecraftServer]: Found new data pack burnt_compat, loading it automatically
-[19:21:08] [main/INFO] [minecraft/MinecraftServer]: Found new data pack burnt_global/Burnt Block Mappings 1.20.1, loading it automatically
-[19:21:08] [main/INFO] [minecraft/MinecraftServer]: Found new data pack create:dynamic_data, loading it automatically
-[19:21:08] [main/INFO] [minecraft/MinecraftServer]: Found new data pack tacz_resources, loading it automatically
-[19:21:08] [main/INFO] [Moonlight/]: Starting runtime resource generation for pack type SERVER_DATA with generators from mods [immersive_weathering]: [com.ordana.immersive_weathering.dynamicpack.ServerDynamicResourcesHandler@3b08afaa]
-[19:21:08] [main/INFO] [Moonlight/]: Generating runtime assets for pack Immersive Weathering Generated Pack (immersive_weathering)
-[19:21:08] [main/INFO] [co.or.im.ImmersiveWeathering/]: Generated runtime SERVER_DATA for pack Immersive Weathering Generated Pack (immersive_weathering) in: 64 ms (multithreaded)
-[19:21:08] [main/INFO] [Moonlight/]: Finished runtime resources generation for 1 packs in a total of 65 ms
-[19:21:09] [main/INFO] [co.gi.al.al.AlexsMobs/]: Adding datapack listener capsid_recipes
-[19:21:09] [Worker-Main-1/ERROR] [minecraft/TagLoader]: Couldn't load tag minecraft:enchantable/durability as it is missing following references: the_knocker:knife (from the_knocker-1.5.2-forge-1.20.1.jar)
-[19:21:10] [main/INFO] [minecraft/RecipeManager]: Loaded 36 recipes
-[19:21:10] [main/INFO] [minecraft/AdvancementList]: Loaded 4636 advancements
-[19:21:10] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:example': unknown source block 'examplemod:example_log' - skipping
-[19:21:10] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:example': unknown source block 'examplemod:example_wood' - skipping
-[19:21:10] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:tfc': unknown source block 'tfc:thatch' - skipping
-[19:21:10] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:tfc': unknown source block 'tfc:thatch_bed' - skipping
-[19:21:10] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:overrides': unknown source block 'yourmod:some_block' - skipping
-[19:21:10] [main/WARN] [burnt/]: [Burnt] burn_mapping 'burnt:overrides': unknown source block 'yourmod:some_other_block' - skipping
-[19:21:10] [main/INFO] [burnt/]: [Burnt] Loaded 2 burn mapping(s) from datapacks.
-[19:21:10] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 78 block growths configurations
-[19:21:10] [main/INFO] [co.or.im.ImmersiveWeathering/]: Loaded 14 liquid generators configurations
-[19:21:11] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[19:21:11] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[19:21:11] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[19:21:11] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[19:21:11] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on *:25565
-[19:21:11] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[19:21:11] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[19:21:11] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[19:21:11] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[19:21:11] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[19:21:11] [Server thread/INFO] [journeymap/]: Loading JourneyMap Forge Configs
-[19:21:11] [Server thread/INFO] [Framework/]: Loading server configs...
-[19:21:11] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
-[19:21:11] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
-[19:21:11] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
-[19:21:16] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[19:21:16] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[19:21:16] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[19:21:17] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[19:21:17] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 1%
-[19:21:18] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
-[19:21:18] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 3%
-[19:21:19] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 5%
-[19:21:19] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 7%
-[19:21:20] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 9%
-[19:21:20] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 11%
-[19:21:21] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 15%
-[19:21:21] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 16%
-[19:21:22] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 19%
-[19:21:22] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 21%
-[19:21:23] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 24%
-[19:21:23] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 28%
-[19:21:24] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 31%
-[19:21:24] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 34%
-[19:21:25] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 38%
-[19:21:25] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 42%
-[19:21:26] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 45%
-[19:21:26] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 48%
-[19:21:27] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 53%
-[19:21:27] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 55%
-[19:21:28] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 58%
-[19:21:28] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 61%
-[19:21:29] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 62%
-[19:21:29] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 63%
-[19:21:30] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 67%
-[19:21:30] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 68%
-[19:21:31] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 70%
-[19:21:31] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 72%
-[19:21:32] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 77%
-[19:21:32] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 82%
-[19:21:33] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 85%
-[19:21:33] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 88%
-[19:21:34] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 90%
-[19:21:34] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 95%
-[19:21:35] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 18939 ms
-[19:21:35] [Server thread/INFO] [minecraft/DedicatedServer]: Done (23.954s)! For help, type "help"
-[19:21:35] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[19:21:35] [Server thread/INFO] [journeymap/]: global (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.global.config
-[19:21:35] [Server thread/INFO] [journeymap/]: global (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.global.config
-[19:21:35] [Server thread/INFO] [journeymap/]: default (FirstLoaded) Setting config file to version "5.10.3": journeymap.server.default.config
-[19:21:35] [Server thread/INFO] [journeymap/]: default (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.default.config
-[19:21:35] [Server thread/INFO] [journeymap/]: minecraft~overworld (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~overworld.config
-[19:21:35] [Server thread/INFO] [journeymap/]: minecraft~overworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~overworld.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~answer_dimension.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~answer_dimension (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~answer_dimension.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~acceptance.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~acceptance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~acceptance.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~maze.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~maze (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~maze.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~accountability.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~accountability (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~accountability.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~reservoir.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~reservoir (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~reservoir.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~chasms.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~chasms (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~chasms.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~shattered_dreams.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~shattered_dreams (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~shattered_dreams.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~repetition.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~repetition (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~repetition.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~catacombs.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~catacombs (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~catacombs.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_vault.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~the_vault (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_vault.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~inconsistency.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~inconsistency (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~inconsistency.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dlrowmaerd.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~dlrowmaerd (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dlrowmaerd.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~lapis_labyrinth.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~lapis_labyrinth (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~lapis_labyrinth.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bedrock_hallways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~bedrock_hallways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bedrock_hallways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~skyways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~skyways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~skyways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~depths.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~depths (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~depths.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~bridges.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~bridges.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dreamworld.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~dreamworld (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dreamworld.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sequence.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~sequence (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sequence.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_library.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_library (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_library.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~wonderland.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~wonderland.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~compliance.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~compliance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~compliance.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~tunnels.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~tunnels (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~tunnels.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~pipes.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~pipes (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~pipes.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_field.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_field (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_field.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~snowy_bridges.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~snowy_bridges (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~snowy_bridges.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~fools_paradise.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~fools_paradise (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~fools_paradise.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~sarcophagus.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~sarcophagus (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~sarcophagus.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~what_once_was.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~what_once_was (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~what_once_was.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_house.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_house (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_house.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~entrails.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~entrails (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~entrails.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~the_slip.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~the_slip (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~the_slip.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~corners.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~corners (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~corners.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~dream_6.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~dream_6 (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~dream_6.config
-[19:21:35] [Server thread/INFO] [journeymap/]: minecraft~the_end (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_end.config
-[19:21:35] [Server thread/INFO] [journeymap/]: minecraft~the_end (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_end.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~no_mans_land.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~no_mans_land (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~no_mans_land.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~abyss.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~abyss (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~abyss.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~endless_forest.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~endless_forest (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~endless_forest.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~remembrance.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~remembrance (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~remembrance.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~torture.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~torture (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~torture.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~winter_wonderland.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~winter_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~winter_wonderland.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~brickways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~brickways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~brickways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~jungle_warehouse.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~jungle_warehouse (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~jungle_warehouse.config
-[19:21:35] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Initialized) Setting config file to version "5.10.3": journeymap.server.minecraft~the_nether.config
-[19:21:35] [Server thread/INFO] [journeymap/]: minecraft~the_nether (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.minecraft~the_nether.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~false_wonderland.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~false_wonderland (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~false_wonderland.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Initialized) Setting config file to version "5.10.3": journeymap.server.the_wonderland~hellways.config
-[19:21:35] [Server thread/INFO] [journeymap/]: the_wonderland~hellways (Valid) Creating config file: ./journeymap/server/5.10/journeymap.server.the_wonderland~hellways.config
-[19:21:35] [Server thread/WARN] [ModernFix/]: Dedicated server took 47.021 seconds to load
-[19:21:35] [Server thread/INFO] [co.gi.al.al.AlexsMobs/]: Found Pupfish chunk at 1695 ~ -336 after 2 tries
-[19:21:35] [Server thread/INFO] [burnt/]: [Burnt] Weather2 detected - wind system bridged.
-[manager] Server ready
-[manager] Starting Pinggy (token supplied)
-[manager] Tunnel: tcp://bgtwy-20-169-71-12.run.pinggy-free.link:42801
-[19:22:22] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:41138] logged in with entity id 498 at (-135.5, 64.0, 30.5)
-[19:22:22] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
-[19:22:22] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
-[19:22:22] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
-[19:22:22] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
-[19:23:23] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:40706] logged in with entity id 737 at (-135.5, 67.0, 39.5)
-[19:23:23] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[19:23:23] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
-[19:23:53] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Alex's Mobs]
-[19:24:07] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Kakonsam lost connection: Timed out
-[19:24:07] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam left the game
-[19:24:26] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule playersSleepingPercentage is now set to: 1]
-[19:24:27] [Server thread/INFO] [minecraft/ServerLoginPacketListenerImpl]: com.mojang.authlib.GameProfile@5bfe22ca[id=<null>,name=Kakonsam,properties={},legacy=false] (/127.0.0.1:46792) lost connection: Disconnected
-[19:24:31] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:43744] logged in with entity id 825 at (-134.0943932170999, 70.00133597911214, 34.40324874358486)
-[19:24:31] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
-[19:24:31] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
-[19:24:31] [Server thread/INFO] [minecraft/MinecraftServer]: [TWIX_EXTRATOP: Gamerule keepInventory is now set to: true]
-[19:25:10] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam has reached the goal [Feeling Watched]
-[19:25:52] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam was slain by Man From The Fog
-[19:26:38] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: TWIX_EXTRATOP lost connection: Timed out
-[19:26:38] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP left the game
-[19:27:01] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Kakonsam lost connection: Timed out
-[19:27:01] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam left the game
-[19:27:02] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:51440] logged in with entity id 1163 at (-137.08762568644582, 74.0, 90.89157268786093)
-[19:27:02] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
-[19:27:02] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[manager] New world requested; old world will not be loaded
+[manager] Mod: BiomesOPlenty-forge-1.20.1-19.0.0.96.jar
+[manager] Mod: FarmersDelight-1.20.1-1.3.4.jar
+[manager] Mod: FramedBlocks-9.4.3.jar
+[manager] Mod: GlitchCore-forge-1.20.1-0.0.1.1.jar
+[manager] Mod: ImmediatelyFast-Forge-1.5.0+1.20.4.jar
+[manager] Mod: Jade-1.20.1-Forge-11.13.3.jar
+[manager] Mod: Kiwi-1.20.1-Forge-11.10.3.jar
+[manager] Mod: KryptonReforged-0.2.3.jar
+[manager] Mod: PassableFoliage-1.20.1-forge-8.2.1.jar
+[manager] Mod: SereneSeasons-forge-1.20.1-9.1.0.3.jar
+[manager] Mod: TerraBlender-forge-1.20.1-3.0.1.10.jar
+[manager] Mod: The-Man-From-The-Fog-1.4-1.20.1.jar
+[manager] Mod: ToughAsNails-forge-1.20.1-9.2.0.171.jar
+[manager] Mod: aaa_particles-forge-1.20.1-2.3.0-beta.1.jar
+[manager] Mod: alexsmobs-1.22.9.jar
+[manager] Mod: another_furniture-forge-1.20.1-3.0.4.jar
+[manager] Mod: appleskin-forge-mc1.20.1-2.5.1.jar
+[manager] Mod: architectury-9.2.14-forge.jar
+[manager] Mod: automobility-0.4.2+1.20.1-forge.jar
+[manager] Mod: burnt-1.10.5.3-forge-1.20.1.jar
+[manager] Mod: citadel-2.6.3-1.20.1.jar
+[manager] Mod: cloth-config-11.1.136-forge.jar
+[manager] Mod: coroutil-forge-1.20.1-1.3.7.jar
+[manager] Mod: create-1.20.1-6.0.8 (1).jar
+[manager] Mod: cristellib-1.1.6-forge.jar
+[manager] Mod: embeddium-0.3.31mc1.20.1.jar
+[manager] Mod: entityculling-forge-1.11.2-mc1.20.1.jar
+[manager] Mod: entityculling-forge-1.7.4-mc1.20.1.jar
+[manager] Mod: ferritecore-6.0.1-forge.jar
+[manager] Mod: flerovium-forge-1.20.1-1.2.10-all.jar
+[manager] Mod: framework-forge-1.20.1-0.8.0.jar
+[manager] Mod: geckolib-forge-1.20.1-4.8.4 (1).jar
+[manager] Mod: immersive_optimization-forge-1.20.1-0.0.3.jar
+[manager] Mod: immersive_weathering-1.20.1-2.0.5-forge.jar
+[manager] Mod: inventoryhud.forge.1.20.1-3.4.26.jar
+[manager] Mod: jei-1.20.1-forge-15.62.0.214.jar
+[manager] Mod: journeymap-1.20.1-5.10.3-forge.jar
+[manager] Mod: mcef-forge-2.1.6-1.20.1.jar
+[manager] Mod: mcw-doors-1.1.5-mc1.20.1forge.jar
+[manager] Mod: mcw-furniture-3.4.1-mc1.20.1forge.jar
+[manager] Mod: mcw-mcwstairs-1.0.2-mc1.20.1forge.jar
+[manager] Mod: mcw-mcwwindows-2.4.2-mc1.20.1forge.jar
+[manager] Mod: minecraft-comes-alive-7.7.1-beta.3+1.20.1-universal.jar
+[manager] Mod: modernfix-forge-5.21.0+mc1.20.1.jar
+[manager] Mod: moonlight-1.20-2.16.35-forge.jar
+[manager] Mod: noisium-forge-2.3.0+mc1.20-1.20.1.jar
+[manager] Mod: puddles-1.20.1-4.0.1.jar
+[manager] Mod: refurbished_furniture-forge-1.20.1-1.0.20.jar
+[manager] Mod: riautomobility-1.0.3.jar
+[manager] Mod: starlight-1.1.2+forge.1cda73c.jar
+[manager] Mod: tacz-1.20.1-1.1.8-hotfix.jar
+[manager] Mod: the_knocker-1.5.2-forge-1.20.1.jar
+[manager] Mod: the_wonderland-3.0.3-1.20.1-forge.jar
+[manager] Mod: weather2-1.20.1-2.8.3.jar
+[manager] Mod: webdisplays-2.0.2-1.20.1.jar
