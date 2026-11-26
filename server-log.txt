@@ -1,7 +1,3 @@
-[10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: Module [kiwi:data] initialized
-[10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: 		recipe_serializer: 3
-[10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:enchantment] initialized
-[10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: 		enchantment: 1
 [10:59:13] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
 [10:59:14] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
 [10:59:14] [main/INFO] [burnt_additions/]: Registering Burnt Additions worldgen features...
@@ -348,3 +344,7 @@
 [11:04:07] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
 [11:04:07] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
 [11:04:08] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
+[11:05:03] [Server thread/INFO] [minecraft/PlayerList]: Kakonsam[/127.0.0.1:36084] logged in with entity id 779 at (10.5, 67.0, 5.5)
+[11:05:03] [Server thread/INFO] [minecraft/MinecraftServer]: Kakonsam joined the game
+[11:05:03] [Server thread/INFO] [Jade/]: Syncing config to Kakonsam (42e6952e-53d3-35de-836b-b7128224eff3)
+[11:05:11] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP has made the advancement [Alex's Mobs]
