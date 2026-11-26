@@ -1,8 +1,3 @@
-[10:59:11] [modloading-worker-0/INFO] [burnt_additions/]: AutoConfig registered OK: true
-[10:59:11] [modloading-worker-0/INFO] [co.si.cr.Create/]: Create 6.0.8 initializing! Commit hash: 1a1a9a2819b4f89f78caec41b55ed8cb222fa24b
-[10:59:11] [modloading-worker-0/INFO] [toughasnails/]: Serene Seasons detected. Enabling season modifier.
-[10:59:11] [modloading-worker-0/INFO] [noisium/]: Loading Noisium.
-[10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:core] initialized
 [10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: Module [kiwi:data] initialized
 [10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: 		recipe_serializer: 3
 [10:59:13] [main/INFO] [sn.ki.Kiwi/INIT]: Module [passablefoliage:enchantment] initialized
@@ -348,3 +343,8 @@
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
 [manager] Tunnel: tcp://kdaiv-18-233-87-154.run.pinggy-free.link:35963
+[11:04:06] [Server thread/INFO] [minecraft/PlayerList]: TWIX_EXTRATOP[/127.0.0.1:36878] logged in with entity id 493 at (-6.5, 65.0, 0.5)
+[11:04:06] [Server thread/INFO] [minecraft/MinecraftServer]: TWIX_EXTRATOP joined the game
+[11:04:07] [Server thread/INFO] [Jade/]: Syncing config to TWIX_EXTRATOP (173072de-cda8-33d1-9173-1d7b95d87ae2)
+[11:04:07] [Server thread/INFO] [burnt_additions/]: [Toxic Smoke] Create detected - a diving helmet with air in the backtank now keeps smoke out.
+[11:04:08] [Server thread/INFO] [coroutil/]: CoroUtil detected Serene Seasons Installed for use
