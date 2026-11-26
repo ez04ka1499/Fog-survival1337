@@ -1,4 +1,3 @@
-[10:59:11] [modloading-worker-0/INFO] [burnt_additions/]: Burnt Additions (Forge-family 1.20.1) initializing...
 [10:59:11] [modloading-worker-0/INFO] [burnt_additions/]: AutoConfig registered OK: true
 [10:59:11] [modloading-worker-0/INFO] [co.si.cr.Create/]: Create 6.0.8 initializing! Commit hash: 1a1a9a2819b4f89f78caec41b55ed8cb222fa24b
 [10:59:11] [modloading-worker-0/INFO] [toughasnails/]: Serene Seasons detected. Enabling season modifier.
@@ -348,3 +347,4 @@
 [10:59:56] [Server thread/INFO] [burnt/]: [Burnt] Weather2 detected - wind system bridged.
 [manager] Server ready
 [manager] Starting Pinggy (token supplied)
+[manager] Tunnel: tcp://kdaiv-18-233-87-154.run.pinggy-free.link:35963
